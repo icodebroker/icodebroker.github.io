@@ -12,6 +12,7 @@
 #   (설정 키 추가, -File에서는 큰따옴표를 \"로) ... -App BigEdit -ExtraJson '\"IsDarkMode\": true'
 #   (고정 크기 창의 바탕색) ... -App BigCloser -Background '#000000'
 #   (처음 실행 크기 그대로) ... -App BigView -KeepSize -Background '#000000'
+#   (관리자 앱을 일반 권한으로) ... -App BigDisk,BigPacket -RunAsInvoker
 #   (관리자 PowerShell에서) powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigDisk,BigPacket
 
 param(
@@ -25,6 +26,8 @@ param(
     [string]$Background = '',
     # 크기 조절이 되는 창도 처음 실행 크기 그대로 찍는다 (1280x800 바탕 가운데에 놓음)
     [switch]$KeepSize,
+    # requireAdministrator 앱도 UAC 없이 일반 권한으로 실행한다 (__COMPAT_LAYER=RunAsInvoker)
+    [switch]$RunAsInvoker,
     [int]$SettleSeconds = 4
 )
 
@@ -252,7 +255,7 @@ foreach($name in $App)
 
     if(-not (Test-Path $exePath)) { Write-Warning "$name : exe 없음"; continue }
 
-    if(($adminAppList -contains $name) -and -not $isAdmin)
+    if(($adminAppList -contains $name) -and -not $isAdmin -and -not $RunAsInvoker)
     {
         Write-Warning "$name : 관리자 권한이 필요하다. 관리자 PowerShell에서 실행하세요."
         continue
@@ -333,7 +336,11 @@ foreach($name in $App)
 
     try
     {
+        if($RunAsInvoker) { $env:__COMPAT_LAYER = 'RunAsInvoker' }
+
         $process = Start-Process -FilePath (Join-Path $stagePath "$name.exe") -WorkingDirectory $stagePath -PassThru
+
+        if($RunAsInvoker) { Remove-Item Env:__COMPAT_LAYER -ErrorAction SilentlyContinue }
 
         #region 창 기다리기
 
