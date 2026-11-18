@@ -118,17 +118,16 @@ layout: default
       </dl>
     </details>
 
-    {%- assign same = site.data.apps | where: 'category', app.category -%}
-    {%- assign shown = 0 -%}
+    {%- assign same = site.data.apps | where: 'category', app.category | sort_natural: 'name' -%}
+    {%- for other in same %}{% if other.name == app.name %}{% assign idx = forloop.index0 %}{% endif %}{% endfor -%}
     {%- if same.size > 1 %}
     <section class="block">
       <h2>{{ t.more_apps }}</h2>
       <div class="grid grid-small">
-        {%- for other in same %}
-        {%- if other.name != app.name and shown < 3 %}
-        {% include app-card.html app=other %}
-        {%- assign shown = shown | plus: 1 -%}
-        {%- endif %}
+        {%- for i in (1..3) %}
+        {%- assign j = idx | plus: i | modulo: same.size -%}
+        {%- if j == idx %}{% break %}{% endif %}
+        {% include app-card.html app=same[j] %}
         {%- endfor %}
       </div>
     </section>
