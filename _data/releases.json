@@ -194,8 +194,8 @@
     "BigPacket":  {
                       "version":  "1.0.0",
                       "zip":  "BigPacket-1.0.0-win-x64.zip",
-                      "size":  62351277,
-                      "sha256":  "6e91dd90db2fdf2c81098c6227e50f556bbec809fe53d294fedd3295fae37ac5",
+                      "size":  62351852,
+                      "sha256":  "ba3ebed085203e4193f58d77c7ab417ced4313f2605c6d947cccad1bd1989d66",
                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigPacket-v1.0.0/BigPacket-1.0.0-win-x64.zip",
                       "released":  "2026-11-18"
                   },
