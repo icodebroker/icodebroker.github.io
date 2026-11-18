@@ -14,7 +14,8 @@ ko:
   big_keys_label: 대부분 이렇게 조절해요
   big_keys_in: 크게
   big_keys_out: 작게
-  badges: [완전 무료, 광고 없음, 설치 필요 없음, Windows 10/11 64비트]
+  badges: [완전 무료, 광고 없음, 설치 필요 없음, 데이터 수집 없음, Windows 10/11 64비트]
+  privacy_note: 사용 기록이나 개인 정보를 제작자나 다른 곳으로 보내지 않아요. 인터넷은 FTP·S3·DB 서버나 AI 도구처럼 직접 연결한 곳에만 쓰고, BigReader만 처음 실행할 때 음성 모델을 한 번 내려받아요.
   all: 전체
   search_placeholder: 프로그램 이름이나 기능으로 찾기
   search_label: 프로그램 찾기
@@ -75,7 +76,8 @@ en:
   big_keys_label: In most apps
   big_keys_in: bigger
   big_keys_out: smaller
-  badges: [100% free, No ads, No installation, Windows 10/11 64-bit]
+  badges: [100% free, No ads, No installation, No data collection, Windows 10/11 64-bit]
+  privacy_note: The apps never send your usage or personal data to the author or anyone else. They go online only to reach what you connect them to, like your FTP, S3 or database servers and AI tools. BigReader alone downloads its voice model once on first run.
   all: All
   search_placeholder: Search by name or feature
   search_label: Search apps
