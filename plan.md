@@ -1,6 +1,6 @@
 # icodebroker 무료 프로그램 다운로드 사이트 계획
 
-작성일: 2026-11-18 (3차 수정) · 상태: 모든 결정 확정, 구현 단계
+작성일: 2026-11-18 (4차 수정) · 상태: 구현·배포 완료 (구현하면서 바뀐 점은 11절)
 
 ## 1. 목표
 
@@ -61,10 +61,12 @@
 ```text
 BigEdit-1.0.0-win-x64.zip
 ├─ BigEdit.exe
-└─ README.txt      # 한국어·영어: 무료 사용·무보증·재배포 금지, 실행 방법, 설정 저장 위치, 제3자 라이선스 고지
+├─ README.txt                # 한국어·영어: 무료 사용·무보증·재배포 금지, 실행 방법, 소개 페이지 주소
+├─ THIRD-PARTY-NOTICES.txt   # 들어 있는 오픈 소스 구성 요소와 라이선스 목록
+└─ LICENSES/                 # 소스에 있는 라이선스 원문 (글꼴 OFL, FreeRDP 등)
 ```
 
-- BigRemote zip에는 `FREERDP-LICENSE.txt`를 더 넣는다.
+- BigRemote zip의 `LICENSES/`에는 `FREERDP-LICENSE.txt`가 들어간다.
 - 파일 이름 형식: `<앱>-<버전>-win-x64.zip`
 
 ### Releases
@@ -89,7 +91,9 @@ GitHub Pages 기본 Jekyll을 쓴다. 플러그인·Actions·빌드 도구는 �
 icodebroker.github.io/
 ├─ _config.yml              # title, lang, theme 줄 삭제
 ├─ _data/
-│   ├─ apps.yml             # 앱 34개 (스크립트가 숫자를 채우고 사람이 설명을 씀)
+│   ├─ apps.yml             # 앱 34개 소개 글 (사람이 고침, 순서 = 카드 순서)
+│   ├─ releases.json        # 버전·zip·크기·SHA-256·주소 (스크립트가 생성)
+│   ├─ thirdparty.json      # 앱별 오픈 소스 목록 (스크립트가 생성)
 │   └─ i18n.yml             # 화면 문구 ko/en (버튼, 안내, 분류 이름)
 ├─ _includes/
 │   ├─ app-card.html        # 첫 화면 카드
@@ -110,7 +114,9 @@ icodebroker.github.io/
 │   ├─ icons/BigEdit.png    # .ico에서 변환 (128px)
 │   └─ screenshots/placeholder.png   # 빈 스크린샷 이미지
 ├─ README.md
-└─ tools/Publish-Apps.ps1
+└─ tools/
+    ├─ Publish-Apps.ps1     # zip·릴리스·데이터·소개 페이지 파일·아이콘
+    └─ New-SiteImages.ps1   # 빈 스크린샷, 파비콘
 ```
 
 ### `_data/apps.yml` 항목
@@ -244,7 +250,7 @@ icodebroker.github.io/
 
 - `assets/screenshots/placeholder.png`, 1280×800(16:10)
 - 연한 미색 바탕에 창 모양 테두리, 가운데 그림 아이콘과 "스크린샷 준비 중 · Screenshot coming soon"
-- 만드는 방법: PowerShell + System.Drawing으로 그려서 저장(다시 만들 수 있게 `tools/New-Placeholder.ps1`로 둔다)
+- 만드는 방법: PowerShell + System.Drawing으로 그려서 저장(다시 만들 수 있게 `tools/New-SiteImages.ps1`로 둔다)
 - 나중에 바꾸는 법: `assets/screenshots/BigEdit.png`(1280×800 권장)를 넣고 `apps.yml`의 `screenshot:`에 파일 이름을 적는다
 
 ## 7. 업로드 스크립트 `tools/Publish-Apps.ps1`
@@ -258,7 +264,7 @@ Windows PowerShell 5.1 호환. 인자 `-App <이름>`(하나만), `-WhatIf`(업�
 3. 임시 폴더에 exe와 README.txt(+ BigRemote는 FreeRDP 라이선스)를 모아 zip을 만든다.
 4. zip SHA-256을 계산한다.
 5. `gh release create <앱>-v<버전> <zip> --title ... --notes ...`. 같은 태그가 있으면 건너뛰고, `-Force`면 `gh release upload --clobber`로 덮어쓴다.
-6. `_data/apps.yml`에서 version·zip·size·sha256·url·released만 갱신한다. 사람이 쓴 summary·features·screenshot은 건드리지 않는다.
+6. `_data/releases.json`과 `_data/thirdparty.json`을 갱신한다. 사람이 쓴 `apps.yml`은 건드리지 않는다.
 7. 상세 페이지 파일(`apps/<앱>.html`, `en/apps/<앱>.html`)이 없으면 만든다.
 8. `.ico`를 128px PNG로 바꿔 `assets/icons/`에 둔다(없을 때만).
 
@@ -288,3 +294,12 @@ Windows PowerShell 5.1 호환. 인자 `-App <이름>`(하나만), `-WhatIf`(업�
 ## 10. 확인할 것
 
 없음. 2026-11-18 답변(재배포 금지, 사이트 이름 icodebroker, 상세 페이지는 앱 소개 페이지)을 2·4·6절에 반영했다.
+
+## 11. 구현하면서 바뀐 점 (2026-11-18)
+
+- **데이터 파일 분리**: PS 5.1에서 YAML을 안전하게 고치기 어려워, 스크립트가 만드는 값은 `releases.json`·`thirdparty.json`으로 나누고 `apps.yml`은 사람만 고친다.
+- **zip 구성**: 오픈 소스 라이선스 고지 의무(MIT·Apache-2.0·OFL)를 지키려고 `THIRD-PARTY-NOTICES.txt`와 `LICENSES/`를 더 넣었다. 패키지 목록은 각 프로젝트의 `obj/project.assets.json`에서, 라이선스는 NuGet 캐시(`D:\NugetPackages`)의 nuspec에서 읽는다.
+- **zip 만들기**: `Compress-Archive`(PS 5.1)는 zip 안 경로를 역슬래시로 써서 `System.IO.Compression`으로 직접 만든다.
+- **아이콘**: 256px 그림이 PNG로 들어 있는 ico는 `System.Drawing.Icon`이 못 읽어서 ico를 직접 읽어 가장 큰 그림을 쓴다.
+- **레이아웃 추가**: `home.html`(첫 화면), `page.html`(도움말·라이선스)
+- **로컬 미리 보기 없음**: 이 PC에 Ruby/Jekyll이 없어 푸시한 뒤 Pages 빌드 결과와 실제 사이트로 확인한다.

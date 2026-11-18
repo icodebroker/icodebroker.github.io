@@ -10,5 +10,951 @@
                               "license":  "SIL OFL 1.1",
                               "url":  null
                           }
-                      ]
+                      ],
+    "BigClaude":  [
+                      {
+                          "name":  ".NET Runtime / WPF",
+                          "license":  "MIT",
+                          "url":  "https://github.com/dotnet/runtime"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.AI.Abstractions",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.Caching.Abstractions",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.Configuration.Abstractions",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.DependencyInjection.Abstractions",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.Diagnostics.Abstractions",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.FileProviders.Abstractions",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.Hosting.Abstractions",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.Logging.Abstractions",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.Options",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.Primitives",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "ModelContextProtocol",
+                          "license":  "Apache-2.0",
+                          "url":  "https://csharp.sdk.modelcontextprotocol.io/"
+                      },
+                      {
+                          "name":  "ModelContextProtocol.Core",
+                          "license":  "Apache-2.0",
+                          "url":  "https://csharp.sdk.modelcontextprotocol.io/"
+                      },
+                      {
+                          "name":  "Newtonsoft.Json",
+                          "license":  "MIT",
+                          "url":  "https://www.newtonsoft.com/json"
+                      }
+                  ],
+    "BigCloser":  [
+                      {
+                          "name":  ".NET Runtime / WPF",
+                          "license":  "MIT",
+                          "url":  "https://github.com/dotnet/runtime"
+                      },
+                      {
+                          "name":  "NanumGothicCoding",
+                          "license":  "SIL OFL 1.1",
+                          "url":  null
+                      }
+                  ],
+    "BigClustering":  [
+                          {
+                              "name":  ".NET Runtime / WPF",
+                              "license":  "MIT",
+                              "url":  "https://github.com/dotnet/runtime"
+                          },
+                          {
+                              "name":  "ExcelDataReader",
+                              "license":  "MIT",
+                              "url":  "https://github.com/ExcelDataReader/ExcelDataReader"
+                          },
+                          {
+                              "name":  "NanumGothicCoding",
+                              "license":  "SIL OFL 1.1",
+                              "url":  null
+                          }
+                      ],
+    "BigCSV":  [
+                   {
+                       "name":  ".NET Runtime / WPF",
+                       "license":  "MIT",
+                       "url":  "https://github.com/dotnet/runtime"
+                   },
+                   {
+                       "name":  "NanumGothicCoding",
+                       "license":  "SIL OFL 1.1",
+                       "url":  null
+                   }
+               ],
+    "BigCURL":  [
+                    {
+                        "name":  ".NET Runtime / WPF",
+                        "license":  "MIT",
+                        "url":  "https://github.com/dotnet/runtime"
+                    },
+                    {
+                        "name":  "AvalonEdit",
+                        "license":  "MIT",
+                        "url":  "http://www.avalonedit.net/"
+                    },
+                    {
+                        "name":  "Microsoft.Extensions.DependencyInjection",
+                        "license":  "MIT",
+                        "url":  "https://dot.net/"
+                    },
+                    {
+                        "name":  "Microsoft.Extensions.DependencyInjection.Abstractions",
+                        "license":  "MIT",
+                        "url":  "https://dot.net/"
+                    },
+                    {
+                        "name":  "Microsoft.Extensions.Logging",
+                        "license":  "MIT",
+                        "url":  "https://dot.net/"
+                    },
+                    {
+                        "name":  "Microsoft.Extensions.Logging.Abstractions",
+                        "license":  "MIT",
+                        "url":  "https://dot.net/"
+                    },
+                    {
+                        "name":  "Microsoft.Extensions.Options",
+                        "license":  "MIT",
+                        "url":  "https://dot.net/"
+                    },
+                    {
+                        "name":  "Microsoft.Extensions.Primitives",
+                        "license":  "MIT",
+                        "url":  "https://dot.net/"
+                    },
+                    {
+                        "name":  "NanumGothicCoding",
+                        "license":  "SIL OFL 1.1",
+                        "url":  null
+                    }
+                ],
+    "BigDetection":  [
+                         {
+                             "name":  ".NET Runtime / WPF",
+                             "license":  "MIT",
+                             "url":  "https://github.com/dotnet/runtime"
+                         },
+                         {
+                             "name":  "Microsoft.Toolkit.Uwp.Notifications",
+                             "license":  "MIT",
+                             "url":  "https://github.com/CommunityToolkit/WindowsCommunityToolkit"
+                         },
+                         {
+                             "name":  "NanumGothicCoding",
+                             "license":  "SIL OFL 1.1",
+                             "url":  null
+                         }
+                     ],
+    "BigDisk":  [
+                    {
+                        "name":  ".NET Runtime / WPF",
+                        "license":  "MIT",
+                        "url":  "https://github.com/dotnet/runtime"
+                    },
+                    {
+                        "name":  "System.Management",
+                        "license":  "MIT",
+                        "url":  "https://dot.net/"
+                    },
+                    {
+                        "name":  "NanumGothicCoding",
+                        "license":  "SIL OFL 1.1",
+                        "url":  null
+                    }
+                ],
+    "BigDiskSize":  [
+                        {
+                            "name":  ".NET Runtime / WPF",
+                            "license":  "MIT",
+                            "url":  "https://github.com/dotnet/runtime"
+                        },
+                        {
+                            "name":  "NanumGothicCoding",
+                            "license":  "SIL OFL 1.1",
+                            "url":  null
+                        }
+                    ],
+    "BigDocker":  [
+                      {
+                          "name":  ".NET Runtime / WPF",
+                          "license":  "MIT",
+                          "url":  "https://github.com/dotnet/runtime"
+                      },
+                      {
+                          "name":  "Newtonsoft.Json",
+                          "license":  "MIT",
+                          "url":  "https://www.newtonsoft.com/json"
+                      },
+                      {
+                          "name":  "NanumGothicCoding",
+                          "license":  "SIL OFL 1.1",
+                          "url":  null
+                      }
+                  ],
+    "BigEdit":  [
+                    {
+                        "name":  ".NET Runtime / WPF",
+                        "license":  "MIT",
+                        "url":  "https://github.com/dotnet/runtime"
+                    },
+                    {
+                        "name":  "Markdig",
+                        "license":  "BSD-2-Clause",
+                        "url":  "https://github.com/lunet-io/markdig"
+                    },
+                    {
+                        "name":  "NanumGothicCoding",
+                        "license":  "SIL OFL 1.1",
+                        "url":  null
+                    }
+                ],
+    "BigExplorer":  [
+                        {
+                            "name":  ".NET Runtime / WPF",
+                            "license":  "MIT",
+                            "url":  "https://github.com/dotnet/runtime"
+                        },
+                        {
+                            "name":  "NanumGothicCoding",
+                            "license":  "SIL OFL 1.1",
+                            "url":  null
+                        }
+                    ],
+    "BigFormula":  [
+                       {
+                           "name":  ".NET Runtime / WPF",
+                           "license":  "MIT",
+                           "url":  "https://github.com/dotnet/runtime"
+                       },
+                       {
+                           "name":  "LatinModernMath",
+                           "license":  "GUST Font License",
+                           "url":  null
+                       },
+                       {
+                           "name":  "NanumGothicCoding",
+                           "license":  "SIL OFL 1.1",
+                           "url":  null
+                       }
+                   ],
+    "BigFTP":  [
+                   {
+                       "name":  ".NET Runtime / WPF",
+                       "license":  "MIT",
+                       "url":  "https://github.com/dotnet/runtime"
+                   },
+                   {
+                       "name":  "FluentFTP",
+                       "license":  "MIT",
+                       "url":  "https://github.com/robinrodricks/FluentFTP"
+                   },
+                   {
+                       "name":  "NanumGothicCoding",
+                       "license":  "SIL OFL 1.1",
+                       "url":  null
+                   }
+               ],
+    "BigGraph":  [
+                     {
+                         "name":  ".NET Runtime / WPF",
+                         "license":  "MIT",
+                         "url":  "https://github.com/dotnet/runtime"
+                     },
+                     {
+                         "name":  "NanumGothicCoding",
+                         "license":  "SIL OFL 1.1",
+                         "url":  null
+                     }
+                 ],
+    "BigHuffman":  [
+                       {
+                           "name":  ".NET Runtime / WPF",
+                           "license":  "MIT",
+                           "url":  "https://github.com/dotnet/runtime"
+                       },
+                       {
+                           "name":  "NanumGothicCoding",
+                           "license":  "SIL OFL 1.1",
+                           "url":  null
+                       }
+                   ],
+    "BigImageView":  [
+                         {
+                             "name":  ".NET Runtime / WPF",
+                             "license":  "MIT",
+                             "url":  "https://github.com/dotnet/runtime"
+                         },
+                         {
+                             "name":  "SkiaSharp",
+                             "license":  "MIT",
+                             "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                         },
+                         {
+                             "name":  "SkiaSharp.NativeAssets.macOS",
+                             "license":  "MIT",
+                             "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                         },
+                         {
+                             "name":  "SkiaSharp.NativeAssets.Win32",
+                             "license":  "MIT",
+                             "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                         },
+                         {
+                             "name":  "VirtualizingWrapPanel",
+                             "license":  "MIT",
+                             "url":  "https://sbaeumlisberger.github.io/VirtualizingWrapPanel/docs/getting-started.html"
+                         },
+                         {
+                             "name":  "NanumGothicCoding",
+                             "license":  "SIL OFL 1.1",
+                             "url":  null
+                         }
+                     ],
+    "BigJSON":  [
+                    {
+                        "name":  ".NET Runtime / WPF",
+                        "license":  "MIT",
+                        "url":  "https://github.com/dotnet/runtime"
+                    },
+                    {
+                        "name":  "AvalonEdit",
+                        "license":  "MIT",
+                        "url":  "http://www.avalonedit.net/"
+                    },
+                    {
+                        "name":  "D2Coding",
+                        "license":  "SIL OFL 1.1",
+                        "url":  null
+                    },
+                    {
+                        "name":  "NanumGothicCoding",
+                        "license":  "SIL OFL 1.1",
+                        "url":  null
+                    }
+                ],
+    "BigKeyboard":  [
+                        {
+                            "name":  ".NET Runtime / WPF",
+                            "license":  "MIT",
+                            "url":  "https://github.com/dotnet/runtime"
+                        },
+                        {
+                            "name":  "NanumGothicCoding",
+                            "license":  "SIL OFL 1.1",
+                            "url":  null
+                        }
+                    ],
+    "BigMaze":  [
+                    {
+                        "name":  ".NET Runtime / WPF",
+                        "license":  "MIT",
+                        "url":  "https://github.com/dotnet/runtime"
+                    },
+                    {
+                        "name":  "NanumGothicCoding",
+                        "license":  "SIL OFL 1.1",
+                        "url":  null
+                    }
+                ],
+    "BigMEMO":  [
+                    {
+                        "name":  ".NET Runtime / WPF",
+                        "license":  "MIT",
+                        "url":  "https://github.com/dotnet/runtime"
+                    },
+                    {
+                        "name":  "Microsoft.Data.Sqlite",
+                        "license":  "MIT",
+                        "url":  "https://docs.microsoft.com/dotnet/standard/data/sqlite/"
+                    },
+                    {
+                        "name":  "Microsoft.Data.Sqlite.Core",
+                        "license":  "MIT",
+                        "url":  "https://docs.microsoft.com/dotnet/standard/data/sqlite/"
+                    },
+                    {
+                        "name":  "SQLitePCLRaw.bundle_e_sqlite3",
+                        "license":  "Apache-2.0",
+                        "url":  "https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3"
+                    },
+                    {
+                        "name":  "SQLitePCLRaw.core",
+                        "license":  "Apache-2.0",
+                        "url":  "https://www.nuget.org/packages/SQLitePCLRaw.core"
+                    },
+                    {
+                        "name":  "SQLitePCLRaw.lib.e_sqlite3",
+                        "license":  "Apache-2.0",
+                        "url":  "https://www.nuget.org/packages/SQLitePCLRaw.lib.e_sqlite3"
+                    },
+                    {
+                        "name":  "SQLitePCLRaw.provider.e_sqlite3",
+                        "license":  "Apache-2.0",
+                        "url":  "https://www.nuget.org/packages/SQLitePCLRaw.provider.e_sqlite3"
+                    },
+                    {
+                        "name":  "NanumGothicCoding",
+                        "license":  "SIL OFL 1.1",
+                        "url":  null
+                    }
+                ],
+    "BigMigration":  [
+                         {
+                             "name":  ".NET Runtime / WPF",
+                             "license":  "MIT",
+                             "url":  "https://github.com/dotnet/runtime"
+                         },
+                         {
+                             "name":  "Microsoft.Extensions.DependencyInjection.Abstractions",
+                             "license":  "MIT",
+                             "url":  "https://dot.net/"
+                         },
+                         {
+                             "name":  "Microsoft.Extensions.Logging.Abstractions",
+                             "license":  "MIT",
+                             "url":  "https://dot.net/"
+                         },
+                         {
+                             "name":  "Npgsql",
+                             "license":  "PostgreSQL",
+                             "url":  "https://github.com/npgsql/npgsql"
+                         },
+                         {
+                             "name":  "NanumGothicCoding",
+                             "license":  "SIL OFL 1.1",
+                             "url":  null
+                         }
+                     ],
+    "BigMindMap":  [
+                       {
+                           "name":  ".NET Runtime / WPF",
+                           "license":  "MIT",
+                           "url":  "https://github.com/dotnet/runtime"
+                       },
+                       {
+                           "name":  "NanumGothicCoding",
+                           "license":  "SIL OFL 1.1",
+                           "url":  null
+                       }
+                   ],
+    "BigOpenCode":  [
+                        {
+                            "name":  ".NET Runtime / WPF",
+                            "license":  "MIT",
+                            "url":  "https://github.com/dotnet/runtime"
+                        },
+                        {
+                            "name":  "Markdig",
+                            "license":  "BSD-2-Clause",
+                            "url":  "https://github.com/lunet-io/markdig"
+                        },
+                        {
+                            "name":  "Newtonsoft.Json",
+                            "license":  "MIT",
+                            "url":  "https://www.newtonsoft.com/json"
+                        },
+                        {
+                            "name":  "NanumGothicCoding",
+                            "license":  "SIL OFL 1.1",
+                            "url":  null
+                        }
+                    ],
+    "BigPacket":  [
+                      {
+                          "name":  ".NET Runtime / WPF",
+                          "license":  "MIT",
+                          "url":  "https://github.com/dotnet/runtime"
+                      },
+                      {
+                          "name":  "Microsoft.Diagnostics.NETCore.Client",
+                          "license":  "MIT",
+                          "url":  "https://github.com/dotnet/diagnostics"
+                      },
+                      {
+                          "name":  "Microsoft.Diagnostics.Tracing.TraceEvent",
+                          "license":  "MIT",
+                          "url":  "https://github.com/Microsoft/perfview"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.DependencyInjection.Abstractions",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "Microsoft.Extensions.Logging.Abstractions",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "System.Reflection.TypeExtensions",
+                          "license":  "MIT",
+                          "url":  "https://github.com/dotnet/corefx"
+                      },
+                      {
+                          "name":  "NanumGothicCoding",
+                          "license":  "SIL OFL 1.1",
+                          "url":  null
+                      }
+                  ],
+    "BigPiano":  [
+                     {
+                         "name":  ".NET Runtime / WPF",
+                         "license":  "MIT",
+                         "url":  "https://github.com/dotnet/runtime"
+                     },
+                     {
+                         "name":  "NAudio.Core",
+                         "license":  "MIT",
+                         "url":  "https://github.com/naudio/NAudio"
+                     },
+                     {
+                         "name":  "NAudio.WinMM",
+                         "license":  "MIT",
+                         "url":  "https://github.com/naudio/NAudio"
+                     },
+                     {
+                         "name":  "Newtonsoft.Json",
+                         "license":  "MIT",
+                         "url":  "https://www.newtonsoft.com/json"
+                     },
+                     {
+                         "name":  "NanumGothicCoding",
+                         "license":  "SIL OFL 1.1",
+                         "url":  null
+                     }
+                 ],
+    "BigReader":  [
+                      {
+                          "name":  ".NET Runtime / WPF",
+                          "license":  "MIT",
+                          "url":  "https://github.com/dotnet/runtime"
+                      },
+                      {
+                          "name":  "H.GeneratedIcons.System.Drawing",
+                          "license":  "MIT",
+                          "url":  "https://github.com/HavenDV/H.NotifyIcon"
+                      },
+                      {
+                          "name":  "H.NotifyIcon",
+                          "license":  "MIT",
+                          "url":  "https://github.com/HavenDV/H.NotifyIcon"
+                      },
+                      {
+                          "name":  "H.NotifyIcon.Wpf",
+                          "license":  "MIT",
+                          "url":  "https://github.com/HavenDV/H.NotifyIcon"
+                      },
+                      {
+                          "name":  "Interop.UIAutomationClient",
+                          "license":  "MIT",
+                          "url":  "https://github.com/Roemer/UIAutomation-Interop"
+                      },
+                      {
+                          "name":  "NAudio.Core",
+                          "license":  "MIT",
+                          "url":  "https://naudio.github.io/NAudio/"
+                      },
+                      {
+                          "name":  "NAudio.Wasapi",
+                          "license":  "MIT",
+                          "url":  "https://naudio.github.io/NAudio/"
+                      },
+                      {
+                          "name":  "org.k2fsa.sherpa.onnx",
+                          "license":  "Apache-2.0",
+                          "url":  "https://github.com/k2-fsa/sherpa-onnx"
+                      },
+                      {
+                          "name":  "org.k2fsa.sherpa.onnx.runtime.win-x64",
+                          "license":  "Apache-2.0",
+                          "url":  "https://github.com/k2-fsa/sherpa-onnx"
+                      },
+                      {
+                          "name":  "SharpZipLib",
+                          "license":  "MIT",
+                          "url":  "https://github.com/icsharpcode/SharpZipLib"
+                      },
+                      {
+                          "name":  "System.Numerics.Tensors",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "System.Speech",
+                          "license":  "MIT",
+                          "url":  "https://dot.net/"
+                      },
+                      {
+                          "name":  "NanumGothicCoding",
+                          "license":  "SIL OFL 1.1",
+                          "url":  null
+                      }
+                  ],
+    "BigRemote":  [
+                      {
+                          "name":  ".NET Runtime / WPF",
+                          "license":  "MIT",
+                          "url":  "https://github.com/dotnet/runtime"
+                      },
+                      {
+                          "name":  "FreeRDP",
+                          "license":  "Apache-2.0",
+                          "url":  null
+                      },
+                      {
+                          "name":  "NanumGothicCoding",
+                          "license":  "SIL OFL 1.1",
+                          "url":  null
+                      }
+                  ],
+    "BigS3":  [
+                  {
+                      "name":  ".NET Runtime / WPF",
+                      "license":  "MIT",
+                      "url":  "https://github.com/dotnet/runtime"
+                  },
+                  {
+                      "name":  "CommunityToolkit.HighPerformance",
+                      "license":  "MIT",
+                      "url":  "https://github.com/CommunityToolkit/dotnet"
+                  },
+                  {
+                      "name":  "Microsoft.Extensions.DependencyInjection",
+                      "license":  "MIT",
+                      "url":  "https://dot.net/"
+                  },
+                  {
+                      "name":  "Microsoft.Extensions.DependencyInjection.Abstractions",
+                      "license":  "MIT",
+                      "url":  "https://dot.net/"
+                  },
+                  {
+                      "name":  "Microsoft.Extensions.Logging",
+                      "license":  "MIT",
+                      "url":  "https://dot.net/"
+                  },
+                  {
+                      "name":  "Microsoft.Extensions.Logging.Abstractions",
+                      "license":  "MIT",
+                      "url":  "https://dot.net/"
+                  },
+                  {
+                      "name":  "Microsoft.Extensions.Options",
+                      "license":  "MIT",
+                      "url":  "https://dot.net/"
+                  },
+                  {
+                      "name":  "Microsoft.Extensions.Primitives",
+                      "license":  "MIT",
+                      "url":  "https://dot.net/"
+                  },
+                  {
+                      "name":  "Minio",
+                      "license":  "Apache-2.0",
+                      "url":  "https://github.com/minio/minio-dotnet"
+                  },
+                  {
+                      "name":  "System.IO.Hashing",
+                      "license":  "MIT",
+                      "url":  "https://dot.net/"
+                  },
+                  {
+                      "name":  "System.Reactive",
+                      "license":  "MIT",
+                      "url":  "https://github.com/dotnet/reactive"
+                  },
+                  {
+                      "name":  "NanumGothicCoding",
+                      "license":  "SIL OFL 1.1",
+                      "url":  null
+                  }
+              ],
+    "BigSQL":  [
+                   {
+                       "name":  ".NET Runtime / WPF",
+                       "license":  "MIT",
+                       "url":  "https://github.com/dotnet/runtime"
+                   },
+                   {
+                       "name":  "AvalonEdit",
+                       "license":  "MIT",
+                       "url":  "http://www.avalonedit.net/"
+                   },
+                   {
+                       "name":  "Microsoft.Extensions.DependencyInjection.Abstractions",
+                       "license":  "MIT",
+                       "url":  "https://dot.net/"
+                   },
+                   {
+                       "name":  "Microsoft.Extensions.Logging.Abstractions",
+                       "license":  "MIT",
+                       "url":  "https://dot.net/"
+                   },
+                   {
+                       "name":  "Npgsql",
+                       "license":  "PostgreSQL",
+                       "url":  "https://github.com/npgsql/npgsql"
+                   },
+                   {
+                       "name":  "NanumGothicCoding",
+                       "license":  "SIL OFL 1.1",
+                       "url":  null
+                   }
+               ],
+    "BigStock":  [
+                     {
+                         "name":  ".NET Runtime / WPF",
+                         "license":  "MIT",
+                         "url":  "https://github.com/dotnet/runtime"
+                     },
+                     {
+                         "name":  "HarfBuzzSharp",
+                         "license":  "MIT",
+                         "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                     },
+                     {
+                         "name":  "HarfBuzzSharp.NativeAssets.macOS",
+                         "license":  "MIT",
+                         "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                     },
+                     {
+                         "name":  "HarfBuzzSharp.NativeAssets.Win32",
+                         "license":  "MIT",
+                         "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                     },
+                     {
+                         "name":  "Microsoft.Data.Sqlite",
+                         "license":  "MIT",
+                         "url":  "https://docs.microsoft.com/dotnet/standard/data/sqlite/"
+                     },
+                     {
+                         "name":  "Microsoft.Data.Sqlite.Core",
+                         "license":  "MIT",
+                         "url":  "https://docs.microsoft.com/dotnet/standard/data/sqlite/"
+                     },
+                     {
+                         "name":  "Newtonsoft.Json",
+                         "license":  "MIT",
+                         "url":  "https://www.newtonsoft.com/json"
+                     },
+                     {
+                         "name":  "OpenTK",
+                         "license":  "MIT",
+                         "url":  "https://github.com/opentk/opentk"
+                     },
+                     {
+                         "name":  "OpenTK.Audio.OpenAL",
+                         "license":  "MIT",
+                         "url":  "https://github.com/opentk/opentk"
+                     },
+                     {
+                         "name":  "OpenTK.Compute",
+                         "license":  "MIT",
+                         "url":  "https://github.com/opentk/opentk"
+                     },
+                     {
+                         "name":  "OpenTK.Core",
+                         "license":  "MIT",
+                         "url":  "https://github.com/opentk/opentk"
+                     },
+                     {
+                         "name":  "OpenTK.GLWpfControl",
+                         "license":  "https://github.com/varon/GLWpfControl/blob/master/LICENSE.md",
+                         "url":  "https://www.opentk.net"
+                     },
+                     {
+                         "name":  "OpenTK.Graphics",
+                         "license":  "MIT",
+                         "url":  "https://github.com/opentk/opentk"
+                     },
+                     {
+                         "name":  "OpenTK.Input",
+                         "license":  "MIT",
+                         "url":  "https://github.com/opentk/opentk"
+                     },
+                     {
+                         "name":  "OpenTK.Mathematics",
+                         "license":  "MIT",
+                         "url":  "https://github.com/opentk/opentk"
+                     },
+                     {
+                         "name":  "OpenTK.redist.glfw",
+                         "license":  "https://aka.ms/deprecateLicenseUrl",
+                         "url":  "https://www.glfw.org/"
+                     },
+                     {
+                         "name":  "OpenTK.Windowing.Common",
+                         "license":  "MIT",
+                         "url":  "https://github.com/opentk/opentk"
+                     },
+                     {
+                         "name":  "OpenTK.Windowing.Desktop",
+                         "license":  "MIT",
+                         "url":  "https://github.com/opentk/opentk"
+                     },
+                     {
+                         "name":  "OpenTK.Windowing.GraphicsLibraryFramework",
+                         "license":  "MIT",
+                         "url":  "https://github.com/opentk/opentk"
+                     },
+                     {
+                         "name":  "ScottPlot",
+                         "license":  "MIT",
+                         "url":  "https://scottplot.net/"
+                     },
+                     {
+                         "name":  "ScottPlot.WPF",
+                         "license":  "MIT",
+                         "url":  "https://scottplot.net/"
+                     },
+                     {
+                         "name":  "Serilog",
+                         "license":  "Apache-2.0",
+                         "url":  "https://serilog.net/"
+                     },
+                     {
+                         "name":  "Serilog.Sinks.File",
+                         "license":  "Apache-2.0",
+                         "url":  "https://github.com/serilog/serilog-sinks-file"
+                     },
+                     {
+                         "name":  "SkiaSharp",
+                         "license":  "MIT",
+                         "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                     },
+                     {
+                         "name":  "SkiaSharp.HarfBuzz",
+                         "license":  "MIT",
+                         "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                     },
+                     {
+                         "name":  "SkiaSharp.NativeAssets.macOS",
+                         "license":  "MIT",
+                         "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                     },
+                     {
+                         "name":  "SkiaSharp.NativeAssets.Win32",
+                         "license":  "MIT",
+                         "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                     },
+                     {
+                         "name":  "SkiaSharp.Views.Desktop.Common",
+                         "license":  "MIT",
+                         "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                     },
+                     {
+                         "name":  "SkiaSharp.Views.WPF",
+                         "license":  "MIT",
+                         "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                     },
+                     {
+                         "name":  "SQLitePCLRaw.bundle_e_sqlite3",
+                         "license":  "Apache-2.0",
+                         "url":  "https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3"
+                     },
+                     {
+                         "name":  "SQLitePCLRaw.core",
+                         "license":  "Apache-2.0",
+                         "url":  "https://www.nuget.org/packages/SQLitePCLRaw.core"
+                     },
+                     {
+                         "name":  "SQLitePCLRaw.lib.e_sqlite3",
+                         "license":  "Apache-2.0",
+                         "url":  "https://www.nuget.org/packages/SQLitePCLRaw.lib.e_sqlite3"
+                     },
+                     {
+                         "name":  "SQLitePCLRaw.provider.e_sqlite3",
+                         "license":  "Apache-2.0",
+                         "url":  "https://www.nuget.org/packages/SQLitePCLRaw.provider.e_sqlite3"
+                     },
+                     {
+                         "name":  "NanumGothicCoding",
+                         "license":  "SIL OFL 1.1",
+                         "url":  null
+                     }
+                 ],
+    "BigView":  [
+                    {
+                        "name":  ".NET Runtime / WPF",
+                        "license":  "MIT",
+                        "url":  "https://github.com/dotnet/runtime"
+                    },
+                    {
+                        "name":  "NanumGothicCoding",
+                        "license":  "SIL OFL 1.1",
+                        "url":  null
+                    }
+                ],
+    "BigWatch":  [
+                     {
+                         "name":  ".NET Runtime / WPF",
+                         "license":  "MIT",
+                         "url":  "https://github.com/dotnet/runtime"
+                     },
+                     {
+                         "name":  "NanumGothicCoding",
+                         "license":  "SIL OFL 1.1",
+                         "url":  null
+                     }
+                 ],
+    "BigZIP":  [
+                   {
+                       "name":  ".NET Runtime / WPF",
+                       "license":  "MIT",
+                       "url":  "https://github.com/dotnet/runtime"
+                   },
+                   {
+                       "name":  "System.IO.Hashing",
+                       "license":  "MIT",
+                       "url":  "https://dot.net/"
+                   },
+                   {
+                       "name":  "NanumGothicCoding",
+                       "license":  "SIL OFL 1.1",
+                       "url":  null
+                   }
+               ]
 }

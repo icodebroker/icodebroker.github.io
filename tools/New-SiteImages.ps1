@@ -46,23 +46,24 @@ for($index = 0; $index -lt 3; $index++)
 
 # 그림 아이콘 (액자 + 해 + 산)
 $frameBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#E2F6EA'))
-$framePath  = New-RoundedRectanglePath 545 255 190 150 22
+# 카드에서는 약 1/4 크기로 줄어 보이므로 그림과 글자를 크게 그린다.
+$framePath  = New-RoundedRectanglePath 500 200 280 210 30
 $graphics.FillPath($frameBrush, $framePath)
-$graphics.FillEllipse((New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#FFD166'))), 580, 280, 40, 40)
+$graphics.FillEllipse((New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#FFD166'))), 548, 236, 58, 58)
 
 $mountainBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#22A565'))
-$graphics.FillPolygon($mountainBrush, [System.Drawing.PointF[]]@((New-Object System.Drawing.PointF 560, 390), (New-Object System.Drawing.PointF 625, 320), (New-Object System.Drawing.PointF 690, 390)))
-$graphics.FillPolygon((New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#7BD3A0'))), [System.Drawing.PointF[]]@((New-Object System.Drawing.PointF 640, 390), (New-Object System.Drawing.PointF 680, 345), (New-Object System.Drawing.PointF 720, 390)))
+$graphics.FillPolygon($mountainBrush, [System.Drawing.PointF[]]@((New-Object System.Drawing.PointF 522, 385), (New-Object System.Drawing.PointF 618, 282), (New-Object System.Drawing.PointF 714, 385)))
+$graphics.FillPolygon((New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#7BD3A0'))), [System.Drawing.PointF[]]@((New-Object System.Drawing.PointF 640, 385), (New-Object System.Drawing.PointF 700, 318), (New-Object System.Drawing.PointF 760, 385)))
 
 # 문구
 $format = New-Object System.Drawing.StringFormat
 $format.Alignment = 'Center'
 
-$titleFont = New-Object System.Drawing.Font 'Malgun Gothic', 34, ([System.Drawing.FontStyle]::Bold), ([System.Drawing.GraphicsUnit]::Pixel)
-$subFont   = New-Object System.Drawing.Font 'Segoe UI', 26, ([System.Drawing.FontStyle]::Regular), ([System.Drawing.GraphicsUnit]::Pixel)
+$titleFont = New-Object System.Drawing.Font 'Malgun Gothic', 72, ([System.Drawing.FontStyle]::Bold), ([System.Drawing.GraphicsUnit]::Pixel)
+$subFont   = New-Object System.Drawing.Font 'Segoe UI', 46, ([System.Drawing.FontStyle]::Regular), ([System.Drawing.GraphicsUnit]::Pixel)
 
-$graphics.DrawString('스크린샷 준비 중', $titleFont, (New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#2B2A28'))), (New-Object System.Drawing.RectangleF 120, 440, 1040, 50), $format)
-$graphics.DrawString('Screenshot coming soon', $subFont, (New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#6E6A64'))), (New-Object System.Drawing.RectangleF 120, 494, 1040, 40), $format)
+$graphics.DrawString('스크린샷 준비 중', $titleFont, (New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#2B2A28'))), (New-Object System.Drawing.RectangleF 120, 450, 1040, 100), $format)
+$graphics.DrawString('Screenshot coming soon', $subFont, (New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#6E6A64'))), (New-Object System.Drawing.RectangleF 120, 556, 1040, 70), $format)
 
 $screenshotDirectoryPath = Join-Path $siteRootPath 'assets\screenshots'
 

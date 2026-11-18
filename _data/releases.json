@@ -6,5 +6,269 @@
                           "sha256":  "3aa301ad1808137b1cfb49cc49675758b24bdc0597cb29b345bbf41d27bd78e4",
                           "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCalculator-v1.0.0/BigCalculator-1.0.0-win-x64.zip",
                           "released":  "2026-11-18"
-                      }
+                      },
+    "BigClaude":  {
+                      "version":  "1.0.0",
+                      "zip":  "BigClaude-1.0.0-win-x64.zip",
+                      "size":  62034393,
+                      "sha256":  "e41dd4913d0cc6692303808b1283b3e43699c081d7cd49782c2b3033f51583e6",
+                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigClaude-v1.0.0/BigClaude-1.0.0-win-x64.zip",
+                      "released":  "2026-11-18"
+                  },
+    "BigCloser":  {
+                      "version":  "1.0.0",
+                      "zip":  "BigCloser-1.0.0-win-x64.zip",
+                      "size":  57007697,
+                      "sha256":  "8b1dfbba1fa92b8cd410b82f8a2eb790e1b158a629651ae5b2fe7141e1731f9f",
+                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCloser-v1.0.0/BigCloser-1.0.0-win-x64.zip",
+                      "released":  "2026-11-18"
+                  },
+    "BigClustering":  {
+                          "version":  "1.0.0",
+                          "zip":  "BigClustering-1.0.0-win-x64.zip",
+                          "size":  60368943,
+                          "sha256":  "f22a7809a036d9e7a6459d99bc894c8d14e7b4249476ae4ff60c9d54090f54aa",
+                          "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigClustering-v1.0.0/BigClustering-1.0.0-win-x64.zip",
+                          "released":  "2026-11-18"
+                      },
+    "BigCSV":  {
+                   "version":  "1.0.0",
+                   "zip":  "BigCSV-1.0.0-win-x64.zip",
+                   "size":  59867399,
+                   "sha256":  "c7b48d546e7e7d2274053488aa50ec91eca6bf900892fb413b93feb718102989",
+                   "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCSV-v1.0.0/BigCSV-1.0.0-win-x64.zip",
+                   "released":  "2026-11-18"
+               },
+    "BigCURL":  {
+                    "version":  "1.0.0",
+                    "zip":  "BigCURL-1.0.0-win-x64.zip",
+                    "size":  65551053,
+                    "sha256":  "c0b5e4db68bb41e8d3f8425dc9c9d9085426bfad6ef5f4cda14f1e81cea11405",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCURL-v1.0.0/BigCURL-1.0.0-win-x64.zip",
+                    "released":  "2026-11-18"
+                },
+    "BigDetection":  {
+                         "version":  "1.0.0",
+                         "zip":  "BigDetection-1.0.0-win-x64.zip",
+                         "size":  66076105,
+                         "sha256":  "da1b53d2322dc860aaabaebbbee45212d9b95e36718ce7d34a9b6c9ac207f690",
+                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigDetection-v1.0.0/BigDetection-1.0.0-win-x64.zip",
+                         "released":  "2026-11-18"
+                     },
+    "BigDisk":  {
+                    "version":  "1.0.0",
+                    "zip":  "BigDisk-1.0.0-win-x64.zip",
+                    "size":  60450471,
+                    "sha256":  "994bf939464c7837dd7d7a3eb0d431ab8fd699d2d8ce4515806d26dd1f47cfe7",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigDisk-v1.0.0/BigDisk-1.0.0-win-x64.zip",
+                    "released":  "2026-11-18"
+                },
+    "BigDiskSize":  {
+                        "version":  "1.0.0",
+                        "zip":  "BigDiskSize-1.0.0-win-x64.zip",
+                        "size":  60211013,
+                        "sha256":  "c23226cb78cecfe9a31a682b443d9e1565ff2af5614c899fa2b883e6fb440847",
+                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigDiskSize-v1.0.0/BigDiskSize-1.0.0-win-x64.zip",
+                        "released":  "2026-11-18"
+                    },
+    "BigDocker":  {
+                      "version":  "1.0.0",
+                      "zip":  "BigDocker-1.0.0-win-x64.zip",
+                      "size":  60496054,
+                      "sha256":  "74b23e3d2a5c9220d7bc60426f8e151455594fef9c1bc2e007c917f32c044e76",
+                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigDocker-v1.0.0/BigDocker-1.0.0-win-x64.zip",
+                      "released":  "2026-11-18"
+                  },
+    "BigEdit":  {
+                    "version":  "1.0.0",
+                    "zip":  "BigEdit-1.0.0-win-x64.zip",
+                    "size":  60436672,
+                    "sha256":  "7155ed8aae8a6b6fa3f349c3d6fc2b35ca7acec3f6e9f547c377176e95af3604",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigEdit-v1.0.0/BigEdit-1.0.0-win-x64.zip",
+                    "released":  "2026-11-18"
+                },
+    "BigExplorer":  {
+                        "version":  "1.0.0",
+                        "zip":  "BigExplorer-1.0.0-win-x64.zip",
+                        "size":  60297562,
+                        "sha256":  "e96d02116152404c86faa4b1683b8c3ba22c07a69caa4eeb3feabb61ab9da869",
+                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigExplorer-v1.0.0/BigExplorer-1.0.0-win-x64.zip",
+                        "released":  "2026-11-18"
+                    },
+    "BigFormula":  {
+                       "version":  "1.0.0",
+                       "zip":  "BigFormula-1.0.0-win-x64.zip",
+                       "size":  60795662,
+                       "sha256":  "ea6296522cc38ede41a2bef91df213bba35f2afa7b2f8b54dcee7ffd8dd8150f",
+                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigFormula-v1.0.0/BigFormula-1.0.0-win-x64.zip",
+                       "released":  "2026-11-18"
+                   },
+    "BigFTP":  {
+                   "version":  "1.0.0",
+                   "zip":  "BigFTP-1.0.0-win-x64.zip",
+                   "size":  60410683,
+                   "sha256":  "8d1399b352ad89a39f3d580983184d972a4cca628aa47ebd8d689177119a7557",
+                   "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigFTP-v1.0.0/BigFTP-1.0.0-win-x64.zip",
+                   "released":  "2026-11-18"
+               },
+    "BigGraph":  {
+                     "version":  "1.0.0",
+                     "zip":  "BigGraph-1.0.0-win-x64.zip",
+                     "size":  60275908,
+                     "sha256":  "e98e51d265e16734ca36978513a1b23a852ebecfccdd8e7f501b17e502549a57",
+                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigGraph-v1.0.0/BigGraph-1.0.0-win-x64.zip",
+                     "released":  "2026-11-18"
+                 },
+    "BigHuffman":  {
+                       "version":  "1.0.0",
+                       "zip":  "BigHuffman-1.0.0-win-x64.zip",
+                       "size":  60206742,
+                       "sha256":  "5232747ed2d143d750bf99ccbc7c102b9800e6c9c4dc663109d9c897ec17c3a8",
+                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigHuffman-v1.0.0/BigHuffman-1.0.0-win-x64.zip",
+                       "released":  "2026-11-18"
+                   },
+    "BigImageView":  {
+                         "version":  "1.0.0",
+                         "zip":  "BigImageView-1.0.0-win-x64.zip",
+                         "size":  65717834,
+                         "sha256":  "d4894410799470da97297b1d9dbc4cffa47f06c13cfdca9844642fae5bd5b8ee",
+                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigImageView-v1.0.0/BigImageView-1.0.0-win-x64.zip",
+                         "released":  "2026-11-18"
+                     },
+    "BigJSON":  {
+                    "version":  "1.0.0",
+                    "zip":  "BigJSON-1.0.0-win-x64.zip",
+                    "size":  72999903,
+                    "sha256":  "9f0acbabc41ae222b1925bedfcd47614af22fbe2aa5121ba45a4f65636cac57f",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigJSON-v1.0.0/BigJSON-1.0.0-win-x64.zip",
+                    "released":  "2026-11-18"
+                },
+    "BigKeyboard":  {
+                        "version":  "1.0.0",
+                        "zip":  "BigKeyboard-1.0.0-win-x64.zip",
+                        "size":  60155851,
+                        "sha256":  "d8b21400c39390d2cefbd8952d1544768d95433cbb29af38f5be758c713e7af1",
+                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigKeyboard-v1.0.0/BigKeyboard-1.0.0-win-x64.zip",
+                        "released":  "2026-11-18"
+                    },
+    "BigMaze":  {
+                    "version":  "1.0.0",
+                    "zip":  "BigMaze-1.0.0-win-x64.zip",
+                    "size":  60225402,
+                    "sha256":  "c0a999f49589ebe9484409aa66a9e63de5a2a63778e9d8f9209df37e2689ec53",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigMaze-v1.0.0/BigMaze-1.0.0-win-x64.zip",
+                    "released":  "2026-11-18"
+                },
+    "BigMEMO":  {
+                    "version":  "1.0.0",
+                    "zip":  "BigMEMO-1.0.0-win-x64.zip",
+                    "size":  58187110,
+                    "sha256":  "1206d5720f6ecd9f20386466cf6118eec4909cb5bcdb409aa73188b8632df1c3",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigMEMO-v1.0.0/BigMEMO-1.0.0-win-x64.zip",
+                    "released":  "2026-11-18"
+                },
+    "BigMigration":  {
+                         "version":  "1.0.0",
+                         "zip":  "BigMigration-1.0.0-win-x64.zip",
+                         "size":  65359684,
+                         "sha256":  "d7a79bd958fbefd48528e4886c8dffcef7c573222910bb957efd477e8fd9968e",
+                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigMigration-v1.0.0/BigMigration-1.0.0-win-x64.zip",
+                         "released":  "2026-11-18"
+                     },
+    "BigMindMap":  {
+                       "version":  "1.0.0",
+                       "zip":  "BigMindMap-1.0.0-win-x64.zip",
+                       "size":  57086561,
+                       "sha256":  "8455a793df9ae07c327a1f59529efdd3cee3b96f920c4d0a3f29efdac6c9645c",
+                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigMindMap-v1.0.0/BigMindMap-1.0.0-win-x64.zip",
+                       "released":  "2026-11-18"
+                   },
+    "BigOpenCode":  {
+                        "version":  "1.0.0",
+                        "zip":  "BigOpenCode-1.0.0-win-x64.zip",
+                        "size":  60691624,
+                        "sha256":  "f76719f8b2cbe86d6366d7ed7197c8e14f11a4bb41bc9f48190c1d42d828a766",
+                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigOpenCode-v1.0.0/BigOpenCode-1.0.0-win-x64.zip",
+                        "released":  "2026-11-18"
+                    },
+    "BigPacket":  {
+                      "version":  "1.0.0",
+                      "zip":  "BigPacket-1.0.0-win-x64.zip",
+                      "size":  62351277,
+                      "sha256":  "6e91dd90db2fdf2c81098c6227e50f556bbec809fe53d294fedd3295fae37ac5",
+                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigPacket-v1.0.0/BigPacket-1.0.0-win-x64.zip",
+                      "released":  "2026-11-18"
+                  },
+    "BigPiano":  {
+                     "version":  "1.0.0",
+                     "zip":  "BigPiano-1.0.0-win-x64.zip",
+                     "size":  60666615,
+                     "sha256":  "6eade4a5df2bd6b1a5475e72125d1b0afca90e4bf20098b780afee01f81b2bab",
+                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigPiano-v1.0.0/BigPiano-1.0.0-win-x64.zip",
+                     "released":  "2026-11-18"
+                 },
+    "BigReader":  {
+                      "version":  "1.0.0",
+                      "zip":  "BigReader-1.0.0-win-x64.zip",
+                      "size":  75541267,
+                      "sha256":  "7fcb6f4d3e1be275008613f2e7c726a10e645638bfbc89b79a263f344b567bbf",
+                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigReader-v1.0.0/BigReader-1.0.0-win-x64.zip",
+                      "released":  "2026-11-18"
+                  },
+    "BigRemote":  {
+                      "version":  "1.0.0",
+                      "zip":  "BigRemote-1.0.0-win-x64.zip",
+                      "size":  63966445,
+                      "sha256":  "1e8ea31ee2e25d5bf39d30a93bb51a5ca08e7a1ed5c8eab342be2c3c726fb7b4",
+                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigRemote-v1.0.0/BigRemote-1.0.0-win-x64.zip",
+                      "released":  "2026-11-18"
+                  },
+    "BigS3":  {
+                  "version":  "1.0.0",
+                  "zip":  "BigS3-1.0.0-win-x64.zip",
+                  "size":  57826608,
+                  "sha256":  "4b8ae0b0f5d75110751f24c97a5782c2207ee8992d361634fbeb76dc9d1545c3",
+                  "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigS3-v1.0.0/BigS3-1.0.0-win-x64.zip",
+                  "released":  "2026-11-18"
+              },
+    "BigSQL":  {
+                   "version":  "1.0.0",
+                   "zip":  "BigSQL-1.0.0-win-x64.zip",
+                   "size":  71524431,
+                   "sha256":  "911a441e89c4867adafde447ac02dc79edc38c0e343bb9909a986aab8141b83e",
+                   "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigSQL-v1.0.0/BigSQL-1.0.0-win-x64.zip",
+                   "released":  "2026-11-18"
+               },
+    "BigStock":  {
+                     "version":  "1.0.0",
+                     "zip":  "BigStock-1.0.0-win-x64.zip",
+                     "size":  69368728,
+                     "sha256":  "342c1ffa7d3b8c6580a4d536c5928d579e1408710a14f04d53f1a4107bf32b85",
+                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigStock-v1.0.0/BigStock-1.0.0-win-x64.zip",
+                     "released":  "2026-11-18"
+                 },
+    "BigView":  {
+                    "version":  "1.0.0",
+                    "zip":  "BigView-1.0.0-win-x64.zip",
+                    "size":  57017324,
+                    "sha256":  "624f8b5d274885db215aae264ce73bf835beb7346ef37b937b77bef761992a04",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigView-v1.0.0/BigView-1.0.0-win-x64.zip",
+                    "released":  "2026-11-18"
+                },
+    "BigWatch":  {
+                     "version":  "1.0.0",
+                     "zip":  "BigWatch-1.0.0-win-x64.zip",
+                     "size":  56991278,
+                     "sha256":  "9350d41280231f2faaef29c67e88ffe7c9ed71b77586ad253c6d50df4d388893",
+                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigWatch-v1.0.0/BigWatch-1.0.0-win-x64.zip",
+                     "released":  "2026-11-18"
+                 },
+    "BigZIP":  {
+                   "version":  "1.0.0",
+                   "zip":  "BigZIP-1.0.0-win-x64.zip",
+                   "size":  57083091,
+                   "sha256":  "10813840108bcf5d6404974245bf4f38d4f793869246ad6c3a4a72ca6fbaa099",
+                   "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigZIP-v1.0.0/BigZIP-1.0.0-win-x64.zip",
+                   "released":  "2026-11-18"
+               }
 }
