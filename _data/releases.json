@@ -1,0 +1,10 @@
+{
+    "BigCalculator":  {
+                          "version":  "1.0.0",
+                          "zip":  "BigCalculator-1.0.0-win-x64.zip",
+                          "size":  61354716,
+                          "sha256":  "3aa301ad1808137b1cfb49cc49675758b24bdc0597cb29b345bbf41d27bd78e4",
+                          "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCalculator-v1.0.0/BigCalculator-1.0.0-win-x64.zip",
+                          "released":  "2026-11-18"
+                      }
+}

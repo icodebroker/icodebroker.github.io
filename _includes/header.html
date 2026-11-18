@@ -1,0 +1,19 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- if page.lang == 'ko' -%}{%- assign home = '/' -%}{%- else -%}{%- assign home = '/en/' -%}{%- endif -%}
+<header class="site-header">
+  <div class="wrap header-inner">
+    <a class="logo" href="{{ home | relative_url }}">
+      <span class="logo-mark" aria-hidden="true">i</span>
+      <span class="logo-text">icodebroker</span>
+    </a>
+    <nav class="lang-switch" aria-label="Language">
+      {%- if page.lang == 'ko' %}
+      <span class="lang-on" aria-current="true">한국어</span>
+      <a href="{{ page.alt_url | default: '/en/' | relative_url }}" data-lang="en" hreflang="en">English</a>
+      {%- else %}
+      <a href="{{ page.alt_url | default: '/' | relative_url }}" data-lang="ko" hreflang="ko">한국어</a>
+      <span class="lang-on" aria-current="true">English</span>
+      {%- endif %}
+    </nav>
+  </div>
+</header>

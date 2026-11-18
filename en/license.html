@@ -1,0 +1,33 @@
+---
+layout: page
+lang: en
+title: License
+permalink: /en/license/
+alt_url: /license/
+---
+<h1>License</h1>
+
+<div class="callout">
+  <p><strong>Free to use · No warranty · No redistribution</strong></p>
+  <p>The apps on this site are free for personal and commercial use. They are provided "as is", without warranty of any kind. The author is not liable for any damages arising from their use.</p>
+  <p>Redistribution (uploading or handing out copies elsewhere), modification and resale are prohibited. Please share a link to this site (<a href="https://icodebroker.github.io/">https://icodebroker.github.io/</a>) instead.</p>
+</div>
+
+<h2>Open source used</h2>
+<p>The apps include open source components made by others. Those components follow their own licenses, not the terms above; the no-redistribution term applies only to the parts made by icodebroker. Each zip also contains a <code>LICENSES</code> folder and <code>THIRD-PARTY-NOTICES.txt</code> with the same information.</p>
+
+<table>
+  <thead><tr><th>App</th><th>Component — License</th></tr></thead>
+  <tbody>
+  {%- for app in site.data.apps %}
+    <tr>
+      <td><a href="{{ '/en/apps/' | append: app.name | append: '/' | relative_url }}">{{ app.name }}</a></td>
+      <td>
+        {%- for p in site.data.thirdparty[app.name] -%}
+        {% if p.url %}<a href="{{ p.url }}">{{ p.name }}</a>{% else %}{{ p.name }}{% endif %} — {{ p.license }}{% unless forloop.last %}<br>{% endunless %}
+        {%- endfor -%}
+      </td>
+    </tr>
+  {%- endfor %}
+  </tbody>
+</table>

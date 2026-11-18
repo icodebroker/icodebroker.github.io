@@ -1,0 +1,113 @@
+# 화면 문구 (한국어 / English)
+
+ko:
+  lang_name: 한국어
+  home_title: 설치 없이 바로 쓰는 무료 윈도우 프로그램
+  home_desc: 설치 없이 바로 쓰는 무료 윈도우 프로그램 모음. 광고 없이, 버튼 한 번으로 받으세요.
+  hero_kicker: 무료 프로그램 모음
+  hero_title_before: 설치 없이 바로 쓰는
+  hero_title_after: 무료 윈도우 프로그램
+  hero_count_suffix: 개
+  hero_sub: 필요한 프로그램을 골라 받고, 압축을 풀어 바로 실행하세요. 회원 가입도, 광고도 없어요.
+  badges: [완전 무료, 광고 없음, 설치 필요 없음, Windows 10/11 64비트]
+  all: 전체
+  search_placeholder: 프로그램 이름이나 기능으로 찾기
+  search_label: 프로그램 찾기
+  no_results: 찾는 프로그램이 없어요. 다른 낱말로 찾아보세요.
+  download: 무료 다운로드
+  download_short: 다운로드
+  details: 소개 보기
+  coming_soon: 준비 중
+  mobile_note: 이 프로그램들은 Windows PC용이에요. PC에서 내려받아 주세요.
+  first_time_title: 처음 받으셨나요?
+  first_time_text: 받은 프로그램을 실행할 때 "Windows의 PC 보호" 창이 뜰 수 있어요. 어떻게 하면 되는지 도움말에 정리해 두었어요.
+  help: 도움말
+  license: 라이선스
+  footer_short: 무료 사용 · 무보증 · 재배포 금지
+  footer_note: 모든 프로그램은 icodebroker가 만들어 무료로 나눠 드려요.
+  back_all: 모든 프로그램
+  features_title: 이런 걸 할 수 있어요
+  uses_title: 이럴 때 쓰세요
+  start_title: 시작하기
+  steps: [zip 파일 받기, 압축 풀기, exe 파일 실행]
+  smartscreen_note: '"Windows의 PC 보호" 창이 뜨면 "추가 정보" → "실행"을 누르세요.'
+  requirements: Windows 10/11 64비트 · .NET 설치 필요 없음
+  more_info: 자세한 정보
+  file: 파일
+  size: 크기
+  version: 버전
+  released: 올린 날
+  sha256: SHA-256
+  verify: PowerShell로 파일이 온전한지 확인하기
+  settings: 설정 저장 위치
+  uninstall: 지우는 법
+  uninstall_text: 설치하지 않았으니 exe 파일을 지우면 끝이에요. 설정까지 지우려면 아래 위치도 지우세요.
+  third_party: 사용한 오픈 소스
+  third_party_text: 이 프로그램에 들어 있는 오픈 소스 구성 요소와 라이선스
+  more_apps: 다른 프로그램도 둘러보세요
+  screenshot_alt: 스크린샷
+  free_badge: 무료
+  categories:
+    files: 파일·디스크
+    docs: 편집·문서
+    dev: 개발·데이터베이스
+    network: 네트워크·보안
+    media: 미디어
+    desktop: 데스크톱 도구
+    algo: 알고리즘 시각화
+
+en:
+  lang_name: English
+  home_title: Free Windows apps that run without installing
+  home_desc: A collection of free Windows apps that run without installing. No ads, one click to download.
+  hero_kicker: Free software collection
+  hero_title_before: ""
+  hero_title_after: free Windows apps, no install needed
+  hero_count_suffix: ""
+  hero_sub: Pick what you need, unzip it and run it right away. No sign-up, no ads.
+  badges: [100% free, No ads, No installation, Windows 10/11 64-bit]
+  all: All
+  search_placeholder: Search by name or feature
+  search_label: Search apps
+  no_results: Nothing matched. Try another word.
+  download: Free download
+  download_short: Download
+  details: Learn more
+  coming_soon: Coming soon
+  mobile_note: These apps are for Windows PCs. Please download them on your PC.
+  first_time_title: First time here?
+  first_time_text: When you run a downloaded app, a "Windows protected your PC" window may appear. The help page shows what to do.
+  help: Help
+  license: License
+  footer_short: Free to use · No warranty · No redistribution
+  footer_note: Every app here is made by icodebroker and shared for free.
+  back_all: All apps
+  features_title: What it can do
+  uses_title: Handy when you are
+  start_title: Getting started
+  steps: [Download the zip, Unzip it, Run the exe]
+  smartscreen_note: 'If "Windows protected your PC" appears, click "More info" → "Run anyway".'
+  requirements: Windows 10/11 64-bit · No .NET install needed
+  more_info: More details
+  file: File
+  size: Size
+  version: Version
+  released: Released
+  sha256: SHA-256
+  verify: Check the file with PowerShell
+  settings: Settings location
+  uninstall: How to remove
+  uninstall_text: Nothing is installed, so just delete the exe. To remove settings too, delete the location below.
+  third_party: Open source used
+  third_party_text: Open source components included in this app and their licenses
+  more_apps: Take a look at other apps
+  screenshot_alt: screenshot
+  free_badge: Free
+  categories:
+    files: Files & Disks
+    docs: Editing & Docs
+    dev: Dev & Database
+    network: Network & Security
+    media: Media
+    desktop: Desktop Tools
+    algo: Algorithm Visualizers

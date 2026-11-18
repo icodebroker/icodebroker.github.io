@@ -1,0 +1,103 @@
+﻿# 빈 스크린샷 이미지(assets\screenshots\placeholder.png)와 파비콘(assets\favicon.png)을 만든다.
+# Windows PowerShell 5.1 호환. 사용법: powershell -ExecutionPolicy Bypass -File .\tools\New-SiteImages.ps1
+
+$ErrorActionPreference = 'Stop'
+
+Add-Type -AssemblyName System.Drawing
+
+$siteRootPath = Split-Path -Parent $PSScriptRoot
+
+function New-RoundedRectanglePath([float]$x, [float]$y, [float]$width, [float]$height, [float]$radius)
+{
+    $path     = New-Object System.Drawing.Drawing2D.GraphicsPath
+    $diameter = $radius * 2
+
+    $path.AddArc($x, $y, $diameter, $diameter, 180, 90)
+    $path.AddArc($x + $width - $diameter, $y, $diameter, $diameter, 270, 90)
+    $path.AddArc($x + $width - $diameter, $y + $height - $diameter, $diameter, $diameter, 0, 90)
+    $path.AddArc($x, $y + $height - $diameter, $diameter, $diameter, 90, 90)
+    $path.CloseFigure()
+
+    return $path
+}
+
+#region 빈 스크린샷 (1280x800)
+
+$bitmap   = New-Object System.Drawing.Bitmap 1280, 800
+$graphics = [System.Drawing.Graphics]::FromImage($bitmap)
+
+$graphics.SmoothingMode     = 'AntiAlias'
+$graphics.TextRenderingHint = 'AntiAliasGridFit'
+
+$graphics.Clear([System.Drawing.ColorTranslator]::FromHtml('#FFF4E4'))
+
+# 창 모양
+$windowPath = New-RoundedRectanglePath 120 90 1040 620 28
+$graphics.FillPath((New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#FFFFFF'))), $windowPath)
+$graphics.DrawPath((New-Object System.Drawing.Pen ([System.Drawing.ColorTranslator]::FromHtml('#EFE6D8')), 3), $windowPath)
+$graphics.DrawLine((New-Object System.Drawing.Pen ([System.Drawing.ColorTranslator]::FromHtml('#EFE6D8')), 3), 120, 150, 1160, 150)
+
+$dotColorList = @('#FF8A80', '#FFD166', '#7BD3A0')
+
+for($index = 0; $index -lt 3; $index++)
+{
+    $graphics.FillEllipse((New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml($dotColorList[$index]))), 150 + $index * 32, 111, 18, 18)
+}
+
+# 그림 아이콘 (액자 + 해 + 산)
+$frameBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#E2F6EA'))
+$framePath  = New-RoundedRectanglePath 545 255 190 150 22
+$graphics.FillPath($frameBrush, $framePath)
+$graphics.FillEllipse((New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#FFD166'))), 580, 280, 40, 40)
+
+$mountainBrush = New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#22A565'))
+$graphics.FillPolygon($mountainBrush, [System.Drawing.PointF[]]@((New-Object System.Drawing.PointF 560, 390), (New-Object System.Drawing.PointF 625, 320), (New-Object System.Drawing.PointF 690, 390)))
+$graphics.FillPolygon((New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#7BD3A0'))), [System.Drawing.PointF[]]@((New-Object System.Drawing.PointF 640, 390), (New-Object System.Drawing.PointF 680, 345), (New-Object System.Drawing.PointF 720, 390)))
+
+# 문구
+$format = New-Object System.Drawing.StringFormat
+$format.Alignment = 'Center'
+
+$titleFont = New-Object System.Drawing.Font 'Malgun Gothic', 34, ([System.Drawing.FontStyle]::Bold), ([System.Drawing.GraphicsUnit]::Pixel)
+$subFont   = New-Object System.Drawing.Font 'Segoe UI', 26, ([System.Drawing.FontStyle]::Regular), ([System.Drawing.GraphicsUnit]::Pixel)
+
+$graphics.DrawString('스크린샷 준비 중', $titleFont, (New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#2B2A28'))), (New-Object System.Drawing.RectangleF 120, 440, 1040, 50), $format)
+$graphics.DrawString('Screenshot coming soon', $subFont, (New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#6E6A64'))), (New-Object System.Drawing.RectangleF 120, 494, 1040, 40), $format)
+
+$screenshotDirectoryPath = Join-Path $siteRootPath 'assets\screenshots'
+
+New-Item -ItemType Directory -Force $screenshotDirectoryPath | Out-Null
+
+$bitmap.Save((Join-Path $screenshotDirectoryPath 'placeholder.png'), [System.Drawing.Imaging.ImageFormat]::Png)
+
+$graphics.Dispose()
+$bitmap.Dispose()
+
+#endregion
+
+#region 파비콘 (64x64, 초록 둥근 사각형 + i)
+
+$bitmap   = New-Object System.Drawing.Bitmap 64, 64
+$graphics = [System.Drawing.Graphics]::FromImage($bitmap)
+
+$graphics.SmoothingMode     = 'AntiAlias'
+$graphics.TextRenderingHint = 'AntiAliasGridFit'
+
+$graphics.Clear([System.Drawing.Color]::Transparent)
+$graphics.FillPath((New-Object System.Drawing.SolidBrush ([System.Drawing.ColorTranslator]::FromHtml('#22A565'))), (New-RoundedRectanglePath 2 2 60 60 16))
+
+$iconFont   = New-Object System.Drawing.Font 'Segoe UI', 40, ([System.Drawing.FontStyle]::Bold), ([System.Drawing.GraphicsUnit]::Pixel)
+$iconFormat = New-Object System.Drawing.StringFormat
+$iconFormat.Alignment     = 'Center'
+$iconFormat.LineAlignment = 'Center'
+
+$graphics.DrawString('i', $iconFont, [System.Drawing.Brushes]::White, (New-Object System.Drawing.RectangleF 0, 2, 64, 64), $iconFormat)
+
+$bitmap.Save((Join-Path $siteRootPath 'assets\favicon.png'), [System.Drawing.Imaging.ImageFormat]::Png)
+
+$graphics.Dispose()
+$bitmap.Dispose()
+
+#endregion
+
+Write-Host '완료: assets\screenshots\placeholder.png, assets\favicon.png'

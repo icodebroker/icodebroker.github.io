@@ -1,0 +1,55 @@
+---
+layout: default
+---
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign apps = site.data.apps -%}
+{%- if page.lang == 'ko' -%}{%- assign prefix = '/' -%}{%- else -%}{%- assign prefix = '/en/' -%}{%- endif -%}
+<section class="hero">
+  <div class="wrap">
+    <p class="hero-kicker">{{ t.hero_kicker }}</p>
+    <h1 class="hero-title">
+      {%- if t.hero_title_before != '' %}{{ t.hero_title_before }}<br>{% endif -%}
+      <span class="hero-count">{{ apps.size }}{{ t.hero_count_suffix }}</span> {{ t.hero_title_after }}
+    </h1>
+    <p class="hero-sub">{{ t.hero_sub }}</p>
+    <ul class="badges">
+      {%- for b in t.badges %}
+      <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ b }}</li>
+      {%- endfor %}
+    </ul>
+    <p class="mobile-note">{{ t.mobile_note }}</p>
+  </div>
+</section>
+
+<section class="catalog wrap" aria-label="{{ t.search_label }}">
+  <div class="toolbar">
+    <div class="chips" role="group">
+      <button type="button" class="chip is-on" data-filter="all" aria-pressed="true">{{ t.all }} <span class="chip-n">{{ apps.size }}</span></button>
+      {%- for c in t.categories %}
+      {%- assign key = c[0] -%}
+      {%- assign n = apps | where: 'category', key | size -%}
+      <button type="button" class="chip" data-filter="{{ key }}" data-cat="{{ key }}" aria-pressed="false">{{ c[1] }} <span class="chip-n">{{ n }}</span></button>
+      {%- endfor %}
+    </div>
+    <label class="search">
+      <span class="sr-only">{{ t.search_label }}</span>
+      <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/><path d="m16 16 4 4" stroke="currentColor" stroke-width="2" stroke-linecap="round"/></svg>
+      <input type="search" id="search" placeholder="{{ t.search_placeholder }}" autocomplete="off">
+    </label>
+  </div>
+
+  <div class="grid" id="grid">
+    {%- for app in apps %}
+    {% include app-card.html app=app %}
+    {%- endfor %}
+  </div>
+  <p class="no-results" id="no-results" hidden>{{ t.no_results }}</p>
+
+  <aside class="tip">
+    <span class="tip-emoji" aria-hidden="true">💡</span>
+    <div>
+      <h2>{{ t.first_time_title }}</h2>
+      <p>{{ t.first_time_text }} <a href="{{ prefix | append: 'help/' | relative_url }}">{{ t.help }} →</a></p>
+    </div>
+  </aside>
+</section>

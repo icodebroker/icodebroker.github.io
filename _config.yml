@@ -1,3 +1,10 @@
-theme: jekyll-theme-minimal
-title: icodebroker's homepage
-description: Bookmark this to keep an eye on my project updates!
+title: icodebroker
+description: 설치 없이 바로 쓰는 무료 윈도우 프로그램 / Free Windows apps that run without installing
+url: https://icodebroker.github.io
+lang: ko
+repository: icodebroker/icodebroker.github.io
+
+exclude:
+  - plan.md
+  - README.md
+  - tools/

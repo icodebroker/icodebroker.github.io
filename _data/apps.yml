@@ -1,0 +1,710 @@
+# 앱 소개 글 (사람이 고치는 파일). 크기·해시·주소는 releases.json(스크립트가 생성)에 있다.
+# 순서가 첫 화면 카드 순서다.
+
+- name: BigExplorer
+  category: files
+  summary: { ko: "두 창으로 나눠 쓰는 파일 탐색기", en: "A file explorer with a side-by-side split view" }
+  tagline: { ko: "폴더 두 개를 나란히 열고 편하게 정리하세요", en: "Open two folders side by side and tidy up with ease" }
+  intro: { ko: "BigExplorer는 Windows 탐색기처럼 쓰는 파일 관리 프로그램이에요. 화면을 좌우로 나눠 두 폴더를 함께 보고, 복사·이동·비교를 한 화면에서 할 수 있어요. 압축 풀기와 바로 가기 만들기 같은 자주 쓰는 일도 오른쪽 클릭 메뉴에 모아 두었어요.", en: "BigExplorer is a file manager that works much like Windows File Explorer. Split the window in two to see two folders at once, and copy, move or compare files on one screen. Everyday jobs like extracting archives and making shortcuts are right in the right-click menu." }
+  features:
+    - title: { ko: "좌우 분할 보기", en: "Split view" }
+      text: { ko: "창을 세로로 나눠 두 폴더를 나란히 열고, 반대쪽 창으로 바로 복사하거나 옮길 수 있어요.", en: "Split the window vertically to open two folders side by side and copy or move items straight to the other pane." }
+    - title: { ko: "두 폴더 비교", en: "Folder compare" }
+      text: { ko: "한쪽에만 있는 파일과 크기·수정 시간이 다른 파일을 색으로 표시해 줘요.", en: "Colors the files that exist on only one side or differ in size or modified time." }
+    - title: { ko: "ZIP 압축과 풀기", en: "ZIP compress and extract" }
+      text: { ko: "오른쪽 클릭으로 압축, 하나씩 압축, 여기에 풀기, 스마트 풀기를 할 수 있어요.", en: "Right-click to compress, compress each item separately, extract here or use smart extract." }
+    - title: { ko: "경로 한 번에 만들기", en: "Create a path" }
+      text: { ko: "중간 폴더까지 포함한 경로를 입력하면 필요한 폴더를 한꺼번에 만들어 줘요.", en: "Type a full path and every missing folder along the way is created at once." }
+    - title: { ko: "편리한 파일 작업", en: "Handy file tools" }
+      text: { ko: "바로 가기 만들기, 경로 복사, VS Code나 터미널에서 열기를 메뉴에서 바로 할 수 있어요.", en: "Create shortcuts, copy paths, or open a folder in VS Code or a terminal right from the menu." }
+    - title: { ko: "글꼴·테마·확대", en: "Font, theme and zoom" }
+      text: { ko: "글꼴을 고르고, 한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Pick your font, switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["두 폴더의 내용을 비교하며 정리할 때", "파일을 이 폴더에서 저 폴더로 자주 옮길 때", "깊은 폴더 구조를 한 번에 만들어야 할 때"], en: ["When you sort files while comparing two folders", "When you often move files from one folder to another", "When you need to create a deep folder structure in one go"] }
+  settings_path: { ko: "%LOCALAPPDATA%\\BigExplorer\\settings.json", en: "%LOCALAPPDATA%\\BigExplorer\\settings.json" }
+
+- name: BigDiskSize
+  category: files
+  summary: { ko: "폴더 크기를 한눈에 보는 트리맵", en: "See folder sizes at a glance with a treemap" }
+  tagline: { ko: "디스크 공간, 어디에 다 쓰였는지 찾아 드려요", en: "Find out where all your disk space went" }
+  intro: { ko: "BigDiskSize는 드라이브나 폴더를 살펴보고 크기를 색깔 상자(트리맵)와 목록으로 보여 줘요. 큰 상자일수록 공간을 많이 차지하는 폴더라서, 무엇을 지우면 좋을지 금방 알 수 있어요.", en: "BigDiskSize scans a drive or folder and shows its size as colored boxes (a treemap) and a list. The bigger the box, the more space that folder takes, so you can quickly see what is worth cleaning up." }
+  features:
+    - title: { ko: "트리맵 보기", en: "Treemap view" }
+      text: { ko: "폴더 크기를 상자의 넓이로 그려서 큰 폴더가 한눈에 들어와요.", en: "Draws each folder as a box sized by how much space it uses, so big folders stand out." }
+    - title: { ko: "크기순 폴더 목록", en: "Folder list" }
+      text: { ko: "트리맵 옆 목록에서 폴더와 파일 묶음의 크기를 함께 확인할 수 있어요.", en: "A list next to the treemap shows the sizes of folders and grouped files." }
+    - title: { ko: "더블클릭으로 들어가기", en: "Double-click to drill down" }
+      text: { ko: "상자나 목록을 더블클릭하면 안으로 들어가고, 상위 폴더 버튼으로 돌아와요.", en: "Double-click a box or list item to go inside, and use Parent Folder to come back." }
+    - title: { ko: "드라이브·폴더 선택", en: "Drive or folder" }
+      text: { ko: "드라이브 전체를 고르거나 원하는 폴더만 골라 살펴볼 수 있고, 중간에 멈출 수도 있어요.", en: "Scan a whole drive or just one folder, and stop the scan at any time." }
+    - title: { ko: "관리자 모드 빠른 읽기", en: "Admin fast scan" }
+      text: { ko: "관리자 권한으로 실행하면 NTFS 드라이브의 파일 목록(MFT)을 직접 읽어 살펴봐요.", en: "When run as administrator, it reads the NTFS file table (MFT) directly to scan the drive." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["디스크 공간이 부족하다는 알림이 떴을 때", "어떤 폴더가 가장 큰지 궁금할 때", "정리할 큰 파일을 찾고 싶을 때"], en: ["When Windows warns you that disk space is low", "When you wonder which folder is the biggest", "When you want to find large files to clean up"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigDiskSize.json", en: "CONFIGURATION\\BigDiskSize.json next to the exe" }
+
+- name: BigDisk
+  category: files
+  summary: { ko: "디스크 건강과 불량 섹터 진단", en: "Check disk health and bad sectors" }
+  tagline: { ko: "내 디스크가 괜찮은지 미리 살펴보세요", en: "Check that your disk is healthy before it lets you down" }
+  intro: { ko: "BigDisk는 하드디스크와 SSD의 상태를 살펴보는 진단 프로그램이에요. SMART·NVMe 건강 정보와 Windows 이벤트 기록을 모아 보여 주고, 표면 검사로 느리거나 읽히지 않는 구역을 찾아 줘요. 디스크를 직접 읽어야 해서 관리자 권한으로 실행돼요.", en: "BigDisk is a diagnostic tool for hard disks and SSDs. It gathers SMART and NVMe health data and Windows event logs in one place, and a surface scan finds slow or unreadable areas. Because it reads the disk directly, it runs with administrator rights." }
+  features:
+    - title: { ko: "건강 상태 확인", en: "Health check" }
+      text: { ko: "SMART나 NVMe 건강 기록, 온도, 사용 시간을 읽어 좋음·주의·나쁨으로 알려 줘요.", en: "Reads SMART or NVMe health data, temperature and power-on hours, and rates the disk as Good, Caution or Bad." }
+    - title: { ko: "표면 검사", en: "Surface scan" }
+      text: { ko: "디스크를 읽기 전용으로 훑어 응답 속도를 색 지도로 보여 주고 불량 섹터 후보를 찾아요.", en: "Reads the disk in read-only mode, shows response times on a color map and finds bad sector candidates." }
+    - title: { ko: "불량 섹터 파일 찾기", en: "Find affected files" }
+      text: { ko: "불량 섹터가 나오면 그 자리에 있는 파일이 무엇인지 찾아 보여 줘요.", en: "When bad sectors turn up, it shows which files sit on them." }
+    - title: { ko: "파티션·섹터 보기", en: "Partitions and sectors" }
+      text: { ko: "파티션 구성을 그림으로 보고, 섹터 뷰어로 MBR·GPT·부트 섹터 내용을 풀어서 볼 수 있어요.", en: "See the partition layout as a picture and use the sector viewer to read MBR, GPT and boot sectors field by field." }
+    - title: { ko: "결과 저장·보고서", en: "Save and report" }
+      text: { ko: "검사 결과를 저장했다가 다시 열 수 있고, CSV나 HTML 보고서로 내보낼 수 있어요.", en: "Save scan results to open later, and export them as CSV or an HTML report." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["컴퓨터가 갑자기 느려지거나 멈출 때", "중고 디스크를 사기 전이나 산 뒤에 점검할 때", "중요한 자료를 백업할 때가 됐는지 알고 싶을 때"], en: ["When your PC suddenly slows down or freezes", "When you check a used disk before or after buying it", "When you want to know if it is time to back up important data"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigDisk.json", en: "CONFIGURATION\\BigDisk.json next to the exe" }
+
+- name: BigZIP
+  category: files
+  summary: { ko: "여러 코어로 빠르게 쓰는 ZIP 압축", en: "A ZIP tool that uses all your CPU cores" }
+  tagline: { ko: "ZIP 압축, 끌어다 놓기만 하면 돼요", en: "Zipping files is as easy as drag and drop" }
+  intro: { ko: "BigZIP은 ZIP 파일을 만들고 풀어 주는 압축 프로그램이에요. 큰 파일도 여러 스레드로 나눠 압축하고, 파일을 끌어다 놓으면 바로 압축 창이 열려요. 탐색기 오른쪽 클릭 메뉴에 등록해 두면 더 간편하게 쓸 수 있어요.", en: "BigZIP creates and extracts ZIP files. It splits even large files across multiple threads, and dropping files onto it opens the compress window right away. Add it to the Explorer right-click menu for even quicker use." }
+  features:
+    - title: { ko: "여러 스레드 압축", en: "Multi-threaded" }
+      text: { ko: "큰 파일을 조각으로 나눠 여러 스레드가 함께 압축하고, 풀기와 검사도 여러 스레드로 해요.", en: "Splits large files into chunks compressed on multiple threads, and extracts and tests on multiple threads too." }
+    - title: { ko: "탐색기 메뉴 등록", en: "Explorer menu" }
+      text: { ko: "오른쪽 클릭으로 빠른 압축, 폴더별 압축, 여기에 풀기, 폴더로 풀기를 할 수 있어요.", en: "Right-click for quick compress, compress each folder, extract here or extract to a folder." }
+    - title: { ko: "압축 파일 바로 편집", en: "Edit archives" }
+      text: { ko: "열어 둔 ZIP에 파일을 추가하거나 지울 때 기존 파일은 다시 압축하지 않아요.", en: "Add or delete files in an open ZIP without recompressing the files already inside." }
+    - title: { ko: "압축 파일 검사", en: "Archive test" }
+      text: { ko: "CRC 검사로 ZIP 파일이 깨지지 않았는지 확인해 줘요.", en: "Checks the ZIP file with a CRC test to make sure it is not damaged." }
+    - title: { ko: "큰 파일도 OK", en: "Big files welcome" }
+      text: { ko: "ZIP64를 지원해 4GB가 넘는 파일도 담을 수 있고, 한글 파일 이름은 UTF-8로 저장해요.", en: "Supports ZIP64 for files over 4GB and saves file names in UTF-8." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["여러 파일을 하나로 묶어 보낼 때", "용량이 큰 폴더를 빠르게 압축할 때", "받은 ZIP 파일이 깨지지 않았는지 확인할 때"], en: ["When you bundle many files into one to send", "When you want to compress a large folder quickly", "When you check that a downloaded ZIP file is not damaged"] }
+  settings_path: { ko: "%APPDATA%\\BigZIP\\BigZIP.json", en: "%APPDATA%\\BigZIP\\BigZIP.json" }
+
+- name: BigFTP
+  category: files
+  summary: { ko: "쉽고 안전한 FTP/FTPS 파일 전송", en: "Easy and careful FTP/FTPS file transfer" }
+  tagline: { ko: "내 PC와 서버 사이, 파일을 편하게 주고받으세요", en: "Move files between your PC and a server with ease" }
+  intro: { ko: "BigFTP는 FTP와 FTPS 서버에 접속해 파일을 올리고 내려받는 프로그램이에요. 왼쪽에는 내 PC, 오른쪽에는 서버가 보여서 끌어다 놓기만 하면 전송돼요. 전송이 끝나면 해시나 크기로 파일이 제대로 왔는지 확인해 줘요.", en: "BigFTP connects to FTP and FTPS servers so you can upload and download files. Your PC is on the left and the server on the right, so a simple drag and drop starts a transfer. When a transfer finishes, it checks the file by hash or size." }
+  features:
+    - title: { ko: "두 창 전송 화면", en: "Two-pane view" }
+      text: { ko: "내 PC와 서버를 나란히 보고, 끌어다 놓거나 버튼으로 올리고 내려받을 수 있어요.", en: "See your PC and the server side by side, and upload or download by drag and drop or with a button." }
+    - title: { ko: "서버 관리자", en: "Server manager" }
+      text: { ko: "자주 쓰는 서버를 저장해 두고, 비밀번호는 Windows 암호화(DPAPI)로 보관해요.", en: "Save the servers you use often; passwords are kept with Windows encryption (DPAPI)." }
+    - title: { ko: "TLS 암호화 연결", en: "TLS encryption" }
+      text: { ko: "명시적·암시적 TLS를 지원하고, 처음 보는 인증서는 지문을 보여 주고 확인을 받아요.", en: "Supports explicit and implicit TLS, and asks you to confirm the fingerprint of any new certificate." }
+    - title: { ko: "전송 목록과 검증", en: "Transfer queue" }
+      text: { ko: "여러 파일을 동시에 보내고, 끝나면 해시나 크기로 제대로 왔는지 확인해요.", en: "Sends several files in parallel and verifies each one by hash or size when it is done." }
+    - title: { ko: "한글 파일 이름", en: "Korean file names" }
+      text: { ko: "서버가 UTF-8을 지원하지 않으면 CP949로 자동 전환해 한글 이름이 깨지지 않아요.", en: "Falls back to CP949 automatically when the server lacks UTF-8, so Korean file names stay readable." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["웹사이트 파일을 서버에 올릴 때", "회사나 집의 NAS에서 파일을 받아 올 때", "같은 파일이 덮어쓰이지 않도록 조심해서 보낼 때"], en: ["When you upload website files to a server", "When you fetch files from a NAS at home or work", "When you want to send files without overwriting by accident"] }
+  settings_path: { ko: "%APPDATA%\\BigFTP\\BigFTP.json", en: "%APPDATA%\\BigFTP\\BigFTP.json" }
+
+- name: BigS3
+  category: files
+  summary: { ko: "S3 호환 저장소를 다루는 브라우저", en: "A browser for S3-compatible storage" }
+  tagline: { ko: "S3 저장소의 파일을 폴더처럼 쉽게 다뤄요", en: "Handle files in S3 storage as easily as folders" }
+  intro: { ko: "BigS3는 Amazon S3나 MinIO 같은 S3 호환 저장소에 접속해 버킷과 파일(객체)을 관리하는 프로그램이에요. 주소와 키만 넣으면 접속해서, 올리기·내려받기·지우기를 버튼 하나로 할 수 있어요.", en: "BigS3 connects to S3-compatible storage such as Amazon S3 or MinIO and lets you manage buckets and files (objects). Enter the address and keys to connect, then upload, download or delete with a single button." }
+  features:
+    - title: { ko: "간단한 접속", en: "Quick connect" }
+      text: { ko: "엔드포인트, 액세스 키, 비밀 키를 넣고 접속하면 다음에도 그대로 기억해요.", en: "Enter the endpoint, access key and secret key to connect, and it remembers them for next time." }
+    - title: { ko: "버킷 관리", en: "Buckets" }
+      text: { ko: "버킷 목록을 보고 새 버킷을 만들거나 빈 버킷을 지울 수 있어요.", en: "See your buckets, create new ones, or delete empty ones." }
+    - title: { ko: "올리기·내려받기", en: "Upload and download" }
+      text: { ko: "여러 파일을 한 번에 올리거나 내려받고, 폴더(접두사)별로 목록을 볼 수 있어요.", en: "Upload or download many files at once, and browse objects by folder (prefix)." }
+    - title: { ko: "공유 링크 만들기", en: "Presigned URL" }
+      text: { ko: "객체 하나에 유효 시간이 있는 공유 주소(최대 7일)를 만들어 바로 복사할 수 있어요.", en: "Create a time-limited share link for one object (up to 7 days) and copy it right away." }
+    - title: { ko: "객체 속성 보기", en: "Object properties" }
+      text: { ko: "크기, 콘텐츠 형식, ETag, 버전 ID, 메타데이터를 한 창에서 확인해요.", en: "Check size, content type, ETag, version ID and metadata in one window." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["MinIO나 S3에 파일을 올리고 확인할 때", "다른 사람에게 파일 링크를 잠깐 공유할 때", "버킷 안에 무엇이 들어 있는지 살펴볼 때"], en: ["When you upload and check files on MinIO or S3", "When you share a file link with someone for a short time", "When you want to see what is inside a bucket"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigS3.json", en: "CONFIGURATION\\BigS3.json next to the exe" }
+
+- name: BigEdit
+  category: docs
+  summary: { ko: "탭과 분할 화면을 갖춘 텍스트 편집기", en: "A text editor with tabs and split views" }
+  tagline: { ko: "메모장보다 한 걸음 더, 가볍게 쓰는 편집기예요", en: "One step beyond Notepad, still light and simple" }
+  intro: { ko: "여러 파일을 탭으로 열고, 화면을 좌우나 위아래로 나눠 함께 볼 수 있어요. 큰 파일도 줄을 색인하면서 열고, 인코딩을 바꿔 다시 열거나 저장할 수 있어요. 마크다운 미리 보기와 16진수 보기도 들어 있어요.", en: "Open many files in tabs and split the screen side by side or top and bottom. Large files open while lines are indexed, and you can reopen or save a file in a different encoding. Markdown preview and a hex view are built in." }
+  features:
+    - title: { ko: "탭과 화면 분할", en: "Tabs and split view" }
+      text: { ko: "여러 문서를 탭으로 열고 좌우·위아래로 나눠 나란히 볼 수 있어요.", en: "Open documents in tabs and view them side by side or stacked." }
+    - title: { ko: "찾기·바꾸기", en: "Find and replace" }
+      text: { ko: "대/소문자, 단어 단위, 정규식으로 찾고, 모두 바꾸기도 한 번에 되돌릴 수 있어요.", en: "Search by case, whole word or regular expression, and undo a Replace All in one step." }
+    - title: { ko: "열 선택과 멀티 커서", en: "Column select and multi-cursor" }
+      text: { ko: "Alt+드래그로 블록을 고르고 Ctrl+Alt+↑/↓로 여러 줄을 한꺼번에 고쳐요.", en: "Pick a block with Alt+drag and edit several lines at once with Ctrl+Alt+Up/Down." }
+    - title: { ko: "인코딩 변환", en: "Encoding tools" }
+      text: { ko: "다른 인코딩으로 다시 열거나, 원하는 인코딩으로 바꿔 저장할 수 있어요.", en: "Reopen a file with another encoding or save it converted to the one you need." }
+    - title: { ko: "미리 보기와 16진수", en: "Preview and hex view" }
+      text: { ko: "마크다운 문서를 바로 미리 보고, 파일 내용을 16진수로도 확인할 수 있어요.", en: "Preview Markdown right away and inspect file contents in hexadecimal." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom for the whole screen." }
+  uses: { ko: ["큰 로그 파일을 열어 살펴볼 때", "글자가 깨진 파일의 인코딩을 바꿀 때", "마크다운 글을 쓰면서 바로 확인할 때", "여러 줄을 한꺼번에 정리할 때"], en: ["Looking through a large log file", "Fixing a file whose text looks garbled", "Writing Markdown and checking it as you go", "Tidying many lines at once"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigEdit.json (쓸 수 없으면 %LOCALAPPDATA%\\BigEdit)", en: "BigEdit.json in the CONFIGURATION folder next to the exe (falls back to %LOCALAPPDATA%\\BigEdit if not writable)" }
+
+- name: BigJSON
+  category: docs
+  summary: { ko: "콜론을 맞춰 정렬해 보여 주는 JSON 뷰어", en: "A JSON viewer that lines up the colons" }
+  tagline: { ko: "복잡한 JSON도 한눈에 들어오게 정리해 드려요", en: "Messy JSON, neatly lined up at a glance" }
+  intro: { ko: "JSON이나 JSONL 파일을 열거나 붙여 넣으면 콜론 위치를 맞춰 읽기 쉽게 정렬해 줘요. 화면에서 바로 고친 뒤 Ctrl+Enter로 다시 정렬할 수 있어요.", en: "Open or paste a JSON or JSONL file and it is rearranged with the colons lined up so it reads easily. Edit it on screen and press Ctrl+Enter to tidy it again." }
+  features:
+    - title: { ko: "콜론 정렬 보기", en: "Colon-aligned view" }
+      text: { ko: "키와 값 사이의 콜론을 세로로 맞춰 구조가 한눈에 보여요.", en: "Colons between keys and values line up vertically so the structure is easy to see." }
+    - title: { ko: "열기·붙여넣기·끌기", en: "Open, paste or drop" }
+      text: { ko: "파일을 열거나, 클립보드에서 붙여 넣거나, 창에 끌어다 놓으면 돼요.", en: "Open a file, paste from the clipboard, or just drag it onto the window." }
+    - title: { ko: "고치고 다시 정렬", en: "Edit and re-tidy" }
+      text: { ko: "편집한 내용을 Ctrl+Enter로 다시 정렬하고 복사 버튼으로 가져갈 수 있어요.", en: "Re-tidy your edits with Ctrl+Enter and copy the result with one button." }
+    - title: { ko: "들여쓰기와 글꼴", en: "Indent and font" }
+      text: { ko: "들여쓰기 칸 수와 글꼴, 글꼴 크기를 원하는 대로 고를 수 있어요.", en: "Choose the indent size, font and font size you like." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom for the whole screen." }
+  uses: { ko: ["API 응답을 읽기 쉽게 보고 싶을 때", "설정 파일 구조를 빠르게 확인할 때", "JSONL 로그를 살펴볼 때"], en: ["Reading an API response more easily", "Checking the structure of a settings file", "Going through JSONL logs"] }
+  settings_path: { ko: "%APPDATA%\\BigJSON\\BigJSON.json", en: "%APPDATA%\\BigJSON\\BigJSON.json" }
+
+- name: BigCSV
+  category: docs
+  summary: { ko: "아주 큰 CSV 파일도 가볍게 여는 뷰어", en: "A light viewer for very large CSV files" }
+  tagline: { ko: "엑셀이 버거운 큰 CSV도 술술 열어 봐요", en: "Open huge CSV files that spreadsheets struggle with" }
+  intro: { ko: "파일 전체를 메모리에 올리지 않고, 화면에 보이는 행만 읽어서 보여 줘요. 그래서 아주 큰 CSV 파일도 가볍게 열고 원하는 행으로 바로 이동할 수 있어요.", en: "Instead of loading the whole file into memory, it reads only the rows on screen. That keeps even very large CSV files light to open and lets you jump straight to any row." }
+  features:
+    - title: { ko: "보이는 행만 읽기", en: "Reads only visible rows" }
+      text: { ko: "화면에 필요한 행만 읽어 큰 파일도 메모리 부담 없이 볼 수 있어요.", en: "Only the rows you see are read, so large files stay light on memory." }
+    - title: { ko: "행 번호로 이동", en: "Jump to a row" }
+      text: { ko: "행 번호를 입력하거나 처음·이전·다음·마지막 버튼으로 빠르게 이동해요.", en: "Type a row number or use First, Previous, Next and Last to move quickly." }
+    - title: { ko: "인코딩 자동 감지", en: "Auto encoding detection" }
+      text: { ko: "UTF-8과 CP949(한글 윈도우) 파일을 알아서 구분해 읽어요.", en: "UTF-8 and CP949 (Korean Windows) files are detected automatically." }
+    - title: { ko: "편한 키보드 조작", en: "Easy keyboard browsing" }
+      text: { ko: "방향키, Page Up/Down, Home/End, 마우스 휠로 둘러보고 선택한 행을 복사해요.", en: "Browse with arrow keys, Page Up/Down, Home/End or the mouse wheel, and copy selected rows." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom for the whole screen." }
+  uses: { ko: ["엑셀로 열기 힘든 큰 CSV를 볼 때", "내보낸 데이터를 빠르게 확인할 때", "특정 행의 내용을 찾아볼 때"], en: ["Viewing a CSV too big for a spreadsheet", "Quickly checking exported data", "Looking up a specific row"] }
+  settings_path: { ko: "%APPDATA%\\BigCSV\\BigCSV.json", en: "%APPDATA%\\BigCSV\\BigCSV.json" }
+
+- name: BigFormula
+  category: docs
+  summary: { ko: "LaTeX 수식을 만들어 이미지로 저장", en: "Make LaTeX formulas and save them as images" }
+  tagline: { ko: "예쁜 수식, 입력하고 바로 복사해서 붙여 넣어요", en: "Type a beautiful formula, then copy and paste it" }
+  intro: { ko: "LaTeX로 입력하거나 수식 편집기에서 직접 만들면 바로 미리 보기가 나와요. 완성한 수식은 이미지로 복사하거나 PNG·SVG로 저장하고, MathML로 복사해 Word에서 편집할 수도 있어요.", en: "Type LaTeX or build a formula in the visual editor and see it rendered right away. Copy the result as an image, save it as PNG or SVG, or copy it as MathML to keep editing in Word." }
+  features:
+    - title: { ko: "실시간 미리 보기", en: "Live LaTeX preview" }
+      text: { ko: "입력하는 동안 수식이 바로 그려지고, 오류가 있으면 위치를 알려 줘요.", en: "The formula is drawn as you type, and errors show where they are." }
+    - title: { ko: "수식 편집기", en: "Visual formula editor" }
+      text: { ko: "^ 위 첨자, _ 아래 첨자, / 분수처럼 간단한 키로 수식을 만들어요.", en: "Build formulas with simple keys like ^ for superscript, _ for subscript and / for fractions." }
+    - title: { ko: "이미지 복사·저장", en: "Copy or save as image" }
+      text: { ko: "이미지로 복사하거나 PNG·SVG로 저장하고, 배율과 투명 배경을 고를 수 있어요.", en: "Copy as an image or save as PNG or SVG, with your choice of scale and transparent background." }
+    - title: { ko: "Word용 MathML", en: "MathML for Word" }
+      text: { ko: "MathML로 복사해 Word에 붙여 넣으면 편집할 수 있는 수식이 돼요.", en: "Copy as MathML and paste into Word to get an editable equation." }
+    - title: { ko: "PNG에서 다시 열기", en: "Reopen from PNG" }
+      text: { ko: "저장한 PNG 안에 수식이 함께 들어 있어 나중에 다시 열어 고칠 수 있어요.", en: "Saved PNGs keep the formula inside, so you can open and edit them later." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom for the whole screen." }
+  uses: { ko: ["발표 자료에 수식 이미지를 넣을 때", "Word 문서에 수식을 넣을 때", "예전에 만든 수식을 다시 고칠 때"], en: ["Adding formula images to slides", "Putting equations into a Word document", "Editing a formula you made before"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigFormula.json", en: "BigFormula.json in the CONFIGURATION folder next to the exe" }
+
+- name: BigMindMap
+  category: docs
+  summary: { ko: "키보드로 빠르게 그리는 마인드맵", en: "A mind map you can build fast from the keyboard" }
+  tagline: { ko: "떠오르는 생각을 가지처럼 쭉쭉 뻗어 보세요", en: "Let your ideas branch out freely" }
+  intro: { ko: "Tab으로 자식, Enter로 형제 주제를 붙이며 생각을 빠르게 정리할 수 있어요. 노드마다 색과 글꼴, 모양을 바꿀 수 있고 FreeMind/Freeplane 파일도 가져오고 내보낼 수 있어요.", en: "Add a child topic with Tab and a sibling with Enter to sort out your thoughts quickly. Each node can have its own colors, font and shape, and FreeMind/Freeplane files can be imported and exported." }
+  features:
+    - title: { ko: "키보드 중심 편집", en: "Keyboard-first editing" }
+      text: { ko: "Tab, Enter, F2, Space(접기)와 방향키만으로 맵을 만들 수 있어요.", en: "Build a map with just Tab, Enter, F2, Space (collapse) and the arrow keys." }
+    - title: { ko: "노드 꾸미기", en: "Node styling" }
+      text: { ko: "배경·테두리·글자·연결선 색, 글꼴, 굵게·기울임·밑줄, 도형을 노드마다 정해요.", en: "Set background, border, text and line colors, font, bold/italic/underline and shape per node." }
+    - title: { ko: "맵 테마", en: "Map themes" }
+      text: { ko: "맵 테마를 골라 전체 색 분위기를 한 번에 바꿀 수 있어요.", en: "Pick a map theme to change the overall color scheme at once." }
+    - title: { ko: "FreeMind 호환", en: "FreeMind compatible" }
+      text: { ko: "FreeMind/Freeplane(.mm) 파일을 가져오고 내보낼 수 있어요.", en: "Import and export FreeMind/Freeplane (.mm) files." }
+    - title: { ko: "자동 저장과 복구", en: "Auto-save and recovery" }
+      text: { ko: "작업 중인 문서를 따로 자동 저장해 두었다가, 비정상 종료 뒤 복구할 수 있어요.", en: "Your work is auto-saved separately so it can be recovered after an unexpected exit." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom for the whole screen." }
+  uses: { ko: ["아이디어를 쏟아 내며 정리할 때", "회의나 강의 내용을 구조로 정리할 때", "FreeMind로 만든 맵을 이어서 쓸 때"], en: ["Brainstorming and organizing ideas", "Structuring notes from a meeting or lecture", "Continuing a map made in FreeMind"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigMindMap.json (복구 파일은 CONFIGURATION\\RECOVERY)", en: "BigMindMap.json in the CONFIGURATION folder next to the exe (recovery files in CONFIGURATION\\RECOVERY)" }
+
+- name: BigMEMO
+  category: docs
+  summary: { ko: "바탕 화면에 붙여 두는 스티커 메모", en: "Sticky notes for your desktop" }
+  tagline: { ko: "잊으면 안 될 것들, 화면에 톡 붙여 두세요", en: "Stick the things you must not forget right on your screen" }
+  intro: { ko: "알록달록한 메모를 바탕 화면에 띄워 두고 바로바로 적을 수 있어요. 굵게, 밑줄 같은 서식과 이미지도 넣을 수 있고, 메모 목록에서 검색해 다시 찾을 수 있어요.", en: "Keep colorful notes on your desktop and jot things down anytime. Add formatting like bold and underline, drop in images, and search your notes from the list." }
+  features:
+    - title: { ko: "색깔 메모", en: "Colorful notes" }
+      text: { ko: "노랑, 초록, 분홍, 보라, 파랑, 회색, 차콜 중에서 메모 색을 골라요.", en: "Choose yellow, green, pink, purple, blue, gray or charcoal for each note." }
+    - title: { ko: "서식 있는 글쓰기", en: "Rich text" }
+      text: { ko: "글꼴과 크기, 굵게·기울임·밑줄·취소선, 글머리 기호를 쓸 수 있어요.", en: "Use fonts and sizes, bold, italic, underline, strikethrough and bullets." }
+    - title: { ko: "이미지 넣기", en: "Images in notes" }
+      text: { ko: "이미지를 붙여 넣거나 끌어다 놓고, 끌어서 크기를 조절할 수 있어요.", en: "Paste or drop images into a note and drag to resize them." }
+    - title: { ko: "메모 목록과 검색", en: "Note list and search" }
+      text: { ko: "모든 메모를 목록에서 보고 검색해서 바로 열 수 있어요.", en: "See every note in a list and search to open the one you need." }
+    - title: { ko: "데이터 파일 선택", en: "Choose your data file" }
+      text: { ko: "메모는 SQLite 파일에 저장되고, 설정에서 다른 파일을 열거나 새로 만들 수 있어요.", en: "Notes are stored in a SQLite file, and you can open or create another one in Settings." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom." }
+  uses: { ko: ["오늘 할 일을 눈앞에 두고 싶을 때", "전화번호나 짧은 메모를 잠깐 적을 때", "스크린샷을 메모와 함께 남길 때"], en: ["Keeping your to-dos in sight", "Jotting down a phone number or quick note", "Saving a screenshot together with a note"] }
+  settings_path: { ko: "%LOCALAPPDATA%\\BigMEMO (메모 데이터 BigMEMO.db와 설정 BigMEMO.json)", en: "%LOCALAPPDATA%\\BigMEMO (notes in BigMEMO.db, settings in BigMEMO.json)" }
+
+- name: BigSQL
+  category: dev
+  summary: { ko: "PostgreSQL 전용 가벼운 쿼리 도구", en: "A light query tool made just for PostgreSQL" }
+  tagline: { ko: "PostgreSQL 쿼리, 편하고 안전하게 실행해요", en: "Run your PostgreSQL queries comfortably and safely" }
+  intro: { ko: "BigSQL은 PostgreSQL 데이터베이스에 접속해 쿼리를 실행하고 결과를 바로 고칠 수 있는 도구예요. 객체 트리에서 테이블과 함수를 살펴보고, 자주 쓰는 쿼리는 이름을 붙여 저장해 둘 수 있어요. PostgreSQL 14 이상 서버가 필요해요.", en: "BigSQL connects to a PostgreSQL database so you can run queries and edit the results right away. Browse tables and functions in the object tree, and keep the queries you use often in a named list. You need a PostgreSQL 14 or later server." }
+  features:
+    - title: { ko: "SQL 편집기", en: "SQL editor" }
+      text: { ko: "키워드·문자열·주석에 색이 들어간 편집기에서 전체, 선택 영역, 캐럿이 있는 문장만 골라 실행하고 Esc로 취소할 수 있어요.", en: "Run the whole script, a selection or just the statement under the caret in a syntax-colored editor, and cancel with Esc." }
+    - title: { ko: "결과 바로 편집", en: "Edit results in place" }
+      text: { ko: "키가 있는 테이블 결과에서 행 추가·삭제, NULL 넣기를 하고 변경 저장으로 반영해요.", en: "Add or delete rows and set NULL in results from keyed tables, then apply them with Save changes." }
+    - title: { ko: "트랜잭션 제어", en: "Transaction control" }
+      text: { ko: "자동 커밋을 끄면 커밋과 롤백을 직접 골라 실수로 데이터를 바꾸는 일을 막아요.", en: "Turn off auto-commit to choose commit or rollback yourself and avoid accidental changes." }
+    - title: { ko: "객체 트리와 DDL", en: "Object tree and DDL" }
+      text: { ko: "컬럼·제약조건·인덱스·트리거 정보와 DDL을 보고, 여러 객체를 골라 CREATE/INSERT/UPDATE/DELETE 문을 만들어 편집기에 넣어요.", en: "See columns, constraints, indexes, triggers and DDL, and generate CREATE/INSERT/UPDATE/DELETE statements for selected objects." }
+    - title: { ko: "접속·쿼리 목록", en: "Saved connections & queries" }
+      text: { ko: "이름 붙인 접속 목록(SSL 모드, 비밀번호 암호화 저장)과 쿼리 목록을 저장해 두고 다시 써요.", en: "Keep named connections (with SSL mode and encrypted passwords) and a named query list for reuse." }
+    - title: { ko: "보기 설정", en: "View options" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소, 글꼴 크기 설정을 지원해요.", en: "Korean/English UI, dark/light mode, Ctrl +/− zoom and a font size setting." }
+  uses: { ko: ["PostgreSQL 데이터를 조회하고 조금씩 고칠 때", "테이블이나 함수의 DDL을 확인하고 복사할 때", "자주 쓰는 쿼리를 모아 두고 바로 실행하고 싶을 때"], en: ["When you query PostgreSQL data and make small edits", "When you need to check or copy the DDL of a table or function", "When you want your frequent queries saved and ready to run"] }
+  settings_path: { ko: "%APPDATA%\\BigSQL", en: "%APPDATA%\\BigSQL" }
+
+- name: BigMigration
+  category: dev
+  summary: { ko: "PostgreSQL 테이블을 다른 서버로 이동", en: "Move PostgreSQL tables to another server" }
+  tagline: { ko: "테이블과 딸린 객체까지, 통째로 옮겨 드려요", en: "Move tables together with everything they depend on" }
+  intro: { ko: "BigMigration은 PostgreSQL 서버 사이에서 테이블과 그 테이블이 쓰는 객체를 함께 옮기는 도구예요. 옮기기 전에 사전 점검으로 문제를 알려 주고, 옮긴 뒤에는 원본과 같은지 검증해요. 소스와 대상 PostgreSQL 서버(11~18)가 필요해요.", en: "BigMigration moves tables between PostgreSQL servers along with the objects they depend on. A pre-check warns you about problems before you start, and a verification step checks the copy matches the source afterward. You need source and target PostgreSQL servers (versions 11 to 18)." }
+  features:
+    - title: { ko: "의존 객체 자동 포함", en: "Dependencies included" }
+      text: { ko: "테이블을 고르면 시퀀스, 타입, 함수, 뷰, FK 부모 테이블 같은 의존 객체를 계산해 함께 보여 주고 체크로 고를 수 있어요.", en: "Pick tables and it works out sequences, types, functions, views, FK parent tables and more, which you can toggle with checkboxes." }
+    - title: { ko: "사전 점검", en: "Pre-check" }
+      text: { ko: "버전, 권한, 인코딩, 대상의 같은 이름 객체 같은 문제를 경고와 차단으로 나눠 미리 알려 줘요.", en: "Flags version, permission, encoding and name-clash problems in advance as warnings or blockers." }
+    - title: { ko: "DDL 미리 보기", en: "DDL preview" }
+      text: { ko: "대상에 만들 DDL을 미리 보고 SQL 파일로 저장할 수 있어요.", en: "Preview the DDL that will be created on the target and save it as a SQL file." }
+    - title: { ko: "병렬 복사와 이어하기", en: "Parallel copy & resume" }
+      text: { ko: "병렬도를 정해 데이터를 복사하고 테이블별 진행·속도를 보며, 중단된 실행은 이어할 수 있어요.", en: "Copy data with a chosen level of parallelism, watch per-table progress and speed, and resume an interrupted run." }
+    - title: { ko: "결과 검증", en: "Verification" }
+      text: { ko: "옮긴 뒤 행 수, 시퀀스 값, 스키마 차이를 비교해 일치·불일치를 보여 줘요.", en: "After the move it compares row counts, sequence values and schema differences and shows what matches." }
+    - title: { ko: "보기 설정", en: "View options" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  uses: { ko: ["낮은 버전 서버의 테이블을 새 버전 서버로 옮길 때", "일부 테이블만 다른 데이터베이스로 복사할 때", "옮긴 결과가 원본과 같은지 확인하고 싶을 때"], en: ["When you move tables from an older server to a newer one", "When you copy only some tables to another database", "When you want to confirm the copy matches the source"] }
+  settings_path: { ko: "%APPDATA%\\BigMigration", en: "%APPDATA%\\BigMigration" }
+
+- name: BigCURL
+  category: dev
+  summary: { ko: "curl 명령 저장·실행 도구", en: "Save and run your curl commands" }
+  tagline: { ko: "curl 명령, 모아 두고 탭에서 바로 실행해요", en: "Keep your curl commands and run them in tabs" }
+  intro: { ko: "BigCURL은 curl 명령을 저장해 두고 탭에서 실행·반복 실행·수정할 수 있는 도구예요. 응답 본문과 헤더를 보기 좋게 보여 주고, Ubuntu(bash)용 명령으로 바꿔 복사할 수도 있어요. Windows에 들어 있는 curl.exe를 쓰고, 다른 curl은 설정에서 경로를 지정하면 돼요.", en: "BigCURL lets you save curl commands and run, repeat and edit them in tabs. It shows response bodies and headers clearly and can convert a command for Ubuntu (bash). It uses the curl.exe that ships with Windows, or another curl you point to in Settings." }
+  features:
+    - title: { ko: "명령 목록", en: "Command library" }
+      text: { ko: "명령을 이름·그룹·설명과 함께 저장하고 검색하며, 클립보드의 curl 명령으로 바로 새 탭을 열 수 있어요.", en: "Save commands with a name, group and description, search them, and open a new tab straight from a curl command on the clipboard." }
+    - title: { ko: "실행과 반복 실행", en: "Run and repeat" }
+      text: { ko: "F5로 실행하고, 횟수와 간격을 정해 반복 실행하거나 체크한 명령을 순서대로 실행해 실패한 명령을 알려 줘요.", en: "Run with F5, repeat with a set count and interval, or run checked commands in order and see which ones failed." }
+    - title: { ko: "응답 보기", en: "Response viewer" }
+      text: { ko: "본문(JSON 정렬)·헤더·로그를 나눠 보고 실행 이력을 남기며, 본문은 복사하거나 파일로 저장해요.", en: "View body (with JSON formatting), headers and log separately, keep a run history, and copy or save the body to a file." }
+    - title: { ko: "Ubuntu 명령 변환", en: "Ubuntu conversion" }
+      text: { ko: "Windows용 명령을 Ubuntu(bash)용으로 바꿔 미리 보고 클립보드에 복사해요.", en: "Convert a Windows command to Ubuntu (bash), preview it and copy it to the clipboard." }
+    - title: { ko: "실행 설정", en: "Run settings" }
+      text: { ko: "verify, proxy, trust_env 같은 실행 설정을 전역이나 명령별로 정하고 프리셋으로 바꿀 수 있어요.", en: "Set options like verify, proxy and trust_env globally or per command, and switch them with presets." }
+    - title: { ko: "보기 설정", en: "View options" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  uses: { ko: ["API를 여러 번 호출하며 테스트할 때", "팀에서 받은 curl 명령을 정리해 두고 싶을 때", "Windows에서 만든 명령을 Ubuntu 서버에서 쓰고 싶을 때"], en: ["When you test an API with repeated calls", "When you want to organize curl commands you received", "When you need a Windows command to work on an Ubuntu server"] }
+  settings_path: { ko: "%APPDATA%\\BigCURL", en: "%APPDATA%\\BigCURL" }
+
+- name: BigDocker
+  category: dev
+  summary: { ko: "도커 이미지 레이어 탐색기", en: "Explore Docker image layers" }
+  tagline: { ko: "도커 이미지 속을 레이어별로 들여다봐요", en: "Look inside your Docker images, layer by layer" }
+  intro: { ko: "BigDocker는 로컬 Docker 엔진의 이미지를 골라 레이어마다 어떤 파일이 추가·수정·삭제되었는지 보여 주는 도구예요. 덮어쓰거나 지워져서 낭비되는 공간도 찾아 줘요. Docker 엔진(Docker Desktop 등)이 실행 중이어야 하고, Linux 이미지만 분석해요.", en: "BigDocker picks an image from your local Docker engine and shows which files each layer added, changed or deleted. It also finds space wasted by files that were overwritten or removed later. Docker (for example Docker Desktop) must be running, and only Linux images are supported." }
+  features:
+    - title: { ko: "이미지 목록", en: "Image list" }
+      text: { ko: "로컬 이미지를 저장소, 태그, ID로 걸러 찾고 하나를 고르면 바로 분석해요.", en: "Filter local images by repository, tag or ID and analyze one with a click." }
+    - title: { ko: "레이어 타임라인", en: "Layer timeline" }
+      text: { ko: "레이어마다 추가·수정·삭제 수와 만든 명령을 보여 주고, 선택한 레이어까지 쌓인 상태를 봐요.", en: "Shows added, modified and deleted counts and the creating command for each layer, and the state up to the selected layer." }
+    - title: { ko: "파일 시스템 트리", en: "File system tree" }
+      text: { ko: "크기·권한·추가/수정 레이어를 트리로 보고, 변경된 것만 보기로 좁힐 수 있어요.", en: "Browse size, permissions and the adding/modifying layer in a tree, or narrow it to changes only." }
+    - title: { ko: "크기 트리맵", en: "Size treemap" }
+      text: { ko: "어느 폴더가 큰지 트리맵으로 보고, 클릭하면 트리에서 그 항목을 선택해요.", en: "See which folders are big in a treemap; click to select the item in the tree." }
+    - title: { ko: "낭비 공간 찾기", en: "Wasted space" }
+      text: { ko: "최종 크기, 레이어 합계, 낭비 공간과 비율을 보여 주고 낭비를 만든 파일을 짚어 줘요.", en: "Shows final size, layer total and wasted space with its ratio, and points to the files that cause it." }
+    - title: { ko: "보기 설정", en: "View options" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  uses: { ko: ["이미지가 왜 이렇게 큰지 궁금할 때", "Dockerfile을 고친 뒤 레이어 변화를 확인할 때", "이미지에 어떤 파일이 들어 있는지 살펴볼 때"], en: ["When you wonder why an image is so large", "When you check layer changes after editing a Dockerfile", "When you want to see what files an image contains"] }
+  settings_path: { ko: "%APPDATA%\\BigDocker", en: "%APPDATA%\\BigDocker" }
+
+- name: BigOpenCode
+  category: dev
+  summary: { ko: "opencode AI 코딩 에이전트 데스크톱 앱", en: "A desktop app for the opencode coding agent" }
+  tagline: { ko: "opencode와 창에서 편하게 대화해요", en: "Chat with opencode in a friendly window" }
+  intro: { ko: "BigOpenCode는 AI 코딩 에이전트 opencode를 Windows 창에서 쓰게 해 주는 클라이언트예요. 세션을 만들어 대화하고, 에이전트와 모델을 고르고, 도구 실행 권한을 그때그때 허용할 수 있어요. opencode v2 실행 파일이 필요해요.", en: "BigOpenCode is a Windows client for the opencode AI coding agent. Create sessions, chat, pick an agent and model, and approve tool permissions as they come up. You need the opencode v2 executable." }
+  features:
+    - title: { ko: "세션 대화", en: "Session chat" }
+      text: { ko: "작업 폴더별 세션을 만들고 이름을 바꾸거나 지우며, 메시지를 보내고 실행을 중단할 수 있어요.", en: "Create, rename and delete sessions per working folder, send messages and stop a run." }
+    - title: { ko: "에이전트·모델 선택", en: "Agent & model picker" }
+      text: { ko: "대화마다 에이전트와 모델을 고르고, 입력·출력·추론 토큰과 비용을 확인해요.", en: "Choose the agent and model, and check input, output and reasoning tokens and cost." }
+    - title: { ko: "권한 요청 응답", en: "Permission prompts" }
+      text: { ko: "에이전트가 작업 권한을 물으면 한 번 허용, 항상 허용, 거부 중에 골라요.", en: "When the agent asks for permission, choose allow once, always allow or deny." }
+    - title: { ko: "MCP 서버 관리", en: "MCP servers" }
+      text: { ko: "로컬 명령이나 원격 URL 방식의 MCP 서버를 추가·수정·삭제하고 연결 상태를 봐요.", en: "Add, edit and remove local-command or remote-URL MCP servers and see their connection status." }
+    - title: { ko: "모델 직접 추가", en: "Custom models" }
+      text: { ko: "vLLM 같은 OpenAI 호환 API 서버의 모델을 추가하고, 기본 모델은 목록에서 숨길 수 있어요.", en: "Add models from OpenAI-compatible servers such as vLLM, and hide built-in models you don't need." }
+    - title: { ko: "보기 설정", en: "View options" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  uses: { ko: ["opencode를 터미널 대신 창에서 쓰고 싶을 때", "사내 vLLM 모델로 코딩 에이전트를 돌릴 때", "MCP 서버를 화면에서 쉽게 등록하고 싶을 때"], en: ["When you'd rather use opencode in a window than a terminal", "When you run a coding agent on your own vLLM model", "When you want to register MCP servers from a screen"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
+
+- name: BigClaude
+  category: dev
+  summary: { ko: "Claude CLI 여러 에이전트 지휘 도구", en: "Run a team of Claude CLI agents" }
+  tagline: { ko: "Claude 에이전트 여럿이 함께 일하게 해요", en: "Let several Claude agents work together" }
+  intro: { ko: "BigClaude는 Claude CLI 에이전트 여러 개를 역할별로 띄워 하나의 요청을 나눠 처리하게 하는 도구예요. 오케스트레이터가 작업을 나눠 맡기고, 각 워커는 자기 git worktree에서 일한 뒤 결과를 기준 브랜치로 병합해요. Claude CLI와 git 저장소인 대상 폴더가 필요해요.", en: "BigClaude starts several Claude CLI agents with different roles to split up a single request. An orchestrator hands out tasks, each worker works in its own git worktree, and results are merged into the base branch. You need the Claude CLI and a target folder that is a git repository." }
+  features:
+    - title: { ko: "역할 집합 편집", en: "Role set editor" }
+      text: { ko: "역할마다 허용 도구, 최대 턴, 예산, 색을 정해 역할 집합으로 저장·복제해요.", en: "Set allowed tools, max turns, budget and color per role, and save or duplicate role sets." }
+    - title: { ko: "작업 분배와 병합", en: "Task split & merge" }
+      text: { ko: "오케스트레이터가 워커에게 작업을 맡기고, 끝난 워커의 브랜치를 병합하며 충돌을 알려 줘요.", en: "The orchestrator assigns tasks to workers and merges finished branches, reporting any conflicts." }
+    - title: { ko: "진행 상황 모니터", en: "Progress monitor" }
+      text: { ko: "요청과 작업의 상태, 에이전트별 턴과 비용 합계를 한눈에 보여 줘요.", en: "Shows request and task status plus turns and total cost per agent at a glance." }
+    - title: { ko: "이벤트 로그", en: "Event log" }
+      text: { ko: "에이전트와 이벤트 타입으로 걸러 보고, 줄을 눌러 상세를 펼치거나 복사할 수 있어요.", en: "Filter by agent and event type, click a line to expand details, and copy lines." }
+    - title: { ko: "워커 재개", en: "Resume workers" }
+      text: { ko: "프로세스가 끝나 버린 워커를 같은 세션으로 다시 이어 실행해요.", en: "Resume a crashed worker in the same session." }
+    - title: { ko: "보기 설정", en: "View options" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−(Ctrl+휠)로 글자 크기 조절을 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− (or Ctrl+wheel) text size." }
+  uses: { ko: ["큰 작업을 여러 에이전트에게 나눠 맡기고 싶을 때", "에이전트별 진행과 비용을 지켜보고 싶을 때", "에이전트 작업을 브랜치로 나눠 안전하게 병합하고 싶을 때"], en: ["When you want to split a big job across several agents", "When you want to watch each agent's progress and cost", "When you want agent work kept on branches and merged safely"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
+
+- name: BigPacket
+  category: network
+  summary: { ko: "계층별로 보는 패킷 모니터", en: "A packet monitor sorted by layer" }
+  tagline: { ko: "내 PC의 네트워크 패킷, 계층별로 쉽게 봐요", en: "See your PC's network packets, layer by layer" }
+  intro: { ko: "BigPacket은 Windows에 들어 있는 pktmon으로 패킷을 캡처해 L2부터 L7까지 계층별로 나눠 보여 주는 모니터예요. 필터로 원하는 패킷만 골라 보고, pcap/pcapng 파일로 열고 저장할 수 있어요. pktmon을 쓰기 때문에 관리자 권한으로 실행돼요.", en: "BigPacket captures packets with Windows' built-in pktmon and shows them sorted from L2 to L7. Use filters to see only what you need, and open or save pcap/pcapng files. Because it uses pktmon, it runs with administrator rights." }
+  features:
+    - title: { ko: "패킷 캡처", en: "Packet capture" }
+      text: { ko: "전체 포트나 특정 포트를 캡처하고, 패킷마다 방향과 프로세스를 함께 보여 줘요.", en: "Capture all ports or one port, with direction and process shown for each packet." }
+    - title: { ko: "계층별 탭", en: "Layer tabs" }
+      text: { ko: "L2 데이터 링크, L3 네트워크, L4 전송, L7 응용 탭으로 패킷을 나눠 봐요.", en: "Browse packets in L2 data link, L3 network, L4 transport and L7 application tabs." }
+    - title: { ko: "디스플레이 필터", en: "Display filter" }
+      text: { ko: "tcp.port == 443, dns, !arp 같은 식으로 보고 싶은 패킷만 걸러요.", en: "Filter with expressions like tcp.port == 443, dns or !arp." }
+    - title: { ko: "상세 해석", en: "Packet details" }
+      text: { ko: "선택한 패킷을 트리와 16진수로 보고, 재전송·중복 ACK·손상 패킷을 표시해 줘요.", en: "Inspect the selected packet as a tree and hex, with retransmissions, duplicate ACKs and broken packets marked." }
+    - title: { ko: "pcap 열기·저장", en: "Open & save pcap" }
+      text: { ko: "pcap/pcapng 파일을 열고, 지금 보이는 패킷을 pcapng로 저장해요.", en: "Open pcap/pcapng files and save the packets on screen as pcapng." }
+    - title: { ko: "보기 설정", en: "View options" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  uses: { ko: ["어떤 프로그램이 어디와 통신하는지 궁금할 때", "특정 포트의 트래픽을 빠르게 확인할 때", "따로 드라이버를 설치하지 않고 패킷을 보고 싶을 때"], en: ["When you wonder which program talks to where", "When you want a quick look at traffic on one port", "When you want to see packets without installing a capture driver"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
+
+- name: BigDetection
+  category: network
+  summary: { ko: "Windows 침입 탐지 모니터", en: "An intrusion detection monitor for Windows" }
+  tagline: { ko: "수상한 접속 시도, 먼저 알아채요", en: "Spot suspicious access attempts early" }
+  intro: { ko: "BigDetection은 Windows 보안 이벤트 로그, 방화벽, TCP 연결을 살펴 침입 시도를 찾아 주는 모니터예요. 찾은 항목마다 판단 근거와 대응 방안을 알기 쉽게 정리해 보여 줘요. 보안 이벤트 로그를 읽으려면 관리자 권한으로 실행하세요.", en: "BigDetection watches the Windows security event log, firewall and TCP connections to find intrusion attempts. For each finding it explains the evidence and what you can do about it. Run it as administrator so it can read the security event log." }
+  features:
+    - title: { ko: "자동 스캔", en: "Automatic scans" }
+      text: { ko: "모니터링을 시작하면 정해진 간격으로 스캔하고, 지금 스캔으로 바로 확인할 수도 있어요.", en: "Start monitoring to scan at a set interval, or press Scan now to check right away." }
+    - title: { ko: "공격 유형 탐지", en: "Attack types" }
+      text: { ko: "RDP·SMB 무차별 대입, 계정 열거, 포트 스캔, 차단 연결 폭주, 실패 후 로그온 성공을 찾아요.", en: "Detects RDP and SMB brute force, account enumeration, port scans, blocked-connection floods and logons that succeed after failures." }
+    - title: { ko: "위험 점수", en: "Risk scoring" }
+      text: { ko: "탐지마다 등급과 점수 근거를 보여 주고, HIGH 이상은 따로 강조해요.", en: "Each finding gets a severity and score breakdown, and HIGH or above is highlighted separately." }
+    - title: { ko: "대응 방안 안내", en: "Response guide" }
+      text: { ko: "즉시 대응, 조사, 보안 강화 항목과 Windows 명령 힌트를 함께 알려 줘요.", en: "Lists immediate actions, investigation steps, hardening tips and Windows command hints." }
+    - title: { ko: "샘플 데이터", en: "Sample data" }
+      text: { ko: "샘플 데이터로 실제 공격 없이도 화면과 탐지 결과를 미리 살펴볼 수 있어요.", en: "Try the screens and detection results with sample data, no real attack needed." }
+    - title: { ko: "보기 설정", en: "View options" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  uses: { ko: ["RDP나 파일 공유가 열린 PC를 지켜보고 싶을 때", "로그온 실패가 계속 생기는 이유를 알고 싶을 때", "의심스러운 IP에 어떻게 대응할지 감을 잡고 싶을 때"], en: ["When you want to keep an eye on a PC with RDP or file sharing open", "When you want to know why logon failures keep happening", "When you need ideas for handling a suspicious IP"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
+
+- name: BigRemote
+  category: network
+  summary: { ko: "탭으로 쓰는 원격 데스크톱", en: "Remote desktop with tabs" }
+  tagline: { ko: "여러 원격 PC를 탭 하나하나로 편하게", en: "Many remote PCs, each in its own tab" }
+  intro: { ko: "BigRemote는 FreeRDP 엔진을 넣은 원격 데스크톱 프로그램이에요. 서버 목록을 저장해 두고 여러 원격 PC를 탭으로 열어 오가며 쓸 수 있어요. 접속할 PC에서 원격 데스크톱이 허용되어 있어야 해요.", en: "BigRemote is a remote desktop app with the FreeRDP engine built in. Save a list of servers and open several remote PCs in tabs to switch between them. Remote Desktop must be allowed on the PC you connect to." }
+  features:
+    - title: { ko: "탭 세션", en: "Tabbed sessions" }
+      text: { ko: "원격 세션을 탭으로 여러 개 열고, 다시 연결·연결 끊기·전체 화면(F11)을 쓸 수 있어요.", en: "Open several remote sessions in tabs with reconnect, disconnect and full screen (F11)." }
+    - title: { ko: "서버 목록", en: "Server list" }
+      text: { ko: "서버를 그룹과 즐겨찾기로 정리하고 검색하며, .rdp 파일도 가져올 수 있어요.", en: "Organize servers with groups and favorites, search them, and import .rdp files." }
+    - title: { ko: "빠른 연결", en: "Quick connect" }
+      text: { ko: "host[:port]만 입력하고 Enter를 누르면 목록에 넣지 않고 바로 연결해요.", en: "Type host[:port] and press Enter to connect without adding it to the list." }
+    - title: { ko: "화면·리디렉션", en: "Display & redirection" }
+      text: { ko: "탭 크기 맞춤 해상도, 오디오, 클립보드, 로컬 드라이브·프린터 공유를 정할 수 있어요.", en: "Choose dynamic resolution, audio, clipboard and local drive or printer sharing." }
+    - title: { ko: "자격 증명·보안", en: "Credentials & security" }
+      text: { ko: "비밀번호는 현재 Windows 계정으로 암호화해 저장하고, RD 게이트웨이와 인증서 처리 방식을 고를 수 있어요.", en: "Passwords are encrypted with your Windows account, and you can set an RD Gateway and certificate handling." }
+    - title: { ko: "보기 설정", en: "View options" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  uses: { ko: ["여러 서버에 동시에 접속해 관리할 때", "자주 쓰는 원격 PC를 목록으로 정리하고 싶을 때", "원격 PC로 파일을 클립보드로 옮기고 싶을 때"], en: ["When you manage several servers at the same time", "When you want your frequent remote PCs in a tidy list", "When you want to move files to a remote PC via the clipboard"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
+
+- name: BigImageView
+  category: media
+  summary: { ko: "썸네일로 빠르게 훑는 이미지 뷰어", en: "An image viewer for browsing by thumbnail" }
+  tagline: { ko: "사진 폴더를 시원하게 넘겨 보세요", en: "Flip through your photo folders with ease" }
+  intro: { ko: "BigImageView는 폴더 속 사진을 썸네일이나 자세히 보기로 둘러보는 이미지 뷰어예요. 사진을 열면 전체 화면으로 크게 볼 수 있고, 여러 파일의 이름을 규칙대로 한 번에 바꿀 수도 있어요.", en: "BigImageView lets you browse the photos in a folder as thumbnails or a detailed list. Open a photo to see it full screen, and rename many files at once by a pattern." }
+  features:
+    - title: { ko: "썸네일·자세히 보기", en: "Thumbnails or details" }
+      text: { ko: "큰 썸네일이나 해상도·크기·형식이 보이는 목록으로 사진을 둘러볼 수 있어요.", en: "Browse photos as large thumbnails or as a list showing resolution, size and format." }
+    - title: { ko: "전체 화면 보기", en: "Full screen" }
+      text: { ko: "화면에 맞추기나 원래 크기로 보고, 키보드로 다음 사진으로 넘기거나 확대해요.", en: "View fit to screen or at original size, and use the keyboard to move to the next photo or zoom." }
+    - title: { ko: "여러 형식 지원", en: "Many formats" }
+      text: { ko: "JPG, PNG, WebP, GIF, TIFF를 열고, 움직이는 GIF와 여러 쪽 TIFF도 볼 수 있어요.", en: "Opens JPG, PNG, WebP, GIF and TIFF, including animated GIFs and multi-page TIFFs." }
+    - title: { ko: "이름 한꺼번에 바꾸기", en: "Batch rename" }
+      text: { ko: "\"20261109-####\" 같은 규칙으로 번호를 붙이고, 마지막 이름 바꾸기는 되돌릴 수 있어요.", en: "Number files with a pattern like \"20261109-####\", and undo the last rename if needed." }
+    - title: { ko: "파일 정리", en: "File tidy-up" }
+      text: { ko: "잘라내기·복사·붙여넣기, 끌어다 놓기, 휴지통으로 삭제를 바로 할 수 있어요.", en: "Cut, copy, paste, drag and drop, or send files to the Recycle Bin right there." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["여행 사진을 빠르게 훑어볼 때", "사진 파일 이름을 날짜와 번호로 맞출 때", "필요 없는 사진을 골라 지울 때"], en: ["When you flip through travel photos", "When you rename photos with a date and number", "When you pick out and delete unwanted photos"] }
+  settings_path: { ko: "%APPDATA%\\BigImageView\\BigImageView.json", en: "%APPDATA%\\BigImageView\\BigImageView.json" }
+
+- name: BigPiano
+  category: media
+  summary: { ko: "악보와 건반이 함께 움직이는 피아노", en: "A piano that plays with a moving score" }
+  tagline: { ko: "곡을 고르고 재생을 누르면 피아노가 연주해요", en: "Pick a song, press play, and let the piano play" }
+  intro: { ko: "BigPiano는 곡을 자동으로 연주해 주는 피아노 프로그램이에요. 연주에 맞춰 악보가 흘러가고 건반에 불이 들어와서, 어떤 음을 치는지 눈으로 따라갈 수 있어요.", en: "BigPiano is a piano app that plays songs for you. The score scrolls and the keys light up as it plays, so you can follow every note with your eyes." }
+  features:
+    - title: { ko: "자동 연주", en: "Auto play" }
+      text: { ko: "재생, 일시 정지, 정지 버튼으로 곡을 듣고, 진행 시간과 마디를 확인할 수 있어요.", en: "Play, pause or stop a song and see the elapsed time and current bar." }
+    - title: { ko: "흘러가는 악보", en: "Scrolling score" }
+      text: { ko: "화음과 조표, 임시표가 들어간 악보가 연주에 맞춰 움직여요.", en: "A score with chords, key signatures and accidentals moves along with the music." }
+    - title: { ko: "빛나는 건반", en: "Glowing keys" }
+      text: { ko: "지금 연주하는 음의 건반이 화면 속 피아노에서 빛나요.", en: "The keys being played light up on the on-screen piano." }
+    - title: { ko: "내장 곡", en: "Built-in songs" }
+      text: { ko: "작은 별, 비행기, 연습곡, 쇼팽 녹턴 Op.9 No.2, 드뷔시 달빛이 들어 있어요.", en: "Comes with Twinkle Twinkle, Airplane, an etude, Chopin's Nocturne Op. 9 No. 2 and Debussy's Clair de Lune." }
+    - title: { ko: "곡 추가", en: "Add songs" }
+      text: { ko: "exe 옆 SONG 폴더에 곡 파일(JSON)을 넣으면 목록에 더해져요.", en: "Put song files (JSON) in a SONG folder next to the exe to add them to the list." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["아이와 함께 피아노 곡을 들으며 악보를 볼 때", "어떤 건반을 누르는지 눈으로 익히고 싶을 때", "잔잔한 피아노 곡을 틀어 두고 싶을 때"], en: ["When you listen to piano songs and watch the score with your kids", "When you want to learn which keys are played by watching", "When you want some calm piano music in the background"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigPiano.json", en: "CONFIGURATION\\BigPiano.json next to the exe" }
+
+- name: BigCalculator
+  category: desktop
+  summary: { ko: "공학·프로그래머 모드와 변환기 계산기", en: "Standard, scientific and programmer calculator" }
+  tagline: { ko: "일상 계산부터 단위 변환까지 하나로 해결해요", en: "From everyday math to unit conversion, all in one" }
+  intro: { ko: "표준, 공학용, 프로그래머 모드와 날짜 계산, 단위 변환기를 한 창에서 쓸 수 있어요. 계산 기록과 메모리도 남아 있어 앞의 결과를 다시 쓰기 편해요.", en: "Standard, scientific and programmer modes plus date calculation and unit converters, all in one window. History and memory make it easy to reuse earlier results." }
+  features:
+    - title: { ko: "여러 계산 모드", en: "Several calculator modes" }
+      text: { ko: "표준, 공학용(삼각법·로그·지수), 프로그래머 모드를 골라 써요.", en: "Switch between standard, scientific (trig, log, powers) and programmer modes." }
+    - title: { ko: "프로그래머 모드", en: "Programmer mode" }
+      text: { ko: "2·8·10·16진수 표시, 비트 연산과 시프트, 비트 키패드를 지원해요.", en: "Binary, octal, decimal and hex, bitwise operations, shifts and a bit keypad." }
+    - title: { ko: "날짜 계산", en: "Date calculation" }
+      text: { ko: "두 날짜 사이의 차이를 구하거나 날짜에 일수를 더하고 뺄 수 있어요.", en: "Find the difference between two dates or add and subtract days." }
+    - title: { ko: "단위 변환기", en: "Unit converters" }
+      text: { ko: "길이, 무게, 온도, 부피, 면적, 속도, 시간, 데이터 등 여러 단위를 바꿔요.", en: "Convert length, weight, temperature, volume, area, speed, time, data and more." }
+    - title: { ko: "기록과 메모리", en: "History and memory" }
+      text: { ko: "계산 기록과 메모리 값을 목록으로 보고 다시 불러올 수 있어요.", en: "View your history and memory values in a list and recall them." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "시스템/라이트/다크 테마, 한국어/English 화면, Ctrl +/−로 확대를 지원해요.", en: "System/light/dark theme, Korean/English UI and Ctrl +/− zoom." }
+  uses: { ko: ["가계부나 간단한 계산을 할 때", "16진수나 비트 값을 확인할 때", "기념일까지 남은 날을 셀 때", "레시피나 여행지 단위를 바꿀 때"], en: ["Doing quick everyday math", "Checking hex or bit values", "Counting days until an anniversary", "Converting units for a recipe or a trip"] }
+  settings_path: { ko: "%LOCALAPPDATA%\\BigCalculator\\BigCalculator.json", en: "%LOCALAPPDATA%\\BigCalculator\\BigCalculator.json" }
+
+- name: BigCloser
+  category: desktop
+  summary: { ko: "원하는 때에 Windows를 꺼 주는 종료 예약", en: "Schedule Windows to shut down" }
+  tagline: { ko: "켜 두고 자도 괜찮아요, 때가 되면 꺼 드릴게요", en: "Leave it running; it will shut down right on time" }
+  intro: { ko: "정한 시각이 되거나 일정 시간이 지나면 Windows를 자동으로 종료해 줘요. 남은 시간과 종료 예정 시각을 보여 주고, 마음이 바뀌면 언제든 취소할 수 있어요.", en: "It shuts Windows down automatically at a set time or after a set amount of time. It shows the time left and the planned shutdown time, and you can cancel whenever you change your mind." }
+  features:
+    - title: { ko: "시각 지정 종료", en: "Shut down at a time" }
+      text: { ko: "몇 시 몇 분에 끌지 정해 두면 그때 Windows를 종료해요.", en: "Pick the hour and minute, and Windows shuts down then." }
+    - title: { ko: "시간 경과 후 종료", en: "Shut down after a while" }
+      text: { ko: "시간·분·초를 넣으면 그만큼 지난 뒤에 종료해요.", en: "Enter hours, minutes and seconds to shut down after that much time." }
+    - title: { ko: "남은 시간 표시", en: "Countdown display" }
+      text: { ko: "종료까지 남은 시간과 종료 예정 시각을 바로 확인할 수 있어요.", en: "See the time remaining and the scheduled shutdown time at a glance." }
+    - title: { ko: "언제든 취소", en: "Cancel anytime" }
+      text: { ko: "취소 버튼 하나로 예약을 바로 멈출 수 있어요.", en: "Stop the schedule with a single Cancel button." }
+    - title: { ko: "최상위 모드", en: "Always on top" }
+      text: { ko: "다른 창 위에 늘 떠 있게 해 남은 시간을 놓치지 않아요.", en: "Keep the window above others so you never lose track of the countdown." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크 모드, 한국어/English 화면, Ctrl +/−로 확대를 지원해요.", en: "Dark mode, Korean/English UI and Ctrl +/− zoom." }
+  uses: { ko: ["큰 파일을 받아 두고 잠자리에 들 때", "영상을 틀어 놓고 잠들 때", "작업이 끝날 즈음 PC를 끄고 싶을 때"], en: ["Leaving a big download running overnight", "Falling asleep while a video plays", "Turning off the PC when a long task should be done"] }
+  settings_path: { ko: "%LOCALAPPDATA%\\BigCloser\\BigCloser.json", en: "%LOCALAPPDATA%\\BigCloser\\BigCloser.json" }
+
+- name: BigWatch
+  category: desktop
+  summary: { ko: "바탕 화면에 띄우는 투명 3D 시계", en: "A transparent 3D clock for your desktop" }
+  tagline: { ko: "숫자가 휙휙 넘어가는 입체 시계를 바탕 화면에", en: "A 3D flip clock floating on your desktop" }
+  intro: { ko: "테두리 없는 투명한 창에 시·분·초 숫자가 입체로 넘어가며 시간을 보여 줘요. 마우스를 올리면 작은 도구 모음이 나타나고, 오른쪽 클릭 메뉴로 그림자 깊이도 바꿀 수 있어요.", en: "Hours, minutes and seconds flip over in 3D on a borderless, transparent window. Hover to reveal a small toolbar, or right-click to change the shadow depth." }
+  features:
+    - title: { ko: "입체 숫자 넘김", en: "3D flipping digits" }
+      text: { ko: "시·분·초 숫자가 바뀔 때마다 입체로 휙 넘어가요.", en: "Each hour, minute and second digit flips over in 3D as it changes." }
+    - title: { ko: "투명 위젯 창", en: "Transparent widget" }
+      text: { ko: "테두리 없이 바탕 화면 위에 떠 있고, 다른 창보다 위에 보여요.", en: "It floats borderless on your desktop and stays above other windows." }
+    - title: { ko: "그림자 조절", en: "Adjustable shadow" }
+      text: { ko: "오른쪽 클릭 메뉴에서 그림자 깊이를 단계별로 고를 수 있어요.", en: "Choose the shadow depth step by step from the right-click menu." }
+    - title: { ko: "숨는 도구 모음", en: "Hover toolbar" }
+      text: { ko: "마우스를 올릴 때만 도구 모음이 나타나 평소엔 시계만 깔끔하게 보여요.", en: "The toolbar appears only on hover, so the clock looks clean the rest of the time." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크/라이트 모드, 한국어/English 메뉴, Ctrl +/−로 시계 크기를 바꿔요.", en: "Dark/light mode, Korean/English menus and Ctrl +/− to resize the clock." }
+  uses: { ko: ["작업하면서 시간을 늘 보고 싶을 때", "바탕 화면을 조금 멋지게 꾸미고 싶을 때", "발표나 시험 중 시계를 크게 띄울 때"], en: ["Keeping an eye on the time while you work", "Giving your desktop a nice touch", "Showing a big clock during a talk or exam"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigWatch.json", en: "BigWatch.json in the CONFIGURATION folder next to the exe" }
+
+- name: BigView
+  category: desktop
+  summary: { ko: "마우스 주변을 크게 보여 주는 돋보기", en: "A magnifier that follows your mouse" }
+  tagline: { ko: "작은 글씨도 마우스만 올리면 크게 보여요", en: "Hover your mouse and small text gets big" }
+  intro: { ko: "BigView는 마우스 포인터 주변 화면을 실시간으로 크게 보여 주는 돋보기예요. 창이 늘 다른 창 위에 떠 있어서 어떤 프로그램을 쓰든 옆에 두고 볼 수 있어요. 배율은 마우스 휠로 바로 바꿀 수 있어요.", en: "BigView is a magnifier that shows the area around your mouse pointer, enlarged, in real time. Its window stays on top of other windows, so you can keep it beside any program you use. You can change the magnification right away with the mouse wheel." }
+  features:
+    - title: { ko: "마우스 따라 확대", en: "Follows your mouse" }
+      text: { ko: "포인터가 있는 곳의 화면을 계속 따라가며 크게 보여 줘요.", en: "It keeps following the pointer and shows that part of the screen enlarged." }
+    - title: { ko: "휠로 배율 조절", en: "Wheel to zoom" }
+      text: { ko: "마우스 휠이나 + / − 버튼으로 배율을 0.2배부터 5배까지 바꿀 수 있어요.", en: "Use the mouse wheel or the + / − buttons to set the magnification from 0.2x to 5x." }
+    - title: { ko: "항상 위에 표시", en: "Always on top" }
+      text: { ko: "다른 창에 가려지지 않아서 작업하면서 함께 볼 수 있어요.", en: "Other windows never cover it, so you can watch it while you work." }
+    - title: { ko: "확대 켜기/끄기", en: "Magnifier on/off" }
+      text: { ko: "잠시 필요 없을 때는 확대를 꺼 두면 화면을 캡처하지 않아요.", en: "Turn magnifying off when you don't need it, and it stops capturing the screen." }
+    - title: { ko: "자리와 배율 기억", en: "Remembers your setup" }
+      text: { ko: "창 위치와 크기, 배율을 저장해 두었다가 다음에 그대로 열어 줘요.", en: "It saves the window position, size and magnification and opens the same way next time." }
+    - title: { ko: "한/영·테마·화면 확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/−로 버튼과 글자 크기 조절을 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− to resize the buttons and text." }
+  uses: { ko: ["화면의 작은 글씨를 읽기 힘들 때", "이미지나 디자인을 픽셀 단위로 살펴볼 때", "발표나 강의에서 화면 일부를 크게 보여 줄 때"], en: ["When small text on screen is hard to read", "When you want to inspect images or designs up close", "When you need to show part of the screen bigger in a talk or class"] }
+  settings_path: { ko: "%LOCALAPPDATA%\\BigView\\BigView.json", en: "%LOCALAPPDATA%\\BigView\\BigView.json" }
+
+- name: BigKeyboard
+  category: desktop
+  summary: { ko: "마우스로 누르는 화상 키보드", en: "An on-screen keyboard you click" }
+  tagline: { ko: "마우스로 톡톡, 화면 위의 키보드예요", en: "Click to type with a keyboard on your screen" }
+  intro: { ko: "BigKeyboard는 마우스나 터치로 눌러서 글자를 입력하는 화상 키보드예요. 키를 눌러도 입력하던 창의 포커스를 빼앗지 않아서, 쓰던 프로그램에 바로 글자가 들어가요. 지금 쓰는 Windows 자판(한국어, 영어, 일본어 등)에 맞춰 키 배열이 바뀌어요.", en: "BigKeyboard is an on-screen keyboard you type on with a mouse or touch. Pressing a key doesn't steal focus from the window you're typing in, so the text goes straight into your program. The key layout follows your current Windows keyboard (Korean, English, Japanese and more)." }
+  features:
+    - title: { ko: "포커스 유지", en: "Keeps your focus" }
+      text: { ko: "키를 눌러도 입력하던 창이 그대로 활성 상태로 남아요.", en: "The window you're typing in stays active while you press keys." }
+    - title: { ko: "입력 대상 표시", en: "Shows the target" }
+      text: { ko: "지금 어느 창에 글자가 들어가는지 키보드에 알려 줘요.", en: "The keyboard tells you which window your typing is going to." }
+    - title: { ko: "OS 자판 따라가기", en: "Follows your layout" }
+      text: { ko: "입력 대상 창의 자판 언어에 맞춰 한국어, 일본어, 미국식, 유럽식 배열을 골라 보여 줘요.", en: "It picks a Korean, Japanese, US or European layout to match the target window's keyboard language." }
+    - title: { ko: "진짜 키 입력", en: "Real Windows input" }
+      text: { ko: "실제 키 신호를 보내서 한글 조합, AltGr 문자, 일본어 입력도 Windows가 그대로 처리해요.", en: "It sends real key signals, so Windows handles Hangul composition, AltGr characters and Japanese input as usual." }
+    - title: { ko: "창 크기 확대", en: "Resizable keyboard" }
+      text: { ko: "−/100%/+ 버튼이나 마우스를 올린 채 Ctrl +/−로 키보드 전체를 키우거나 줄여요.", en: "Use the −/100%/+ buttons, or Ctrl +/− while the mouse is over it, to make the whole keyboard bigger or smaller." }
+    - title: { ko: "한/영·다크/라이트", en: "Language and theme" }
+      text: { ko: "한국어/영어 화면과 청색 계열 다크/라이트 테마를 고를 수 있어요.", en: "Choose a Korean or English UI and a blue dark or light theme." }
+  uses: { ko: ["실제 키보드가 없거나 고장 났을 때", "터치스크린 PC에서 글자를 입력할 때", "손 대신 마우스로만 입력하고 싶을 때"], en: ["When you have no keyboard or it stopped working", "When typing on a touchscreen PC", "When you'd rather type with just the mouse"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigKeyboard.json", en: "CONFIGURATION\\BigKeyboard.json next to the exe" }
+
+- name: BigReader
+  category: desktop
+  summary: { ko: "마우스 아래 글자를 소리 내어 읽기", en: "Reads the text under your mouse aloud" }
+  tagline: { ko: "가리키고 누르면, 소리 내어 읽어 줘요", en: "Point, click, and hear it read aloud" }
+  intro: { ko: "BigReader는 작업 표시줄 트레이에 조용히 있다가, 마우스를 글자 위에 두고 버튼을 누르면 그 줄을 소리 내어 읽어 주는 프로그램이에요. 마우스 사이드 버튼이나 단축키로 쓸 수 있고, 복사한 글도 읽어 줘요. 처음 실행할 때 음성 모델이 없으면 인터넷에서 내려받을 수 있어요.", en: "BigReader waits quietly in the system tray. Put your mouse over some text, press a button, and it reads that line aloud. It works with a mouse side button or a hotkey, and it can read copied text too. On first run it may download a voice model if one isn't installed yet." }
+  features:
+    - title: { ko: "마우스 버튼으로 읽기", en: "Read with a mouse button" }
+      text: { ko: "마우스 사이드 버튼(뒤로/앞으로)을 누르면 커서 아래 글자를 읽고, 다시 누르면 멈춰요.", en: "Press a mouse side button (back/forward) to read the text under the cursor, and press again to stop." }
+    - title: { ko: "단축키·클립보드", en: "Hotkeys and clipboard" }
+      text: { ko: "커서 읽기와 클립보드 읽기를 원하는 키 조합으로 지정할 수 있어요.", en: "Set your own key combinations for reading at the cursor and reading the clipboard." }
+    - title: { ko: "읽기 단위 선택", en: "Choose how much to read" }
+      text: { ko: "단어, 줄, 문단 중에서 한 번에 읽을 범위를 고를 수 있어요.", en: "Choose whether to read a word, a line or a paragraph at a time." }
+    - title: { ko: "음성 엔진 선택", en: "Pick a voice engine" }
+      text: { ko: "SAPI5, Windows OneCore, Supertonic-3 중에서 고르고, 한글과 영어를 각각 맞는 목소리로 나눠 읽을 수 있어요.", en: "Choose SAPI5, Windows OneCore or Supertonic-3, and let Korean and English parts be read in matching voices." }
+    - title: { ko: "OCR로 읽기", en: "OCR fallback" }
+      text: { ko: "글자 정보를 얻을 수 없는 화면은 화면 OCR로 글자를 찾아 읽어요.", en: "When a program doesn't expose its text, it can find the words with screen OCR." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "설정 창과 알림은 한국어/영어로, 다크/라이트 테마와 Ctrl +/− 확대도 돼요.", en: "Settings and notifications in Korean or English, plus dark/light theme and Ctrl +/− zoom." }
+  uses: { ko: ["긴 글을 눈 대신 귀로 듣고 싶을 때", "화면 글자를 읽기 힘들 때", "외국어 문장의 발음을 들어 보고 싶을 때"], en: ["When you'd rather listen to long text than read it", "When on-screen text is hard to read", "When you want to hear how a sentence sounds"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigReader.json", en: "CONFIGURATION\\BigReader.json next to the exe" }
+
+- name: BigStock
+  category: desktop
+  summary: { ko: "국내 주식 시세 수집과 차트", en: "Collect and chart Korean stock prices" }
+  tagline: { ko: "국내 주식 시세를 모으고 차트로 살펴봐요", en: "Gather Korean stock prices and explore them in charts" }
+  intro: { ko: "BigStock은 공공 API로 국내 주식 시세를 내려받아 내 PC에 모아 두고, 차트와 기술적 지표로 살펴보는 프로그램이에요. 공공데이터포털(금융위원회)이나 KRX에서 직접 발급받은 API 키가 필요해요. 신호와 백테스트는 과거 데이터를 계산한 결과일 뿐이고, 투자 권유가 아니에요.", en: "BigStock downloads Korean stock prices through public APIs, keeps them on your PC, and lets you explore them with charts and technical indicators. You need your own API key from data.go.kr (Financial Services Commission) or KRX. Signals and backtests are just calculations on past data, not investment advice." }
+  features:
+    - title: { ko: "종목 조회", en: "Stock lookup" }
+      text: { ko: "종목 코드나 이름으로 찾고, 관심 종목을 따로 모아 볼 수 있어요.", en: "Search by code or name and keep a separate watchlist." }
+    - title: { ko: "시세 수집", en: "Price collection" }
+      text: { ko: "기간과 대상을 정해 일별 시세를 내 PC의 데이터베이스에 저장하고, 멈춘 작업은 이어서 받을 수 있어요.", en: "Pick a period and targets to save daily prices into a local database, and resume interrupted jobs." }
+    - title: { ko: "차트와 지표", en: "Charts and indicators" }
+      text: { ko: "가격 차트에 이동평균, 볼린저 밴드, RSI, MACD를 함께 보여 줘요.", en: "Price charts with moving averages, Bollinger bands, RSI and MACD." }
+    - title: { ko: "신호와 백테스트", en: "Signals and backtests" }
+      text: { ko: "네 가지 기술적 전략을 과거 데이터에 적용해 보고 수수료·세금을 반영한 결과를 확인해요.", en: "Apply four technical strategies to past data and see results that include fees and taxes." }
+    - title: { ko: "CSV 내보내기", en: "CSV export" }
+      text: { ko: "저장한 시세를 기간별로 CSV 파일로 내보낼 수 있어요.", en: "Export the saved prices for any period to a CSV file." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 테마(차트 포함), Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme (charts included), and Ctrl +/− zoom." }
+  uses: { ko: ["국내 주식 시세를 내 PC에 모아 두고 싶을 때", "기술적 지표가 차트에서 어떻게 보이는지 공부할 때", "시세 데이터를 CSV로 받아 직접 분석하고 싶을 때"], en: ["When you want Korean stock prices stored on your own PC", "When learning how technical indicators look on a chart", "When you want price data as CSV for your own analysis"] }
+  settings_path: { ko: "%LOCALAPPDATA%\\BigStock (설정 settings.json, 데이터 stock.db)", en: "%LOCALAPPDATA%\\BigStock (settings.json and stock.db)" }
+
+- name: BigMaze
+  category: algo
+  summary: { ko: "미로를 만들고 푸는 과정 보기", en: "Watch mazes being built and solved" }
+  tagline: { ko: "미로가 만들어지고 풀리는 걸 눈으로 봐요", en: "See mazes get made and solved, step by step" }
+  intro: { ko: "BigMaze는 여러 알고리즘으로 미로를 만들고, 또 다른 알고리즘으로 길을 찾는 과정을 애니메이션으로 보여 줘요. 같은 미로에서 알고리즘마다 어떻게 다르게 움직이는지 한눈에 비교할 수 있어요.", en: "BigMaze builds mazes with several algorithms and animates other algorithms as they search for the way out. On the same maze, you can easily compare how each algorithm moves differently." }
+  features:
+    - title: { ko: "네 가지 생성법", en: "Four generators" }
+      text: { ko: "재귀 백트래커, 무작위 프림, 크루스칼, 윌슨 알고리즘으로 최대 300×300 미로를 만들어요.", en: "Build mazes up to 300×300 with recursive backtracker, randomized Prim, Kruskal or Wilson." }
+    - title: { ko: "열 가지 탐색법", en: "Ten solvers" }
+      text: { ko: "BFS, DFS, A*, 양방향 A*, 벽 따라가기, 막다른 길 채우기, 트레모 등을 골라 볼 수 있어요.", en: "Try BFS, DFS, A*, bidirectional A*, wall followers, dead-end filling, Trémaux and more." }
+    - title: { ko: "애니메이션 재생", en: "Animated search" }
+      text: { ko: "속도를 조절하며 탐색을 지켜보고, 일시정지하거나 결과만 한 번에 볼 수 있어요.", en: "Watch the search at your chosen speed, pause it, or show the result all at once." }
+    - title: { ko: "시드와 루프", en: "Seeds and loops" }
+      text: { ko: "같은 시드로 같은 미로를 다시 만들고, 브레이드로 루프를 넣어 갈림길을 만들 수 있어요.", en: "Reuse a seed to get the same maze again, and add loops with the braid setting." }
+    - title: { ko: "결과 비교 지표", en: "Comparison stats" }
+      text: { ko: "경로 길이, 방문 셀, 탐색 단계, 시간을 보여 줘서 알고리즘끼리 비교하기 좋아요.", en: "Path length, visited cells, steps and time make it easy to compare algorithms." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 미로까지 바뀌는 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, a dark/light theme that recolors the maze too, and Ctrl +/− zoom." }
+  uses: { ko: ["탐색 알고리즘을 눈으로 이해하고 싶을 때", "수업이나 발표에서 알고리즘을 보여 줄 때", "그냥 미로가 풀리는 걸 구경하고 싶을 때"], en: ["When you want to understand search algorithms visually", "When showing algorithms in a class or talk", "When you just enjoy watching a maze get solved"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigMaze.json", en: "CONFIGURATION\\BigMaze.json next to the exe" }
+
+- name: BigGraph
+  category: algo
+  summary: { ko: "그래프에서 최단 경로 찾기", en: "Find shortest paths in a graph" }
+  tagline: { ko: "점과 선 사이, 가장 짧은 길을 찾아 줘요", en: "Find the shortest way between the dots" }
+  intro: { ko: "BigGraph는 그래프를 만들거나 불러와서 다익스트라 알고리즘으로 두 점 사이의 최단 경로를 찾아 주는 프로그램이에요. 여러 모양의 랜덤 그래프를 바로 만들 수 있고, Mermaid 파일로 직접 그래프를 적어 불러올 수도 있어요.", en: "BigGraph builds or loads a graph and uses Dijkstra's algorithm to find the shortest path between two points. You can generate random graphs in several shapes, or write your own graph as a Mermaid file and load it." }
+  features:
+    - title: { ko: "랜덤 그래프 생성", en: "Random graphs" }
+      text: { ko: "원형, 분산, 격자, 군집, 계층 모양으로 노드 수와 밀도, 가중치를 정해 만들어요.", en: "Generate circular, scattered, grid, clustered or layered graphs with your own node count, density and weights." }
+    - title: { ko: "최단 경로 찾기", en: "Shortest path" }
+      text: { ko: "시작 노드와 목적 노드를 고르면 거리와 경로를 그래프 위에 보여 줘요.", en: "Pick a start and an end node to see the distance and the path on the graph." }
+    - title: { ko: "Mermaid 파일", en: "Mermaid files" }
+      text: { ko: "Mermaid(.mmd) 파일을 불러오고 저장할 수 있어요.", en: "Load and save graphs as Mermaid (.mmd) files." }
+    - title: { ko: "오류 진단", en: "Diagnostics" }
+      text: { ko: "파일에 잘못된 부분이 있으면 줄과 열 위치를 알려 줘요.", en: "If a file has a mistake, it tells you the line and column." }
+    - title: { ko: "방향 그래프", en: "Directed graphs" }
+      text: { ko: "방향이 있는 그래프와 없는 그래프를 모두 다룰 수 있어요.", en: "Works with both directed and undirected graphs." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  uses: { ko: ["다익스트라 알고리즘을 직접 실험해 보고 싶을 때", "Mermaid로 적은 그래프의 경로를 확인할 때", "자료구조 수업 자료가 필요할 때"], en: ["When you want to experiment with Dijkstra's algorithm", "When checking paths in a graph written in Mermaid", "When you need material for a data structures class"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigGraph.json", en: "CONFIGURATION\\BigGraph.json next to the exe" }
+
+- name: BigHuffman
+  category: algo
+  summary: { ko: "허프만 코딩으로 압축 원리 보기", en: "See how Huffman coding compresses" }
+  tagline: { ko: "글자가 어떻게 줄어드는지 직접 봐요", en: "Watch your text shrink, bit by bit" }
+  intro: { ko: "BigHuffman은 허프만 코딩으로 텍스트를 압축하고 다시 풀어 보는 프로그램이에요. 자주 나오는 글자에 짧은 코드를 주는 방식이 어떻게 동작하는지 코드 표와 비트 문자열로 보여 줘요.", en: "BigHuffman compresses text with Huffman coding and decodes it back. It shows how giving shorter codes to frequent characters works, using a code table and the actual bit string." }
+  features:
+    - title: { ko: "인코딩", en: "Encoding" }
+      text: { ko: "입력한 텍스트를 허프만 코드로 바꾸고 원본과 결과 바이트 수, 압축률을 보여 줘요.", en: "Turns your text into Huffman codes and shows original and encoded bytes plus the compression ratio." }
+    - title: { ko: "코드 테이블", en: "Code table" }
+      text: { ko: "글자마다 나온 횟수와 받은 코드를 표로 보여 줘요.", en: "A table lists how often each character appears and the code it got." }
+    - title: { ko: "비트·HEX 보기", en: "Bits and hex" }
+      text: { ko: "인코딩 결과를 비트 문자열(8비트씩 구분 가능)과 HEX 바이트로 볼 수 있어요.", en: "See the result as a bit string (optionally split into 8-bit groups) and as hex bytes." }
+    - title: { ko: "디코딩과 확인", en: "Decode and check" }
+      text: { ko: "비트를 고친 뒤 다시 풀어 보고, 원본과 일치하는지 알려 줘요.", en: "Edit the bits, decode them again, and see whether the result matches the original." }
+    - title: { ko: "예제 불러오기", en: "Built-in examples" }
+      text: { ko: "예제 텍스트를 눌러서 바로 시험해 볼 수 있어요.", en: "Load an example text with one click and try it right away." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  uses: { ko: ["압축이 어떻게 동작하는지 궁금할 때", "허프만 코딩을 배우거나 가르칠 때", "글자 빈도에 따라 코드가 어떻게 달라지는지 볼 때"], en: ["When you're curious how compression works", "When learning or teaching Huffman coding", "When you want to see how codes change with character frequency"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigHuffman.json", en: "CONFIGURATION\\BigHuffman.json next to the exe" }
+
+- name: BigClustering
+  category: algo
+  summary: { ko: "엑셀·CSV 데이터를 군집으로 묶기", en: "Group CSV and Excel data into clusters" }
+  tagline: { ko: "비슷한 데이터끼리 알아서 묶어 줘요", en: "Let similar rows find each other" }
+  intro: { ko: "BigClustering은 CSV나 엑셀(XLSX) 파일을 열고 원하는 열을 골라 K-평균 알고리즘으로 비슷한 행끼리 묶어 주는 프로그램이에요. 몇 개로 나누면 좋을지 추천해 주고, 결과를 표와 산점도로 보여 줘요.", en: "BigClustering opens a CSV or Excel (XLSX) file, lets you pick columns, and groups similar rows with the K-means algorithm. It suggests how many groups to use and shows the result as a summary table and a scatter plot." }
+  features:
+    - title: { ko: "CSV·XLSX 열기", en: "Open CSV or XLSX" }
+      text: { ko: "파일을 열면 데이터를 표로 보여 주고, 숫자와 문자열 열을 모두 고를 수 있어요.", en: "Open a file to see it as a table, and choose both number and text columns." }
+    - title: { ko: "K-평균 군집화", en: "K-means clustering" }
+      text: { ko: "군집 수 K를 정하고 실행하면 행마다 속한 군집을 붙여 줘요.", en: "Set the number of clusters K and run it to label every row with its cluster." }
+    - title: { ko: "K 추천", en: "K suggestion" }
+      text: { ko: "K = 2~10을 엘보 기법과 실루엣 점수로 비교해 알맞은 K를 추천해요.", en: "Compares K = 2 to 10 with the elbow method and silhouette score to suggest a good K." }
+    - title: { ko: "군집 요약", en: "Cluster summary" }
+      text: { ko: "군집별 건수와 평균, 가장 많이 나온 값을 표로 정리해 줘요.", en: "A table shows each cluster's size, averages and most common values." }
+    - title: { ko: "PCA 산점도", en: "PCA scatter plot" }
+      text: { ko: "데이터를 2차원으로 줄여 군집을 점 그림으로 보여 주고, 점에 마우스를 올리면 행 번호가 나와요.", en: "Projects the data to 2D and plots the clusters; hover a point to see its row number." }
+    - title: { ko: "결과 CSV 저장", en: "Save results as CSV" }
+      text: { ko: "군집 번호가 붙은 데이터를 CSV 파일로 저장해요.", en: "Save the data with cluster labels to a CSV file." }
+  uses: { ko: ["고객이나 상품 데이터를 비슷한 그룹으로 나눠 보고 싶을 때", "K-평균 알고리즘을 실제 데이터로 배워 볼 때", "엑셀 표에 숨은 패턴을 찾아보고 싶을 때"], en: ["When you want to split customer or product data into similar groups", "When learning K-means with real data", "When looking for hidden patterns in a spreadsheet"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigClustering.json", en: "CONFIGURATION\\BigClustering.json next to the exe" }

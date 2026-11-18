@@ -1,0 +1,13 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- if page.lang == 'ko' -%}{%- assign prefix = '/' -%}{%- else -%}{%- assign prefix = '/en/' -%}{%- endif -%}
+<footer class="site-footer">
+  <div class="wrap footer-inner">
+    <p class="footer-short">{{ t.footer_short }}</p>
+    <p class="footer-links">
+      <a href="{{ prefix | append: 'help/' | relative_url }}">{{ t.help }}</a>
+      <a href="{{ prefix | append: 'license/' | relative_url }}">{{ t.license }}</a>
+      <a href="https://github.com/{{ site.repository }}/releases">GitHub</a>
+    </p>
+    <p class="footer-note">{{ t.footer_note }} © {{ site.time | date: '%Y' }} icodebroker</p>
+  </div>
+</footer>

@@ -1,0 +1,32 @@
+{%- assign t = site.data.i18n[page.lang] -%}
+{%- assign app = include.app -%}
+{%- assign rel = site.data.releases[app.name] -%}
+{%- if page.lang == 'ko' -%}{%- assign page_url = '/apps/' | append: app.name | append: '/' -%}{%- else -%}{%- assign page_url = '/en/apps/' | append: app.name | append: '/' -%}{%- endif -%}
+{%- if app.screenshot -%}{%- assign shot = '/assets/screenshots/' | append: app.screenshot -%}{%- else -%}{%- assign shot = '/assets/screenshots/placeholder.png' -%}{%- endif -%}
+<article class="card" data-cat="{{ app.category }}" data-search="{{ app.name | downcase }} {{ app.summary.ko | escape }} {{ app.summary.en | downcase | escape }} {{ t.categories[app.category] | escape }}">
+  <a class="card-shot" href="{{ page_url | relative_url }}" tabindex="-1" aria-hidden="true">
+    <img src="{{ shot | relative_url }}" alt="" width="1280" height="800" loading="lazy">
+  </a>
+  <div class="card-body">
+    <div class="card-head">
+      <img class="app-icon" src="{{ '/assets/icons/' | append: app.name | append: '.png' | relative_url }}" alt="" width="48" height="48" loading="lazy">
+      <div>
+        <h3 class="card-title"><a href="{{ page_url | relative_url }}">{{ app.name }}</a></h3>
+        <span class="cat-badge">{{ t.categories[app.category] }}</span>
+      </div>
+    </div>
+    <p class="card-summary">{{ app.summary[page.lang] }}</p>
+    <div class="card-actions">
+      {%- if rel %}
+      <a class="btn btn-download" href="{{ rel.url }}" download>
+        <svg class="btn-ico" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3v12m0 0-5-5m5 5 5-5M4 20h16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+        {{ t.download }}
+      </a>
+      <p class="card-meta">v{{ rel.version }} · {{ rel.size | divided_by: 1048576.0 | round }}MB</p>
+      {%- else %}
+      <span class="btn btn-disabled">{{ t.coming_soon }}</span>
+      {%- endif %}
+      <a class="card-more" href="{{ page_url | relative_url }}">{{ t.details }} <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</article>

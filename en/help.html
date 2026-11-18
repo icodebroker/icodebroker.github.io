@@ -1,0 +1,37 @@
+---
+layout: page
+lang: en
+title: Help
+permalink: /en/help/
+alt_url: /help/
+---
+<h1>Help</h1>
+
+<h2>Download and run</h2>
+<ol>
+  <li>Click the <strong>Free download</strong> button of the app you want to get the zip file.</li>
+  <li>Right-click the zip file → <strong>Extract All</strong> and pick a folder.</li>
+  <li>Double-click the <code>.exe</code> file in that folder. There is no installer.</li>
+</ol>
+<p>Runs on Windows 10 or 11 (64-bit). You don't need to install .NET or anything else.</p>
+
+<h2>"Windows protected your PC" appears</h2>
+<p>These apps are shared without a paid code-signing certificate, so Windows SmartScreen may warn you the first time you run one.</p>
+<ol>
+  <li>Click <strong>More info</strong>.</li>
+  <li>Click the <strong>Run anyway</strong> button that appears.</li>
+</ol>
+<p>It won't show up again for that file. If you'd like, check the file first as shown below.</p>
+
+<h2>Check that the file is intact</h2>
+<p>Each app page lists the zip file's SHA-256 under <strong>More details</strong>. In PowerShell, go to the folder with the downloaded file, run the command below and compare the result with the page.</p>
+<p><code>Get-FileHash .\BigEdit-1.0.0-win-x64.zip</code></p>
+
+<h2>My antivirus blocks it</h2>
+<p>Some antivirus products wrongly flag single-file portable exes. If you downloaded it from this site (GitHub) and the SHA-256 matches, you can add it to your antivirus exceptions.</p>
+
+<h2>How to remove</h2>
+<p>Nothing is installed, so just delete the exe and the extracted folder. To remove settings too, delete the folder listed under <strong>More details → Settings location</strong> on the app page.</p>
+
+<h2>Apps that need administrator rights</h2>
+<p>A few apps that read system information, such as BigDisk and BigPacket, ask for administrator rights when they start. Their pages mention it.</p>
