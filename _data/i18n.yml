@@ -29,6 +29,7 @@ ko:
   first_time_text: 받은 프로그램을 실행할 때 "Windows의 PC 보호" 창이 뜰 수 있어요. 어떻게 하면 되는지 도움말에 정리해 두었어요.
   support_title: 프로그램이 도움이 되셨나요?
   support_text: 후원은 자유예요. 후원하지 않아도 모든 기능을 그대로 쓸 수 있어요. 마음에 드셨다면 커피 한 잔으로 응원해 주세요. 새 프로그램과 업데이트를 만드는 데 큰 힘이 돼요.
+  support_kakaopay: 카카오페이로 후원하기
   help: 도움말
   license: 라이선스
   footer_short: 무료 사용 · 무보증 · 재배포 금지
@@ -93,6 +94,7 @@ en:
   first_time_text: When you run a downloaded app, a "Windows protected your PC" window may appear. The help page shows what to do.
   support_title: Find these apps useful?
   support_text: Support is entirely optional, and every feature stays free either way. If you'd like to cheer me on, a coffee helps me keep making new apps and updates.
+  support_kakaopay: Donate with KakaoPay
   help: Help
   license: License
   footer_short: Free to use · No warranty · No redistribution

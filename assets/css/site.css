@@ -247,6 +247,11 @@ kbd {
 .btn-coffee:hover { transform: translateY(-1px); box-shadow: 0 5px 0 #d4b600; }
 .btn-coffee:active { transform: translateY(3px); box-shadow: 0 1px 0 #d4b600; }
 .btn-coffee:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+.support-links { display: flex; flex-wrap: wrap; gap: 10px; }
+.btn-kakaopay { background: #fee500; color: #191919; box-shadow: 0 4px 0 #d1bc00; }
+.btn-kakaopay:hover { transform: translateY(-1px); box-shadow: 0 5px 0 #d1bc00; }
+.btn-kakaopay:active { transform: translateY(3px); box-shadow: 0 1px 0 #d1bc00; }
+.btn-kakaopay:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
 
 /* 앱 소개 페이지 */
 .app-hero {
