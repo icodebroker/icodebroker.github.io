@@ -10,6 +10,7 @@
 # 사용법:
 #   powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigEdit,BigJSON -Language en
 #   (설정 키 추가, -File에서는 큰따옴표를 \"로) ... -App BigEdit -ExtraJson '\"IsDarkMode\": true'
+#   (고정 크기 창의 바탕색) ... -App BigCloser -Background '#000000'
 #   (관리자 PowerShell에서) powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigDisk,BigPacket
 
 param(
@@ -19,6 +20,8 @@ param(
     [string]$Language = 'ko',
     # 처음 실행 설정에 더 넣을 JSON 속성 (예: '"IsDarkMode": true')
     [string]$ExtraJson = '',
+    # 크기가 고정된 창을 가운데에 놓을 때의 바탕색 (기본 #FFF4E4, 예: '#000000')
+    [string]$Background = '',
     [int]$SettleSeconds = 4
 )
 
@@ -419,6 +422,11 @@ foreach($name in $App)
         if($keepAspect)
         {
             $mode = Save-Composed $bitmap $imagePath $bitmap.GetPixel(0, 0) $false
+        }
+        elseif($Background)
+        {
+            # 바탕색을 정하면 그림자는 넣지 않는다(어두운 바탕에서는 보이지 않고 테두리만 지저분해진다).
+            $mode = Save-Composed $bitmap $imagePath ([System.Drawing.ColorTranslator]::FromHtml($Background)) $false
         }
         else
         {
