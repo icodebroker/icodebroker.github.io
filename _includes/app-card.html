@@ -2,7 +2,7 @@
 {%- assign app = include.app -%}
 {%- assign rel = site.data.releases[app.name] -%}
 {%- if page.lang == 'ko' -%}{%- assign page_url = '/apps/' | append: app.name | append: '/' -%}{%- else -%}{%- assign page_url = '/en/apps/' | append: app.name | append: '/' -%}{%- endif -%}
-{%- if app.screenshot -%}{%- assign shot = '/assets/screenshots/' | append: app.screenshot -%}{%- else -%}{%- assign shot = '/assets/screenshots/placeholder.png' -%}{%- endif -%}
+{%- include screenshot-path.html name=app.name -%}
 <article class="card" data-cat="{{ app.category }}" data-search="{{ app.name | downcase }} {{ app.summary.ko | escape }} {{ app.summary.en | downcase | escape }} {{ t.categories[app.category] | escape }}">
   <a class="card-shot" href="{{ page_url | relative_url }}" tabindex="-1" aria-hidden="true">
     <img src="{{ shot | relative_url }}" alt="" width="1280" height="800" loading="lazy">

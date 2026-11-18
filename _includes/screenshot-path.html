@@ -1,0 +1,16 @@
+{%- comment -%}
+  include.name 앱의 스크린샷 경로를 shot 변수에 넣는다.
+  페이지 언어(assets/screenshots/<lang>/<앱>.png) → 다른 언어 → 빈 스크린샷 순서로 고른다.
+{%- endcomment -%}
+{%- if page.lang == 'ko' -%}{%- assign shot_other = 'en' -%}{%- else -%}{%- assign shot_other = 'ko' -%}{%- endif -%}
+{%- assign shot_main_path = '/assets/screenshots/' | append: page.lang | append: '/' | append: include.name | append: '.png' -%}
+{%- assign shot_other_path = '/assets/screenshots/' | append: shot_other | append: '/' | append: include.name | append: '.png' -%}
+{%- assign shot_main_file = site.static_files | where: 'path', shot_main_path | first -%}
+{%- assign shot_other_file = site.static_files | where: 'path', shot_other_path | first -%}
+{%- if shot_main_file -%}
+{%- assign shot = shot_main_path -%}
+{%- elsif shot_other_file -%}
+{%- assign shot = shot_other_path -%}
+{%- else -%}
+{%- assign shot = '/assets/screenshots/placeholder.png' -%}
+{%- endif -%}

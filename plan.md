@@ -146,7 +146,6 @@ icodebroker.github.io/
   sha256: "…"
   url: https://github.com/icodebroker/icodebroker.github.io/releases/download/BigEdit-v1.0.0/BigEdit-1.0.0-win-x64.zip
   released: 2026-11-18
-  screenshot:             # 비어 있으면 placeholder.png
 ```
 
 상세 페이지 파일(`apps/BigEdit.html`)에는 `layout: app`, `app: BigEdit`, `lang: ko`, `permalink`만 들어 있다. 내용은 모두 `apps.yml`과 `i18n.yml`에서 가져온다.
@@ -154,7 +153,7 @@ icodebroker.github.io/
 ### 두 언어 처리
 
 - `/`는 한국어, `/en/`은 영어다. 머리글의 `한국어 | English` 버튼은 같은 내용의 반대 언어 주소로 간다.
-- 첫 방문에 브라우저 언어가 한국어가 아니고 저장된 선택도 없으면 `/`에서 `/en/`으로 보낸다. 사용자가 고른 언어는 `localStorage`에 기억한다(읽기·쓰기는 try/catch로 감싸고, 실패하면 그냥 한국어로 보인다).
+- **기본 언어는 영어**(2026-11-18 변경): `/`에 들어오면 한국어를 직접 고른 적이 없는 한 `/en/`으로 보낸다. 사용자가 고른 언어는 `localStorage`에 기억한다(읽기·쓰기는 try/catch로 감싼다). 이미 배포한 zip·릴리스 노트의 주소가 바뀌지 않게 URL 구조는 그대로 둔다.
 - `<html lang>`, `<link rel="alternate" hreflang>`을 페이지마다 넣는다.
 
 ## 6. 디자인
@@ -251,7 +250,7 @@ icodebroker.github.io/
 - `assets/screenshots/placeholder.png`, 1280×800(16:10)
 - 연한 미색 바탕에 창 모양 테두리, 가운데 그림 아이콘과 "스크린샷 준비 중 · Screenshot coming soon"
 - 만드는 방법: PowerShell + System.Drawing으로 그려서 저장(다시 만들 수 있게 `tools/New-SiteImages.ps1`로 둔다)
-- 나중에 바꾸는 법: `assets/screenshots/BigEdit.png`(1280×800 권장)를 넣고 `apps.yml`의 `screenshot:`에 파일 이름을 적는다
+- 실제 스크린샷: `tools/Capture-Apps.ps1 -Language ko|en`이 `D:\UTILITY\<앱>\capture\<ko|en>\image01.png`(1280×800)를 만들고, `tools/Copy-Screenshots.ps1`이 `assets/screenshots/<ko|en>/<앱>.png`로 복사한다. 페이지는 자기 언어 → 다른 언어 → 빈 스크린샷 순서로 고른다(`_includes/screenshot-path.html`).
 
 ## 7. 업로드 스크립트 `tools/Publish-Apps.ps1`
 

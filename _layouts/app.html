@@ -7,7 +7,7 @@ layout: default
 {%- assign tp = site.data.thirdparty[app.name] -%}
 {%- assign L = page.lang -%}
 {%- if L == 'ko' -%}{%- assign prefix = '/' -%}{%- else -%}{%- assign prefix = '/en/' -%}{%- endif -%}
-{%- if app.screenshot -%}{%- assign shot = '/assets/screenshots/' | append: app.screenshot -%}{%- else -%}{%- assign shot = '/assets/screenshots/placeholder.png' -%}{%- endif -%}
+{%- include screenshot-path.html name=app.name -%}
 {%- capture download_button -%}
 {%- if rel -%}
 <a class="btn btn-download btn-lg" href="{{ rel.url }}" download>

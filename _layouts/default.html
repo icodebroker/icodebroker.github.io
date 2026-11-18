@@ -16,8 +16,8 @@
     (function () {
       var saved = null;
       try { saved = localStorage.getItem('lang'); } catch (e) {}
-      var browser = (navigator.language || 'ko').toLowerCase();
-      if (saved === 'en' || (!saved && browser.indexOf('ko') !== 0)) { location.replace('{{ "/en/" | relative_url }}'); }
+      // 기본 언어는 영어. 한국어를 직접 고른 방문자만 한국어 첫 화면에 머문다.
+      if (saved !== 'ko') { location.replace('{{ "/en/" | relative_url }}'); }
     })();
   </script>
   {%- endif %}
