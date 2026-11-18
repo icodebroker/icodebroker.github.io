@@ -147,9 +147,23 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'FFmpeg'; license = 'GPL-2.0-or-later'; url = 'https://ffmpeg.org' })
     }
 
+    # exe에 내장된 데이터 (출처 표기가 필요한 것 포함)
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigWorldWatch')
+    {
+        [void]$list.Add([ordered]@{ name = 'IANA Time Zone Database 2026f'; license = 'Public domain'; url = 'https://www.iana.org/time-zones' })
+        [void]$list.Add([ordered]@{ name = 'NodaTime tzdb2026f.nzd'; license = 'Apache-2.0'; url = 'https://nodatime.org/tzdb/' })
+        [void]$list.Add([ordered]@{ name = 'timezone-boundary-builder 2026f, (c) OpenStreetMap contributors'; license = 'ODbL-1.0'; url = 'https://github.com/evansiroky/timezone-boundary-builder' })
+        [void]$list.Add([ordered]@{ name = 'Natural Earth (1:50m land, 1:10m disputed areas)'; license = 'Public domain'; url = 'https://www.naturalearthdata.com/' })
+        [void]$list.Add([ordered]@{ name = 'GeoNames (cities15000, alternateNamesV2, countryInfo)'; license = 'CC-BY-4.0'; url = 'https://www.geonames.org/' })
+        [void]$list.Add([ordered]@{ name = 'Unicode CLDR 49'; license = 'Unicode-3.0'; url = 'https://cldr.unicode.org/' })
+    }
+
     $packageTable = [ordered]@{}
 
-    $projectFileList = Get-ChildItem $appDirectoryPath -Recurse -Filter *.csproj | Where-Object { $_.FullName -notmatch '\\(bin|obj|publish)\\' }
+    # 테스트 프로젝트의 패키지는 배포본에 들어가지 않는다.
+    $projectFileList = Get-ChildItem $appDirectoryPath -Recurse -Filter *.csproj |
+        Where-Object { $_.FullName -notmatch '\\(bin|obj|publish)\\' } |
+        Where-Object { $_.Name -notmatch 'Test\.csproj$' }
 
     foreach($projectFile in $projectFileList)
     {

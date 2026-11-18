@@ -564,6 +564,27 @@
   uses: { ko: ["작업하면서 시간을 늘 보고 싶을 때", "바탕 화면을 조금 멋지게 꾸미고 싶을 때", "발표나 시험 중 시계를 크게 띄울 때"], en: ["Keeping an eye on the time while you work", "Giving your desktop a nice touch", "Showing a big clock during a talk or exam"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigWatch.json", en: "BigWatch.json in the CONFIGURATION folder next to the exe" }
 
+- name: BigWorldWatch
+  category: desktop
+  summary: { ko: "세계 지도에서 고르는 세계 시계", en: "A world clock you pick from a world map" }
+  tagline: { ko: "지도를 클릭하면 그곳이 지금 몇 시인지 알려 드려요", en: "Click the map to see what time it is there right now" }
+  intro: { ko: "BigWorldWatch는 세계 지도를 클릭하거나 도시·시간대를 검색해 그곳의 현재 시각을 보여 주는 세계 시계예요. 자주 보는 도시는 '내 도시'에 모아 두고, 이 컴퓨터와의 시차와 다음 서머타임 전환까지 한눈에 확인할 수 있어요. 인터넷 연결 없이 프로그램에 들어 있는 시간대 데이터로 계산해요.", en: "BigWorldWatch is a world clock that shows the current time anywhere you click on the world map or find by searching for a city or time zone. Keep the places you check often in My Cities, and see the difference from this PC and the next daylight saving change at a glance. It works offline with the time zone data built into the app." }
+  features:
+    - title: { ko: "지도로 시간대 찾기", en: "Find time zones on the map" }
+      text: { ko: "세계 지도를 클릭하면 그 지점의 시간대와 현재 시각을 보여 줘요. 바다도 해역 시간대로 알려 줘요.", en: "Click anywhere on the world map to see that spot's time zone and current time, including ocean time zones." }
+    - title: { ko: "도시·시간대 검색", en: "City and time zone search" }
+      text: { ko: "인구 15,000명 이상의 도시를 한글이나 영문 이름, 국가, 시간대 이름으로 찾을 수 있어요.", en: "Search cities with 15,000 or more people by Korean or English name, country or time zone name." }
+    - title: { ko: "내 도시", en: "My Cities" }
+      text: { ko: "자주 보는 도시를 모아 두면 각 도시의 시각과 어제·오늘·내일 표시를 함께 보여 줘요.", en: "Save the cities you check often and see each one's time along with whether it is yesterday, today or tomorrow there." }
+    - title: { ko: "시차와 서머타임", en: "Time difference and DST" }
+      text: { ko: "UTC 오프셋, 이 컴퓨터와의 시차, 서머타임 여부와 다음 전환 날짜를 알려 줘요.", en: "Shows the UTC offset, the difference from this PC, whether daylight saving time is on and when the next change happens." }
+    - title: { ko: "정확한 시간대 데이터", en: "Accurate time zone data" }
+      text: { ko: "IANA 시간대 데이터베이스(tzdb 2026f)를 내장했고, 새 tzdb 파일(.nzd)을 exe 옆에 두면 그것을 써요.", en: "Built on the IANA Time Zone Database (tzdb 2026f), and uses a newer tzdb file (.nzd) if you place one next to the exe." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["해외에 있는 가족·친구에게 연락하기 좋은 시간을 알고 싶을 때", "다른 나라와 회의 시간을 잡을 때", "서머타임이 언제 바뀌는지 확인할 때"], en: ["When you want to know a good time to call family or friends abroad", "When you schedule a meeting with people in another country", "When you check when daylight saving time changes"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigWorldWatch.json", en: "BigWorldWatch.json in the CONFIGURATION folder next to the exe" }
+
 - name: BigView
   category: desktop
   summary: { ko: "마우스 주변을 크게 보여 주는 돋보기", en: "A magnifier that follows your mouse" }

@@ -962,6 +962,53 @@
                          "url":  null
                      }
                  ],
+    "BigWorldWatch":  [
+                          {
+                              "name":  ".NET Runtime / WPF",
+                              "license":  "MIT",
+                              "url":  "https://github.com/dotnet/runtime"
+                          },
+                          {
+                              "name":  "IANA Time Zone Database 2026f",
+                              "license":  "Public domain",
+                              "url":  "https://www.iana.org/time-zones"
+                          },
+                          {
+                              "name":  "NodaTime tzdb2026f.nzd",
+                              "license":  "Apache-2.0",
+                              "url":  "https://nodatime.org/tzdb/"
+                          },
+                          {
+                              "name":  "timezone-boundary-builder 2026f, (c) OpenStreetMap contributors",
+                              "license":  "ODbL-1.0",
+                              "url":  "https://github.com/evansiroky/timezone-boundary-builder"
+                          },
+                          {
+                              "name":  "Natural Earth (1:50m land, 1:10m disputed areas)",
+                              "license":  "Public domain",
+                              "url":  "https://www.naturalearthdata.com/"
+                          },
+                          {
+                              "name":  "GeoNames (cities15000, alternateNamesV2, countryInfo)",
+                              "license":  "CC-BY-4.0",
+                              "url":  "https://www.geonames.org/"
+                          },
+                          {
+                              "name":  "Unicode CLDR 49",
+                              "license":  "Unicode-3.0",
+                              "url":  "https://cldr.unicode.org/"
+                          },
+                          {
+                              "name":  "NodaTime",
+                              "license":  "Apache-2.0",
+                              "url":  "https://nodatime.org/"
+                          },
+                          {
+                              "name":  "NanumGothicCoding",
+                              "license":  "SIL OFL 1.1",
+                              "url":  null
+                          }
+                      ],
     "BigZIP":  [
                    {
                        "name":  ".NET Runtime / WPF",
