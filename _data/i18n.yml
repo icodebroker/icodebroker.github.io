@@ -9,6 +9,11 @@ ko:
   hero_title_after: 무료 윈도우 프로그램
   hero_count_suffix: 개
   hero_sub: 필요한 프로그램을 골라 받고, 압축을 풀어 바로 실행하세요. 회원 가입도, 광고도 없어요.
+  big_title: 이름 앞의 “Big”은 큰 글씨라는 뜻이에요
+  big_text: 고해상도 모니터에서 글씨가 너무 작아 눈을 찡그리던 분들을 위해 만들었어요. 모든 프로그램에 확대·축소 기능이 들어 있어서 글씨와 버튼을 보기 편한 크기로 키울 수 있어요.
+  big_keys_label: 대부분 이렇게 조절해요
+  big_keys_in: 크게
+  big_keys_out: 작게
   badges: [완전 무료, 광고 없음, 설치 필요 없음, Windows 10/11 64비트]
   all: 전체
   search_placeholder: 프로그램 이름이나 기능으로 찾기
@@ -65,6 +70,11 @@ en:
   hero_title_after: free Windows apps, no install needed
   hero_count_suffix: ""
   hero_sub: Pick what you need, unzip it and run it right away. No sign-up, no ads.
+  big_title: The “Big” in every name stands for Big Font
+  big_text: Made for anyone who squints at tiny text on high-resolution screens. Every app has zoom built in, so you can make text and buttons as large as feels comfortable.
+  big_keys_label: In most apps
+  big_keys_in: bigger
+  big_keys_out: smaller
   badges: [100% free, No ads, No installation, Windows 10/11 64-bit]
   all: All
   search_placeholder: Search by name or feature

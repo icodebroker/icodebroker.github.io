@@ -12,6 +12,18 @@ layout: default
       <span class="hero-count">{{ apps.size }}{{ t.hero_count_suffix }}</span> {{ t.hero_title_after }}
     </h1>
     <p class="hero-sub">{{ t.hero_sub }}</p>
+    <div class="big-note">
+      <div class="big-mark" aria-hidden="true"><span class="big-a-small">A</span><span class="big-arrow">→</span><span class="big-a-large">A</span></div>
+      <div class="big-body">
+        <h2 class="big-title">{{ t.big_title }}</h2>
+        <p class="big-text">{{ t.big_text }}</p>
+        <p class="big-keys">
+          <span class="big-keys-label">{{ t.big_keys_label }}</span>
+          <span class="big-key-group"><kbd>Ctrl</kbd> + <kbd>+</kbd> {{ t.big_keys_in }}</span>
+          <span class="big-key-group"><kbd>Ctrl</kbd> + <kbd>−</kbd> {{ t.big_keys_out }}</span>
+        </p>
+      </div>
+    </div>
     <ul class="badges">
       {%- for b in t.badges %}
       <li><svg viewBox="0 0 24 24" aria-hidden="true"><path d="m5 12.5 4.5 4.5L19 7.5" fill="none" stroke="currentColor" stroke-width="2.6" stroke-linecap="round" stroke-linejoin="round"/></svg>{{ b }}</li>
