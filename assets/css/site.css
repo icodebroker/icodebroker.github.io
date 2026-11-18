@@ -238,6 +238,16 @@ kbd {
 .tip h2 { font-size: 1.05rem; margin-bottom: 4px; }
 .tip p { margin: 0; color: var(--muted); }
 
+/* 후원 */
+.support { flex-wrap: wrap; align-items: center; }
+.support-body { flex: 1 1 260px; }
+.tip + .support { margin-top: -40px; }
+.app-page .support { margin: 28px 0 0; }
+.btn-coffee { background: #ffdd00; color: #2b2a28; box-shadow: 0 4px 0 #d4b600; }
+.btn-coffee:hover { transform: translateY(-1px); box-shadow: 0 5px 0 #d4b600; }
+.btn-coffee:active { transform: translateY(3px); box-shadow: 0 1px 0 #d4b600; }
+.btn-coffee:focus-visible { outline: 3px solid var(--green); outline-offset: 3px; }
+
 /* 앱 소개 페이지 */
 .app-hero {
   padding: 28px 0 32px;

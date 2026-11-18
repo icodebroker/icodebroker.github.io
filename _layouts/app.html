@@ -91,6 +91,8 @@ layout: default
       <p class="footer-short">{% if app.license_terms %}{{ app.license_terms[L] }}{% else %}{{ t.footer_short }}{% endif %} · <a href="{{ prefix | append: 'license/' | relative_url }}">{{ t.license }}</a></p>
     </section>
 
+    {% include support.html %}
+
     <details class="more-info">
       <summary>{{ t.more_info }}</summary>
       <dl>
