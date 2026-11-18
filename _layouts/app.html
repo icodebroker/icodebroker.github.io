@@ -127,7 +127,8 @@ layout: default
         {%- for i in (1..3) %}
         {%- assign j = idx | plus: i | modulo: same.size -%}
         {%- if j == idx %}{% break %}{% endif %}
-        {% include app-card.html app=same[j] %}
+        {%- assign other = same[j] %}
+        {% include app-card.html app=other %}
         {%- endfor %}
       </div>
     </section>
