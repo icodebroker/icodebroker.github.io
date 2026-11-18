@@ -11,6 +11,7 @@
 #   powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigEdit,BigJSON -Language en
 #   (설정 키 추가, -File에서는 큰따옴표를 \"로) ... -App BigEdit -ExtraJson '\"IsDarkMode\": true'
 #   (고정 크기 창의 바탕색) ... -App BigCloser -Background '#000000'
+#   (처음 실행 크기 그대로) ... -App BigView -KeepSize -Background '#000000'
 #   (관리자 PowerShell에서) powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigDisk,BigPacket
 
 param(
@@ -22,6 +23,8 @@ param(
     [string]$ExtraJson = '',
     # 크기가 고정된 창을 가운데에 놓을 때의 바탕색 (기본 #FFF4E4, 예: '#000000')
     [string]$Background = '',
+    # 크기 조절이 되는 창도 처음 실행 크기 그대로 찍는다 (1280x800 바탕 가운데에 놓음)
+    [switch]$KeepSize,
     [int]$SettleSeconds = 4
 )
 
@@ -371,7 +374,7 @@ foreach($name in $App)
         if([WindowCapture]::IsZoomed($window)) { [void][WindowCapture]::ShowWindow($window, 4) }
 
         $style     = [WindowCapture]::GetWindowLong($window, -16)
-        $resizable = ($style -band $WS_THICKFRAME) -ne 0
+        $resizable = (($style -band $WS_THICKFRAME) -ne 0) -and -not $KeepSize
 
         $windowRect = New-Object WindowCapture+RECT
         [void][WindowCapture]::GetWindowRect($window, [ref]$windowRect)
