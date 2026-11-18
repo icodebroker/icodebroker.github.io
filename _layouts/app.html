@@ -39,6 +39,9 @@ layout: default
         <p class="app-req">{% if rel %}v{{ rel.version }} · {% endif %}{{ t.requirements }}</p>
       </div>
       <p class="mobile-note">{{ t.mobile_note }}</p>
+      {%- if app.notice %}
+      <p class="app-notice">{{ app.notice[L] }}</p>
+      {%- endif %}
     </div>
   </section>
 
@@ -85,7 +88,7 @@ layout: default
 
     <section class="block cta-again">
       {{ download_button }}
-      <p class="footer-short">{{ t.footer_short }} · <a href="{{ prefix | append: 'license/' | relative_url }}">{{ t.license }}</a></p>
+      <p class="footer-short">{% if app.license_terms %}{{ app.license_terms[L] }}{% else %}{{ t.footer_short }}{% endif %} · <a href="{{ prefix | append: 'license/' | relative_url }}">{{ t.license }}</a></p>
     </section>
 
     <details class="more-info">

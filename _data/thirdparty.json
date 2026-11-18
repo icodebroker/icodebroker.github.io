@@ -566,6 +566,28 @@
                          "url":  null
                      }
                  ],
+    "BigPlayer":  [
+                      {
+                          "name":  ".NET Runtime / WPF",
+                          "license":  "MIT",
+                          "url":  "https://github.com/dotnet/runtime"
+                      },
+                      {
+                          "name":  "mpv (libmpv)",
+                          "license":  "GPL-2.0-or-later",
+                          "url":  "https://github.com/mpv-player/mpv"
+                      },
+                      {
+                          "name":  "FFmpeg",
+                          "license":  "GPL-2.0-or-later",
+                          "url":  "https://ffmpeg.org"
+                      },
+                      {
+                          "name":  "NanumGothicCoding",
+                          "license":  "SIL OFL 1.1",
+                          "url":  null
+                      }
+                  ],
     "BigReader":  [
                       {
                           "name":  ".NET Runtime / WPF",

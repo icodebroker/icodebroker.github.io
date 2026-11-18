@@ -166,6 +166,7 @@ $settingFileTable = @{
     'BigMEMO'       = 'LOCALAPPDATA\BigMEMO\BigMEMO.json'
     'BigStock'      = 'LOCALAPPDATA\BigStock\settings.json'
     'BigView'       = 'LOCALAPPDATA\BigView\BigView.json'
+    'BigPlayer'     = 'LOCALAPPDATA\BigPlayer\setting.json'
 }
 # 투명 위젯은 창 비율대로 내용이 그려지므로 원래 비율을 지킨 채 키우고, 투명했던 바탕색으로 1280x800을 채운다.
 $keepAspectAppList = @('BigWatch', 'BigKeyboard')

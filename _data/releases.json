@@ -207,6 +207,14 @@
                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigPiano-v1.0.0/BigPiano-1.0.0-win-x64.zip",
                      "released":  "2026-11-18"
                  },
+    "BigPlayer":  {
+                      "version":  "1.0.0",
+                      "zip":  "BigPlayer-1.0.0-win-x64.zip",
+                      "size":  107204482,
+                      "sha256":  "3e029e317cede02286fcffc3528983f1bcca9a9bd0822f1f6c737beda3eb6259",
+                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigPlayer-v1.0.0/BigPlayer-1.0.0-win-x64.zip",
+                      "released":  "2026-11-18"
+                  },
     "BigReader":  {
                       "version":  "1.0.0",
                       "zip":  "BigReader-1.0.0-win-x64.zip",

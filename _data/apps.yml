@@ -459,6 +459,29 @@
   uses: { ko: ["여행 사진을 빠르게 훑어볼 때", "사진 파일 이름을 날짜와 번호로 맞출 때", "필요 없는 사진을 골라 지울 때"], en: ["When you flip through travel photos", "When you rename photos with a date and number", "When you pick out and delete unwanted photos"] }
   settings_path: { ko: "%APPDATA%\\BigImageView\\BigImageView.json", en: "%APPDATA%\\BigImageView\\BigImageView.json" }
 
+- name: BigPlayer
+  category: media
+  summary: { ko: "자막과 이퀄라이저를 갖춘 동영상·음악 플레이어", en: "A video and music player with subtitles and an equalizer" }
+  tagline: { ko: "파일을 끌어다 놓으면 바로 재생해요", en: "Drop a file in and it starts playing" }
+  intro: { ko: "BigPlayer는 mpv 엔진으로 동영상과 음악을 재생하는 플레이어예요. 대부분의 형식을 따로 코덱을 설치하지 않고 열고, 자막·오디오 트랙 선택, 원하는 시간으로 정확히 이동, 10밴드 이퀄라이저를 쓸 수 있어요.", en: "BigPlayer plays videos and music with the mpv engine. It opens most formats without installing codecs, and lets you pick subtitle and audio tracks, jump to an exact time and use a 10-band equalizer." }
+  features:
+    - title: { ko: "코덱 설치 없이 재생", en: "No codecs to install" }
+      text: { ko: "mpv·FFmpeg가 들어 있어 대부분의 동영상·음악 파일을 바로 열어요. 끌어다 놓기도 돼요.", en: "mpv and FFmpeg are built in, so most video and music files open right away. Drag and drop works too." }
+    - title: { ko: "정확한 시간 이동", en: "Exact seeking" }
+      text: { ko: "1:23:45.678처럼 시간을 넣으면 그 프레임으로 이동하고, ←/→로 5초씩 움직여요.", en: "Type a time like 1:23:45.678 to jump to that frame, or move 5 seconds with Left/Right." }
+    - title: { ko: "자막", en: "Subtitles" }
+      text: { ko: "내장 자막과 SRT·SMI·ASS 파일을 열고, [ ]로 싱크를 맞출 수 있어요.", en: "Use built-in subtitles or open SRT, SMI and ASS files, and adjust the timing with [ and ]." }
+    - title: { ko: "오디오 트랙·이퀄라이저", en: "Audio tracks and equalizer" }
+      text: { ko: "오디오 트랙(언어)을 고르고, 프리셋이 있는 10밴드 이퀄라이저로 소리를 맞춰요.", en: "Choose an audio track (language) and shape the sound with a 10-band equalizer with presets." }
+    - title: { ko: "전체 화면", en: "Full screen" }
+      text: { ko: "더블클릭이나 F로 전체 화면으로 보고, 마우스를 아래로 내리면 조작 바가 나와요.", en: "Double-click or press F for full screen; move the mouse to the bottom to show the controls." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 조작 바 글자 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and enlarge the control text with Ctrl +/−." }
+  uses: { ko: ["받아 둔 동영상을 자막과 함께 볼 때", "자막 싱크가 맞지 않을 때", "음악을 이퀄라이저로 다듬어 들을 때"], en: ["When you watch a downloaded video with subtitles", "When the subtitles are out of sync", "When you want to fine-tune music with an equalizer"] }
+  settings_path: { ko: "%LOCALAPPDATA%\\BigPlayer\\setting.json", en: "%LOCALAPPDATA%\\BigPlayer\\setting.json" }
+  license_terms: { ko: "GPL-2.0-or-later · 무보증", en: "GPL-2.0-or-later · No warranty" }
+  notice: { ko: "BigPlayer에는 GPL로 배포되는 mpv(libmpv)와 FFmpeg가 들어 있어 프로그램 전체가 GPL-2.0-or-later 조건으로 배포됩니다. 이 사이트의 '재배포 금지' 조건은 BigPlayer에 적용되지 않으며, GPL 조건에 따라 복사·수정·재배포할 수 있습니다. 전체 소스 코드는 곧 공개할 예정이며, 공개되면 이 페이지에 위치를 알려 드립니다.", en: "BigPlayer includes mpv (libmpv) and FFmpeg, which are distributed under the GPL, so the whole app is distributed under GPL-2.0-or-later. This site's no-redistribution term does not apply to BigPlayer; you may copy, modify and redistribute it under the GPL. The complete source code will be published soon, and its location will be announced on this page." }
+
 - name: BigPiano
   category: media
   summary: { ko: "악보와 건반이 함께 움직이는 피아노", en: "A piano that plays with a moving score" }

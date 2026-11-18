@@ -20,7 +20,10 @@ Add-Type -AssemblyName System.IO.Compression
 Add-Type -AssemblyName System.IO.Compression.FileSystem
 
 $utilityRootPath       = 'D:\UTILITY'
-$excludeNameList       = @('BigChat', 'BigVideoStream', 'BigPlayer')
+$excludeNameList       = @('BigChat', 'BigVideoStream')
+# GPL 구성 요소(libmpv)가 들어 있어 실행 파일 전체가 GPL-2.0-or-later인 앱. README·릴리스 노트의 조건이 다르고 zip에 GPL 전문을 넣는다.
+$gplAppList            = @('BigPlayer')
+$gplLicenseFilePath    = Join-Path $PSScriptRoot 'licenses\GPL-2.0-LICENSE.txt'
 $repository            = 'icodebroker/icodebroker.github.io'
 $siteUrl               = 'https://icodebroker.github.io'
 $nugetPackageRootPath  = 'D:\NugetPackages'
@@ -137,6 +140,13 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
 
     [void]$list.Add([ordered]@{ name = '.NET Runtime / WPF'; license = 'MIT'; url = 'https://github.com/dotnet/runtime' })
 
+    # NuGet이 아닌 네이티브 DLL로 들어간 구성 요소
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigPlayer')
+    {
+        [void]$list.Add([ordered]@{ name = 'mpv (libmpv)'; license = 'GPL-2.0-or-later'; url = 'https://github.com/mpv-player/mpv' })
+        [void]$list.Add([ordered]@{ name = 'FFmpeg'; license = 'GPL-2.0-or-later'; url = 'https://ffmpeg.org' })
+    }
+
     $packageTable = [ordered]@{}
 
     $projectFileList = Get-ChildItem $appDirectoryPath -Recurse -Filter *.csproj | Where-Object { $_.FullName -notmatch '\\(bin|obj|publish)\\' }
@@ -213,6 +223,55 @@ function Get-LicenseFileList([string]$appDirectoryPath)
 
 function Get-ReadmeText([string]$name, [string]$version)
 {
+    if($gplAppList -contains $name)
+    {
+        return @"
+$name $version
+==============================
+
+[한국어]
+
+설치 없이 바로 쓰는 무료 프로그램입니다. $name.exe를 두 번 클릭하면 실행됩니다.
+Windows 10/11 64비트에서 돌아가며 .NET을 따로 설치할 필요가 없습니다.
+
+소개와 새 버전: $siteUrl/apps/$name/
+도움말: $siteUrl/help/
+
+라이선스: GPL-2.0-or-later
+이 프로그램에는 GPL로 배포되는 mpv(libmpv)와 FFmpeg가 들어 있어, 프로그램 전체가
+GNU General Public License 2.0 이상(GPL-2.0-or-later) 조건으로 배포됩니다.
+GPL 조건에 따라 복사·수정·재배포할 수 있습니다. GPL 전문은 LICENSES 폴더에 있습니다.
+어떤 보증도 없이 '있는 그대로' 제공되며, 사용하면서 생긴 손해에 대해 제작자는
+책임지지 않습니다.
+
+소스 코드 공개 안내: $name의 전체 소스 코드는 곧 공개할 예정입니다.
+공개되면 $siteUrl/apps/$name/ 에 위치를 알려 드립니다.
+
+[English]
+
+A free app that runs without installing. Double-click $name.exe to start.
+Runs on Windows 10/11 (64-bit). No .NET installation needed.
+
+About and updates: $siteUrl/en/apps/$name/
+Help: $siteUrl/en/help/
+
+License: GPL-2.0-or-later
+This app includes mpv (libmpv) and FFmpeg, which are distributed under the GPL,
+so the whole app is distributed under the GNU General Public License, version 2
+or later (GPL-2.0-or-later). You may copy, modify and redistribute it under the
+terms of the GPL. The full GPL text is in the LICENSES folder.
+Provided "as is", without warranty of any kind. The author is not liable for
+any damages arising from its use.
+
+Source code: the complete source code of $name will be published soon.
+Its location will be announced at $siteUrl/en/apps/$name/.
+
+See THIRD-PARTY-NOTICES.txt for the open source components included in this app.
+
+(c) icodebroker
+"@
+    }
+
     return @"
 $name $version
 ==============================
@@ -443,6 +502,11 @@ foreach($appDirectory in $appDirectoryList)
         Copy-Item $licenseFile.FullName (Join-Path $stagePath 'LICENSES')
     }
 
+    if($gplAppList -contains $name)
+    {
+        Copy-Item $gplLicenseFilePath (Join-Path $stagePath 'LICENSES')
+    }
+
     # Compress-Archive(PS 5.1)는 zip 안 경로를 역슬래시로 써서 다른 압축 프로그램에서 폴더가 깨진다. 항목을 직접 '/'로 넣는다.
     $archive = [System.IO.Compression.ZipFile]::Open($zipPath, 'Create')
 
@@ -490,7 +554,14 @@ foreach($appDirectory in $appDirectoryList)
     else
     {
         $notesPath = Join-Path $workDirectoryPath "$name-notes.md"
-        $notes     = "**$name $version** (Windows 10/11 64-bit)`n`n- 소개 / About: $siteUrl/apps/$name/ · $siteUrl/en/apps/$name/`n- SHA-256 (zip): ``$sha256```n`n무료 사용 · 무보증 · 재배포 금지 / Free to use · No warranty · No redistribution`n"
+        $terms     = '무료 사용 · 무보증 · 재배포 금지 / Free to use · No warranty · No redistribution'
+
+        if($gplAppList -contains $name)
+        {
+            $terms = "GPL-2.0-or-later (mpv·FFmpeg 포함) · 무보증 / No warranty`n`n소스 코드는 곧 공개할 예정입니다. / The source code will be published soon."
+        }
+
+        $notes     = "**$name $version** (Windows 10/11 64-bit)`n`n- 소개 / About: $siteUrl/apps/$name/ · $siteUrl/en/apps/$name/`n- SHA-256 (zip): ``$sha256```n`n$terms`n"
 
         [System.IO.File]::WriteAllText($notesPath, $notes, $utf8NoBom)
 
