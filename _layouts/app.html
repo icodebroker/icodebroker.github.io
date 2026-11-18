@@ -38,6 +38,7 @@ layout: default
         {{ download_button }}
         <p class="app-req">{% if rel %}v{{ rel.version }} · {% endif %}{{ t.requirements }}</p>
       </div>
+      {% include support.html %}
       <p class="mobile-note">{{ t.mobile_note }}</p>
       {%- if app.notice %}
       <p class="app-notice">{{ app.notice[L] }}</p>
