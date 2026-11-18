@@ -8,7 +8,8 @@
 #   잠시 이름을 바꿔 두었다가 끝나면 그대로 되돌린다.
 #
 # 사용법:
-#   powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigEdit,BigJSON
+#   powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigEdit,BigJSON -Language en
+#   (설정 키 추가, -File에서는 큰따옴표를 \"로) ... -App BigEdit -ExtraJson '\"IsDarkMode\": true'
 #   (관리자 PowerShell에서) powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigDisk,BigPacket
 
 param(
@@ -16,6 +17,8 @@ param(
     [string[]]$App,
     [ValidateSet('ko', 'en')]
     [string]$Language = 'ko',
+    # 처음 실행 설정에 더 넣을 JSON 속성 (예: '"IsDarkMode": true')
+    [string]$ExtraJson = '',
     [int]$SettleSeconds = 4
 )
 
@@ -298,6 +301,11 @@ foreach($name in $App)
     }
 
     #region 언어 설정 파일 넣기 (설정 폴더를 치운 뒤라 원래 설정은 건드리지 않는다)
+
+    if($ExtraJson)
+    {
+        $settingJson = $settingJson.TrimEnd().TrimEnd('}') + ", $ExtraJson }"
+    }
 
     if($settingFileTable.ContainsKey($name))
     {
