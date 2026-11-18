@@ -482,6 +482,27 @@
   license_terms: { ko: "GPL-2.0-or-later · 무보증", en: "GPL-2.0-or-later · No warranty" }
   notice: { ko: "BigPlayer에는 GPL로 배포되는 mpv(libmpv)와 FFmpeg가 들어 있어 프로그램 전체가 GPL-2.0-or-later 조건으로 배포됩니다. 이 사이트의 '재배포 금지' 조건은 BigPlayer에 적용되지 않으며, GPL 조건에 따라 복사·수정·재배포할 수 있습니다. 전체 소스 코드는 곧 공개할 예정이며, 공개되면 이 페이지에 위치를 알려 드립니다.", en: "BigPlayer includes mpv (libmpv) and FFmpeg, which are distributed under the GPL, so the whole app is distributed under GPL-2.0-or-later. This site's no-redistribution term does not apply to BigPlayer; you may copy, modify and redistribute it under the GPL. The complete source code will be published soon, and its location will be announced on this page." }
 
+- name: BigRadio
+  category: media
+  summary: { ko: "아날로그 VU 미터가 있는 인터넷 라디오", en: "Internet radio with analog VU meters" }
+  tagline: { ko: "전 세계 5만여 개 방송을 골라 듣고, 바늘로 소리를 봐요", en: "Tune in to 50,000+ stations worldwide and watch the needles move" }
+  intro: { ko: "BigRadio는 전 세계 인터넷 라디오 방송을 찾아 듣는 프로그램이에요. 공개 방송 목록인 Radio Browser에서 5만여 개 방송을 받아 국가와 이름으로 찾고, 좋아하는 방송은 즐겨찾기에 모아 둘 수 있어요. 재생하는 동안 IEC 규격대로 움직이는 아날로그 VU 미터 두 개가 왼쪽·오른쪽 소리 크기를 보여 줘요. 방송 목록은 하루 한 번 받아 두고, 재생할 때 Radio Browser에 그 방송의 재생 횟수를 알려요.", en: "BigRadio finds and plays internet radio stations from around the world. It downloads 50,000+ stations from Radio Browser, a public station directory, so you can search by country and name and keep your favorites. While playing, two analog VU meters that move to the IEC standard show the left and right levels. The station list is refreshed once a day, and when you play a station BigRadio reports a play count for it to Radio Browser." }
+  features:
+    - title: { ko: "전 세계 방송", en: "Stations worldwide" }
+      text: { ko: "Radio Browser의 5만여 개 방송을 국가별로 거르고 방송 이름으로 검색해요. 최근 점검에 실패한 방송은 흐리게 보여 줘요.", en: "Filter 50,000+ Radio Browser stations by country and search by name. Stations that failed the last check are dimmed." }
+    - title: { ko: "아날로그 VU 미터", en: "Analog VU meters" }
+      text: { ko: "IEC 60268-17 규격의 바늘 움직임으로 왼쪽·오른쪽 소리 크기를 보여 줘요. 볼륨과 상관없이 방송 자체의 레벨을 보여 줘요.", en: "Left and right needles move to the IEC 60268-17 standard and show the broadcast level regardless of your volume." }
+    - title: { ko: "대부분의 방송 형식 재생", en: "Plays most stream formats" }
+      text: { ko: "FFmpeg 디코더가 들어 있어 MP3·AAC·OGG·FLAC과 HLS 방송을 따로 설치 없이 들을 수 있어요. 끊기면 다시 연결해요.", en: "The built-in FFmpeg decoder plays MP3, AAC, OGG, FLAC and HLS streams with nothing extra to install, and reconnects if the stream drops." }
+    - title: { ko: "즐겨찾기", en: "Favorites" }
+      text: { ko: "★를 눌러 즐겨찾기에 넣고, 즐겨찾기만 모아 볼 수 있어요. 다시 켜면 마지막 방송이 선택되어 있어요.", en: "Click ★ to add a favorite and show only your favorites. The last station is selected when you open the app again." }
+    - title: { ko: "곡 정보", en: "Track info" }
+      text: { ko: "방송이 보내 주는 곡 제목과 실제 형식(코덱·샘플 레이트)을 보여 줘요.", en: "Shows the track title sent by the station and the actual stream format (codec and sample rate)." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["일하면서 다른 나라 라디오를 틀어 두고 싶을 때", "외국어 공부로 현지 방송을 들을 때", "방송 소리 크기를 VU 미터로 보고 싶을 때"], en: ["When you want radio from another country playing while you work", "When you listen to local broadcasts to learn a language", "When you want to watch broadcast levels on VU meters"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigRadio.json (방송 목록 캐시와 FFmpeg DLL은 %LOCALAPPDATA%\\BigRadio)", en: "BigRadio.json in the CONFIGURATION folder next to the exe (station list cache and FFmpeg DLLs in %LOCALAPPDATA%\\BigRadio)" }
+
 - name: BigPiano
   category: media
   summary: { ko: "악보와 건반이 함께 움직이는 피아노", en: "A piano that plays with a moving score" }

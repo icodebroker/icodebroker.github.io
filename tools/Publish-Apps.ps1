@@ -93,6 +93,7 @@ function Get-PackageLicense([string]$name, [string]$version)
     $overrideTable = @{
         'Newtonsoft.Json'            = 'MIT'
         'Interop.UIAutomationClient' = 'MIT'
+        'FFmpeg.AutoGen'             = 'MIT'
     }
 
     $license    = $null
@@ -145,6 +146,12 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
     {
         [void]$list.Add([ordered]@{ name = 'mpv (libmpv)'; license = 'GPL-2.0-or-later'; url = 'https://github.com/mpv-player/mpv' })
         [void]$list.Add([ordered]@{ name = 'FFmpeg'; license = 'GPL-2.0-or-later'; url = 'https://ffmpeg.org' })
+    }
+
+    # BigRadio는 FFmpeg LGPL 공유 빌드(--enable-version3) DLL을 exe에 내장했다가 %LOCALAPPDATA%\BigRadio\FFMPEG에 풀어 쓴다.
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigRadio')
+    {
+        [void]$list.Add([ordered]@{ name = 'FFmpeg n8.1.3 (avcodec, avformat, avutil, swresample; shared DLLs)'; license = 'LGPL-3.0-or-later'; url = 'https://ffmpeg.org' })
     }
 
     # exe에 내장된 데이터 (출처 표기가 필요한 것 포함)
@@ -205,6 +212,9 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
 
     foreach($licenseFile in (Get-LicenseFileList $appDirectoryPath))
     {
+        # FFMPEG\LICENSE.txt는 위에서 넣은 FFmpeg 항목의 전문이다.
+        if($licenseFile.Directory.Name -eq 'FFMPEG') { continue }
+
         $text = [System.IO.File]::ReadAllText($licenseFile.FullName)
 
         $license = 'See file'
@@ -513,7 +523,12 @@ foreach($appDirectory in $appDirectoryList)
 
     foreach($licenseFile in (Get-LicenseFileList $appDirectory.FullName))
     {
-        Copy-Item $licenseFile.FullName (Join-Path $stagePath 'LICENSES')
+        $targetName = $licenseFile.Name
+
+        # FFMPEG\LICENSE.txt는 이름만으로 무엇의 전문인지 알 수 없어 이름을 바꿔 넣는다.
+        if($licenseFile.Directory.Name -eq 'FFMPEG') { $targetName = 'FFMPEG-LGPL-3.0-LICENSE.txt' }
+
+        Copy-Item $licenseFile.FullName (Join-Path (Join-Path $stagePath 'LICENSES') $targetName)
     }
 
     if($gplAppList -contains $name)

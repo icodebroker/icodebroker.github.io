@@ -215,6 +215,14 @@
                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigPlayer-v1.0.0/BigPlayer-1.0.0-win-x64.zip",
                       "released":  "2026-11-18"
                   },
+    "BigRadio":  {
+                     "version":  "1.0.0",
+                     "zip":  "BigRadio-1.0.0-win-x64.zip",
+                     "size":  110497787,
+                     "sha256":  "5d185eef3bb22ef87c3001011ce338350b92514d59e88dc57405cd0ab290985b",
+                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigRadio-v1.0.0/BigRadio-1.0.0-win-x64.zip",
+                     "released":  "2026-11-19"
+                 },
     "BigReader":  {
                       "version":  "1.0.0",
                       "zip":  "BigReader-1.0.0-win-x64.zip",
