@@ -90,8 +90,8 @@
     "BigExplorer":  {
                         "version":  "1.0.0",
                         "zip":  "BigExplorer-1.0.0-win-x64.zip",
-                        "size":  60297562,
-                        "sha256":  "e96d02116152404c86faa4b1683b8c3ba22c07a69caa4eeb3feabb61ab9da869",
+                        "size":  60297633,
+                        "sha256":  "cceb6cc8facb9b11fc89a4c525fc649cf4b348b6450c1af43b6bd505bfb5b7c5",
                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigExplorer-v1.0.0/BigExplorer-1.0.0-win-x64.zip",
                         "released":  "2026-11-18"
                     },
