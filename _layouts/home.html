@@ -2,7 +2,7 @@
 layout: default
 ---
 {%- assign t = site.data.i18n[page.lang] -%}
-{%- assign apps = site.data.apps -%}
+{%- assign apps = site.data.apps | sort_natural: 'name' -%}
 {%- if page.lang == 'ko' -%}{%- assign prefix = '/' -%}{%- else -%}{%- assign prefix = '/en/' -%}{%- endif -%}
 <section class="hero">
   <div class="wrap">
