@@ -11,6 +11,12 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <script>
+    // 카카오페이는 휴대폰 앱에서만 열린다. 휴대폰(짧은 변 600px 미만 터치 기기)이 아니면 QR 코드를 보여 준다.
+    if (!(matchMedia('(pointer: coarse)').matches && Math.min(screen.width, screen.height) < 600)) {
+      document.documentElement.classList.add('show-qr');
+    }
+  </script>
   {%- if page.lang == 'ko' and page.url == '/' %}
   <script>
     (function () {

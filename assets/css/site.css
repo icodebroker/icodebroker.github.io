@@ -255,6 +255,8 @@ kbd {
   .btn-kakaopay { display: none; }
   .kakaopay-qr { display: flex; }
 }
+.show-qr .btn-kakaopay { display: none; }
+.show-qr .kakaopay-qr { display: flex; }
 .btn-kakaopay { background: #fee500; color: #191919; box-shadow: 0 4px 0 #d1bc00; }
 .btn-kakaopay:hover { transform: translateY(-1px); box-shadow: 0 5px 0 #d1bc00; }
 .btn-kakaopay:active { transform: translateY(3px); box-shadow: 0 1px 0 #d1bc00; }
