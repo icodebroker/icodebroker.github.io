@@ -94,6 +94,7 @@ function Get-PackageLicense([string]$name, [string]$version)
         'Newtonsoft.Json'            = 'MIT'
         'Interop.UIAutomationClient' = 'MIT'
         'FFmpeg.AutoGen'             = 'MIT'
+        'BitMiracle.LibTiff.NET'     = 'BSD-3-Clause'
     }
 
     $license    = $null
@@ -163,6 +164,15 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'Natural Earth (1:50m land, 1:10m disputed areas)'; license = 'Public domain'; url = 'https://www.naturalearthdata.com/' })
         [void]$list.Add([ordered]@{ name = 'GeoNames (cities15000, alternateNamesV2, countryInfo)'; license = 'CC-BY-4.0'; url = 'https://www.geonames.org/' })
         [void]$list.Add([ordered]@{ name = 'Unicode CLDR 49'; license = 'Unicode-3.0'; url = 'https://cldr.unicode.org/' })
+    }
+
+    # BigContourMap : SQLitePCLRaw가 싣는 네이티브 SQLite와 미리 정의한 색상표 값 (ColorRampPresetHelper)
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigContourMap')
+    {
+        [void]$list.Add([ordered]@{ name = 'SQLite (e_sqlite3)'; license = 'Public domain'; url = 'https://sqlite.org/copyright.html' })
+        [void]$list.Add([ordered]@{ name = 'matplotlib colormap terrain'; license = 'matplotlib License (PSF-based)'; url = 'https://matplotlib.org/stable/project/license.html' })
+        [void]$list.Add([ordered]@{ name = 'matplotlib colormaps viridis, cividis'; license = 'CC0-1.0'; url = 'https://matplotlib.org/' })
+        [void]$list.Add([ordered]@{ name = 'ColorBrewer 2.0 (YlGn, YlOrBr, Greys, BrBG, RdYlBu)'; license = 'Apache-2.0'; url = 'https://colorbrewer2.org/' })
     }
 
     $packageTable = [ordered]@{}

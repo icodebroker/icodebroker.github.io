@@ -207,6 +207,28 @@
   uses: { ko: ["발표 자료에 수식 이미지를 넣을 때", "Word 문서에 수식을 넣을 때", "예전에 만든 수식을 다시 고칠 때"], en: ["Adding formula images to slides", "Putting equations into a Word document", "Editing a formula you made before"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigFormula.json", en: "BigFormula.json in the CONFIGURATION folder next to the exe" }
 
+- name: BigContourMap
+  category: docs
+  summary: { ko: "높이를 고치면 등고선이 따라 바뀌는 등고선 지도 편집기", en: "A contour map editor where contours follow your height edits" }
+  tagline: { ko: "지형을 브러시로 다듬으면 등고선이 바로 다시 그려져요", en: "Shape the terrain with a brush and watch the contours redraw" }
+  intro: { ko: "BigContourMap은 수치 표고 모델(DEM)이나 표고점으로 등고선 지도를 만들고 고치는 프로그램이에요. 등고선을 직접 옮기는 대신 높이 면을 브러시나 칸 값으로 고치면, 등고선이 매번 다시 계산되어 서로 겹치거나 끊기지 않아요. 고도 채색과 음영기복으로 지형을 입체적으로 보여 주고, 결과는 GeoPackage·GeoTIFF·GeoJSON과 지도 이미지로 내보낼 수 있어요. 인터넷 연결 없이 동작해요.", en: "BigContourMap creates and edits contour maps from a digital elevation model (DEM) or spot heights. Instead of moving contour lines by hand, you edit the height surface with a brush or cell values, and the contours are recalculated every time so they never cross or break. Hypsometric tints and hillshading show the terrain in relief, and you can export to GeoPackage, GeoTIFF, GeoJSON or a map image. It works offline." }
+  features:
+    - title: { ko: "DEM·표고점 열기", en: "Open DEMs and spot heights" }
+      text: { ko: "GeoTIFF, ESRI ASCII Grid, SRTM HGT 지형 파일과 x,y,z 표고점 CSV를 열어요.", en: "Opens GeoTIFF, ESRI ASCII Grid and SRTM HGT elevation files and x,y,z spot height CSVs." }
+    - title: { ko: "높이를 고치는 편집", en: "Edit the heights, not the lines" }
+      text: { ko: "브러시로 높이기·낮추기·평탄화·부드럽게, 칸 값 직접 입력, 실행 취소·다시 실행을 쓸 수 있어요.", en: "Raise, lower, flatten and smooth with a brush, set cell values directly, and undo or redo." }
+    - title: { ko: "표고점 보간", en: "Spot height interpolation" }
+      text: { ko: "표고점과 변화선(산등성이·계곡선)으로 TIN(제약 들로네)·IDW·자연 이웃 보간을 해요.", en: "Interpolates spot heights and breaklines (ridges and valleys) with TIN (constrained Delaunay), IDW or natural neighbor." }
+    - title: { ko: "깔끔한 등고선", en: "Clean contours" }
+      text: { ko: "간격·계곡선 주기·높이 라벨을 정하고, 등고선이 겹치거나 끊기지 않았는지 위상 검사로 확인해요.", en: "Set the interval, index lines and height labels, and run a topology check to confirm no contours cross or break." }
+    - title: { ko: "고도 채색·음영기복", en: "Hypsometric tints and hillshade" }
+      text: { ko: "미리 정의한 색상표 8종이나 직접 만든 색상표를 쓰고, 색맹 시뮬레이션으로 구분이 잘 되는지 확인해요.", en: "Use one of 8 preset color tables or your own, and check them with a color vision deficiency simulation." }
+    - title: { ko: "표준 형식 저장·내보내기", en: "Standard formats" }
+      text: { ko: "프로젝트는 GeoPackage로 저장하고, GeoTIFF·GeoJSON·CSV와 PNG·GeoTIFF 지도 이미지로 내보내요. 한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대도 쓸 수 있어요.", en: "Save projects as GeoPackage and export GeoTIFF, GeoJSON, CSV and PNG or GeoTIFF map images. Korean/English, light/dark themes and Ctrl +/− zoom are included." }
+  uses: { ko: ["지형 데이터로 등산·답사용 등고선 지도를 만들 때", "측량한 표고점으로 지형면과 등고선을 만들 때", "게임·모형용 가상 지형을 만들고 다듬을 때"], en: ["Making a contour map for hiking or fieldwork from elevation data", "Building a surface and contours from surveyed spot heights", "Creating and shaping imaginary terrain for games or models"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigContourMap.json", en: "BigContourMap.json in the CONFIGURATION folder next to the exe" }
+  screenshot_credit: { ko: "스크린샷 지형: Copernicus DEM GLO-30 설악산 일대를 잘라 낸 수정 데이터 — produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.", en: "Screenshot terrain: modified Copernicus DEM GLO-30 data (Seoraksan, Korea) — produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved." }
+
 - name: BigMindMap
   category: docs
   summary: { ko: "키보드로 빠르게 그리는 마인드맵", en: "A mind map you can build fast from the keyboard" }

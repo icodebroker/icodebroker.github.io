@@ -13,6 +13,7 @@
 #   (고정 크기 창의 바탕색) ... -App BigCloser -Background '#000000'
 #   (처음 실행 크기 그대로) ... -App BigView -KeepSize -Background '#000000'
 #   (관리자 앱을 일반 권한으로) ... -App BigDisk,BigPacket -RunAsInvoker
+#   (파일을 연 상태로) ... -App BigContourMap -OpenFile 'D:\UTILITY\BigContourMap\data\glo30_seorak.tif'
 #   (관리자 PowerShell에서) powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigDisk,BigPacket
 
 param(
@@ -28,6 +29,8 @@ param(
     [switch]$KeepSize,
     # requireAdministrator 앱도 UAC 없이 일반 권한으로 실행한다 (__COMPAT_LAYER=RunAsInvoker)
     [switch]$RunAsInvoker,
+    # 이 파일을 연 상태로 실행한다 (exe 첫 번째 인수로 넘김)
+    [string]$OpenFile = '',
     [int]$SettleSeconds = 4
 )
 
@@ -339,7 +342,14 @@ foreach($name in $App)
     {
         if($RunAsInvoker) { $env:__COMPAT_LAYER = 'RunAsInvoker' }
 
-        $process = Start-Process -FilePath (Join-Path $stagePath "$name.exe") -WorkingDirectory $stagePath -PassThru
+        if($OpenFile)
+        {
+            $process = Start-Process -FilePath (Join-Path $stagePath "$name.exe") -ArgumentList ('"' + $OpenFile + '"') -WorkingDirectory $stagePath -PassThru
+        }
+        else
+        {
+            $process = Start-Process -FilePath (Join-Path $stagePath "$name.exe") -WorkingDirectory $stagePath -PassThru
+        }
 
         if($RunAsInvoker) { Remove-Item Env:__COMPAT_LAYER -ErrorAction SilentlyContinue }
 

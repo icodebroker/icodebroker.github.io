@@ -112,6 +112,73 @@
                               "url":  null
                           }
                       ],
+    "BigContourMap":  [
+                          {
+                              "name":  ".NET Runtime / WPF",
+                              "license":  "MIT",
+                              "url":  "https://github.com/dotnet/runtime"
+                          },
+                          {
+                              "name":  "SQLite (e_sqlite3)",
+                              "license":  "Public domain",
+                              "url":  "https://sqlite.org/copyright.html"
+                          },
+                          {
+                              "name":  "matplotlib colormap terrain",
+                              "license":  "matplotlib License (PSF-based)",
+                              "url":  "https://matplotlib.org/stable/project/license.html"
+                          },
+                          {
+                              "name":  "matplotlib colormaps viridis, cividis",
+                              "license":  "CC0-1.0",
+                              "url":  "https://matplotlib.org/"
+                          },
+                          {
+                              "name":  "ColorBrewer 2.0 (YlGn, YlOrBr, Greys, BrBG, RdYlBu)",
+                              "license":  "Apache-2.0",
+                              "url":  "https://colorbrewer2.org/"
+                          },
+                          {
+                              "name":  "BitMiracle.LibTiff.NET",
+                              "license":  "BSD-3-Clause",
+                              "url":  "https://bitmiracle.com/libtiff/"
+                          },
+                          {
+                              "name":  "Microsoft.Data.Sqlite",
+                              "license":  "MIT",
+                              "url":  "https://docs.microsoft.com/dotnet/standard/data/sqlite/"
+                          },
+                          {
+                              "name":  "Microsoft.Data.Sqlite.Core",
+                              "license":  "MIT",
+                              "url":  "https://docs.microsoft.com/dotnet/standard/data/sqlite/"
+                          },
+                          {
+                              "name":  "SQLitePCLRaw.bundle_e_sqlite3",
+                              "license":  "Apache-2.0",
+                              "url":  "https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3"
+                          },
+                          {
+                              "name":  "SQLitePCLRaw.core",
+                              "license":  "Apache-2.0",
+                              "url":  "https://www.nuget.org/packages/SQLitePCLRaw.core"
+                          },
+                          {
+                              "name":  "SQLitePCLRaw.lib.e_sqlite3",
+                              "license":  "Apache-2.0",
+                              "url":  "https://www.nuget.org/packages/SQLitePCLRaw.lib.e_sqlite3"
+                          },
+                          {
+                              "name":  "SQLitePCLRaw.provider.e_sqlite3",
+                              "license":  "Apache-2.0",
+                              "url":  "https://www.nuget.org/packages/SQLitePCLRaw.provider.e_sqlite3"
+                          },
+                          {
+                              "name":  "NanumGothicCoding",
+                              "license":  "SIL OFL 1.1",
+                              "url":  null
+                          }
+                      ],
     "BigCSV":  [
                    {
                        "name":  ".NET Runtime / WPF",

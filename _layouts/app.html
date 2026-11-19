@@ -50,6 +50,9 @@ layout: default
     <figure class="app-shot">
       <img src="{{ shot | relative_url }}" alt="{{ app.name }} {{ t.screenshot_alt }}" width="1280" height="800">
     </figure>
+    {%- if app.screenshot_credit %}
+    <p class="shot-credit">{{ app.screenshot_credit[L] }}</p>
+    {%- endif %}
 
     <p class="app-intro">{{ app.intro[L] }}</p>
 

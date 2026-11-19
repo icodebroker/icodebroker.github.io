@@ -31,6 +31,14 @@
                           "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigClustering-v1.0.0/BigClustering-1.0.0-win-x64.zip",
                           "released":  "2026-11-18"
                       },
+    "BigContourMap":  {
+                          "version":  "1.0.0",
+                          "zip":  "BigContourMap-1.0.0-win-x64.zip",
+                          "size":  61847790,
+                          "sha256":  "14900450fd258e450ce0ebeb0464238d53bdb6577c05eece108f9712fc5cee19",
+                          "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigContourMap-v1.0.0/BigContourMap-1.0.0-win-x64.zip",
+                          "released":  "2026-11-19"
+                      },
     "BigCSV":  {
                    "version":  "1.0.0",
                    "zip":  "BigCSV-1.0.0-win-x64.zip",
