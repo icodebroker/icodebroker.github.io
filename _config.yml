@@ -12,6 +12,10 @@ defaults:
       path: google42baeeacb65e8d59.html
     values:
       sitemap: false
+  - scope:
+      path: navere921b7b39d71a51e90071381f645033e.html
+    values:
+      sitemap: false
 
 exclude:
   - plan.md
