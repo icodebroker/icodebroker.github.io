@@ -795,3 +795,26 @@
       text: { ko: "군집 번호가 붙은 데이터를 CSV 파일로 저장해요.", en: "Save the data with cluster labels to a CSV file." }
   uses: { ko: ["고객이나 상품 데이터를 비슷한 그룹으로 나눠 보고 싶을 때", "K-평균 알고리즘을 실제 데이터로 배워 볼 때", "엑셀 표에 숨은 패턴을 찾아보고 싶을 때"], en: ["When you want to split customer or product data into similar groups", "When learning K-means with real data", "When looking for hidden patterns in a spreadsheet"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigClustering.json", en: "CONFIGURATION\\BigClustering.json next to the exe" }
+
+- name: BigHanoiTop
+  category: algo
+  summary: { ko: "하노이 탑 풀이를 애니메이션으로 보기", en: "Watch Tower of Hanoi solutions play out" }
+  tagline: { ko: "원판이 한 칸씩 옮겨 가는 과정을 따라가요", en: "Follow every disk, one move at a time" }
+  intro: { ko: "BigHanoiTop은 하노이 탑을 풀어서 원판을 목표 기둥에 모으는 과정을 애니메이션과 이동 목록으로 보여 주는 프로그램이에요. 원판 3~10개, 기둥 3~8개를 고를 수 있고, 기둥이 3개면 원판이 아무렇게나 놓여 있어도 최소 이동으로 풀어요.", en: "BigHanoiTop solves the Tower of Hanoi and shows the disks gathering on the target peg as an animation and a move list. Choose 3 to 10 disks and 3 to 8 pegs; with 3 pegs it solves any legal starting arrangement in the fewest moves." }
+  features:
+    - title: { ko: "애니메이션 재생", en: "Animated playback" }
+      text: { ko: "재생, 한 단계, 처음으로 버튼과 속도 조절로 원판이 옮겨 가는 모습을 봐요.", en: "Play, step or restart, and adjust the speed to watch each disk move." }
+    - title: { ko: "이동 목록", en: "Move list" }
+      text: { ko: "모든 이동을 번호, 원판, 출발→도착 기둥으로 보여 주고, 항목을 누르면 그 이동 뒤 상태로 바로 가요.", en: "Lists every move by number, disk and from→to peg; click an item to jump to the state after that move." }
+    - title: { ko: "기본·랜덤 배치", en: "Standard or random start" }
+      text: { ko: "한 기둥에 쌓인 기본 배치나 원판이 흩어진 랜덤 배치에서 시작하고, 목표 기둥도 고를 수 있어요.", en: "Start from a single stack or a random arrangement, and pick the target peg." }
+    - title: { ko: "기둥 3~8개", en: "3 to 8 pegs" }
+      text: { ko: "기둥이 4개 이상이면 Frame–Stewart 방식이나 상태 탐색으로 풀어요.", en: "With 4 or more pegs it solves with the Frame–Stewart method or a state search." }
+    - title: { ko: "최소 이동 수 비교", en: "Minimum move check" }
+      text: { ko: "최소 이동 수와 실제 이동 수를 나란히 보여 주고, 최적인지(증명된 경우와 추측인 경우를 나눠서) 알려 줘요.", en: "Shows the minimum and actual move counts side by side and says whether the solution is optimal, marking proven and conjectured cases separately." }
+    - title: { ko: "목록 복사", en: "Copy the moves" }
+      text: { ko: "이동 목록을 정해진 텍스트 형식으로 클립보드에 복사해요.", en: "Copy the move list to the clipboard in a fixed text format." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  uses: { ko: ["하노이 탑 재귀 풀이를 눈으로 따라가 보고 싶을 때", "재귀 알고리즘을 배우거나 가르칠 때", "기둥이 늘면 이동 수가 얼마나 줄어드는지 볼 때"], en: ["When you want to follow the recursive Hanoi solution with your eyes", "When learning or teaching recursive algorithms", "When you want to see how extra pegs cut the move count"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigHanoiTop.json", en: "CONFIGURATION\\BigHanoiTop.json next to the exe" }
