@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://icodebroker.github.io/sitemap.xml
