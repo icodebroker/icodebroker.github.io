@@ -546,6 +546,27 @@
   uses: { ko: ["아이와 함께 피아노 곡을 들으며 악보를 볼 때", "어떤 건반을 누르는지 눈으로 익히고 싶을 때", "잔잔한 피아노 곡을 틀어 두고 싶을 때"], en: ["When you listen to piano songs and watch the score with your kids", "When you want to learn which keys are played by watching", "When you want some calm piano music in the background"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigPiano.json", en: "CONFIGURATION\\BigPiano.json next to the exe" }
 
+- name: BigSteganography
+  category: media
+  summary: { ko: "이미지 픽셀에 암호화한 텍스트 숨기기", en: "Hide encrypted text inside image pixels" }
+  tagline: { ko: "겉보기엔 그냥 사진, 비밀키가 있어야 글이 나와요", en: "Looks like a plain picture; only the password reveals the text" }
+  intro: { ko: "BigSteganography는 비밀키로 암호화한 텍스트를 이미지 픽셀에 숨기고, 같은 비밀키로 다시 꺼내는 프로그램이에요. 텍스트는 PBKDF2와 AES-256-GCM으로 암호화되고, 비밀키로 정한 무작위 위치의 픽셀 값을 1씩만 바꿔서 원본과 눈으로 구별되지 않아요. 메신저·SNS는 이미지를 다시 저장해 숨긴 내용을 지우므로 파일 그대로 전달해야 해요.", en: "BigSteganography hides password-encrypted text in the pixels of an image and reveals it again with the same password. The text is encrypted with PBKDF2 and AES-256-GCM, and only pixel values at password-chosen random positions change, each by just 1, so the result looks the same as the original. Messengers and social networks re-save images and erase the hidden content, so send the file as is." }
+  features:
+    - title: { ko: "숨기기·꺼내기", en: "Hide and reveal" }
+      text: { ko: "원본 이미지와 텍스트, 비밀키로 PNG를 만들고, 그 PNG와 비밀키로 텍스트를 다시 꺼내요.", en: "Create a PNG from a cover image, text and password, then get the text back from that PNG with the password." }
+    - title: { ko: "비밀키 암호화", en: "Password encryption" }
+      text: { ko: "PBKDF2(600,000회)로 키를 만들고 AES-256-GCM으로 암호화해서, 비밀키가 틀리거나 파일이 바뀌면 꺼내지 않아요.", en: "Derives the key with PBKDF2 (600,000 rounds) and encrypts with AES-256-GCM, so a wrong password or altered file reveals nothing." }
+    - title: { ko: "무작위 위치 ±1 변경", en: "Random positions, ±1 changes" }
+      text: { ko: "비밀키로 정한 순서대로 픽셀 값을 1만 올리거나 내리고, 포화·투명 영역은 건드리지 않아요. 파일에 숨겼다는 표지도 남기지 않아요.", en: "Nudges pixel values up or down by 1 in a password-chosen order, leaves saturated and transparent areas alone, and writes no marker saying anything is hidden." }
+    - title: { ko: "용량·삽입률 표시", en: "Capacity and rate" }
+      text: { ko: "이미지에 숨길 수 있는 최대 바이트와 지금 쓰는 양, 삽입률(bpp)을 보여 주고, 삽입률이 높으면 탐지되기 쉽다고 알려 줘요.", en: "Shows the maximum bytes the image can hold, how much you are using and the embedding rate (bpp), and warns when the rate gets high enough to be easier to detect." }
+    - title: { ko: "여러 이미지 형식", en: "Several image formats" }
+      text: { ko: "PNG, BMP, TIFF, JPEG를 원본으로 열고 결과는 무손실 PNG로 저장해요. 팔레트 이미지는 쓰지 않아요.", en: "Opens PNG, BMP, TIFF and JPEG covers and saves the result as lossless PNG. Palette images are not accepted." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  uses: { ko: ["사진 한 장에 짧은 메모를 몰래 담아 전하고 싶을 때", "스테가노그래피가 어떻게 동작하는지 직접 해 보고 싶을 때", "암호화와 정보 은닉을 배우거나 가르칠 때"], en: ["When you want to pass a short note tucked inside a photo", "When you want to try out how steganography works", "When learning or teaching encryption and information hiding"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigSteganography.json", en: "CONFIGURATION\\BigSteganography.json next to the exe" }
+
 - name: BigCalculator
   category: desktop
   summary: { ko: "공학·프로그래머 모드와 변환기 계산기", en: "Standard, scientific and programmer calculator" }

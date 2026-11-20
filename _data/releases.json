@@ -279,6 +279,14 @@
                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigSQL-v1.0.0/BigSQL-1.0.0-win-x64.zip",
                    "released":  "2026-11-18"
                },
+    "BigSteganography":  {
+                             "version":  "1.0.0",
+                             "zip":  "BigSteganography-1.0.0-win-x64.zip",
+                             "size":  60258908,
+                             "sha256":  "24097a0fac7635b797de611920cc8642d24c7a1fd7e90fc4bccb528e2488a4b7",
+                             "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigSteganography-v1.0.0/BigSteganography-1.0.0-win-x64.zip",
+                             "released":  "2026-11-21"
+                         },
     "BigStock":  {
                      "version":  "1.0.0",
                      "zip":  "BigStock-1.0.0-win-x64.zip",
