@@ -724,6 +724,43 @@
                          "url":  null
                      }
                  ],
+    "BigRailway":  [
+                       {
+                           "name":  ".NET Runtime / WPF",
+                           "license":  "MIT",
+                           "url":  "https://github.com/dotnet/runtime"
+                       },
+                       {
+                           "name":  "OpenStreetMap data (station coordinates, English names, line colors), (c) OpenStreetMap contributors",
+                           "license":  "ODbL-1.0",
+                           "url":  "https://www.openstreetmap.org/copyright"
+                       },
+                       {
+                           "name":  "BigRailway railway-data.json (DATA folder; derived database of the data in this list)",
+                           "license":  "ODbL-1.0",
+                           "url":  null
+                       },
+                       {
+                           "name":  "국토교통부 도시철도 노선별 경유역 정보 / MOLIT urban railway route station data (data.go.kr 15142034)",
+                           "license":  "data.go.kr, no usage restriction (이용허락범위 제한 없음)",
+                           "url":  "https://www.data.go.kr/data/15142034/openapi.do"
+                       },
+                       {
+                           "name":  "서울교통공사·부산교통공사·광주교통공사 역간 소요시간 / station-to-station times published by Seoul Metro, Busan Transportation Corp., Gwangju Metropolitan Rapid Transit Corp.",
+                           "license":  "Public data (data.go.kr)",
+                           "url":  "https://www.data.go.kr/"
+                       },
+                       {
+                           "name":  "Newtonsoft.Json",
+                           "license":  "MIT",
+                           "url":  "https://www.newtonsoft.com/json"
+                       },
+                       {
+                           "name":  "NanumGothicCoding",
+                           "license":  "SIL OFL 1.1",
+                           "url":  null
+                       }
+                   ],
     "BigReader":  [
                       {
                           "name":  ".NET Runtime / WPF",

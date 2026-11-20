@@ -239,6 +239,14 @@
                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigRadio-v1.0.0/BigRadio-1.0.0-win-x64.zip",
                      "released":  "2026-11-19"
                  },
+    "BigRailway":  {
+                       "version":  "1.0.0",
+                       "zip":  "BigRailway-1.0.0-win-x64.zip",
+                       "size":  60750913,
+                       "sha256":  "5b77d845553da77f3be5a66cdb124f81b2ce08af3d460d2961ef42e0290619d7",
+                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigRailway-v1.0.0/BigRailway-1.0.0-win-x64.zip",
+                       "released":  "2026-11-20"
+                   },
     "BigReader":  {
                       "version":  "1.0.0",
                       "zip":  "BigReader-1.0.0-win-x64.zip",

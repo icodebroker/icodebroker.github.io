@@ -24,6 +24,9 @@ $excludeNameList       = @('BigChat', 'BigVideoStream')
 # GPL 구성 요소(libmpv)가 들어 있어 실행 파일 전체가 GPL-2.0-or-later인 앱. README·릴리스 노트의 조건이 다르고 zip에 GPL 전문을 넣는다.
 $gplAppList            = @('BigPlayer')
 $gplLicenseFilePath    = Join-Path $PSScriptRoot 'licenses\GPL-2.0-LICENSE.txt'
+# BigRailway 내장 데이터는 OpenStreetMap(ODbL) 파생 데이터베이스라 zip에 데이터 파일(DATA\)과 ODbL 전문을 넣는다.
+$odblLicenseFilePath   = Join-Path $PSScriptRoot 'licenses\ODbL-1.0-LICENSE.txt'
+$railwayDataFilePath   = Join-Path $utilityRootPath 'BigRailway\BigRailwayLibrary\DATA\railway-data.json'
 $repository            = 'icodebroker/icodebroker.github.io'
 $siteUrl               = 'https://icodebroker.github.io'
 $nugetPackageRootPath  = 'D:\NugetPackages'
@@ -175,6 +178,15 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'ColorBrewer 2.0 (YlGn, YlOrBr, Greys, BrBG, RdYlBu)'; license = 'Apache-2.0'; url = 'https://colorbrewer2.org/' })
     }
 
+    # BigRailway : 내장 노선 데이터 (railway-data.json은 OSM 파생 데이터베이스라 zip의 DATA 폴더에 ODbL로 함께 넣는다)
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigRailway')
+    {
+        [void]$list.Add([ordered]@{ name = 'OpenStreetMap data (station coordinates, English names, line colors), (c) OpenStreetMap contributors'; license = 'ODbL-1.0'; url = 'https://www.openstreetmap.org/copyright' })
+        [void]$list.Add([ordered]@{ name = 'BigRailway railway-data.json (DATA folder; derived database of the data in this list)'; license = 'ODbL-1.0'; url = $null })
+        [void]$list.Add([ordered]@{ name = '국토교통부 도시철도 노선별 경유역 정보 / MOLIT urban railway route station data (data.go.kr 15142034)'; license = 'data.go.kr, no usage restriction (이용허락범위 제한 없음)'; url = 'https://www.data.go.kr/data/15142034/openapi.do' })
+        [void]$list.Add([ordered]@{ name = '서울교통공사·부산교통공사·광주교통공사 역간 소요시간 / station-to-station times published by Seoul Metro, Busan Transportation Corp., Gwangju Metropolitan Rapid Transit Corp.'; license = 'Public data (data.go.kr)'; url = 'https://www.data.go.kr/' })
+    }
+
     $packageTable = [ordered]@{}
 
     # 테스트 프로젝트의 패키지는 배포본에 들어가지 않는다.
@@ -250,8 +262,9 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
 
 function Get-LicenseFileList([string]$appDirectoryPath)
 {
+    # 검증용 파이썬 가상 환경(.venv)의 패키지는 배포본에 들어가지 않는다.
     return Get-ChildItem $appDirectoryPath -Recurse -File -Include '*LICENSE*.txt', '*OFL*.txt' |
-        Where-Object { $_.FullName -notmatch '\\(bin|obj|publish)\\' } |
+        Where-Object { $_.FullName -notmatch '\\(bin|obj|publish|\.venv)\\' } |
         Sort-Object Name -Unique
 }
 
@@ -544,6 +557,13 @@ foreach($appDirectory in $appDirectoryList)
     if($gplAppList -contains $name)
     {
         Copy-Item $gplLicenseFilePath (Join-Path $stagePath 'LICENSES')
+    }
+
+    if($name -eq 'BigRailway')
+    {
+        Copy-Item $odblLicenseFilePath (Join-Path $stagePath 'LICENSES')
+        New-Item -ItemType Directory -Force (Join-Path $stagePath 'DATA') | Out-Null
+        Copy-Item $railwayDataFilePath (Join-Path $stagePath 'DATA')
     }
 
     # Compress-Archive(PS 5.1)는 zip 안 경로를 역슬래시로 써서 다른 압축 프로그램에서 폴더가 깨진다. 항목을 직접 '/'로 넣는다.
