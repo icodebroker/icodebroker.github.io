@@ -458,7 +458,7 @@ function Save-PageStub([string]$name)
 
         New-Item -ItemType Directory -Force (Split-Path -Parent $path) | Out-Null
 
-        $text = "---`nlayout: app`napp: $name`nlang: $($stub.Lang)`npermalink: $($stub.Permalink)`nalt_url: $($stub.AltUrl)`nog_image: /assets/icons/$name.png`n---`n"
+        $text = "---`nlayout: app`napp: $name`nlang: $($stub.Lang)`npermalink: $($stub.Permalink)`nalt_url: $($stub.AltUrl)`n---`n"
 
         [System.IO.File]::WriteAllText($path, $text, $utf8NoBom)
     }
