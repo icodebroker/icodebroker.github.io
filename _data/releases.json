@@ -287,6 +287,14 @@
                              "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigSteganography-v1.0.0/BigSteganography-1.0.0-win-x64.zip",
                              "released":  "2026-11-21"
                          },
+    "BigStereogram":  {
+                          "version":  "1.0.0",
+                          "zip":  "BigStereogram-1.0.0-win-x64.zip",
+                          "size":  60328114,
+                          "sha256":  "0dc800e838dbfc8c421d0650a7ca4b1bd379003803f09ab0f9c18e86240fe309",
+                          "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigStereogram-v1.0.0/BigStereogram-1.0.0-win-x64.zip",
+                          "released":  "2026-11-21"
+                      },
     "BigStock":  {
                      "version":  "1.0.0",
                      "zip":  "BigStock-1.0.0-win-x64.zip",

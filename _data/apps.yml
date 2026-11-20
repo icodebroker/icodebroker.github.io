@@ -567,6 +567,27 @@
   uses: { ko: ["사진 한 장에 짧은 메모를 몰래 담아 전하고 싶을 때", "스테가노그래피가 어떻게 동작하는지 직접 해 보고 싶을 때", "암호화와 정보 은닉을 배우거나 가르칠 때"], en: ["When you want to pass a short note tucked inside a photo", "When you want to try out how steganography works", "When learning or teaching encryption and information hiding"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigSteganography.json", en: "CONFIGURATION\\BigSteganography.json next to the exe" }
 
+- name: BigStereogram
+  category: media
+  summary: { ko: "평행·교차 보기 스테레오 쌍 그림 만들기", en: "Make parallel and cross-eye stereo pairs" }
+  tagline: { ko: "두 그림을 겹쳐 보면 글자와 도형이 떠올라요", en: "Merge the two pictures and text and shapes pop out" }
+  intro: { ko: "BigStereogram은 왼쪽·오른쪽 눈에 보여 줄 그림 두 장을 나란히 만들어, 평행 보기나 교차 보기로 입체감을 느끼게 하는 프로그램이에요. 텍스트, 스마일, 도형, 3D 객체를 깊이마다 시차를 주어 배경 위에 배치하고, 화면 DPI와 시청 거리로 시차를 mm와 각도로 계산해 보기 편한지 알려 줘요. 원래 그림이 따로 필요 없도록 그림을 코드로 만들고, IMAGE 폴더에 내 그림을 더할 수도 있어요.", en: "BigStereogram creates two side-by-side pictures, one for each eye, so you can see depth with parallel or cross-eye viewing. It places text, smileys, shapes and 3D objects over a background with a disparity for each depth, and uses the screen DPI and viewing distance to compute that disparity in millimeters and degrees and tell you whether it is comfortable to view. The pictures are generated in code, so no separate images are needed, and you can add your own in the IMAGE folder." }
+  features:
+    - title: { ko: "평행·교차 보기", en: "Parallel and cross-eye" }
+      text: { ko: "두 보기 방식을 버튼 하나로 바꾸고, 그림 위의 융합 보조 점 두 개가 하나로 겹치면 맞게 본 거예요.", en: "Switch between the two viewing styles with one button; when the two guide dots above the pictures merge into one, you are seeing it right." }
+    - title: { ko: "깊이별 장면 구성", en: "Scenes by depth" }
+      text: { ko: "텍스트와 스마일·도형·3D 객체의 수와 깊이, 글꼴, 그림자, 배경 이미지나 색상을 정하고 시드로 같은 장면을 다시 만들어요.", en: "Set the count and depth of text, smileys, shapes and 3D objects, the font and shadow, and a background image or color, and rebuild the same scene from a seed." }
+    - title: { ko: "실제 크기 기하 계산", en: "Real-size geometry" }
+      text: { ko: "모니터의 물리 DPI와 시청 거리·눈 사이 거리로 패널 간격과 최대 시차를 mm와 각도로 보여 주고, 각 시차가 ±1°를 넘으면 알려 줘요.", en: "Uses the monitor's physical DPI, viewing distance and eye separation to show the panel pitch and maximum disparity in millimeters and degrees, and warns when the angular disparity exceeds ±1°." }
+    - title: { ko: "평행 보기 크기", en: "Parallel-view size" }
+      text: { ko: "패널 간격이 눈 사이 거리보다 넓어 평행 보기가 안 되면 알려 주고, 버튼 하나로 볼 수 있는 크기로 맞춰 미리 봐요.", en: "Tells you when the panel pitch is wider than your eye separation and parallel viewing is impossible, and resizes the preview to a viewable size with one click." }
+    - title: { ko: "저장과 타이머", en: "Save and timer" }
+      text: { ko: "그림을 PNG·JPEG로, 장면 설정을 JSON으로 저장하고, 타이머로 새 장면을 자동으로 계속 만들 수 있어요.", en: "Save the picture as PNG or JPEG and the scene settings as JSON, and let a timer keep generating new scenes automatically." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  uses: { ko: ["맨눈 입체 보기를 연습하고 싶을 때", "아이와 함께 떠오르는 글자와 도형을 찾아보고 싶을 때", "양안 시차와 입체 시각을 배우거나 가르칠 때"], en: ["When you want to practice free-viewing stereo pictures", "When you want to find floating text and shapes with your kids", "When learning or teaching binocular disparity and stereo vision"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigStereogram.json", en: "CONFIGURATION\\BigStereogram.json next to the exe" }
+
 - name: BigCalculator
   category: desktop
   summary: { ko: "공학·프로그래머 모드와 변환기 계산기", en: "Standard, scientific and programmer calculator" }
