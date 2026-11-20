@@ -1,0 +1,42 @@
+---
+layout: null
+permalink: /sitemap.xml
+---
+{%- comment -%}
+  jekyll-sitemap 대신 쓰는 사이트맵.
+  lastmod: 앱 페이지 = releases.json의 released, 첫 화면 = 가장 최근 released, 그 밖의 페이지 = 머리말 last_modified.
+  image: 앱 페이지에 한/영 스크린샷과 아이콘(파일이 있을 때만).
+{%- endcomment -%}
+{%- assign latest = '' -%}
+{%- for r in site.data.releases -%}
+{%- if r[1].released > latest -%}{%- assign latest = r[1].released -%}{%- endif -%}
+{%- endfor -%}
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+{%- assign pages = site.pages | sort: 'url' -%}
+{%- for p in pages -%}
+{%- unless p.name contains '.html' -%}{%- continue -%}{%- endunless -%}
+{%- if p.sitemap == false -%}{%- continue -%}{%- endif -%}
+{%- assign lastmod = p.last_modified -%}
+{%- if p.app -%}
+{%- assign lastmod = site.data.releases[p.app].released -%}
+{%- elsif p.layout == 'home' -%}
+{%- assign lastmod = latest -%}
+{%- endif %}
+<url>
+<loc>{{ p.url | absolute_url | xml_escape }}</loc>
+{%- if lastmod %}
+<lastmod>{{ lastmod }}</lastmod>
+{%- endif -%}
+{%- if p.app -%}
+{%- assign images = '/assets/screenshots/ko/' | append: p.app | append: '.png,/assets/screenshots/en/' | append: p.app | append: '.png,/assets/icons/' | append: p.app | append: '.png' | split: ',' -%}
+{%- for img in images -%}
+{%- assign f = site.static_files | where: 'path', img | first -%}
+{%- if f %}
+<image:image><image:loc>{{ img | absolute_url | xml_escape }}</image:loc></image:image>
+{%- endif -%}
+{%- endfor -%}
+{%- endif %}
+</url>
+{%- endfor %}
+</urlset>

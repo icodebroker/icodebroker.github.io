@@ -4,9 +4,6 @@ url: https://icodebroker.github.io
 lang: ko
 repository: icodebroker/icodebroker.github.io
 
-plugins:
-  - jekyll-sitemap
-
 defaults:
   - scope:
       path: google42baeeacb65e8d59.html
