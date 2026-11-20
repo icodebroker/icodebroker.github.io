@@ -23,16 +23,6 @@
       document.documentElement.classList.add('show-qr');
     }
   </script>
-  {%- if page.lang == 'ko' and page.url == '/' %}
-  <script>
-    (function () {
-      var saved = null;
-      try { saved = localStorage.getItem('lang'); } catch (e) {}
-      // 기본 언어는 영어. 한국어를 직접 고른 방문자만 한국어 첫 화면에 머문다.
-      if (saved !== 'ko') { location.replace('{{ "/en/" | relative_url }}'); }
-    })();
-  </script>
-  {%- endif %}
   <title>{{ full_title }}</title>
   <meta name="description" content="{{ page_desc | strip_html | escape }}">
   <meta property="og:type" content="website">
@@ -65,6 +55,34 @@
   <link rel="stylesheet" href="{{ '/assets/css/site.css' | relative_url }}?v={{ site.time | date: '%s' }}">
 </head>
 <body>
+  {%- if page.lang == 'ko' and page.url == '/' %}
+  {%- assign t_en = site.data.i18n.en %}
+  <div class="lang-banner" id="lang-banner" lang="en" hidden>
+    <div class="wrap lang-banner-inner">
+      <a href="{{ '/en/' | relative_url }}" hreflang="en">{{ t_en.lang_banner }} →</a>
+      <button type="button" class="lang-banner-close" aria-label="{{ t_en.lang_banner_close }}">×</button>
+    </div>
+  </div>
+  <script>
+    (function () {
+      // 자동으로 /en/에 보내면 검색 로봇에 리디렉션으로 보이므로, 영어 페이지 안내만 띄운다.
+      // 영어를 고른 적이 있거나, 언어를 고른 적 없고 브라우저가 한국어가 아닐 때 보인다. 닫으면 한국어를 고른 것으로 기억한다.
+      var saved = null;
+      try { saved = localStorage.getItem('lang'); } catch (e) {}
+      var browserKo = /^ko\b/i.test(navigator.language || '');
+      if (saved === 'ko' || (saved !== 'en' && browserKo)) { return; }
+      var banner = document.getElementById('lang-banner');
+      banner.hidden = false;
+      banner.querySelector('a').addEventListener('click', function () {
+        try { localStorage.setItem('lang', 'en'); } catch (e) {}
+      });
+      banner.querySelector('button').addEventListener('click', function () {
+        try { localStorage.setItem('lang', 'ko'); } catch (e) {}
+        banner.hidden = true;
+      });
+    })();
+  </script>
+  {%- endif %}
   {% include header.html %}
   <main id="main">
     {{ content }}

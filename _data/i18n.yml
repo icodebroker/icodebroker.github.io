@@ -68,6 +68,9 @@ ko:
 
 en:
   lang_name: English
+  # 한국어 첫 화면의 영어 안내 띠 (한국어 페이지에서도 영어로 보여 주므로 en에만 있다)
+  lang_banner: This page is in Korean. View it in English
+  lang_banner_close: Close
   home_title: Free Windows apps that run without installing
   home_desc: A collection of free Windows apps that run without installing. No ads, one click to download.
   hero_kicker: Free software collection
