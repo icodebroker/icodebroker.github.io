@@ -240,12 +240,12 @@
                       "released":  "2026-11-21"
                   },
     "BigRadio":  {
-                     "version":  "1.0.0",
-                     "zip":  "BigRadio-1.0.0-win-x64.zip",
-                     "size":  110497787,
-                     "sha256":  "5d185eef3bb22ef87c3001011ce338350b92514d59e88dc57405cd0ab290985b",
-                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigRadio-v1.0.0/BigRadio-1.0.0-win-x64.zip",
-                     "released":  "2026-11-19"
+                     "version":  "1.0.1",
+                     "zip":  "BigRadio-1.0.1-win-x64.zip",
+                     "size":  110498693,
+                     "sha256":  "f7e1c4d6dcadfbc74459acede4789bcabf70b8550a6cc448d2447f88d28f8338",
+                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigRadio-v1.0.1/BigRadio-1.0.1-win-x64.zip",
+                     "released":  "2026-11-21"
                  },
     "BigRailway":  {
                        "version":  "1.0.0",
