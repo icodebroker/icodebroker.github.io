@@ -905,3 +905,24 @@
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
   uses: { ko: ["하노이 탑 재귀 풀이를 눈으로 따라가 보고 싶을 때", "재귀 알고리즘을 배우거나 가르칠 때", "기둥이 늘면 이동 수가 얼마나 줄어드는지 볼 때"], en: ["When you want to follow the recursive Hanoi solution with your eyes", "When learning or teaching recursive algorithms", "When you want to see how extra pegs cut the move count"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigHanoiTop.json", en: "CONFIGURATION\\BigHanoiTop.json next to the exe" }
+
+- name: BigFractal
+  category: algo
+  summary: { ko: "정의대로 계산하고 검증한 프랙탈 24종 보기", en: "View 24 fractals computed by their definitions" }
+  tagline: { ko: "망델브로부터 소수 걸음까지, 식 그대로 그려요", en: "From Mandelbrot to prime walks, drawn straight from the formulas" }
+  intro: { ko: "BigFractal은 망델브로·줄리아 같은 탈출 시간 프랙탈부터 브다브로·별난 끌개, 반즐리 고사리, 코흐 눈송이·드래곤 곡선, 소수 걸음·컬리큐까지 프랙탈 24종을 수학 정의대로 계산해 그리는 프로그램이에요. 화면을 드래그하거나 클릭해 확대하고, 매개변수와 팔레트를 바꿔 가며 탐험할 수 있어요. 결과는 원본 코드 대조, 따로 만든 독립 구현, 차원 같은 수학적 불변량으로 검증했어요.", en: "BigFractal computes and draws 24 fractals straight from their mathematical definitions, from escape-time sets like Mandelbrot and Julia to the Buddhabrot and strange attractors, the Barnsley fern, the Koch snowflake and dragon curve, and prime walks and curlicues. Drag or click to zoom in, and change parameters and palettes as you explore. The results are verified against the original code, a separate independent implementation and mathematical invariants such as dimensions." }
+  features:
+    - title: { ko: "다섯 갈래 24종", en: "24 fractals in five families" }
+      text: { ko: "탈출 시간, 궤적 누적, 반복 함수계(IFS), L-시스템·재귀 기하, 수론 다섯 갈래를 썸네일로 골라요.", en: "Pick from five families with thumbnails: escape time, orbit density, iterated function systems (IFS), L-systems and recursive geometry, and number theory." }
+    - title: { ko: "확대 탐험", en: "Zoom to explore" }
+      text: { ko: "드래그로 영역 확대, 클릭으로 2배 확대, 오른쪽 클릭으로 2배 축소하고, double 정밀도 한계에 가까워지면 알려 줘요.", en: "Drag to zoom into an area, click to zoom in 2×, right-click to zoom out 2×, and get a warning as you approach the limit of double precision." }
+    - title: { ko: "매개변수와 식 입력", en: "Parameters and formulas" }
+      text: { ko: "중심·반복 수·계수·프리셋을 바꾸고, 탈출 시간 다항식과 L-시스템 식물은 식과 규칙을 직접 입력해요.", en: "Change the center, iterations, coefficients and presets, and type your own formulas for the escape-time formula and rules for the L-system plant." }
+    - title: { ko: "다시 계산 없는 색칠", en: "Recolor without recomputing" }
+      text: { ko: "팔레트·색 주기·오프셋을 바꾸면 계산은 그대로 두고 색만 다시 칠해요.", en: "Changing the palette, color period or offset only recolors the result without computing it again." }
+    - title: { ko: "재현 가능한 고해상도 PNG", en: "Reproducible high-resolution PNG" }
+      text: { ko: "원하는 크기로 다시 그려 PNG로 저장하거나 클립보드에 복사하고, PNG에 매개변수를 담아 두어 그 파일로 같은 그림을 다시 그려요.", en: "Redraw at any size to save as PNG or copy to the clipboard; the PNG carries its parameters, so you can open it to redraw the same picture." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  uses: { ko: ["망델브로 집합 속을 깊이 확대해 구경하고 싶을 때", "프랙탈과 혼돈 이론을 배우거나 가르칠 때", "배경 화면이나 인쇄용 고해상도 프랙탈 그림이 필요할 때"], en: ["When you want to zoom deep into the Mandelbrot set", "When learning or teaching fractals and chaos theory", "When you need a high-resolution fractal picture for a wallpaper or print"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigFractal.json", en: "CONFIGURATION\\BigFractal.json next to the exe" }

@@ -119,6 +119,14 @@
                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigFormula-v1.0.0/BigFormula-1.0.0-win-x64.zip",
                        "released":  "2026-11-18"
                    },
+    "BigFractal":  {
+                       "version":  "1.0.0",
+                       "zip":  "BigFractal-1.0.0-win-x64.zip",
+                       "size":  60567389,
+                       "sha256":  "8776447f8e31e484cd3641f3e0864f8470c71754c42c1d96239c899b0db52317",
+                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigFractal-v1.0.0/BigFractal-1.0.0-win-x64.zip",
+                       "released":  "2026-11-22"
+                   },
     "BigFTP":  {
                    "version":  "1.0.0",
                    "zip":  "BigFTP-1.0.0-win-x64.zip",
