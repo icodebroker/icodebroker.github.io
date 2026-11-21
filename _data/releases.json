@@ -336,11 +336,11 @@
                           "released":  "2026-11-19"
                       },
     "BigZIP":  {
-                   "version":  "1.0.0",
-                   "zip":  "BigZIP-1.0.0-win-x64.zip",
-                   "size":  57083091,
-                   "sha256":  "10813840108bcf5d6404974245bf4f38d4f793869246ad6c3a4a72ca6fbaa099",
-                   "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigZIP-v1.0.0/BigZIP-1.0.0-win-x64.zip",
-                   "released":  "2026-11-18"
+                   "version":  "1.0.1",
+                   "zip":  "BigZIP-1.0.1-win-x64.zip",
+                   "size":  57084037,
+                   "sha256":  "b3ca051f2cbabc55ed2bdcba5113f443c3197bb3e55a815308ee9244e4983054",
+                   "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigZIP-v1.0.1/BigZIP-1.0.1-win-x64.zip",
+                   "released":  "2026-11-21"
                }
 }
