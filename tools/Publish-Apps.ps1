@@ -152,8 +152,8 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'FFmpeg'; license = 'GPL-2.0-or-later'; url = 'https://ffmpeg.org' })
     }
 
-    # BigRadio는 FFmpeg LGPL 공유 빌드(--enable-version3) DLL을 exe에 내장했다가 %LOCALAPPDATA%\BigRadio\FFMPEG에 풀어 쓴다.
-    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigRadio')
+    # BigRadio·BigAudio는 FFmpeg LGPL 공유 빌드(--enable-version3) DLL을 exe에 내장했다가 %LOCALAPPDATA%\<앱>\FFMPEG에 풀어 쓴다.
+    if(@('BigRadio', 'BigAudio') -contains (Split-Path -Leaf $appDirectoryPath))
     {
         [void]$list.Add([ordered]@{ name = 'FFmpeg n8.1.3 (avcodec, avformat, avutil, swresample; shared DLLs)'; license = 'LGPL-3.0-or-later'; url = 'https://ffmpeg.org' })
     }

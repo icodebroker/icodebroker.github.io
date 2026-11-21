@@ -1,4 +1,12 @@
 {
+    "BigAudio":  {
+                     "version":  "1.0.0",
+                     "zip":  "BigAudio-1.0.0-win-x64.zip",
+                     "size":  110173301,
+                     "sha256":  "ce06d8245a904a227d59bd5b51e927ec2223ac74310d4e535612ff53964beaf0",
+                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigAudio-v1.0.0/BigAudio-1.0.0-win-x64.zip",
+                     "released":  "2026-11-21"
+                 },
     "BigCalculator":  {
                           "version":  "1.0.0",
                           "zip":  "BigCalculator-1.0.0-win-x64.zip",
