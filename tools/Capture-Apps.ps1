@@ -12,6 +12,7 @@
 #   (설정 키 추가, -File에서는 큰따옴표를 \"로) ... -App BigEdit -ExtraJson '\"IsDarkMode\": true'
 #   (고정 크기 창의 바탕색) ... -App BigCloser -Background '#000000'
 #   (처음 실행 크기 그대로) ... -App BigView -KeepSize -Background '#000000'
+#   (여백 없이, 들어가면 원본 크기) ... -App BigPlayer -KeepSize -NoMargin -Background '#000000'
 #   (관리자 앱을 일반 권한으로) ... -App BigDisk,BigPacket -RunAsInvoker
 #   (파일을 연 상태로) ... -App BigContourMap -OpenFile 'D:\UTILITY\BigContourMap\data\glo30_seorak.tif'
 #   (관리자 PowerShell에서) powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigDisk,BigPacket
@@ -27,6 +28,8 @@ param(
     [string]$Background = '',
     # 크기 조절이 되는 창도 처음 실행 크기 그대로 찍는다 (1280x800 바탕 가운데에 놓음)
     [switch]$KeepSize,
+    # 가운데에 놓을 때 바깥 여백(40px)을 두지 않는다 (1280x800 안에 들어가면 줄이지 않음)
+    [switch]$NoMargin,
     # requireAdministrator 앱도 UAC 없이 일반 권한으로 실행한다 (__COMPAT_LAYER=RunAsInvoker)
     [switch]$RunAsInvoker,
     # 이 파일을 연 상태로 실행한다 (exe 첫 번째 인수로 넘김)
@@ -219,7 +222,8 @@ function Save-Composed([System.Drawing.Bitmap]$source, [string]$path, [System.Dr
     }
 
     # 크기가 다르면 늘리지 않고 바탕 가운데에 놓는다. 1280x800을 넘으면 비율을 지켜 줄인다.
-    $scale  = [math]::Min(1.0, [math]::Min(($targetWidth - 80) / $source.Width, ($targetHeight - 80) / $source.Height))
+    $margin = if($NoMargin) { 0 } else { 80 }
+    $scale  = [math]::Min(1.0, [math]::Min(($targetWidth - $margin) / $source.Width, ($targetHeight - $margin) / $source.Height))
     $width  = [int][math]::Round($source.Width * $scale)
     $height = [int][math]::Round($source.Height * $scale)
     $left   = [int](($targetWidth - $width) / 2)
