@@ -15,6 +15,14 @@
                           "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCalculator-v1.0.1/BigCalculator-1.0.1-win-x64.zip",
                           "released":  "2026-11-21"
                       },
+    "BigCalendar":  {
+                        "version":  "1.0.0",
+                        "zip":  "BigCalendar-1.0.0-win-x64.zip",
+                        "size":  58553376,
+                        "sha256":  "87dbe80ed39c3ac87db0ad780feca69d10a79dadd8ce7c44bfaa1da94bd2999a",
+                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCalendar-v1.0.0/BigCalendar-1.0.0-win-x64.zip",
+                        "released":  "2026-11-22"
+                    },
     "BigClaude":  {
                       "version":  "1.0.0",
                       "zip":  "BigClaude-1.0.0-win-x64.zip",

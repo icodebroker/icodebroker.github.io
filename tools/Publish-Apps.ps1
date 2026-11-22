@@ -178,6 +178,12 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'ColorBrewer 2.0 (YlGn, YlOrBr, Greys, BrBG, RdYlBu)'; license = 'Apache-2.0'; url = 'https://colorbrewer2.org/' })
     }
 
+    # BigCalendar : SQLitePCLRaw가 싣는 네이티브 SQLite
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigCalendar')
+    {
+        [void]$list.Add([ordered]@{ name = 'SQLite (e_sqlite3)'; license = 'Public domain'; url = 'https://sqlite.org/copyright.html' })
+    }
+
     # BigRailway : 내장 노선 데이터 (railway-data.json은 OSM 파생 데이터베이스라 zip의 DATA 폴더에 ODbL로 함께 넣는다)
     if((Split-Path -Leaf $appDirectoryPath) -eq 'BigRailway')
     {

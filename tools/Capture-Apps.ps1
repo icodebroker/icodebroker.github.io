@@ -166,6 +166,7 @@ $settingFileTable = @{
     'BigMigration'  = 'APPDATA\BigMigration\BigMigration.json'
     'BigCURL'       = 'APPDATA\BigCURL\settings.json'
     'BigDocker'     = 'APPDATA\BigDocker\BigDocker.json'
+    'BigCalendar'   = 'APPDATA\BigCalendar\BigCalendar.json'
     'BigExplorer'   = 'LOCALAPPDATA\BigExplorer\settings.json'
     'BigCalculator' = 'LOCALAPPDATA\BigCalculator\BigCalculator.json'
     'BigCloser'     = 'LOCALAPPDATA\BigCloser\BigCloser.json'

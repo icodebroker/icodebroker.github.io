@@ -712,6 +712,27 @@
   uses: { ko: ["해외에 있는 가족·친구에게 연락하기 좋은 시간을 알고 싶을 때", "다른 나라와 회의 시간을 잡을 때", "서머타임이 언제 바뀌는지 확인할 때"], en: ["When you want to know a good time to call family or friends abroad", "When you schedule a meeting with people in another country", "When you check when daylight saving time changes"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigWorldWatch.json", en: "BigWorldWatch.json in the CONFIGURATION folder next to the exe" }
 
+- name: BigCalendar
+  category: desktop
+  summary: { ko: "공휴일·음력이 정확한 달력과 날짜별 메모", en: "A calendar with accurate Korean holidays and lunar dates, plus daily notes" }
+  tagline: { ko: "빨간 날과 음력을 공식 자료 그대로, 메모는 날짜마다", en: "Red days and lunar dates straight from official data, with a note for every day" }
+  intro: { ko: "BigCalendar는 한국 공휴일·대체 공휴일과 음력, 24절기를 보여 주는 달력에 날짜마다 메모를 남길 수 있는 프로그램이에요. 공휴일은 한국천문연구원 특일 정보를 공공데이터포털 API 키로 받아 저장해 두고, 음력은 한국천문연구원 음양력 자료와 1900~2050년 전체 날짜를 대조해 확인했어요. 메모는 글자 서식과 그림을 넣을 수 있고, 모든 메모를 검색할 수 있어요.", en: "BigCalendar is a calendar that shows Korean public and substitute holidays, lunar dates and the 24 solar terms, with a note you can keep for each day. Holidays come from the Korea Astronomy and Space Science Institute (KASI) special-day data, fetched with your own data.go.kr API key and stored locally, and the lunar dates were checked against KASI's lunar calendar data for every day from 1900 to 2050. Notes support text formatting and pictures, and you can search across all of them." }
+  features:
+    - title: { ko: "공식 공휴일 정보", en: "Official holiday data" }
+      text: { ko: "한국천문연구원 특일 정보로 공휴일·대체 공휴일·선거일을 빨간 날로 표시하고, 받은 정보는 저장해 두어 인터넷 없이도 보여 줘요. 정보가 없는 해는 일요일만 빨갛게 표시하고 알려 줘요.", en: "Marks public holidays, substitute holidays and election days in red from KASI special-day data, and stores what it fetched so it works offline. For years without data, only Sundays are red and you are told why." }
+    - title: { ko: "음력·절기·기념일", en: "Lunar dates, solar terms, observances" }
+      text: { ko: "음력(윤달 포함)과 24절기를 기본으로 보여 주고, 기념일과 잡절도 켜고 끌 수 있어요.", en: "Shows lunar dates (including leap months) and the 24 solar terms by default, and lets you turn observances and folk days on or off." }
+    - title: { ko: "날짜별 메모", en: "A note for each day" }
+      text: { ko: "날짜를 고르면 옆 패널에서 바로 메모를 쓰고, 글꼴·굵게·목록 같은 서식을 쓰고 그림을 끌어다 넣을 수 있어요. 메모가 있는 날은 달력에 표시돼요.", en: "Pick a day and write its note in the side panel, with formatting such as fonts, bold and bullet lists, and drag pictures in. Days with notes are marked on the calendar." }
+    - title: { ko: "메모 검색", en: "Note search" }
+      text: { ko: "Ctrl+F로 모든 메모를 검색하면 찾은 날짜에 테두리를 두르고, F3·Shift+F3로 이전/다음 결과로 이동해요.", en: "Search all notes with Ctrl+F; matching days get a border, and F3 or Shift+F3 moves to the next or previous result." }
+    - title: { ko: "데이터 파일 위치 선택", en: "Choose where data is kept" }
+      text: { ko: "메모와 공휴일 정보는 SQLite 파일 하나에 저장하고, 클라우드 동기화 폴더 같은 다른 위치로 옮기거나 기존 파일을 열 수 있어요. API 키는 이 PC의 현재 사용자만 풀 수 있게 암호화해 저장해요.", en: "Notes and holiday data live in a single SQLite file that you can move elsewhere, such as a cloud-synced folder, or point to an existing file. Your API key is stored encrypted so only the current user on this PC can read it." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 다크/라이트 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and dark or light themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["올해와 내년의 빨간 날을 한눈에 보고 싶을 때", "음력 생일이나 제사 날짜를 양력으로 확인할 때", "날마다 한 일이나 일정을 달력에 적어 두고 다시 찾을 때"], en: ["When you want to see this year's and next year's Korean holidays at a glance", "When you look up the solar date of a lunar birthday or memorial day", "When you jot down what you did or plan to do each day and find it again later"] }
+  settings_path: { ko: "%APPDATA%\\BigCalendar\\BigCalendar.json (데이터 파일 기본 위치 %APPDATA%\\BigCalendar\\BigCalendar.db)", en: "%APPDATA%\\BigCalendar\\BigCalendar.json (data file by default at %APPDATA%\\BigCalendar\\BigCalendar.db)" }
+
 - name: BigView
   category: desktop
   summary: { ko: "마우스 주변을 크게 보여 주는 돋보기", en: "A magnifier that follows your mouse" }
