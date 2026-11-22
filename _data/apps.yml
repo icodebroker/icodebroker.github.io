@@ -485,7 +485,7 @@
   category: media
   summary: { ko: "정의대로 계산하고 검증한 이미지 편집기", en: "An image editor that computes by definition, verified" }
   tagline: { ko: "필터도 합성도, 계산이 맞는지 확인했어요", en: "Filters and compositing, checked to compute correctly" }
-  intro: { ko: "BigPainter는 여러 그림을 한 창 안의 자식 창으로 열어 선택·필터·색 조정·크기 조정·합성을 하는 이미지 편집기예요. 공간 연산은 선형 빛 공간에서, 블렌드는 sRGB에서 16비트 프리멀티플라이드 버퍼로 계산하고, 결과는 ImageMagick·Pillow·OpenCV·브라우저 캔버스와 따로 만든 독립 구현으로 대조해 검증했어요.", en: "BigPainter is an image editor that opens several pictures as child windows inside one window for selection, filters, color adjustments, resizing and compositing. Spatial operations run in linear light and blends in sRGB on a 16-bit premultiplied buffer, and the results are verified against ImageMagick, Pillow, OpenCV, a browser canvas and a separate independent implementation." }
+  intro: { ko: "BigPainter는 여러 그림을 한 창 안의 자식 창으로 열어 선택·필터·색 조정·크기 조정·합성을 하는 이미지 편집기예요. 공간 연산은 선형 빛 공간에서, 블렌드는 sRGB에서 16비트 프리멀티플라이드 버퍼로 계산해요.", en: "BigPainter is an image editor that opens several pictures as child windows inside one window for selection, filters, color adjustments, resizing and compositing. Spatial operations run in linear light and blends in sRGB on a 16-bit premultiplied buffer." }
   features:
     - title: { ko: "필터·조정 25종", en: "25 filters and adjustments" }
       text: { ko: "가우시안·동작 흐림, 선명하게, 중간값, 엠보스, 모자이크, 오목/볼록, 카툰부터 레벨·색조/채도·밝기/대비까지 써요.", en: "From Gaussian and motion blur, sharpening, median, emboss, mosaic, pinch and cartoon to levels, hue/saturation and brightness/contrast." }
