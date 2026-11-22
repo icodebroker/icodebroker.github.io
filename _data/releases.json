@@ -207,6 +207,14 @@
                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigMEMO-v1.0.0/BigMEMO-1.0.0-win-x64.zip",
                     "released":  "2026-11-18"
                 },
+    "BigMermaid":  {
+                       "version":  "1.0.0",
+                       "zip":  "BigMermaid-1.0.0-win-x64.zip",
+                       "size":  71275890,
+                       "sha256":  "b11f70a87120a562ef54064585f2b0c5b44e52d3ee6b877eee96ca31cf7d236f",
+                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigMermaid-v1.0.0/BigMermaid-1.0.0-win-x64.zip",
+                       "released":  "2026-11-23"
+                   },
     "BigMigration":  {
                          "version":  "1.0.0",
                          "zip":  "BigMigration-1.0.0-win-x64.zip",

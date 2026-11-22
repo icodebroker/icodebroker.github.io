@@ -636,6 +636,28 @@
                         "url":  null
                     }
                 ],
+    "BigMermaid":  [
+                       {
+                           "name":  ".NET Runtime / WPF",
+                           "license":  "MIT",
+                           "url":  "https://github.com/dotnet/runtime"
+                       },
+                       {
+                           "name":  "mermaid 12.3.0 (grammar, layout and shape code, theme values, samples), Copyright (c) 2014 - 2022 Knut Sveidqvist",
+                           "license":  "MIT",
+                           "url":  "https://github.com/mermaid-js/mermaid"
+                       },
+                       {
+                           "name":  "AvalonEdit",
+                           "license":  "MIT",
+                           "url":  "http://www.avalonedit.net/"
+                       },
+                       {
+                           "name":  "NanumGothicCoding",
+                           "license":  "SIL OFL 1.1",
+                           "url":  null
+                       }
+                   ],
     "BigMigration":  [
                          {
                              "name":  ".NET Runtime / WPF",

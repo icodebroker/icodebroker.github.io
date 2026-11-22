@@ -184,6 +184,12 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'SQLite (e_sqlite3)'; license = 'Public domain'; url = 'https://sqlite.org/copyright.html' })
     }
 
+    # BigMermaid : mermaid 12.3.0의 문법(렉서 규칙)·배치·도형·테마 값·샘플을 C#으로 옮긴 부분
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigMermaid')
+    {
+        [void]$list.Add([ordered]@{ name = 'mermaid 12.3.0 (grammar, layout and shape code, theme values, samples), Copyright (c) 2014 - 2022 Knut Sveidqvist'; license = 'MIT'; url = 'https://github.com/mermaid-js/mermaid' })
+    }
+
     # BigRailway : 내장 노선 데이터 (railway-data.json은 OSM 파생 데이터베이스라 zip의 DATA 폴더에 ODbL로 함께 넣는다)
     if((Split-Path -Leaf $appDirectoryPath) -eq 'BigRailway')
     {

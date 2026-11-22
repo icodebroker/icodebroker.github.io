@@ -229,6 +229,27 @@
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigContourMap.json", en: "BigContourMap.json in the CONFIGURATION folder next to the exe" }
   screenshot_credit: { ko: "스크린샷 지형: Copernicus DEM GLO-30 설악산 일대를 잘라 낸 수정 데이터 — produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.", en: "Screenshot terrain: modified Copernicus DEM GLO-30 data (Seoraksan, Korea) — produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved." }
 
+- name: BigMermaid
+  category: docs
+  summary: { ko: "mermaid 문자열을 바로 그려 보는 다이어그램 뷰어", en: "A diagram viewer that draws mermaid text as you type" }
+  tagline: { ko: "글로 쓴 다이어그램을 웹 브라우저 없이 바로 그림으로", en: "Diagrams written as text, drawn right away without a web browser" }
+  intro: { ko: "BigMermaid는 mermaid 문법으로 쓴 글을 입력하면 다이어그램을 바로 그려 주는 프로그램이에요. 웹 브라우저나 JavaScript 없이 mermaid 12.3.0 문법을 직접 해석해 순서도, 시퀀스, 클래스, 간트 차트, 마인드맵 등 20종을 그려요. 완성한 그림은 SVG나 PNG로 내보낼 수 있고, 인터넷 연결 없이 동작해요.", en: "BigMermaid draws a diagram as soon as you type text in mermaid syntax. It interprets mermaid 12.3.0 syntax directly, without a web browser or JavaScript, and draws 20 kinds of diagrams including flowcharts, sequence and class diagrams, Gantt charts and mind maps. Export the result as SVG or PNG. It works offline." }
+  features:
+    - title: { ko: "다이어그램 20종", en: "20 diagram types" }
+      text: { ko: "순서도, 시퀀스, 클래스, 상태, 개체 관계, 원 차트, 간트, 요구 사항, 사용자 여정, 타임라인, 사분면, XY 차트, 레이더, 패킷, 칸반, 트리맵, Git 그래프, 마인드맵, 생키, 블록 다이어그램을 그려요.", en: "Flowchart, sequence, class, state, entity relationship, pie, Gantt, requirement, user journey, timeline, quadrant, XY chart, radar, packet, kanban, treemap, Git graph, mind map, Sankey and block diagrams." }
+    - title: { ko: "입력하는 대로 그리기", en: "Live drawing" }
+      text: { ko: "글을 고치면 다이어그램이 바로 다시 그려지고, 문법 오류가 있으면 줄·열을 알려 주며 클릭하면 그 위치로 이동해요.", en: "The diagram redraws as you edit, and syntax errors show the line and column; click to jump there." }
+    - title: { ko: "종류별 샘플", en: "Samples for every type" }
+      text: { ko: "왼쪽 샘플 목록에서 골라 바로 그려 보고 고쳐 가며 문법을 익힐 수 있어요.", en: "Pick a sample from the list on the left to draw it right away and learn the syntax by editing it." }
+    - title: { ko: "SVG·PNG 내보내기", en: "SVG and PNG export" }
+      text: { ko: "SVG로 내보내거나, PNG를 1·2·4배 또는 원하는 DPI와 투명 배경으로 저장해요.", en: "Export as SVG, or save PNG at 1x, 2x, 4x or a custom DPI, with an optional transparent background." }
+    - title: { ko: ".mmd 파일 저장", en: "Save .mmd files" }
+      text: { ko: "mermaid 글을 .mmd 파일로 저장하고 최근 파일에서 다시 열 수 있어요.", en: "Save mermaid text as .mmd files and reopen them from the recent files list." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대, Ctrl+휠로 다이어그램 확대를 지원해요.", en: "Dark/light mode, Korean/English UI, Ctrl +/− zoom for the screen and Ctrl+wheel zoom for the diagram." }
+  uses: { ko: ["README나 위키에 넣을 mermaid 다이어그램을 미리 확인할 때", "회의 자료에 넣을 순서도나 간트 차트를 이미지로 만들 때", "mermaid 문법을 샘플로 익힐 때"], en: ["Previewing a mermaid diagram before putting it in a README or wiki", "Making a flowchart or Gantt chart image for meeting slides", "Learning mermaid syntax from samples"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigMermaid.json", en: "BigMermaid.json in the CONFIGURATION folder next to the exe" }
+
 - name: BigMindMap
   category: docs
   summary: { ko: "키보드로 빠르게 그리는 마인드맵", en: "A mind map you can build fast from the keyboard" }
