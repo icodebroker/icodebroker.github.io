@@ -481,6 +481,27 @@
   uses: { ko: ["여행 사진을 빠르게 훑어볼 때", "사진 파일 이름을 날짜와 번호로 맞출 때", "필요 없는 사진을 골라 지울 때"], en: ["When you flip through travel photos", "When you rename photos with a date and number", "When you pick out and delete unwanted photos"] }
   settings_path: { ko: "%APPDATA%\\BigImageView\\BigImageView.json", en: "%APPDATA%\\BigImageView\\BigImageView.json" }
 
+- name: BigPainter
+  category: media
+  summary: { ko: "정의대로 계산하고 검증한 이미지 편집기", en: "An image editor that computes by definition, verified" }
+  tagline: { ko: "필터도 합성도, 계산이 맞는지 확인했어요", en: "Filters and compositing, checked to compute correctly" }
+  intro: { ko: "BigPainter는 여러 그림을 한 창 안의 자식 창으로 열어 선택·필터·색 조정·크기 조정·합성을 하는 이미지 편집기예요. 공간 연산은 선형 빛 공간에서, 블렌드는 sRGB에서 16비트 프리멀티플라이드 버퍼로 계산하고, 결과는 ImageMagick·Pillow·OpenCV·브라우저 캔버스와 따로 만든 독립 구현으로 대조해 검증했어요.", en: "BigPainter is an image editor that opens several pictures as child windows inside one window for selection, filters, color adjustments, resizing and compositing. Spatial operations run in linear light and blends in sRGB on a 16-bit premultiplied buffer, and the results are verified against ImageMagick, Pillow, OpenCV, a browser canvas and a separate independent implementation." }
+  features:
+    - title: { ko: "필터·조정 25종", en: "25 filters and adjustments" }
+      text: { ko: "가우시안·동작 흐림, 선명하게, 중간값, 엠보스, 모자이크, 오목/볼록, 카툰부터 레벨·색조/채도·밝기/대비까지 써요.", en: "From Gaussian and motion blur, sharpening, median, emboss, mosaic, pinch and cartoon to levels, hue/saturation and brightness/contrast." }
+    - title: { ko: "선택과 페더", en: "Selections and feathering" }
+      text: { ko: "사각형·원·다각형으로 고르고, 반전·페더를 준 뒤 그 영역에만 필터를 적용하거나 잘라내요.", en: "Select with rectangles, ellipses or polygons, invert or feather, then filter only that area or crop to it." }
+    - title: { ko: "블렌드 16종과 Poisson", en: "16 blend modes and Poisson" }
+      text: { ko: "붙여 넣은 조각을 곱하기·스크린·오버레이 같은 블렌드 모드나 Poisson 블렌딩으로 경계 없이 합성해요.", en: "Composite a pasted piece with blend modes like multiply, screen and overlay, or seamlessly with Poisson blending." }
+    - title: { ko: "리샘플링 5가지", en: "Five resampling kernels" }
+      text: { ko: "바이큐빅 같은 커널마다 특징을 보여 주고, 고른 커널로 그림 크기를 바꿔요. 테두리 추가도 할 수 있어요.", en: "Each kernel, such as bicubic, comes with a note on its character; resize with the one you choose, or add a border." }
+    - title: { ko: "한 창 안의 여러 그림", en: "Many pictures in one window" }
+      text: { ko: "계단식·바둑판식 정렬, 최대화, Ctrl+Tab 전환을 쓰고, 탐색기에서 다시 열어도 같은 창에 들어와요.", en: "Cascade or tile, maximize and switch with Ctrl+Tab; opening another file from Explorer lands in the same window." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 화면 확대(그림 배율은 따로)를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− UI zoom (separate from image zoom)." }
+  uses: { ko: ["사진 일부만 흐리거나 모자이크할 때", "두 사진을 경계 없이 합성하고 싶을 때", "필터와 리샘플링이 실제로 어떻게 계산되는지 비교해 볼 때"], en: ["When you blur or pixelate part of a photo", "When you want to combine two photos without a visible seam", "When you compare how filters and resampling are actually computed"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigPainter.json", en: "CONFIGURATION\\BigPainter.json next to the exe" }
+
 - name: BigPlayer
   category: media
   summary: { ko: "자막과 이퀄라이저를 갖춘 동영상·음악 플레이어", en: "A video and music player with subtitles and an equalizer" }

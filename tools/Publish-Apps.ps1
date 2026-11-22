@@ -187,6 +187,16 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = '서울교통공사·부산교통공사·광주교통공사 역간 소요시간 / station-to-station times published by Seoul Metro, Busan Transportation Corp., Gwangju Metropolitan Rapid Transit Corp.'; license = 'Public data (data.go.kr)'; url = 'https://www.data.go.kr/' })
     }
 
+    # BigPainter : SkiaSharp 네이티브 라이브러리(libSkiaSharp.dll)에 들어 있는 Skia와 코덱
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigPainter')
+    {
+        [void]$list.Add([ordered]@{ name = 'Skia (in libSkiaSharp)'; license = 'BSD-3-Clause'; url = 'https://skia.org' })
+        [void]$list.Add([ordered]@{ name = 'libwebp (in libSkiaSharp)'; license = 'BSD-3-Clause'; url = 'https://chromium.googlesource.com/webm/libwebp' })
+        [void]$list.Add([ordered]@{ name = 'libjpeg-turbo (in libSkiaSharp)'; license = 'IJG, BSD-3-Clause'; url = 'https://libjpeg-turbo.org' })
+        [void]$list.Add([ordered]@{ name = 'libpng (in libSkiaSharp)'; license = 'libpng-2.0'; url = 'http://www.libpng.org/pub/png/libpng.html' })
+        [void]$list.Add([ordered]@{ name = 'zlib (in libSkiaSharp)'; license = 'Zlib'; url = 'https://zlib.net' })
+    }
+
     $packageTable = [ordered]@{}
 
     # 테스트 프로젝트의 패키지는 배포본에 들어가지 않는다.
@@ -226,7 +236,7 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
     {
         # 빌드 전용 패키지와 다른 플랫폼용 런타임 패키지는 배포본에 들어가지 않는다.
         if($name -eq 'Microsoft.NET.ILLink.Tasks') { continue }
-        if($name -match '\.(android|linux|osx|ios|maccatalyst|win-arm64|win-x86)(-|$|\.)') { continue }
+        if($name -match '\.(android|linux|osx|macOS|ios|maccatalyst|win-arm64|win-x86)(-|$|\.)') { continue }
         if($name -match '\.runtime\.(android|linux|osx|win-arm64|win-x86)') { continue }
 
         [void]$list.Add((Get-PackageLicense $name $packageTable[$name]))

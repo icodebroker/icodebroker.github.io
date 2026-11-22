@@ -231,6 +231,14 @@
                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigPacket-v1.0.0/BigPacket-1.0.0-win-x64.zip",
                       "released":  "2026-11-18"
                   },
+    "BigPainter":  {
+                       "version":  "1.0.0",
+                       "zip":  "BigPainter-1.0.0-win-x64.zip",
+                       "size":  65996092,
+                       "sha256":  "47c499e7c54393e47be0b92799caf3dc81e7c597a6138b803be6243a56342f3c",
+                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigPainter-v1.0.0/BigPainter-1.0.0-win-x64.zip",
+                       "released":  "2026-11-22"
+                   },
     "BigPiano":  {
                      "version":  "1.0.0",
                      "zip":  "BigPiano-1.0.0-win-x64.zip",

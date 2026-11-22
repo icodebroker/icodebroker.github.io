@@ -682,6 +682,53 @@
                           "url":  null
                       }
                   ],
+    "BigPainter":  [
+                       {
+                           "name":  ".NET Runtime / WPF",
+                           "license":  "MIT",
+                           "url":  "https://github.com/dotnet/runtime"
+                       },
+                       {
+                           "name":  "Skia (in libSkiaSharp)",
+                           "license":  "BSD-3-Clause",
+                           "url":  "https://skia.org"
+                       },
+                       {
+                           "name":  "libwebp (in libSkiaSharp)",
+                           "license":  "BSD-3-Clause",
+                           "url":  "https://chromium.googlesource.com/webm/libwebp"
+                       },
+                       {
+                           "name":  "libjpeg-turbo (in libSkiaSharp)",
+                           "license":  "IJG, BSD-3-Clause",
+                           "url":  "https://libjpeg-turbo.org"
+                       },
+                       {
+                           "name":  "libpng (in libSkiaSharp)",
+                           "license":  "libpng-2.0",
+                           "url":  "http://www.libpng.org/pub/png/libpng.html"
+                       },
+                       {
+                           "name":  "zlib (in libSkiaSharp)",
+                           "license":  "Zlib",
+                           "url":  "https://zlib.net"
+                       },
+                       {
+                           "name":  "SkiaSharp",
+                           "license":  "MIT",
+                           "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                       },
+                       {
+                           "name":  "SkiaSharp.NativeAssets.Win32",
+                           "license":  "MIT",
+                           "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                       },
+                       {
+                           "name":  "NanumGothicCoding",
+                           "license":  "SIL OFL 1.1",
+                           "url":  null
+                       }
+                   ],
     "BigPiano":  [
                      {
                          "name":  ".NET Runtime / WPF",
