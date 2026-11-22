@@ -18,8 +18,8 @@
     "BigCalendar":  {
                         "version":  "1.0.0",
                         "zip":  "BigCalendar-1.0.0-win-x64.zip",
-                        "size":  58553376,
-                        "sha256":  "87dbe80ed39c3ac87db0ad780feca69d10a79dadd8ce7c44bfaa1da94bd2999a",
+                        "size":  58555258,
+                        "sha256":  "71395ee8f156912780951be5fb976af53944f4f4f98663d20f389b4a778436db",
                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCalendar-v1.0.0/BigCalendar-1.0.0-win-x64.zip",
                         "released":  "2026-11-22"
                     },
