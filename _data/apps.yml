@@ -588,6 +588,27 @@
   uses: { ko: ["악기나 노래 연습으로 어려운 구간을 반복해 들을 때", "외국어 듣기 공부로 한 문장을 되풀이할 때", "이퀄라이저로 음악 소리를 내 취향에 맞출 때"], en: ["When practicing an instrument or song and repeating a hard passage", "When studying a language and replaying one sentence", "When tuning music to your taste with the equalizer"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigAudio.json (FFmpeg DLL은 %LOCALAPPDATA%\\BigAudio)", en: "CONFIGURATION\\BigAudio.json next to the exe (FFmpeg DLLs in %LOCALAPPDATA%\\BigAudio)" }
 
+- name: BigWave
+  category: media
+  summary: { ko: "스펙트로그램에서 소리를 보고 고치는 오디오 편집기", en: "Audio editor that lets you see and fix sound in a spectrogram" }
+  tagline: { ko: "소리를 눈으로 보고, 원하는 부분만 깔끔하게 고쳐요", en: "See the sound and fix just the part you want, cleanly" }
+  intro: { ko: "BigWave는 소리를 스펙트로그램으로 보면서 편집하는 오디오 편집기예요. 시간 구간을 자르고 붙일 수 있고, 스펙트로그램에서 시간과 주파수를 함께 사각형으로 골라 그 부분만 줄이거나 없애거나 키울 수 있어요. 자르고 붙인 이음새는 위치를 조금 옮기고 교차 페이드를 넣어 딸깍 소리 없이 자연스럽게 이어요. FFmpeg 디코더가 들어 있어 대부분의 형식을 열고, 결과는 손실 없는 WAV나 FLAC으로 내보내요. 인터넷에 연결하지 않는 오프라인 프로그램이에요.", en: "BigWave is an audio editor that lets you edit while looking at the sound as a spectrogram. You can cut and paste time ranges, or select a rectangle of time and frequency on the spectrogram to reduce, remove or boost just that part. Seams from cutting and pasting are shifted slightly and crossfaded so they join naturally without clicks. Its built-in FFmpeg decoder opens most formats, and the result is exported as lossless WAV or FLAC. It is an offline app that never connects to the internet." }
+  features:
+    - title: { ko: "네 가지 스펙트럼 보기", en: "Four spectrum views" }
+      text: { ko: "STFT 스펙트로그램, 멜 필터뱅크, 상수 Q(CQT), 재할당 스펙트로그램 중에서 고르고 FFT 크기·색상표·dB 바닥·주파수 축을 바꿀 수 있어요.", en: "Choose an STFT spectrogram, mel filterbank, constant-Q (CQT) or reassigned spectrogram, and change the FFT size, color map, dB floor and frequency axis." }
+    - title: { ko: "시간-주파수 편집", en: "Time-frequency editing" }
+      text: { ko: "스펙트로그램에서 사각형으로 고른 시간·주파수 영역만 원하는 dB만큼 감쇠·제거·증폭하고, 영역 밖 소리는 그대로 둬요.", en: "Attenuate, remove or boost by any dB just the time-frequency area you select as a rectangle, leaving sound outside the area untouched." }
+    - title: { ko: "자연스러운 이음", en: "Natural seams" }
+      text: { ko: "잘라내기·붙여넣기·삭제를 하면 이음 위치를 몇 ms 안에서 가장 잘 맞는 곳으로 옮기고 교차 페이드를 넣어요. 이음 앞뒤 음량을 보여 주고, 이음 앞뒤 2초를 바로 들어 볼 수 있어요.", en: "When you cut, paste or delete, the seam is moved within a few ms to the best-matching spot and crossfaded. It shows the loudness before and after the seam, and you can listen to 2 seconds around it right away." }
+    - title: { ko: "무손실 내보내기", en: "Lossless export" }
+      text: { ko: "WAV 16/24비트·32비트 float, FLAC 16/24비트로 내보내요. 정수 형식은 TPDF 디더를 넣어요.", en: "Exports WAV 16/24-bit or 32-bit float and FLAC 16/24-bit, with TPDF dither for integer formats." }
+    - title: { ko: "대부분의 형식 열기", en: "Opens most formats" }
+      text: { ko: "WAV, FLAC, MP3, M4A/AAC, OGG, Opus, AIFF, WMA, MKA, WebM 오디오를 열고, 실행 취소·다시 실행으로 편집을 언제든 되돌릴 수 있어요.", en: "Opens WAV, FLAC, MP3, M4A/AAC, OGG, Opus, AIFF, WMA, MKA and WebM audio, and undo and redo let you take back any edit." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["녹음에 섞인 기침이나 휴대폰 알림음만 골라 지울 때", "긴 녹음에서 필요 없는 부분을 잘라 내고 이음새 없이 이을 때", "소리가 주파수별로 어떻게 생겼는지 눈으로 살펴볼 때"], en: ["When removing just a cough or phone notification mixed into a recording", "When cutting unneeded parts out of a long recording and joining it seamlessly", "When looking at how a sound is shaped across frequencies"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigWave.json (FFmpeg DLL은 %LOCALAPPDATA%\\BigWave)", en: "CONFIGURATION\\BigWave.json next to the exe (FFmpeg DLLs in %LOCALAPPDATA%\\BigWave)" }
+
 - name: BigPiano
   category: media
   summary: { ko: "악보와 건반이 함께 움직이는 피아노", en: "A piano that plays with a moving score" }

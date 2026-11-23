@@ -367,6 +367,14 @@
                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigWatch-v1.0.0/BigWatch-1.0.0-win-x64.zip",
                      "released":  "2026-11-18"
                  },
+    "BigWave":  {
+                    "version":  "1.0.0",
+                    "zip":  "BigWave-1.0.0-win-x64.zip",
+                    "size":  110196164,
+                    "sha256":  "07b0f1f53bc6de923f4f887c54ef957ac8445f24a67f0a23d5d386009cc1b1e5",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigWave-v1.0.0/BigWave-1.0.0-win-x64.zip",
+                    "released":  "2026-11-23"
+                },
     "BigWorldWatch":  {
                           "version":  "1.0.0",
                           "zip":  "BigWorldWatch-1.0.0-win-x64.zip",

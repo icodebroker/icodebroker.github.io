@@ -152,8 +152,8 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'FFmpeg'; license = 'GPL-2.0-or-later'; url = 'https://ffmpeg.org' })
     }
 
-    # BigRadio·BigAudio는 FFmpeg LGPL 공유 빌드(--enable-version3) DLL을 exe에 내장했다가 %LOCALAPPDATA%\<앱>\FFMPEG에 풀어 쓴다.
-    if(@('BigRadio', 'BigAudio') -contains (Split-Path -Leaf $appDirectoryPath))
+    # BigRadio·BigAudio·BigWave는 FFmpeg LGPL 공유 빌드(--enable-version3) DLL을 exe에 내장했다가 %LOCALAPPDATA%\<앱>\FFMPEG에 풀어 쓴다.
+    if(@('BigRadio', 'BigAudio', 'BigWave') -contains (Split-Path -Leaf $appDirectoryPath))
     {
         [void]$list.Add([ordered]@{ name = 'FFmpeg n8.1.3 (avcodec, avformat, avutil, swresample; shared DLLs)'; license = 'LGPL-3.0-or-later'; url = 'https://ffmpeg.org' })
     }
@@ -176,6 +176,12 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'matplotlib colormap terrain'; license = 'matplotlib License (PSF-based)'; url = 'https://matplotlib.org/stable/project/license.html' })
         [void]$list.Add([ordered]@{ name = 'matplotlib colormaps viridis, cividis'; license = 'CC0-1.0'; url = 'https://matplotlib.org/' })
         [void]$list.Add([ordered]@{ name = 'ColorBrewer 2.0 (YlGn, YlOrBr, Greys, BrBG, RdYlBu)'; license = 'Apache-2.0'; url = 'https://colorbrewer2.org/' })
+    }
+
+    # BigWave : 스펙트로그램 색상표 값 (viridis·inferno)
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigWave')
+    {
+        [void]$list.Add([ordered]@{ name = 'matplotlib colormaps viridis, inferno'; license = 'CC0-1.0'; url = 'https://matplotlib.org/' })
     }
 
     # BigCalendar : SQLitePCLRaw가 싣는 네이티브 SQLite
