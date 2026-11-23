@@ -191,6 +191,14 @@
                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigKeyboard-v1.0.0/BigKeyboard-1.0.0-win-x64.zip",
                         "released":  "2026-11-18"
                     },
+    "BigLauncher":  {
+                        "version":  "1.0.0",
+                        "zip":  "BigLauncher-1.0.0-win-x64.zip",
+                        "size":  60254437,
+                        "sha256":  "41dbda56c6e364ba3347875b7e0c9132d6955c84bff5d06fafec7a5ff614392c",
+                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigLauncher-v1.0.0/BigLauncher-1.0.0-win-x64.zip",
+                        "released":  "2026-11-23"
+                    },
     "BigMaze":  {
                     "version":  "1.0.0",
                     "zip":  "BigMaze-1.0.0-win-x64.zip",

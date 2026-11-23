@@ -754,6 +754,27 @@
   uses: { ko: ["올해와 내년의 빨간 날을 한눈에 보고 싶을 때", "음력 생일이나 제사 날짜를 양력으로 확인할 때", "날마다 한 일이나 일정을 달력에 적어 두고 다시 찾을 때"], en: ["When you want to see this year's and next year's Korean holidays at a glance", "When you look up the solar date of a lunar birthday or memorial day", "When you jot down what you did or plan to do each day and find it again later"] }
   settings_path: { ko: "%APPDATA%\\BigCalendar\\BigCalendar.json (데이터 파일 기본 위치 %APPDATA%\\BigCalendar\\BigCalendar.db)", en: "%APPDATA%\\BigCalendar\\BigCalendar.json (data file by default at %APPDATA%\\BigCalendar\\BigCalendar.db)" }
 
+- name: BigLauncher
+  category: desktop
+  summary: { ko: "자주 쓰는 프로그램을 그룹으로 모아 실행하는 런처", en: "A launcher that keeps your favorite programs in groups" }
+  tagline: { ko: "끌어다 놓아 등록하고, 두 번 클릭해 실행해요", en: "Drag and drop to register, double-click to launch" }
+  intro: { ko: "BigLauncher는 자주 쓰는 프로그램의 실행 파일(.exe)이나 바로 가기(.lnk)를 끌어다 놓아 등록하고, 아이콘을 두 번 클릭해 실행하는 프로그램 런처예요. 프로그램을 그룹으로 나눠 정리하고, 그룹을 접거나 검색해 원하는 프로그램을 빨리 찾을 수 있어요. 바로 가기는 인수와 작업 폴더까지 그대로 실행해요.", en: "BigLauncher is a program launcher: drag executables (.exe) or shortcuts (.lnk) onto it to register them, then double-click an icon to launch. Organize programs into groups, collapse groups or search to find what you need quickly. Shortcuts run exactly as saved, including their arguments and working folder." }
+  features:
+    - title: { ko: "끌어다 놓아 등록", en: "Drag-and-drop registration" }
+      text: { ko: ".exe나 .lnk 파일을 여러 개 한꺼번에 끌어다 놓아 등록하고, 이미 등록된 파일은 건너뛰어요.", en: "Drop several .exe or .lnk files at once to register them; files already registered are skipped." }
+    - title: { ko: "그룹 정리", en: "Groups" }
+      text: { ko: "새 그룹을 만들고 이름을 바꾸거나, 여러 프로그램을 골라 다른 그룹으로 끌어다 옮길 수 있어요. 그룹은 접고 펼칠 수 있고 그 상태를 기억해요.", en: "Create and rename groups, and select several programs to drag them to another group. Groups can be collapsed and expanded, and the state is remembered." }
+    - title: { ko: "검색", en: "Search" }
+      text: { ko: "Ctrl+F로 이름을 검색하면 일치하는 프로그램을 강조하고, 접힌 그룹도 잠시 펼쳐 보여 줘요.", en: "Press Ctrl+F to search by name; matching programs are highlighted and collapsed groups open temporarily." }
+    - title: { ko: "그룹 배치", en: "Group layout" }
+      text: { ko: "그룹을 위아래로(수평 분할), 옆으로(수직 분할), 또는 2~6열 격자(다중 분할)로 배치할 수 있어요.", en: "Lay out groups stacked (horizontal split), side by side (vertical split) or in a 2–6 column grid (multi split)." }
+    - title: { ko: "바로 가기 그대로 실행", en: "Shortcuts run as saved" }
+      text: { ko: "바로 가기를 대상 파일로 바꾸지 않고 그대로 실행해 인수·작업 폴더·관리자 권한 설정이 유지돼요. 탐색기와 같은 순서로 정렬하고, 파일 위치 열기도 지원해요.", en: "Shortcuts are launched as they are, not replaced with their targets, so arguments, working folder and run-as-administrator settings are kept. Programs are sorted in the same order as File Explorer, and you can open the file location." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom." }
+  uses: { ko: ["바탕 화면에 흩어진 바로 가기를 한곳에 정리하고 싶을 때", "업무용·개발용처럼 용도별로 프로그램을 나눠 두고 싶을 때", "설치하지 않고 쓰는 프로그램(포터블 exe)을 모아 실행할 때"], en: ["Tidying up shortcuts scattered across the desktop in one place", "Keeping programs sorted by purpose, such as work and development", "Collecting and launching portable programs that don't need installing"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigLauncher.json", en: "BigLauncher.json in the CONFIGURATION folder next to the exe" }
+
 - name: BigView
   category: desktop
   summary: { ko: "마우스 주변을 크게 보여 주는 돋보기", en: "A magnifier that follows your mouse" }
