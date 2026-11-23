@@ -481,6 +481,27 @@
   uses: { ko: ["여러 서버에 동시에 접속해 관리할 때", "자주 쓰는 원격 PC를 목록으로 정리하고 싶을 때", "원격 PC로 파일을 클립보드로 옮기고 싶을 때"], en: ["When you manage several servers at the same time", "When you want your frequent remote PCs in a tidy list", "When you want to move files to a remote PC via the clipboard"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
 
+- name: BigCipher
+  category: network
+  summary: { ko: "텍스트와 파일을 대칭키·공개 키로 암호화하고 복호화", en: "Encrypt and decrypt text and files with symmetric or public keys" }
+  tagline: { ko: "검증된 방식만 골라 쓰고, 위험한 방식은 경고해 줘요", en: "Use only verified methods, with warnings on the risky ones" }
+  intro: { ko: "BigCipher는 텍스트나 파일을 AES-GCM, RSA-OAEP, ECDH 같은 방식으로 암호화하고 복호화하는 프로그램이에요. 암호화 방법을 권장·호환 전용·시연 전용으로 나눠 보여 주고, 옛 방식에는 왜 위험한지 경고를 띄워요. 모든 방식은 Windows CNG 구현을 쓰고 NIST CAVP·Wycheproof 표준 시험 벡터로 검증했어요.", en: "BigCipher encrypts and decrypts text or files with methods such as AES-GCM, RSA-OAEP and ECDH. Methods are grouped as recommended, compatibility only and demo only, and legacy methods show a warning explaining the risk. Every method uses the Windows CNG implementation and was verified against the NIST CAVP and Wycheproof standard test vectors." }
+  features:
+    - title: { ko: "암호화 방법 10가지", en: "10 methods" }
+      text: { ko: "권장(AES-GCM, AES-CCM, ChaCha20-Poly1305, RSA-OAEP 하이브리드, ECDH 하이브리드, RSA-OAEP), 호환 전용(AES-CBC, 3DES, RSA PKCS#1 v1.5), 시연 전용(AES-ECB)으로 나눠 보여 줘요. ChaCha20-Poly1305는 지원하는 Windows에서만 켜져요.", en: "Grouped as recommended (AES-GCM, AES-CCM, ChaCha20-Poly1305, RSA-OAEP hybrid, ECDH hybrid, RSA-OAEP), compatibility only (AES-CBC, 3DES, RSA PKCS#1 v1.5) and demo only (AES-ECB). ChaCha20-Poly1305 is enabled only on Windows versions that support it." }
+    - title: { ko: "데이터 하나로 복호화", en: "Self-contained output" }
+      text: { ko: "컨테이너 출력은 암호를 PBKDF2(600,000회)로 키로 바꾸고 솔트·nonce·태그를 함께 담아, 암호만 알면 그 데이터 하나로 복호화할 수 있어요. 키나 데이터가 바뀌면 복호화하지 않아요.", en: "Container output turns the password into a key with PBKDF2 (600,000 iterations) and stores the salt, nonce and tag with the data, so the password and that data alone are enough to decrypt. A wrong key or altered data is rejected." }
+    - title: { ko: "공개 키 암호화", en: "Public-key encryption" }
+      text: { ko: "RSA·타원 곡선 키 쌍을 만들어 PEM으로 저장하고 열 수 있어요. 개인 키는 암호를 걸어 PKCS#8로 저장할 수 있고, 긴 데이터는 RSA·ECDH로 키만 감싸고 본문은 AES-GCM으로 암호화해요.", en: "Generate RSA and elliptic-curve key pairs and save or open them as PEM. Private keys can be saved as password-protected PKCS#8, and long data is encrypted with AES-GCM while RSA or ECDH wraps only the key." }
+    - title: { ko: "OpenSSL과 주고받기", en: "OpenSSL interop" }
+      text: { ko: "원시 키·IV(openssl enc -K -iv)나 openssl enc -pbkdf2의 Salted__ 형식으로 암호화하고 복호화할 수 있어요. nonce·IV·솔트를 직접 넣어 시험 벡터를 재현할 수도 있어요.", en: "Encrypt and decrypt with a raw key and IV (openssl enc -K -iv) or in the Salted__ format of openssl enc -pbkdf2. You can also enter the nonce, IV and salt yourself to reproduce test vectors." }
+    - title: { ko: "텍스트와 파일", en: "Text and files" }
+      text: { ko: "텍스트는 UTF-8·Hex·Base64로 넣고 보며, 파일은 그대로 암호화해 다른 파일로 저장해요. 결과를 바로 입력으로 넘겨 복호화를 확인할 수 있어요.", en: "Enter and view text as UTF-8, Hex or Base64, and encrypt files as they are into another file. Pass the result straight back as input to check decryption." }
+    - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  uses: { ko: ["중요한 파일이나 메모를 암호로 잠가 보관하고 싶을 때", "상대의 공개 키로 암호화해 개인 키를 가진 사람만 열게 하고 싶을 때", "OpenSSL이나 다른 시스템과 같은 결과가 나오는지 확인하거나 암호 방식을 배울 때"], en: ["When you want to lock important files or notes with a password", "When you encrypt with someone's public key so only the holder of the private key can open it", "When you check results against OpenSSL or another system, or learn how ciphers work"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigCipher.json (암호·키는 저장하지 않아요)", en: "CONFIGURATION\\BigCipher.json next to the exe (passwords and keys are not saved)" }
+
 - name: BigImageView
   category: media
   summary: { ko: "썸네일로 빠르게 훑는 이미지 뷰어", en: "An image viewer for browsing by thumbnail" }

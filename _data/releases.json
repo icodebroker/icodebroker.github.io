@@ -23,6 +23,14 @@
                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCalendar-v1.0.0/BigCalendar-1.0.0-win-x64.zip",
                         "released":  "2026-11-22"
                     },
+    "BigCipher":  {
+                      "version":  "1.0.0",
+                      "zip":  "BigCipher-1.0.0-win-x64.zip",
+                      "size":  60256516,
+                      "sha256":  "b6f2089afce9b19c852c3e44ed24d198a69ee917d86838faf705a97ccd8eb3d4",
+                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCipher-v1.0.0/BigCipher-1.0.0-win-x64.zip",
+                      "released":  "2026-11-23"
+                  },
     "BigClaude":  {
                       "version":  "1.0.0",
                       "zip":  "BigClaude-1.0.0-win-x64.zip",
