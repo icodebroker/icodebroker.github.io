@@ -250,6 +250,27 @@
   uses: { ko: ["README나 위키에 넣을 mermaid 다이어그램을 미리 확인할 때", "회의 자료에 넣을 순서도나 간트 차트를 이미지로 만들 때", "mermaid 문법을 샘플로 익힐 때"], en: ["Previewing a mermaid diagram before putting it in a README or wiki", "Making a flowchart or Gantt chart image for meeting slides", "Learning mermaid syntax from samples"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigMermaid.json", en: "BigMermaid.json in the CONFIGURATION folder next to the exe" }
 
+- name: BigClassDiagram
+  category: docs
+  summary: { ko: "폴더의 C#·Python 코드를 분석해 클래스 다이어그램을 그려 주는 도구", en: "Analyzes the C# and Python code in a folder and draws a class diagram" }
+  tagline: { ko: "폴더만 고르면 코드 구조가 그림으로", en: "Pick a folder and see your code structure as a diagram" }
+  intro: { ko: "BigClassDiagram은 폴더 속 C#·Python 소스 코드를 읽어 클래스와 관계를 mermaid 클래스 다이어그램으로 그려 주는 프로그램이에요. C#은 Roslyn 컴파일러로, Python은 자체 파서로 분석해 코드를 실행하지 않아요. 만든 다이어그램은 mermaid 문자열로 복사하거나 .mmd·PNG·SVG로 저장할 수 있고, 인터넷 연결 없이 동작해요.", en: "BigClassDiagram reads the C# and Python source code in a folder and draws its classes and relations as a mermaid class diagram. C# is analyzed with the Roslyn compiler and Python with a built-in parser, so your code is never run. Copy the result as mermaid text or save it as .mmd, PNG or SVG. It works offline." }
+  features:
+    - title: { ko: "C#·Python 분석", en: "C# and Python" }
+      text: { ko: "폴더 안 .cs·.py 파일을 찾아 클래스, 인터페이스, 구조체, 열거형과 필드·속성·메서드를 읽어요. 언어는 자동으로 고르거나 직접 정할 수 있고, 제외 패턴과 C# 전처리 기호도 넣을 수 있어요.", en: "Finds the .cs and .py files in a folder and reads classes, interfaces, structs, enums and their fields, properties and methods. Pick the language automatically or yourself, and add exclude patterns and C# preprocessor symbols." }
+    - title: { ko: "관계 표시", en: "Relations" }
+      text: { ko: "상속과 구현은 코드 그대로, 합성·집합·연관·의존은 추정해서 그려요. 추정한 관계는 근거를 mermaid 주석으로 남길 수 있어요.", en: "Inheritance and implementation come straight from the code, while composition, aggregation, association and dependency are inferred. Inferred relations can carry their evidence as mermaid comments." }
+    - title: { ko: "보기 옵션", en: "View options" }
+      text: { ko: "최소 접근성, 멤버 종류, 관계 종류, 외부 형식 표시, 위→아래·왼쪽→오른쪽 배치, 네임스페이스·모듈로 묶기를 골라요.", en: "Choose the minimum accessibility, member kinds, relation kinds, external types, top-to-bottom or left-to-right layout, and grouping by namespace or module." }
+    - title: { ko: "형식 중심 보기", en: "Focus on a type" }
+      text: { ko: "형식 목록에서 하나를 고르면 그 형식과 정한 단계까지 연결된 형식만 그려서, 큰 프로젝트도 필요한 부분만 볼 수 있어요.", en: "Select a type from the list to draw only that type and the types connected to it within a chosen depth, so you can see just the part you need in a large project." }
+    - title: { ko: "mermaid·PNG·SVG", en: "mermaid, PNG, SVG" }
+      text: { ko: "mermaid 문자열을 바로 복사해 README나 위키에 붙이거나, .mmd 파일과 PNG·SVG 이미지로 저장해요.", en: "Copy the mermaid text straight into a README or wiki, or save it as an .mmd file or a PNG or SVG image." }
+    - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
+      text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대, 마우스 휠로 다이어그램 확대를 지원해요.", en: "Dark/light mode, Korean/English UI, Ctrl +/− zoom for the screen and mouse-wheel zoom for the diagram." }
+  uses: { ko: ["처음 보는 프로젝트의 클래스 구조를 빠르게 파악할 때", "설계 문서나 README에 넣을 클래스 다이어그램을 만들 때", "리팩터링 전후로 클래스 관계가 어떻게 바뀌었는지 볼 때"], en: ["Getting a quick picture of the class structure of an unfamiliar project", "Making a class diagram for a design document or README", "Seeing how class relations changed before and after a refactoring"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigClassDiagram.json", en: "BigClassDiagram.json in the CONFIGURATION folder next to the exe" }
+
 - name: BigMindMap
   category: docs
   summary: { ko: "키보드로 빠르게 그리는 마인드맵", en: "A mind map you can build fast from the keyboard" }

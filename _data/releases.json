@@ -31,6 +31,14 @@
                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCipher-v1.0.0/BigCipher-1.0.0-win-x64.zip",
                       "released":  "2026-11-23"
                   },
+    "BigClassDiagram":  {
+                            "version":  "1.0.0",
+                            "zip":  "BigClassDiagram-1.0.0-win-x64.zip",
+                            "size":  67981689,
+                            "sha256":  "cc10d6a5f3f9df5ed030bcf00bf733dd6905e5c6f3fd02f967dfd02271981974",
+                            "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigClassDiagram-v1.0.0/BigClassDiagram-1.0.0-win-x64.zip",
+                            "released":  "2026-11-24"
+                        },
     "BigClaude":  {
                       "version":  "1.0.0",
                       "zip":  "BigClaude-1.0.0-win-x64.zip",

@@ -196,6 +196,13 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'mermaid 12.3.0 (grammar, layout and shape code, theme values, samples), Copyright (c) 2014 - 2022 Knut Sveidqvist'; license = 'MIT'; url = 'https://github.com/mermaid-js/mermaid' })
     }
 
+    # BigClassDiagram : BigMermaid의 classDiagram 파서·배치·렌더러를 복사 (mermaid 12.3.0, 배치 구조는 dagre-d3-es 7.0.14를 따름)
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigClassDiagram')
+    {
+        [void]$list.Add([ordered]@{ name = 'mermaid 12.3.0 (class diagram grammar, layout and shape code, theme values), Copyright (c) 2014 - 2022 Knut Sveidqvist'; license = 'MIT'; url = 'https://github.com/mermaid-js/mermaid' })
+        [void]$list.Add([ordered]@{ name = 'dagre-d3-es 7.0.14 (layered layout structure), Copyright (c) 2013 Chris Pettitt'; license = 'MIT'; url = 'https://github.com/tbo47/dagre-es' })
+    }
+
     # BigRailway : 내장 노선 데이터 (railway-data.json은 OSM 파생 데이터베이스라 zip의 DATA 폴더에 ODbL로 함께 넣는다)
     if((Split-Path -Leaf $appDirectoryPath) -eq 'BigRailway')
     {

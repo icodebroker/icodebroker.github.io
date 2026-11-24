@@ -127,6 +127,48 @@
                           "url":  null
                       }
                   ],
+    "BigClassDiagram":  [
+                            {
+                                "name":  ".NET Runtime / WPF",
+                                "license":  "MIT",
+                                "url":  "https://github.com/dotnet/runtime"
+                            },
+                            {
+                                "name":  "mermaid 12.3.0 (class diagram grammar, layout and shape code, theme values), Copyright (c) 2014 - 2022 Knut Sveidqvist",
+                                "license":  "MIT",
+                                "url":  "https://github.com/mermaid-js/mermaid"
+                            },
+                            {
+                                "name":  "dagre-d3-es 7.0.14 (layered layout structure), Copyright (c) 2013 Chris Pettitt",
+                                "license":  "MIT",
+                                "url":  "https://github.com/tbo47/dagre-es"
+                            },
+                            {
+                                "name":  "Basic.Reference.Assemblies.Net100",
+                                "license":  "MIT",
+                                "url":  "https://www.nuget.org/packages/Basic.Reference.Assemblies.Net100"
+                            },
+                            {
+                                "name":  "Microsoft.CodeAnalysis.Analyzers",
+                                "license":  "MIT",
+                                "url":  "https://github.com/dotnet/roslyn"
+                            },
+                            {
+                                "name":  "Microsoft.CodeAnalysis.Common",
+                                "license":  "MIT",
+                                "url":  "https://github.com/dotnet/roslyn"
+                            },
+                            {
+                                "name":  "Microsoft.CodeAnalysis.CSharp",
+                                "license":  "MIT",
+                                "url":  "https://github.com/dotnet/roslyn"
+                            },
+                            {
+                                "name":  "NanumGothicCoding",
+                                "license":  "SIL OFL 1.1",
+                                "url":  null
+                            }
+                        ],
     "BigClaude":  [
                       {
                           "name":  ".NET Runtime / WPF",
