@@ -15,6 +15,7 @@
 #   (여백 없이, 들어가면 원본 크기) ... -App BigPlayer -KeepSize -NoMargin -Background '#000000'
 #   (관리자 앱을 일반 권한으로) ... -App BigDisk,BigPacket -RunAsInvoker
 #   (파일을 연 상태로) ... -App BigContourMap -OpenFile 'D:\UTILITY\BigContourMap\data\glo30_seorak.tif'
+#   (데이터 사본을 넣고) ... -App BigLH -ConfigurationFile 'D:\UTILITY\BigLH\publish\CONFIGURATION\BigLH.db'
 #   (관리자 PowerShell에서) powershell -ExecutionPolicy Bypass -File .\tools\Capture-Apps.ps1 -App BigDisk,BigPacket
 
 param(
@@ -34,6 +35,8 @@ param(
     [switch]$RunAsInvoker,
     # 이 파일을 연 상태로 실행한다 (exe 첫 번째 인수로 넘김)
     [string]$OpenFile = '',
+    # 이 파일들을 임시 실행 폴더의 CONFIGURATION에 복사해 둔다 (예: 데이터베이스 사본)
+    [string[]]$ConfigurationFile = @(),
     [int]$SettleSeconds = 4
 )
 
@@ -278,6 +281,12 @@ foreach($name in $App)
 
     New-Item -ItemType Directory -Force $stagePath | Out-Null
     Copy-Item $exePath $stagePath
+
+    foreach($configurationFilePath in $ConfigurationFile)
+    {
+        New-Item -ItemType Directory -Force (Join-Path $stagePath 'CONFIGURATION') | Out-Null
+        Copy-Item $configurationFilePath (Join-Path $stagePath 'CONFIGURATION')
+    }
 
     $languageValue = if($Language -eq 'en') { 1 } else { 0 }
     $settingJson   = "{ `"Language`": $languageValue, `"language`": $languageValue, `"LanguageType`": $languageValue }"
