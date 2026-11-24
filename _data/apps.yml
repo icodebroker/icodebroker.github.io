@@ -68,7 +68,7 @@
   category: files
   summary: { ko: "여러 코어로 빠르게 쓰는 ZIP 압축", en: "A ZIP tool that uses all your CPU cores" }
   tagline: { ko: "ZIP 압축, 끌어다 놓기만 하면 돼요", en: "Zipping files is as easy as drag and drop" }
-  intro: { ko: "BigZIP은 ZIP 파일을 만들고 풀어 주는 압축 프로그램이에요. 큰 파일도 여러 스레드로 나눠 압축하고, 파일을 끌어다 놓으면 바로 압축 창이 열려요. 탐색기 오른쪽 클릭 메뉴에 등록해 두면 더 간편하게 쓸 수 있어요.", en: "BigZIP creates and extracts ZIP files. It splits even large files across multiple threads, and dropping files onto it opens the compress window right away. Add it to the Explorer right-click menu for even quicker use." }
+  intro: { ko: "BigZIP은 ZIP 파일을 만들고 풀어 주는 압축 프로그램이에요. 큰 파일도 여러 스레드로 나눠 압축하고, 파일을 끌어다 놓으면 바로 압축 창이 열려요. 탐색기 오른쪽 클릭 메뉴에 등록해 두면 더 간편하게 쓸 수 있어요. 다 쓰고 나면 Esc 키 하나로 닫을 수 있어요.", en: "BigZIP creates and extracts ZIP files. It splits even large files across multiple threads, and dropping files onto it opens the compress window right away. Add it to the Explorer right-click menu for even quicker use. When you are done, just press Esc to close it." }
   features:
     - title: { ko: "여러 스레드 압축", en: "Multi-threaded" }
       text: { ko: "큰 파일을 조각으로 나눠 여러 스레드가 함께 압축하고, 풀기와 검사도 여러 스레드로 해요.", en: "Splits large files into chunks compressed on multiple threads, and extracts and tests on multiple threads too." }

@@ -402,9 +402,9 @@
     "BigZIP":  {
                    "version":  "1.0.1",
                    "zip":  "BigZIP-1.0.1-win-x64.zip",
-                   "size":  57084037,
-                   "sha256":  "5cedd9513ef801b834e7501a2e3d588e82ec0ca490ca9772c25524b69eac34ab",
+                   "size":  57084105,
+                   "sha256":  "59611c201be033c8fc97a22679b4778c7c2986ba9af5d963e0c239be61e9aad8",
                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigZIP-v1.0.1/BigZIP-1.0.1-win-x64.zip",
-                   "released":  "2026-11-21"
+                   "released":  "2026-11-24"
                }
 }
