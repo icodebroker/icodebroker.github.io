@@ -128,12 +128,12 @@
                     "released":  "2026-11-18"
                 },
     "BigExplorer":  {
-                        "version":  "1.0.1",
-                        "zip":  "BigExplorer-1.0.1-win-x64.zip",
-                        "size":  60297657,
-                        "sha256":  "3ce41fd02025d880f89eb39c8dc5ce9414722fadcf41d9f23ea11a0dcc75f4b2",
-                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigExplorer-v1.0.1/BigExplorer-1.0.1-win-x64.zip",
-                        "released":  "2026-11-21"
+                        "version":  "1.0.3",
+                        "zip":  "BigExplorer-1.0.3-win-x64.zip",
+                        "size":  60297729,
+                        "sha256":  "7e9c5883e81cf18deea220b4c0bebf091df15ee90c659dc5b16b07fe3bcb6493",
+                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigExplorer-v1.0.3/BigExplorer-1.0.3-win-x64.zip",
+                        "released":  "2026-11-24"
                     },
     "BigFormula":  {
                        "version":  "1.0.0",
