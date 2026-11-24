@@ -208,11 +208,11 @@
                         "released":  "2026-11-18"
                     },
     "BigLauncher":  {
-                        "version":  "1.0.0",
-                        "zip":  "BigLauncher-1.0.0-win-x64.zip",
-                        "size":  60255390,
-                        "sha256":  "d41ef99fb38a5e11242b91313cb75523f54ca9ccf75f137beb41e1f3075ae26e",
-                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigLauncher-v1.0.0/BigLauncher-1.0.0-win-x64.zip",
+                        "version":  "1.0.1",
+                        "zip":  "BigLauncher-1.0.1-win-x64.zip",
+                        "size":  60255871,
+                        "sha256":  "5e61545a05e2f0cfcaed4cc484805c2b2716f476217c14852569b42700698cbb",
+                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigLauncher-v1.0.1/BigLauncher-1.0.1-win-x64.zip",
                         "released":  "2026-11-24"
                     },
     "BigMaze":  {

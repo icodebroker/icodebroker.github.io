@@ -821,7 +821,7 @@
   category: desktop
   summary: { ko: "자주 쓰는 프로그램을 그룹으로 모아 실행하는 런처", en: "A launcher that keeps your favorite programs in groups" }
   tagline: { ko: "끌어다 놓아 등록하고, 두 번 클릭해 실행해요", en: "Drag and drop to register, double-click to launch" }
-  intro: { ko: "BigLauncher는 자주 쓰는 프로그램의 실행 파일(.exe)이나 바로 가기(.lnk)를 끌어다 놓아 등록하고, 아이콘을 두 번 클릭해 실행하는 프로그램 런처예요. 프로그램을 그룹으로 나눠 정리하고, 그룹을 접거나 검색해 원하는 프로그램을 빨리 찾을 수 있어요. 바로 가기는 인수와 작업 폴더까지 그대로 실행해요.", en: "BigLauncher is a program launcher: drag executables (.exe) or shortcuts (.lnk) onto it to register them, then double-click an icon to launch. Organize programs into groups, collapse groups or search to find what you need quickly. Shortcuts run exactly as saved, including their arguments and working folder." }
+  intro: { ko: "BigLauncher는 자주 쓰는 프로그램의 실행 파일(.exe)이나 바로 가기(.lnk)를 끌어다 놓아 등록하고, 아이콘을 두 번 클릭해 실행하는 프로그램 런처예요. 프로그램을 그룹으로 나눠 정리하고, 그룹을 접거나 검색해 원하는 프로그램을 빨리 찾을 수 있어요. 바로 가기는 인수와 작업 폴더까지 그대로 실행해요. 왼쪽·오른쪽 화살표 키로 줄과 그룹을 넘나들며 프로그램을 고를 수도 있어요.", en: "BigLauncher is a program launcher: drag executables (.exe) or shortcuts (.lnk) onto it to register them, then double-click an icon to launch. Organize programs into groups, collapse groups or search to find what you need quickly. Shortcuts run exactly as saved, including their arguments and working folder. You can also move between programs across lines and groups with the left and right arrow keys." }
   features:
     - title: { ko: "끌어다 놓아 등록", en: "Drag-and-drop registration" }
       text: { ko: ".exe나 .lnk 파일을 여러 개 한꺼번에 끌어다 놓아 등록하고, 이미 등록된 파일은 건너뛰어요.", en: "Drop several .exe or .lnk files at once to register them; files already registered are skipped." }
