@@ -950,7 +950,7 @@
   category: desktop
   summary: { ko: "LH 분양·임대 공고 알리미", en: "LH sale and rental notice alerts" }
   tagline: { ko: "LH 분양·임대 공고의 새 소식을 놓치지 않게 알려 줘요", en: "Never miss a new LH sale or rental notice" }
-  intro: { ko: "BigLH는 한국토지주택공사(LH)의 분양·임대 공고를 공공데이터포털 API로 받아 내 PC에 모아 두고, 갱신할 때마다 새 공고·정정공고·상태 변화를 알려 주는 프로그램이에요. 공공데이터포털에서 직접 발급받은 「한국토지주택공사 분양임대공고」 API 인증키가 필요하고, 조회는 갱신 버튼을 누를 때만 해요. LH 공식 프로그램이 아니므로 신청 자격과 일정은 꼭 원문 공고문으로 확인하세요.", en: "BigLH fetches sale and rental notices from Korea Land & Housing Corporation (LH) through the data.go.kr API, keeps them on your PC, and tells you about new notices, amended notices and status changes each time you refresh. You need your own API key for the LH sale and rental notice service from data.go.kr, and it only queries when you press Refresh. This is not an official LH program, so always check eligibility and schedules in the original notice." }
+  intro: { ko: "BigLH는 한국토지주택공사(LH)의 분양·임대 공고를 공공데이터포털 API로 받아 내 PC에 모아 두고, 갱신할 때마다 새 공고·정정공고·상태 변화를 알려 주는 프로그램이에요. 쓰기 전에 공공데이터포털에서 아래 세 API를 활용신청해 인증키를 받아야 하고, 조회는 갱신 버튼을 누를 때만 해요. LH 공식 프로그램이 아니므로 신청 자격과 일정은 꼭 원문 공고문으로 확인하세요.", en: "BigLH fetches sale and rental notices from Korea Land & Housing Corporation (LH) through the data.go.kr API, keeps them on your PC, and tells you about new notices, amended notices and status changes each time you refresh. Before using it, apply for the three data.go.kr APIs below to get your own API key, and it only queries when you press Refresh. This is not an official LH program, so always check eligibility and schedules in the original notice." }
   features:
     - title: { ko: "갱신과 알림", en: "Refresh and alerts" }
       text: { ko: "갱신 버튼(F5)으로 최근 2개월 공고를 다시 받아 새 공고·정정공고·상태 변화·마감 임박을 Windows 알림으로 알려 줘요.", en: "Refresh (F5) re-reads the last two months of notices and shows new notices, amendments, status changes and closing deadlines as Windows notifications." }
@@ -959,7 +959,7 @@
     - title: { ko: "관심 조건", en: "Interest filter" }
       text: { ko: "지금 거른 조건을 관심 조건으로 저장하면 그 조건에 맞는 공고만 알리고, 상세 정보도 미리 받아 둬요.", en: "Save the current filter as your interest so only matching notices trigger alerts and their details are fetched ahead of time." }
     - title: { ko: "일정 달력", en: "Schedule calendar" }
-      text: { ko: "공고 상세에 나온 일정(접수·발표·계약 등)을 달력과 D-day 목록으로 보여 주고, .ics 파일로 내보내 다른 달력에 넣을 수 있어요.", en: "Shows the dates in notice details (applications, announcements, contracts and more) on a calendar with a D-day list, and exports them to an .ics file for other calendars." }
+      text: { ko: "공고 상세에 나온 일정(접수·발표·계약 등)을 달력과 D-day 목록으로 보여 주고, .ics 파일로 내보내 다른 달력에 넣을 수 있어요. 일정을 두 번 클릭하면 그 공고를 공고 탭에서 열어요.", en: "Shows the dates in notice details (applications, announcements, contracts and more) on a calendar with a D-day list, and exports them to an .ics file for other calendars. Double-click a date entry to open that notice in the Notices tab." }
     - title: { ko: "가격 비교", en: "Price comparison" }
       text: { ko: "받아 둔 공고의 주택형별 면적·세대수·분양가·㎡당 분양가·보증금·월임대료를 한 표에서 정렬해 비교해요.", en: "Compare area, households, sale price, price per ㎡, deposit and monthly rent by house type across saved notices in one sortable table." }
     - title: { ko: "알림 기록", en: "Alert history" }
@@ -967,6 +967,17 @@
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요. 인증키는 Windows 사용자 계정으로 암호화해 저장해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom. The API key is stored encrypted with your Windows account." }
   uses: { ko: ["LH 청약·임대 공고를 매번 사이트에 들어가 확인하기 번거로울 때", "관심 지역·유형의 새 공고와 마감일을 놓치고 싶지 않을 때", "여러 공고의 분양가와 임대 조건을 한눈에 비교하고 싶을 때"], en: ["When checking the LH website for new notices every time gets tedious", "When you don't want to miss new notices or deadlines for your region and type", "When you want to compare prices and rental terms across notices at a glance"] }
+  apis_note: { ko: "공공데이터포털(data.go.kr)에 회원가입·로그인한 뒤 아래 세 페이지에서 각각 [활용신청]을 눌러 승인받으세요. 인증키는 계정마다 하나라서 마이페이지의 일반 인증키(인코딩·디코딩 어느 쪽이든)를 BigLH의 파일 > 인증키 설정에 한 번만 넣으면 돼요. 세 API가 모두 승인돼야 목록·상세·공급 정보를 다 볼 수 있어요.", en: "Sign up and log in at data.go.kr, then press [활용신청] (Apply for use) on each of the three pages below and wait for approval. The key is one per account, so enter your general API key from My Page (either the Encoding or Decoding form) once in BigLH under File > Service Key. All three APIs must be approved to see notice lists, details and supply information." }
+  apis:
+    - name: { ko: "한국토지주택공사_분양임대공고문 조회 서비스", en: "LH sale and rental notice lookup service" }
+      url: https://www.data.go.kr/data/15058530/openapi.do
+      use: { ko: "공고 목록 (갱신·알림·이력)", en: "Notice list (refresh, alerts, history)" }
+    - name: { ko: "한국토지주택공사 분양임대공고별 상세정보 조회 서비스", en: "LH sale and rental notice detail service" }
+      url: https://www.data.go.kr/data/15057999/openapi.do
+      use: { ko: "공고 상세 (일정·첨부 파일)", en: "Notice details (schedules, attachments)" }
+    - name: { ko: "한국토지주택공사 분양임대공고별 공급정보 조회 서비스", en: "LH sale and rental notice supply service" }
+      url: https://www.data.go.kr/data/15056765/openapi.do
+      use: { ko: "공급 정보 (주택형·분양가·임대 조건)", en: "Supply details (house types, prices, rental terms)" }
   settings_path: { ko: "exe 옆 CONFIGURATION (설정 BigLH.json, 공고 DB BigLH.db)", en: "CONFIGURATION next to the exe (BigLH.json settings and BigLH.db notice database)" }
 
 - name: BigMaze

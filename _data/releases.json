@@ -216,11 +216,11 @@
                         "released":  "2026-11-24"
                     },
     "BigLH":  {
-                  "version":  "1.0.0",
-                  "zip":  "BigLH-1.0.0-win-x64.zip",
-                  "size":  67816218,
-                  "sha256":  "18be60b39d200cb066d1d44c44ede1d868b1097b5d4ff4551ec843086ad22536",
-                  "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigLH-v1.0.0/BigLH-1.0.0-win-x64.zip",
+                  "version":  "1.0.1",
+                  "zip":  "BigLH-1.0.1-win-x64.zip",
+                  "size":  67816330,
+                  "sha256":  "efdaef1e3abfc0fefcac822d437a42cb41097c786eb9dbd7246aa0980e6a4594",
+                  "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigLH-v1.0.1/BigLH-1.0.1-win-x64.zip",
                   "released":  "2026-11-24"
               },
     "BigMaze":  {

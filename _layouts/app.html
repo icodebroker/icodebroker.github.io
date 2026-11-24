@@ -56,6 +56,18 @@ layout: default
 
     <p class="app-intro">{{ app.intro[L] }}</p>
 
+    {%- if app.apis %}
+    <section class="block">
+      <h2>{{ t.apis_title }}</h2>
+      <p class="apis-note">{{ app.apis_note[L] }}</p>
+      <ol class="apis">
+        {%- for a in app.apis %}
+        <li><a href="{{ a.url }}" target="_blank" rel="noopener">{{ a.name[L] }}</a><span>{{ a.use[L] }}</span></li>
+        {%- endfor %}
+      </ol>
+    </section>
+    {%- endif %}
+
     <section class="block">
       <h2>{{ t.features_title }}</h2>
       <div class="features">
