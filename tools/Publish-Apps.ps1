@@ -169,6 +169,15 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'Unicode CLDR 49'; license = 'Unicode-3.0'; url = 'https://cldr.unicode.org/' })
     }
 
+    # BigClock : NodaTime 내장 tzdb와 BigWorldWatch에서 복사한 도시·국가·지도 데이터 (DATA-SOURCE.txt)
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigClock')
+    {
+        [void]$list.Add([ordered]@{ name = 'IANA Time Zone Database 2026f'; license = 'Public domain'; url = 'https://www.iana.org/time-zones' })
+        [void]$list.Add([ordered]@{ name = 'Natural Earth (1:50m land)'; license = 'Public domain'; url = 'https://www.naturalearthdata.com/' })
+        [void]$list.Add([ordered]@{ name = 'GeoNames (cities15000, alternateNamesV2)'; license = 'CC-BY-4.0'; url = 'https://www.geonames.org/' })
+        [void]$list.Add([ordered]@{ name = 'Unicode CLDR 49'; license = 'Unicode-3.0'; url = 'https://cldr.unicode.org/' })
+    }
+
     # BigContourMap : SQLitePCLRaw가 싣는 네이티브 SQLite와 미리 정의한 색상표 값 (ColorRampPresetHelper)
     if((Split-Path -Leaf $appDirectoryPath) -eq 'BigContourMap')
     {

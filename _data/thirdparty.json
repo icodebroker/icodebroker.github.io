@@ -241,6 +241,43 @@
                           "url":  "https://www.newtonsoft.com/json"
                       }
                   ],
+    "BigClock":  [
+                     {
+                         "name":  ".NET Runtime / WPF",
+                         "license":  "MIT",
+                         "url":  "https://github.com/dotnet/runtime"
+                     },
+                     {
+                         "name":  "IANA Time Zone Database 2026f",
+                         "license":  "Public domain",
+                         "url":  "https://www.iana.org/time-zones"
+                     },
+                     {
+                         "name":  "Natural Earth (1:50m land)",
+                         "license":  "Public domain",
+                         "url":  "https://www.naturalearthdata.com/"
+                     },
+                     {
+                         "name":  "GeoNames (cities15000, alternateNamesV2)",
+                         "license":  "CC-BY-4.0",
+                         "url":  "https://www.geonames.org/"
+                     },
+                     {
+                         "name":  "Unicode CLDR 49",
+                         "license":  "Unicode-3.0",
+                         "url":  "https://cldr.unicode.org/"
+                     },
+                     {
+                         "name":  "NodaTime",
+                         "license":  "Apache-2.0",
+                         "url":  "https://nodatime.org/"
+                     },
+                     {
+                         "name":  "NanumGothicCoding",
+                         "license":  "SIL OFL 1.1",
+                         "url":  null
+                     }
+                 ],
     "BigCloser":  [
                       {
                           "name":  ".NET Runtime / WPF",

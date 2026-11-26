@@ -47,6 +47,14 @@
                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigClaude-v1.0.0/BigClaude-1.0.0-win-x64.zip",
                       "released":  "2026-11-18"
                   },
+    "BigClock":  {
+                     "version":  "1.0.0",
+                     "zip":  "BigClock-1.0.0-win-x64.zip",
+                     "size":  62481618,
+                     "sha256":  "5e66d0f0c4335b7d9c0ee3ab2b8234ec80ce1c62c34bedb15e537a507e32b32c",
+                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigClock-v1.0.0/BigClock-1.0.0-win-x64.zip",
+                     "released":  "2026-11-26"
+                 },
     "BigCloser":  {
                       "version":  "1.0.0",
                       "zip":  "BigCloser-1.0.0-win-x64.zip",
