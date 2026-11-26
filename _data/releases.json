@@ -143,6 +143,14 @@
                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigExplorer-v1.0.3/BigExplorer-1.0.3-win-x64.zip",
                         "released":  "2026-11-24"
                     },
+    "BigFolderBackup":  {
+                            "version":  "1.0.0",
+                            "zip":  "BigFolderBackup-1.0.0-win-x64.zip",
+                            "size":  60205198,
+                            "sha256":  "3a793fb6f683c955c167555bcb76e79866828bb970cdf8ecba59e76539d16e09",
+                            "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigFolderBackup-v1.0.0/BigFolderBackup-1.0.0-win-x64.zip",
+                            "released":  "2026-11-26"
+                        },
     "BigFormula":  {
                        "version":  "1.0.0",
                        "zip":  "BigFormula-1.0.0-win-x64.zip",

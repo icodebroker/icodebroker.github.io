@@ -525,6 +525,18 @@
                             "url":  null
                         }
                     ],
+    "BigFolderBackup":  [
+                            {
+                                "name":  ".NET Runtime / WPF",
+                                "license":  "MIT",
+                                "url":  "https://github.com/dotnet/runtime"
+                            },
+                            {
+                                "name":  "NanumGothicCoding",
+                                "license":  "SIL OFL 1.1",
+                                "url":  null
+                            }
+                        ],
     "BigFormula":  [
                        {
                            "name":  ".NET Runtime / WPF",

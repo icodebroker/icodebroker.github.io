@@ -85,6 +85,25 @@
   uses: { ko: ["여러 파일을 하나로 묶어 보낼 때", "용량이 큰 폴더를 빠르게 압축할 때", "받은 ZIP 파일이 깨지지 않았는지 확인할 때"], en: ["When you bundle many files into one to send", "When you want to compress a large folder quickly", "When you check that a downloaded ZIP file is not damaged"] }
   settings_path: { ko: "%APPDATA%\\BigZIP\\BigZIP.json", en: "%APPDATA%\\BigZIP\\BigZIP.json" }
 
+- name: BigFolderBackup
+  category: files
+  summary: { ko: "백업 폴더를 소스 폴더와 똑같이 맞추는 미러 백업", en: "Mirror backup that makes a backup folder match its source" }
+  tagline: { ko: "바뀐 파일만 골라 백업 폴더를 소스와 똑같이 맞춰요", en: "Copies only what changed to keep a backup folder identical to its source" }
+  intro: { ko: "BigFolderBackup은 소스 폴더와 백업 폴더를 짝지어 두고, 백업 폴더를 소스 폴더와 똑같이 맞춰 주는 미러 백업 프로그램이에요. 새 파일과 바뀐 파일만 복사하고 소스에서 지운 파일은 백업에서도 지우며, 실행 전에 미리 보기로 무엇이 바뀔지 확인할 수 있어요. 백업 폴더에 임시 파일 같은 추가 파일을 만들지 않아요.", en: "BigFolderBackup pairs a source folder with a backup folder and makes the backup an exact mirror of the source. It copies only new and changed files and removes from the backup what was deleted from the source, and you can preview every change before running. It never leaves extra files such as temporary files in the backup folder." }
+  features:
+    - title: { ko: "여러 백업 작업", en: "Multiple backup jobs" }
+      text: { ko: "소스·백업 폴더 쌍을 여러 개 등록해 두고, 고른 작업만 한 번에 실행할 수 있어요.", en: "Save several source and backup folder pairs and run just the ones you select in one go." }
+    - title: { ko: "미리 보기", en: "Preview" }
+      text: { ko: "새 파일·덮어쓰기·새 폴더·삭제·속성 변경을 건수와 크기로 보여 주고, 항목마다 이유를 알려 줘요. 미리 보기에서는 아무것도 바꾸지 않아요.", en: "Shows new files, overwrites, new folders, deletions and attribute changes with counts and sizes, plus the reason for each item. Preview changes nothing." }
+    - title: { ko: "안전장치", en: "Safety checks" }
+      text: { ko: "소스와 백업이 겹치는 경로나 드라이브 루트는 막고, 백업 항목을 많이 지우게 되면 실행 전에 한 번 더 물어봐요. 링크는 따라가지 않고 건너뛰어요.", en: "Blocks overlapping source and backup paths and drive roots, and asks again before a run that would delete a large share of the backup. Links are skipped, not followed." }
+    - title: { ko: "진행 상황과 취소", en: "Progress and cancel" }
+      text: { ko: "진행률·처리한 크기·경과 시간을 보여 주고 언제든 취소할 수 있어요. 결과를 전체·변경·삭제·경고별로 걸러 볼 수 있어요.", en: "Shows progress, bytes processed and elapsed time, and you can cancel at any time. Filter results by all, changes, deletes or warnings." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 다크/라이트 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and dark or light themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["작업 폴더를 외장 디스크나 다른 드라이브에 주기적으로 백업할 때", "백업하기 전에 무엇이 복사되고 지워질지 먼저 확인하고 싶을 때", "여러 폴더를 각자의 백업 위치로 한 번에 맞추고 싶을 때"], en: ["When you regularly back up work folders to an external disk or another drive", "When you want to see what will be copied and deleted before backing up", "When you want to sync several folders to their own backup locations at once"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigFolderBackup.json", en: "BigFolderBackup.json in the CONFIGURATION folder next to the exe" }
+
 - name: BigFTP
   category: files
   summary: { ko: "쉽고 안전한 FTP/FTPS 파일 전송", en: "Easy and careful FTP/FTPS file transfer" }
