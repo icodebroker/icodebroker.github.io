@@ -584,6 +584,27 @@
   uses: { ko: ["사진 일부만 흐리거나 모자이크할 때", "두 사진을 경계 없이 합성하고 싶을 때", "필터와 리샘플링이 실제로 어떻게 계산되는지 비교해 볼 때"], en: ["When you blur or pixelate part of a photo", "When you want to combine two photos without a visible seam", "When you compare how filters and resampling are actually computed"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigPainter.json", en: "CONFIGURATION\\BigPainter.json next to the exe" }
 
+- name: BigCapture
+  category: media
+  summary: { ko: "화면 캡처·주석·GIF/MP4 녹화", en: "Screen capture, annotation and GIF/MP4 recording" }
+  tagline: { ko: "찍고, 표시하고, 녹화까지 한 창에서 해요", en: "Capture, mark up and record, all in one window" }
+  intro: { ko: "BigCapture는 화면의 영역·창·스크롤 내용을 캡처하고, 그 위에 주석을 달고, 화면을 GIF나 MP4로 녹화하는 프로그램이에요. 캡처한 픽셀이 화면과 똑같은지, 녹화 프레임이 빠지지 않았는지를 정확하게 맞추는 데 집중했어요. 소리는 녹음하지 않아요.", en: "BigCapture captures a region, a window or scrolling content, lets you annotate the result, and records the screen to GIF or MP4. It focuses on getting the pixels exactly as on screen and on not losing recorded frames. It does not record audio." }
+  features:
+    - title: { ko: "영역·창 캡처", en: "Region and window capture" }
+      text: { ko: "끌어서 영역을 고르거나 창을 클릭해 캡처해요. 창 캡처는 다른 창에 가려진 창도 원래 내용 그대로 찍어요. PrtSc·Alt+PrtSc 단축키도 쓸 수 있어요.", en: "Drag to select a region or click a window. Window capture records a window's own content even when other windows cover it. PrtSc and Alt+PrtSc hotkeys work too." }
+    - title: { ko: "스크롤 캡처", en: "Scrolling capture" }
+      text: { ko: "스크롤 영역을 클릭하면 끝까지 내리며 화면을 이어 붙여 긴 한 장으로 만들어요. 이어 붙일 수 없는 상황이면 이유를 알려 줘요.", en: "Click a scrollable area and it scrolls to the end, stitching the screens into one tall image. If stitching is not possible, it tells you why." }
+    - title: { ko: "주석", en: "Annotation" }
+      text: { ko: "사각형·화살표·선·텍스트·번호·강조·모자이크·흐림·가리기를 색과 굵기를 골라 그리고, 실행 취소·다시 실행할 수 있어요. 개인 정보는 복원할 수 없는 '가리기'를 쓰도록 안내해요.", en: "Draw rectangles, arrows, lines, text, numbers, highlights, mosaic, blur and redaction in your choice of color and width, with undo and redo. For private information it points you to redaction, which cannot be reversed." }
+    - title: { ko: "GIF·MP4 녹화", en: "GIF and MP4 recording" }
+      text: { ko: "고른 영역을 GIF나 MP4(H.264)로 녹화해요. 녹화 중에 프레임 수와 빠진 프레임 수를 보여 주고, 프레임률·디더링·커서 포함을 설정할 수 있어요.", en: "Record a selected area to GIF or MP4 (H.264). While recording it shows the frame count and dropped frames, and you can set the frame rate, dithering and whether to include the cursor." }
+    - title: { ko: "저장과 프로젝트", en: "Saving and projects" }
+      text: { ko: "주석을 합쳐 PNG로 저장하거나 클립보드에 복사해요. 원본이 든 프로젝트(.bcap)로 저장하면 나중에 다시 고칠 수 있어요.", en: "Save the annotated image as PNG or copy it to the clipboard. Save a project (.bcap) that keeps the original so you can edit it again later." }
+    - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
+      text: { ko: "한국어/영어, 다크/라이트 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and dark or light themes, and zoom with Ctrl +/−." }
+  uses: { ko: ["설명서나 보고서에 넣을 화면을 찍고 표시할 때", "긴 웹 페이지나 문서를 한 장으로 남기고 싶을 때", "사용 방법을 짧은 GIF나 MP4로 보여 주고 싶을 때"], en: ["When you capture and mark up screens for a manual or report", "When you want to keep a long web page or document as one image", "When you want to show how something works in a short GIF or MP4"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigCapture.json", en: "CONFIGURATION\\BigCapture.json next to the exe" }
+
 - name: BigPlayer
   category: media
   summary: { ko: "자막과 이퀄라이저를 갖춘 동영상·음악 플레이어", en: "A video and music player with subtitles and an equalizer" }

@@ -115,6 +115,53 @@
                             "url":  null
                         }
                     ],
+    "BigCapture":  [
+                       {
+                           "name":  ".NET Runtime / WPF",
+                           "license":  "MIT",
+                           "url":  "https://github.com/dotnet/runtime"
+                       },
+                       {
+                           "name":  "SharpGen.Runtime",
+                           "license":  "MIT",
+                           "url":  "https://github.com/SharpGenTools/SharpGenTools"
+                       },
+                       {
+                           "name":  "SharpGen.Runtime.COM",
+                           "license":  "MIT",
+                           "url":  "https://github.com/SharpGenTools/SharpGenTools"
+                       },
+                       {
+                           "name":  "Vortice.Direct3D11",
+                           "license":  "MIT",
+                           "url":  "https://www.nuget.org/packages/Vortice.Direct3D11"
+                       },
+                       {
+                           "name":  "Vortice.DirectX",
+                           "license":  "MIT",
+                           "url":  "https://www.nuget.org/packages/Vortice.DirectX"
+                       },
+                       {
+                           "name":  "Vortice.DXGI",
+                           "license":  "MIT",
+                           "url":  "https://www.nuget.org/packages/Vortice.DXGI"
+                       },
+                       {
+                           "name":  "Vortice.Mathematics",
+                           "license":  "MIT",
+                           "url":  "https://github.com/amerkoleci/Vortice.Mathematics"
+                       },
+                       {
+                           "name":  "Vortice.MediaFoundation",
+                           "license":  "MIT",
+                           "url":  "https://www.nuget.org/packages/Vortice.MediaFoundation"
+                       },
+                       {
+                           "name":  "NanumGothicCoding",
+                           "license":  "SIL OFL 1.1",
+                           "url":  null
+                       }
+                   ],
     "BigCipher":  [
                       {
                           "name":  ".NET Runtime / WPF",
