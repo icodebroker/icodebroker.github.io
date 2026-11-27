@@ -288,6 +288,53 @@
                           "url":  "https://www.newtonsoft.com/json"
                       }
                   ],
+    "BigClipboard":  [
+                         {
+                             "name":  ".NET Runtime / WPF",
+                             "license":  "MIT",
+                             "url":  "https://github.com/dotnet/runtime"
+                         },
+                         {
+                             "name":  "SQLite (e_sqlite3)",
+                             "license":  "Public domain",
+                             "url":  "https://sqlite.org/copyright.html"
+                         },
+                         {
+                             "name":  "Microsoft.Data.Sqlite",
+                             "license":  "MIT",
+                             "url":  "https://docs.microsoft.com/dotnet/standard/data/sqlite/"
+                         },
+                         {
+                             "name":  "Microsoft.Data.Sqlite.Core",
+                             "license":  "MIT",
+                             "url":  "https://docs.microsoft.com/dotnet/standard/data/sqlite/"
+                         },
+                         {
+                             "name":  "SQLitePCLRaw.bundle_e_sqlite3",
+                             "license":  "Apache-2.0",
+                             "url":  "https://www.nuget.org/packages/SQLitePCLRaw.bundle_e_sqlite3"
+                         },
+                         {
+                             "name":  "SQLitePCLRaw.core",
+                             "license":  "Apache-2.0",
+                             "url":  "https://www.nuget.org/packages/SQLitePCLRaw.core"
+                         },
+                         {
+                             "name":  "SQLitePCLRaw.lib.e_sqlite3",
+                             "license":  "Apache-2.0",
+                             "url":  "https://www.nuget.org/packages/SQLitePCLRaw.lib.e_sqlite3"
+                         },
+                         {
+                             "name":  "SQLitePCLRaw.provider.e_sqlite3",
+                             "license":  "Apache-2.0",
+                             "url":  "https://www.nuget.org/packages/SQLitePCLRaw.provider.e_sqlite3"
+                         },
+                         {
+                             "name":  "NanumGothicCoding",
+                             "license":  "SIL OFL 1.1",
+                             "url":  null
+                         }
+                     ],
     "BigClock":  [
                      {
                          "name":  ".NET Runtime / WPF",

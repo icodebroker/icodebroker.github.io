@@ -193,8 +193,8 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'matplotlib colormaps viridis, inferno'; license = 'CC0-1.0'; url = 'https://matplotlib.org/' })
     }
 
-    # BigCalendar·BigLH : SQLitePCLRaw가 싣는 네이티브 SQLite
-    if(@('BigCalendar', 'BigLH') -contains (Split-Path -Leaf $appDirectoryPath))
+    # BigCalendar·BigLH·BigClipboard : SQLitePCLRaw가 싣는 네이티브 SQLite
+    if(@('BigCalendar', 'BigLH', 'BigClipboard') -contains (Split-Path -Leaf $appDirectoryPath))
     {
         [void]$list.Add([ordered]@{ name = 'SQLite (e_sqlite3)'; license = 'Public domain'; url = 'https://sqlite.org/copyright.html' })
     }

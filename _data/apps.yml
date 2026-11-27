@@ -897,6 +897,27 @@
   uses: { ko: ["바탕 화면에 흩어진 바로 가기를 한곳에 정리하고 싶을 때", "업무용·개발용처럼 용도별로 프로그램을 나눠 두고 싶을 때", "설치하지 않고 쓰는 프로그램(포터블 exe)을 모아 실행할 때"], en: ["Tidying up shortcuts scattered across the desktop in one place", "Keeping programs sorted by purpose, such as work and development", "Collecting and launching portable programs that don't need installing"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigLauncher.json", en: "BigLauncher.json in the CONFIGURATION folder next to the exe" }
 
+- name: BigClipboard
+  category: desktop
+  summary: { ko: "클립보드 기록·단축키 붙여넣기·고정 항목", en: "Clipboard history, hotkey paste and pinned items" }
+  tagline: { ko: "복사한 것을 잃지 않고, 단축키로 다시 붙여 넣어요", en: "Never lose what you copied, and paste it again with a hotkey" }
+  intro: { ko: "BigClipboard는 복사한 텍스트·이미지·파일을 기록해 두었다가 단축키로 다시 붙여 넣는 클립보드 관리자예요. 기록·단축키 붙여넣기·고정 항목 세 가지 기능에 집중했고, 복사할 때의 형식을 그대로 보존해 다시 붙여 넣어요. 기록은 이 PC 안에만 암호화해 저장해요.", en: "BigClipboard is a clipboard manager that keeps the text, images and files you copy and pastes them again with a hotkey. It focuses on three things, history, hotkey paste and pinned items, and keeps the copied formats as they were when it pastes them again. History is stored encrypted on this PC only." }
+  features:
+    - title: { ko: "클립보드 기록", en: "Clipboard history" }
+      text: { ko: "다른 프로그램에서 복사하면 텍스트·이미지·파일 목록이 출처 프로그램, 시각, 크기와 함께 쌓여요. 같은 내용을 다시 복사하면 새로 쌓지 않고 맨 위로 올려요.", en: "Whatever you copy in other programs, text, images or file lists, is added with the source program, time and size. Copying the same content again moves it to the top instead of adding a duplicate." }
+    - title: { ko: "단축키 팝업으로 붙여넣기", en: "Paste from a hotkey popup" }
+      text: { ko: "Ctrl+Alt+V로 작은 선택 창을 열고, 검색하거나 위/아래로 골라 Enter를 누르면 원래 쓰던 창에 바로 붙여 넣어요. 관리자 권한 창처럼 자동으로 붙일 수 없으면 클립보드에 넣고 알려 줘요.", en: "Press Ctrl+Alt+V to open a small picker, search or move up and down, and press Enter to paste straight into the window you were using. If it cannot paste automatically, for example into an administrator window, it puts the item on the clipboard and tells you." }
+    - title: { ko: "고정 항목", en: "Pinned items" }
+      text: { ko: "자주 쓰는 항목을 고정하면 정리 대상에서 빠지고, Ctrl+Alt+1~9로 순서대로 바로 붙여 넣을 수 있어요. 고정 순서도 바꿀 수 있어요.", en: "Pin the items you use often: they are never cleaned up, and Ctrl+Alt+1 to 9 pastes them directly in order. You can change the pin order too." }
+    - title: { ko: "형식 보존과 미리보기", en: "Formats kept, with preview" }
+      text: { ko: "서식 있는 텍스트나 이미지처럼 복사할 때 함께 들어온 형식을 함께 저장해 다시 붙일 때 그대로 돌려줘요. 미리보기에서 내용과 형식 목록을 볼 수 있어요.", en: "Formats that come with a copy, such as rich text or images, are stored together and given back as they were when you paste again. The preview shows the content and the list of formats." }
+    - title: { ko: "개인 정보 보호", en: "Privacy" }
+      text: { ko: "비밀번호 관리자처럼 기록하지 말라고 표시한 복사와 제외 프로세스(기본 KeePass·KeePassXC·1Password·Bitwarden)는 저장하지 않아요. 기록은 Windows 사용자 계정으로 암호화해 이 PC에만 둬요.", en: "Copies marked as not to be recorded, as password managers do, and copies from excluded processes (KeePass, KeePassXC, 1Password and Bitwarden by default) are not stored. History is encrypted with your Windows user account and stays on this PC." }
+    - title: { ko: "보존 한도·언어·테마", en: "Retention, language, theme" }
+      text: { ko: "기본 500개·30일·항목당 32MB까지 보관하고 설정에서 바꿀 수 있어요. 단축키, 한국어/영어, 다크/라이트 테마, Ctrl +/− 화면 확대도 지원해요.", en: "By default it keeps 500 items, 30 days and up to 32 MB per item, all changeable in settings, along with the hotkeys. Korean or English UI, dark or light theme and Ctrl +/− zoom are supported." }
+  uses: { ko: ["조금 전에 복사한 내용을 다시 붙여 넣어야 할 때", "인사말·주소·명령어처럼 자주 쓰는 문장을 단축키로 넣고 싶을 때", "여러 곳에서 모은 내용을 한 문서에 차례로 붙일 때"], en: ["When you need to paste something you copied a while ago", "When you want frequently used text such as greetings, addresses or commands on a hotkey", "When you paste content gathered from several places into one document"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigClipboard.json (기록은 %LOCALAPPDATA%\\BigClipboard\\History.db)", en: "CONFIGURATION\\BigClipboard.json next to the exe (history in %LOCALAPPDATA%\\BigClipboard\\History.db)" }
+
 - name: BigView
   category: desktop
   summary: { ko: "마우스 주변을 크게 보여 주는 돋보기", en: "A magnifier that follows your mouse" }

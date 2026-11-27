@@ -55,6 +55,14 @@
                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigClaude-v1.0.0/BigClaude-1.0.0-win-x64.zip",
                       "released":  "2026-11-18"
                   },
+    "BigClipboard":  {
+                         "version":  "1.0.0",
+                         "zip":  "BigClipboard-1.0.0-win-x64.zip",
+                         "size":  67450064,
+                         "sha256":  "d25bc1da3b6020b035a257e9ff30767f1098544e35f35ae455151bf9001c7bb7",
+                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigClipboard-v1.0.0/BigClipboard-1.0.0-win-x64.zip",
+                         "released":  "2026-11-28"
+                     },
     "BigClock":  {
                      "version":  "1.0.0",
                      "zip":  "BigClock-1.0.0-win-x64.zip",
