@@ -19,6 +19,17 @@
       text: { ko: "바로 가기 만들기, 경로 복사, VS Code나 터미널에서 열기를 메뉴에서 바로 할 수 있어요.", en: "Create shortcuts, copy paths, or open a folder in VS Code or a terminal right from the menu." }
     - title: { ko: "글꼴·테마·확대", en: "Font, theme and zoom" }
       text: { ko: "글꼴을 고르고, 한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Pick your font, switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "폴더 찾아가기", en: "Get to a folder" }
+      text: { ko: "왼쪽 폴더 트리에서 고르거나, Ctrl+L로 주소 표시줄에 경로를 입력하고 Enter를 누르세요. 폴더는 두 번 클릭(또는 Enter)으로 열고, Backspace나 Alt+↑로 상위 폴더로, Alt+←/Alt+→로 뒤로·앞으로 이동해요.", en: "Pick a folder in the tree on the left, or press Ctrl+L, type a path in the address bar and press Enter. Open a folder by double-clicking it (or pressing Enter), go up with Backspace or Alt+↑, and move back or forward with Alt+← and Alt+→." }
+    - title: { ko: "나눠 보고 옮기기", en: "Split and move files" }
+      text: { ko: "위쪽 '세로 분할' 아이콘 버튼을 누르면 창이 둘로 나뉘어요. 파일을 골라 오른쪽 클릭 > '반대쪽으로 복사' 또는 '반대쪽으로 이동'을 고르거나, 반대쪽 창으로 끌어다 놓으세요. Ctrl+C·Ctrl+X·Ctrl+V도 그대로 써요.", en: "Click the 'Split vertically' icon button at the top to split the window in two. Select files and right-click > 'Copy to other pane' or 'Move to other pane', or drag them to the other pane. Ctrl+C, Ctrl+X and Ctrl+V work as usual." }
+    - title: { ko: "두 폴더 비교하기", en: "Compare two folders" }
+      text: { ko: "분할한 상태에서 옆에 나타나는 '왼쪽/오른쪽 폴더 비교' 버튼을 누르면 양쪽 목록에 차이가 색으로 표시돼요. 한 번 더 누르면 비교를 꺼요.", en: "While split, click the 'Compare left and right folders' button that appears next to it and the differences are colored in both lists. Click it again to turn comparing off." }
+    - title: { ko: "오른쪽 클릭으로 처리하기", en: "Use the right-click menu" }
+      text: { ko: "파일을 오른쪽 클릭해 '압축하기', '각각 압축하기', '여기에 풀기', '알아서 풀기', '바로 가기 만들기', '경로 복사', 'code 실행', '터미널 실행'을 고르세요. 이름은 F2로 바꾸고, Del은 휴지통으로, Shift+Del은 영구 삭제예요.", en: "Right-click a file and choose 'Compress', 'Compress each', 'Extract here', 'Smart extract', 'Create shortcut', 'Copy path', 'Open in code' or 'Open in terminal'. Rename with F2; Del sends items to the Recycle Bin and Shift+Del deletes them permanently." }
+    - title: { ko: "경로 한 번에 만들기", en: "Create a whole path" }
+      text: { ko: "위쪽 '경로 생성' 아이콘 버튼이나 Ctrl+Shift+D(기본값)를 누르고 'a\\b\\c'처럼 경로를 입력한 뒤 [생성]을 누르세요. 상대 경로는 지금 폴더를 기준으로 하고, '생성 후 해당 폴더로 이동'을 켜 두면 바로 그 폴더가 열려요.", en: "Click the 'Create path' icon button at the top or press Ctrl+Shift+D (default), type a path such as 'a\\b\\c' and click [Create]. Relative paths start from the current folder, and with 'Go to the folder after creating it' checked, the new folder opens right away." }
   uses: { ko: ["두 폴더의 내용을 비교하며 정리할 때", "파일을 이 폴더에서 저 폴더로 자주 옮길 때", "깊은 폴더 구조를 한 번에 만들어야 할 때"], en: ["When you sort files while comparing two folders", "When you often move files from one folder to another", "When you need to create a deep folder structure in one go"] }
   settings_path: { ko: "%LOCALAPPDATA%\\BigExplorer\\settings.json", en: "%LOCALAPPDATA%\\BigExplorer\\settings.json" }
 
@@ -40,6 +51,15 @@
       text: { ko: "관리자 권한으로 실행하면 NTFS 드라이브의 파일 목록(MFT)을 직접 읽어 살펴봐요.", en: "When run as administrator, it reads the NTFS file table (MFT) directly to scan the drive." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "드라이브나 폴더 고르기", en: "Pick a drive or folder" }
+      text: { ko: "위쪽 '드라이브' 목록에서 드라이브를 고르면 바로 스캔이 시작돼요. 특정 폴더만 보려면 [폴더 선택](또는 '파일 > 폴더 선택')을 누르세요. 너무 오래 걸리면 [중지]로 멈출 수 있어요.", en: "Choose a drive from the 'Drive' list at the top and the scan starts right away. To scan one folder, click [Select Folder] (or 'File > Select Folder...'). Click [Stop] if it takes too long." }
+    - title: { ko: "큰 상자부터 살펴보기", en: "Start with the biggest boxes" }
+      text: { ko: "스캔이 끝나면 트리맵에서 넓은 상자일수록 큰 폴더예요. 상자에 마우스를 올리면 경로와 크기, 차지하는 비율이 나오고, 옆 목록에서도 크기를 함께 확인할 수 있어요.", en: "When the scan finishes, the larger a box in the treemap, the bigger the folder. Hover over a box to see its path, size and share, and check the sizes in the list beside it." }
+    - title: { ko: "안으로 들어가고 돌아오기", en: "Go in and come back" }
+      text: { ko: "상자나 목록 항목을 두 번 클릭하면 그 폴더 안을 같은 방식으로 보여 줘요. 위로 돌아가려면 [상위 폴더]를 누르세요. 다시 스캔하지 않아서 바로 이동해요.", en: "Double-click a box or list item to see inside that folder the same way. Click [Parent Folder] to go back up. No rescan is needed, so it moves instantly." }
+    - title: { ko: "관리자로 실행해 빠르게", en: "Run as administrator for speed" }
+      text: { ko: "드라이브 전체를 자주 살펴본다면 BigDiskSize.exe를 오른쪽 클릭해 '관리자 권한으로 실행'을 고르세요. NTFS 드라이브를 더 빨리 읽어요.", en: "If you often scan whole drives, right-click BigDiskSize.exe and choose 'Run as administrator'. NTFS drives are then read faster." }
   uses: { ko: ["디스크 공간이 부족하다는 알림이 떴을 때", "어떤 폴더가 가장 큰지 궁금할 때", "정리할 큰 파일을 찾고 싶을 때"], en: ["When Windows warns you that disk space is low", "When you wonder which folder is the biggest", "When you want to find large files to clean up"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigDiskSize.json", en: "CONFIGURATION\\BigDiskSize.json next to the exe" }
 
@@ -61,6 +81,17 @@
       text: { ko: "검사 결과를 저장했다가 다시 열 수 있고, CSV나 HTML 보고서로 내보낼 수 있어요.", en: "Save scan results to open later, and export them as CSV or an HTML report." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "디스크 고르고 건강 보기", en: "Pick a disk and check its health" }
+      text: { ko: "왼쪽 '디스크 목록'에서 디스크를 고르면 '개요' 탭에 모델·용량·종합 판정이 나와요. '건강' 탭에서 판정 사유와 SMART·NVMe 항목을, '이벤트' 탭에서 디스크 관련 Windows 오류 기록을 볼 수 있어요. 목록은 [새로 고침](F5)으로 다시 읽어요.", en: "Pick a disk under 'Disks' on the left to see its model, size and overall assessment on the 'Overview' tab. The 'Health' tab lists the reasons and SMART or NVMe attributes, and the 'Events' tab shows related Windows errors. Click [Refresh] (F5) to reload the list." }
+    - title: { ko: "표면 검사 시작하기", en: "Start a surface scan" }
+      text: { ko: "'표면 검사' 탭의 '범위'에서 전체 디스크나 파티션 하나를 고르거나, '사용자 지정'으로 시작·끝 LBA를 입력하세요. [검사 시작]을 누르고 확인하면 시작되고, [일시 정지]·[재개]·[중지]로 조절할 수 있어요.", en: "On the 'Surface Scan' tab, choose the whole disk or one partition under 'Range', or pick 'Custom' and enter a start and end LBA. Click [Start Scan] and confirm, then use [Pause], [Resume] or [Stop] as needed." }
+    - title: { ko: "결과 지도 살펴보기", en: "Read the result map" }
+      text: { ko: "색 지도의 칸에 마우스를 올리면 LBA 범위가 보이고, 두 번 클릭하면 '섹터 뷰어'에서 그 위치를 열어요. Ctrl+휠로 확대·축소하고 [전체 보기]로 되돌려요. 배드 섹터가 나오면 아래 목록에 그 자리의 파일이 함께 표시돼요.", en: "Hover over a cell on the color map to see its LBA range, and double-click to open that spot in the 'Sector Viewer'. Zoom with Ctrl+Wheel and click [Fit All] to zoom back out. Any bad sectors are listed below along with the files on them." }
+    - title: { ko: "파티션과 섹터 들여다보기", en: "Explore partitions and sectors" }
+      text: { ko: "'파티션' 탭에서 배치 그림의 영역을 클릭하거나 목록을 두 번 클릭하면 섹터 뷰어가 그 시작 LBA로 이동해요. 섹터 뷰어에서는 LBA를 입력하고 Enter를 누르거나 Page Up/Page Down으로 앞뒤 섹터를 넘겨 봐요.", en: "On the 'Partitions' tab, click a segment in the layout or double-click a list row to jump to its start LBA in the sector viewer. In the sector viewer, type an LBA and press Enter, or step through sectors with Page Up and Page Down." }
+    - title: { ko: "결과 저장과 보고서", en: "Save results and reports" }
+      text: { ko: "검사가 끝나면 [결과 저장]으로 남겨 두었다가 위쪽 [검사 결과 열기]로 다시 볼 수 있어요. 배드 섹터 목록은 [CSV 내보내기], 전체 내용은 [HTML 보고서]로 내보내요. 응답 시간 색 기준과 재시도 횟수는 [설정]에서 바꿔요.", en: "After a scan, click [Save Result] to keep it and reopen it later with [Open Scan Result] at the top. Export the bad sector list with [Export CSV] or everything with [HTML Report]. Change the response-time color limits and retry count in [Settings]." }
   uses: { ko: ["컴퓨터가 갑자기 느려지거나 멈출 때", "중고 디스크를 사기 전이나 산 뒤에 점검할 때", "중요한 자료를 백업할 때가 됐는지 알고 싶을 때"], en: ["When your PC suddenly slows down or freezes", "When you check a used disk before or after buying it", "When you want to know if it is time to back up important data"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigDisk.json", en: "CONFIGURATION\\BigDisk.json next to the exe" }
 
@@ -82,6 +113,17 @@
       text: { ko: "ZIP64를 지원해 4GB가 넘는 파일도 담을 수 있고, 한글 파일 이름은 UTF-8로 저장해요.", en: "Supports ZIP64 for files over 4GB and saves file names in UTF-8." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "새로 압축하기", en: "Create an archive" }
+      text: { ko: "파일이나 폴더를 BigZIP 창에 끌어다 놓거나 [새 압축]을 누르면 '새로 압축' 창이 열려요. [파일 추가]·[폴더 추가]로 항목을 더하고, [찾아보기...]로 저장할 ZIP 경로를 정한 뒤 [압축 시작]을 누르세요.", en: "Drag files or folders onto the BigZIP window, or click [New], to open the 'New Archive' window. Add items with [Add files] or [Add folder], set where to save the ZIP with [Browse...], and click [Compress]." }
+    - title: { ko: "압축 옵션 고르기", en: "Choose compression options" }
+      text: { ko: "같은 창의 '압축 옵션'에서 압축 레벨(0 저장 ~ 9 최고 압축), 병렬 스레드 수, 분할 단위를 고를 수 있어요. 진행 창에서는 [일시 정지]·[계속]·[중지]로 작업을 조절해요.", en: "Under 'Compression options' in the same window, pick the level (0 Store to 9 Maximum), the number of threads and the chunk size. In the progress window, use [Pause], [Resume] or [Stop]." }
+    - title: { ko: "ZIP 열어 살펴보기", en: "Open and browse a ZIP" }
+      text: { ko: "[열기](Ctrl+O)를 누르거나 ZIP 파일을 창에 끌어다 놓으세요. 폴더는 두 번 클릭(또는 Enter)해서 들어가고 Backspace로 나와요. 파일을 두 번 클릭하면 임시 폴더에 풀어서 바로 열어 줘요.", en: "Click [Open] (Ctrl+O) or drag a ZIP file onto the window. Double-click a folder (or press Enter) to go in and press Backspace to go back up. Double-click a file to extract it to a temporary folder and open it." }
+    - title: { ko: "풀기·추가·삭제·검사", en: "Extract, add, delete, test" }
+      text: { ko: "[풀기]는 고른 폴더에 풀고, 옆 화살표 메뉴에서 '압축 파일명 폴더에 풀기'나 '여기에 풀기'를 고를 수 있어요. 지금 보는 폴더에 [파일 추가]로 넣거나 항목을 골라 [파일 삭제](Delete)로 빼고, [테스트]로 깨진 곳이 없는지 확인하세요.", en: "[Extract] extracts to a folder you pick, and the arrow menu next to it offers 'Extract to archive-named folder' and 'Extract here'. Use [Add] to put files into the current folder, select items and click [Delete] (Delete key) to remove them, and click [Test] to check for damage." }
+    - title: { ko: "탐색기 메뉴에 등록하기", en: "Add it to the Explorer menu" }
+      text: { ko: "[설정] > '탐색기 메뉴 등록'을 누르면 탐색기에서 파일을 오른쪽 클릭해 바로 압축하거나 풀 수 있어요. 메뉴를 빼려면 '탐색기 메뉴 해제'를 누르세요.", en: "Click [Settings] > 'Register Explorer menu' to compress or extract straight from the right-click menu in Explorer. Use 'Unregister Explorer menu' to remove the menu." }
   uses: { ko: ["여러 파일을 하나로 묶어 보낼 때", "용량이 큰 폴더를 빠르게 압축할 때", "받은 ZIP 파일이 깨지지 않았는지 확인할 때"], en: ["When you bundle many files into one to send", "When you want to compress a large folder quickly", "When you check that a downloaded ZIP file is not damaged"] }
   settings_path: { ko: "%APPDATA%\\BigZIP\\BigZIP.json", en: "%APPDATA%\\BigZIP\\BigZIP.json" }
 
@@ -101,6 +143,15 @@
       text: { ko: "진행률·처리한 크기·경과 시간을 보여 주고 언제든 취소할 수 있어요. 결과를 전체·변경·삭제·경고별로 걸러 볼 수 있어요.", en: "Shows progress, bytes processed and elapsed time, and you can cancel at any time. Filter results by all, changes, deletes or warnings." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 다크/라이트 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and dark or light themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "백업 작업 추가하기", en: "Add a backup job" }
+      text: { ko: "'백업 작업'에서 [추가]를 누르고, 먼저 소스 폴더를, 이어서 백업 폴더를 고르세요. 폴더를 바꾸려면 작업을 고르고 [소스 변경]이나 [백업 변경]을 누르면 돼요.", en: "Click [Add] under 'Backup Jobs' and choose the source folder first, then the backup folder. To change a folder later, select the job and click [Change Source] or [Change Backup]." }
+    - title: { ko: "실행할 작업 고르기", en: "Check the jobs to run" }
+      text: { ko: "목록에서 이번에 돌릴 작업의 체크 상자만 켜 두세요. 필요 없는 작업은 고른 뒤 [삭제](또는 Del 키)로 목록에서 빼요.", en: "Tick the check box of each job you want to run this time. Remove a job you no longer need by selecting it and clicking [Delete] (or pressing Del)." }
+    - title: { ko: "미리 보기로 확인하기", en: "Preview first" }
+      text: { ko: "[미리 보기](또는 F5)를 누르면 아래 '진행 상황'에 할 일이 종류별 건수로 나오고, 목록에서 항목마다 이유를 볼 수 있어요. [전체], [변경], [삭제], [경고·실패]로 골라 볼 수 있어요.", en: "Click [Preview] (or press F5) to see the planned work counted by type under 'Progress', with a reason for each item in the list. Narrow the list with [All], [Changes], [Deletes] or [Warnings]." }
+    - title: { ko: "백업 실행하기", en: "Run the backup" }
+      text: { ko: "미리 본 내용이 맞으면 [백업 실행]을 누르세요. 진행 중에는 [취소](또는 Esc)로 멈출 수 있고, 그때까지 처리한 작업은 그대로 남아요. 끝나면 아래 상태 줄에 성공·실패·건너뜀 건수가 나와요.", en: "If the preview looks right, click [Run Backup]. Click [Cancel] (or press Esc) to stop while it runs; work done so far is kept. When it finishes, the status bar shows how many items succeeded, failed or were skipped." }
   uses: { ko: ["작업 폴더를 외장 디스크나 다른 드라이브에 주기적으로 백업할 때", "백업하기 전에 무엇이 복사되고 지워질지 먼저 확인하고 싶을 때", "여러 폴더를 각자의 백업 위치로 한 번에 맞추고 싶을 때"], en: ["When you regularly back up work folders to an external disk or another drive", "When you want to see what will be copied and deleted before backing up", "When you want to sync several folders to their own backup locations at once"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigFolderBackup.json", en: "BigFolderBackup.json in the CONFIGURATION folder next to the exe" }
 
@@ -122,6 +173,17 @@
       text: { ko: "서버가 UTF-8을 지원하지 않으면 CP949로 자동 전환해 한글 이름이 깨지지 않아요.", en: "Falls back to CP949 automatically when the server lacks UTF-8, so Korean file names stay readable." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "서버 등록하기", en: "Add a server" }
+      text: { ko: "위쪽 [서버 관리]를 눌러 [새 서버]를 고르고 이름, 호스트, 포트, 사용자, 비밀번호, 암호화 방식을 입력한 뒤 [저장]을 누르세요. 다 했으면 [닫기]로 창을 닫아요.", en: "Click [Servers] at the top, choose [New], fill in the name, host, port, user, password and encryption, and click [Save]. Click [Close] when you are done." }
+    - title: { ko: "연결하기", en: "Connect" }
+      text: { ko: "왼쪽 위 목록에서 서버를 고르고 [연결]을 누르세요. TLS 서버에 처음 접속하면 인증서 지문이 나오니, 서버 관리자가 알려 준 지문과 같은지 보고 [신뢰하고 접속]을 누르세요.", en: "Pick the server from the list at the top left and click [Connect]. The first time you reach a TLS server, compare the certificate fingerprint with the one from the server administrator and click [Trust and connect]." }
+    - title: { ko: "폴더 찾아가기", en: "Browse folders" }
+      text: { ko: "왼쪽 '로컬'은 내 PC, 오른쪽 '원격'은 서버예요. 폴더를 두 번 클릭해 들어가고, 상위 디렉토리 버튼으로 올라가요. 경로 칸에 직접 입력하고 Enter를 눌러도 돼요.", en: "'Local' on the left is your PC and 'Remote' on the right is the server. Double-click a folder to open it and use the Parent directory button to go up, or type a path in the path box and press Enter." }
+    - title: { ko: "올리고 내려받기", en: "Upload and download" }
+      text: { ko: "파일을 골라 [업로드 →]나 [← 다운로드]를 누르거나, 반대쪽 창으로 끌어다 놓으세요. Windows 탐색기에서 원격 창으로 바로 끌어 와도 올라가요. 같은 이름이 있으면 덮어쓰기·이어받기(가능할 때)·이름 변경·건너뛰기 중에서 고를 수 있어요.", en: "Select files and click [Upload →] or [← Download], or drag them to the other pane. You can also drag files from Windows Explorer straight onto the remote pane. If a file with the same name exists, choose Overwrite, Resume (when possible), Rename or Skip." }
+    - title: { ko: "전송 확인하기", en: "Check transfers" }
+      text: { ko: "아래 '전송' 탭에서 진행률과 확인 결과를 보고, [선택 취소]나 [모두 취소]로 멈출 수 있어요. 끝난 줄은 [끝난 항목 지우기]로 정리하고, 자세한 기록은 '로그' 탭에서 보세요.", en: "The 'Transfers' tab at the bottom shows progress and verification results; stop jobs with [Cancel selected] or [Cancel all]. Tidy up with [Clear finished], and see the details in the 'Log' tab." }
   uses: { ko: ["웹사이트 파일을 서버에 올릴 때", "회사나 집의 NAS에서 파일을 받아 올 때", "같은 파일이 덮어쓰이지 않도록 조심해서 보낼 때"], en: ["When you upload website files to a server", "When you fetch files from a NAS at home or work", "When you want to send files without overwriting by accident"] }
   settings_path: { ko: "%APPDATA%\\BigFTP\\BigFTP.json", en: "%APPDATA%\\BigFTP\\BigFTP.json" }
 
@@ -143,6 +205,15 @@
       text: { ko: "크기, 콘텐츠 형식, ETag, 버전 ID, 메타데이터를 한 창에서 확인해요.", en: "Check size, content type, ETag, version ID and metadata in one window." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "S3 서버에 연결하기", en: "Connect to the server" }
+      text: { ko: "위쪽 'S3 연결' 칸에 엔드포인트, 액세스 키, 시크릿 키를 넣고 HTTPS 서버라면 SSL을 체크한 뒤 [연결]을 누르세요. 연결되면 왼쪽에 버킷 목록이 나타나요.", en: "In the 'S3 Connection' area, enter the endpoint, access key and secret key, check SSL for an HTTPS server, and click [Connect]. Your buckets then appear on the left." }
+    - title: { ko: "버킷 고르고 만들기", en: "Pick or create a bucket" }
+      text: { ko: "버킷 목록에서 하나를 고르면 오른쪽에 객체가 보여요. 새 버킷은 목록 아래 칸에 이름을 입력하고 [생성]을, 필요 없는 버킷은 고른 뒤 [삭제]를 누르세요.", en: "Select a bucket to list its objects on the right. To add one, type a name in the box below the list and click [Create]; to remove one, select it and click [Delete]." }
+    - title: { ko: "폴더 지정해 올리고 내려받기", en: "Upload and download in a folder" }
+      text: { ko: "'폴더 (접두사)' 칸에 경로를 입력하고 [새로고침]을 누르면 그 폴더의 객체만 보여요. [업로드]로 고른 파일은 이 폴더 아래로 올라가고, 목록에서 여러 개를 골라 [다운로드]를 누르면 저장할 폴더를 물어봐요. 오래 걸리면 아래 [취소]로 멈출 수 있어요.", en: "Type a path in 'Folder (Prefix)' and click [Refresh] to list only that folder. Files chosen with [Upload] go under it, and selecting several objects and clicking [Download] asks for a folder to save them in. Click [Cancel] at the bottom to stop a long job." }
+    - title: { ko: "속성 보기와 공유 링크", en: "Properties and share links" }
+      text: { ko: "객체 하나를 고르고 [속성](또는 오른쪽 클릭 > 속성)을 누르면 자세한 정보 창이 열려요. 공유하려면 아래 'Presigned URL' 칸에 만료 시간(분)을 넣고 [URL 생성]을 누른 뒤 [복사]로 클립보드에 담으세요.", en: "Select one object and click [Properties] (or right-click > Properties) to open its details. To share it, enter an expiry in minutes under 'Presigned URL', click [Create URL], then [Copy] to put it on the clipboard." }
   uses: { ko: ["MinIO나 S3에 파일을 올리고 확인할 때", "다른 사람에게 파일 링크를 잠깐 공유할 때", "버킷 안에 무엇이 들어 있는지 살펴볼 때"], en: ["When you upload and check files on MinIO or S3", "When you share a file link with someone for a short time", "When you want to see what is inside a bucket"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigS3.json", en: "CONFIGURATION\\BigS3.json next to the exe" }
 
@@ -164,6 +235,17 @@
       text: { ko: "마크다운 문서를 바로 미리 보고, 파일 내용을 16진수로도 확인할 수 있어요.", en: "Preview Markdown right away and inspect file contents in hexadecimal." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom for the whole screen." }
+  howto:
+    - title: { ko: "파일 열기", en: "Open files" }
+      text: { ko: "파일 > 열기(Ctrl+O)를 누르거나 탐색기에서 파일을 창에 끌어다 놓으면 탭으로 열려요. 새 문서는 Ctrl+N, 최근에 연 파일은 파일 > 최근 파일에서 다시 열 수 있어요.", en: "Choose File > Open (Ctrl+O) or drag files from Explorer onto the window to open them in tabs. Press Ctrl+N for a new document, or reopen one from File > Recent Files." }
+    - title: { ko: "화면 나눠 보기", en: "Split the screen" }
+      text: { ko: "Ctrl+\\로 좌우, Ctrl+Shift+\\로 위아래로 나눠요. 탭을 끌어 다른 쪽에 놓거나 보기 > 탭을 다른 그룹으로 이동(Ctrl+Shift+.)을 고르면 문서가 옮겨 가요. 다시 한 화면으로 보려면 보기 > 분할 해제를 고르세요.", en: "Press Ctrl+\\ to split left/right or Ctrl+Shift+\\ to split top/bottom. Drag a tab to the other side or choose View > Move Tab to Other Group (Ctrl+Shift+.) to move a document. Choose View > Unsplit to go back to one view." }
+    - title: { ko: "찾고 바꾸기", en: "Find and replace" }
+      text: { ko: "Ctrl+F로 찾기, Ctrl+H로 바꾸기 창을 열고 F3/Shift+F3로 다음·이전 위치로 가요. 모두 찾기를 누르면 아래에 결과 목록이 나오고, 항목을 두 번 클릭하거나 Enter를 누르면 그 줄로 이동해요.", en: "Open Find with Ctrl+F or Replace with Ctrl+H, and press F3/Shift+F3 for the next or previous match. Find All lists the results at the bottom; double-click an item or press Enter to jump to that line." }
+    - title: { ko: "인코딩 바꾸기", en: "Change the encoding" }
+      text: { ko: "아래 상태 표시줄의 인코딩 이름을 클릭하세요. 글자가 깨졌다면 '다른 인코딩으로 다시 열기', 다른 인코딩 파일로 만들려면 '인코딩 변환하여 저장'에서 인코딩을 고르면 돼요.", en: "Click the encoding name in the status bar. If the text looks garbled, pick one under 'Reopen with Encoding'; to make a copy in another encoding, pick one under 'Save with Encoding'." }
+    - title: { ko: "저장하기", en: "Save" }
+      text: { ko: "Ctrl+S로 저장하고, Ctrl+Shift+S로 다른 이름으로 저장해요. 옵션 > 저장할 때 .bak 백업 만들기를 켜 두면 저장할 때마다 원본이 .bak 파일로 남아요.", en: "Press Ctrl+S to save or Ctrl+Shift+S to save under a new name. Turn on Options > Create .bak Backup on Save to keep the original as a .bak file each time you save." }
   uses: { ko: ["큰 로그 파일을 열어 살펴볼 때", "글자가 깨진 파일의 인코딩을 바꿀 때", "마크다운 글을 쓰면서 바로 확인할 때", "여러 줄을 한꺼번에 정리할 때"], en: ["Looking through a large log file", "Fixing a file whose text looks garbled", "Writing Markdown and checking it as you go", "Tidying many lines at once"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigEdit.json (쓸 수 없으면 %LOCALAPPDATA%\\BigEdit)", en: "BigEdit.json in the CONFIGURATION folder next to the exe (falls back to %LOCALAPPDATA%\\BigEdit if not writable)" }
 
@@ -183,6 +265,17 @@
       text: { ko: "들여쓰기 칸 수와 글꼴, 글꼴 크기를 원하는 대로 고를 수 있어요.", en: "Choose the indent size, font and font size you like." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom for the whole screen." }
+  howto:
+    - title: { ko: "JSON 불러오기", en: "Load JSON" }
+      text: { ko: "열기(Ctrl+O)로 .json·.jsonl 파일을 고르거나, 파일을 창에 끌어다 놓으세요. 복사해 둔 JSON은 붙여넣기 버튼을 누르면 바로 정렬돼서 보여요.", en: "Pick a .json or .jsonl file with Open (Ctrl+O) or drag it onto the window. For JSON you have copied, press the Paste button and it appears already formatted." }
+    - title: { ko: "결과 확인하기", en: "Check the result" }
+      text: { ko: "불러오면 아래 상태 표시줄에 줄 수, 값 개수, 걸린 시간이 나와요. JSON이 잘못됐으면 같은 자리에 빨간 글씨로 오류 내용이 나와요.", en: "After loading, the status bar shows the number of lines, values and the time taken. If the JSON is invalid, the error appears there in red instead." }
+    - title: { ko: "고치고 다시 정렬하기", en: "Edit and format again" }
+      text: { ko: "화면에서 바로 내용을 고친 뒤 Ctrl+Enter를 누르거나 정렬 버튼을 누르면 콜론을 다시 맞춰 줘요.", en: "Edit the text right on screen, then press Ctrl+Enter or the Format button to line up the colons again." }
+    - title: { ko: "보기 맞추기", en: "Adjust the view" }
+      text: { ko: "상태 표시줄 오른쪽에서 들여쓰기 칸 수, 글꼴, 글꼴 크기를 고르세요. 들여쓰기를 바꾸면 지금 보이는 내용이 새 칸 수로 다시 정렬돼요.", en: "Choose the indent size, font and font size at the right of the status bar. Changing the indent re-formats the current content with the new size." }
+    - title: { ko: "복사해 가져가기", en: "Copy it out" }
+      text: { ko: "복사 버튼을 누르면 편집기 내용 전체가 클립보드에 들어가요. 지우기를 누르면 화면이 비워져요.", en: "Press Copy to put the whole editor text on the clipboard. Press Clear to empty the screen." }
   uses: { ko: ["API 응답을 읽기 쉽게 보고 싶을 때", "설정 파일 구조를 빠르게 확인할 때", "JSONL 로그를 살펴볼 때"], en: ["Reading an API response more easily", "Checking the structure of a settings file", "Going through JSONL logs"] }
   settings_path: { ko: "%APPDATA%\\BigJSON\\BigJSON.json", en: "%APPDATA%\\BigJSON\\BigJSON.json" }
 
@@ -202,6 +295,15 @@
       text: { ko: "방향키, Page Up/Down, Home/End, 마우스 휠로 둘러보고 선택한 행을 복사해요.", en: "Browse with arrow keys, Page Up/Down, Home/End or the mouse wheel, and copy selected rows." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom for the whole screen." }
+  howto:
+    - title: { ko: "CSV 파일 열기", en: "Open a CSV file" }
+      text: { ko: "파일 열기 버튼(또는 파일 > 열기)으로 CSV 파일을 고르세요. 행 위치 색인이 끝나면 아래 상태 표시줄에 행·열 수, 파일 크기, 인코딩이 나와요.", en: "Press Open File (or File > Open) and pick a CSV file. When the row index is built, the status bar shows the row and column counts, file size and encoding." }
+    - title: { ko: "원하는 행으로 가기", en: "Go to a row" }
+      text: { ko: "행 번호 칸에 번호를 입력하고 Enter나 이동을 누르면 그 행으로 가요. 처음·이전·다음·마지막 버튼은 Home, Page Up, Page Down, End 키와 같아요.", en: "Type a number in the Row box and press Enter or Go to jump to that row. The First, Previous, Next and Last buttons do the same as Home, Page Up, Page Down and End." }
+    - title: { ko: "둘러보기", en: "Browse" }
+      text: { ko: "위/아래 화살표로 한 행씩, 왼쪽/오른쪽 화살표로 열을 옮겨 다녀요. 마우스 휠은 위아래로, Shift+휠은 옆으로 넘겨요.", en: "Use the up and down arrows to move a row at a time and the left and right arrows to move between columns. The mouse wheel scrolls vertically and Shift+wheel scrolls sideways." }
+    - title: { ko: "행 골라 복사하기", en: "Select and copy rows" }
+      text: { ko: "행을 클릭한 뒤 Shift+클릭으로 범위를, Ctrl+클릭으로 따로 떨어진 행을 더 고르세요. Ctrl+C나 오른쪽 클릭 > 복사하기를 누르면 머리글과 함께 탭으로 구분되어 복사되니 엑셀에 바로 붙여 넣을 수 있어요.", en: "Click a row, then Shift+click to select a range or Ctrl+click to add separate rows. Press Ctrl+C or right-click > Copy to copy them tab-separated with the header row, ready to paste into a spreadsheet." }
   uses: { ko: ["엑셀로 열기 힘든 큰 CSV를 볼 때", "내보낸 데이터를 빠르게 확인할 때", "특정 행의 내용을 찾아볼 때"], en: ["Viewing a CSV too big for a spreadsheet", "Quickly checking exported data", "Looking up a specific row"] }
   settings_path: { ko: "%APPDATA%\\BigCSV\\BigCSV.json", en: "%APPDATA%\\BigCSV\\BigCSV.json" }
 
@@ -223,6 +325,15 @@
       text: { ko: "저장한 PNG 안에 수식이 함께 들어 있어 나중에 다시 열어 고칠 수 있어요.", en: "Saved PNGs keep the formula inside, so you can open and edit them later." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom for the whole screen." }
+  howto:
+    - title: { ko: "LaTeX로 입력하기", en: "Type LaTeX" }
+      text: { ko: "LaTeX 칸에 수식을 입력하면 미리 보기에 바로 그려져요. 오류가 있으면 아래에 목록이 나오고, 항목을 클릭하면 LaTeX 칸에서 틀린 부분이 선택돼요.", en: "Type a formula in the LaTeX box and it is drawn in the preview right away. Errors appear in a list below; click one to select the faulty part in the LaTeX box." }
+    - title: { ko: "수식 편집기로 만들기", en: "Build it in the editor" }
+      text: { ko: "수식 편집기를 클릭하고 입력하거나, 위의 분수·근호 같은 버튼을 눌러 틀을 넣은 뒤 방향키로 칸을 옮겨 채우세요. 편집기에서 만든 수식은 LaTeX 칸에도 그대로 써져요.", en: "Click the formula editor and type, or press buttons such as fraction and root to insert a template, then fill the slots moving with the arrow keys. What you build is written to the LaTeX box as well." }
+    - title: { ko: "이미지로 복사·저장하기", en: "Copy or save as an image" }
+      text: { ko: "배율(1×·2×·4×·8×)과 투명 배경을 고른 뒤 이미지 복사(Ctrl+Shift+C), PNG 저장(Ctrl+S), SVG 저장 중 하나를 누르세요. Word에서 고칠 수 있는 수식이 필요하면 편집 > MathML 복사를 고른 뒤 Word에 붙여 넣으세요.", en: "Choose a scale (1×, 2×, 4×, 8×) and Transparent if you like, then press Copy Image (Ctrl+Shift+C), Save PNG (Ctrl+S) or Save SVG. For an equation you can edit in Word, choose Edit > Copy MathML and paste it into Word." }
+    - title: { ko: "저장한 수식 다시 고치기", en: "Edit a saved formula" }
+      text: { ko: "파일 > PNG에서 수식 열기(Ctrl+O)로 이 프로그램에서 저장한 PNG를 고르면 수식이 다시 불러와져요. 새 수식을 시작하려면 Ctrl+N이나 지우기를 누르세요.", en: "Choose File > Open Formula from PNG (Ctrl+O) and pick a PNG saved by this app to load its formula again. Press Ctrl+N or Clear to start a new one." }
   uses: { ko: ["발표 자료에 수식 이미지를 넣을 때", "Word 문서에 수식을 넣을 때", "예전에 만든 수식을 다시 고칠 때"], en: ["Adding formula images to slides", "Putting equations into a Word document", "Editing a formula you made before"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigFormula.json", en: "BigFormula.json in the CONFIGURATION folder next to the exe" }
 
@@ -244,6 +355,17 @@
       text: { ko: "미리 정의한 색상표 8종이나 직접 만든 색상표를 쓰고, 색맹 시뮬레이션으로 구분이 잘 되는지 확인해요.", en: "Use one of 8 preset color tables or your own, and check them with a color vision deficiency simulation." }
     - title: { ko: "표준 형식 저장·내보내기", en: "Standard formats" }
       text: { ko: "프로젝트는 GeoPackage로 저장하고, GeoTIFF·GeoJSON·CSV와 PNG·GeoTIFF 지도 이미지로 내보내요. 한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대도 쓸 수 있어요.", en: "Save projects as GeoPackage and export GeoTIFF, GeoJSON, CSV and PNG or GeoTIFF map images. Korean/English, light/dark themes and Ctrl +/− zoom are included." }
+  howto:
+    - title: { ko: "지형 파일 열기", en: "Open terrain data" }
+      text: { ko: "파일 > 열기(Ctrl+O)로 DEM 파일, 표고점 CSV, 저장한 프로젝트(.gpkg)를 고르세요. CSV를 열면 표고점 가져오기 창이 나오니 수평 EPSG 코드(모르면 0)와 높이 단위를 정하고 확인을 누르세요.", en: "Choose File > Open (Ctrl+O) and pick a DEM file, a spot height CSV or a saved project (.gpkg). For a CSV, the Import spot heights window asks for the horizontal EPSG code (0 if unknown) and the height unit; set them and press OK." }
+    - title: { ko: "브러시로 높이 다듬기", en: "Shape heights with the brush" }
+      text: { ko: "도구 모음에서 브러시를 누르고, 왼쪽 격자 편집에서 올리기·내리기·평탄화·부드럽게와 반경을 고른 뒤 지도를 왼쪽 버튼으로 끌어요. 한 점만 고치려면 칸 값 도구에서 값을 입력하고 격자점을 클릭하세요. 오른쪽·가운데 끌기로 이동, 휠로 확대, Home으로 전체 보기, Ctrl+Z/Ctrl+Y로 되돌리기와 다시 실행이 돼요.", en: "Press Brush on the toolbar, choose Raise, Lower, Flatten or Smooth and a radius under Grid editing on the left, then left-drag on the map. To change a single point, enter a value with the Cell value tool and click a grid point. Right- or middle-drag to pan, use the wheel to zoom, press Home for the full extent, and Ctrl+Z/Ctrl+Y to undo and redo." }
+    - title: { ko: "표고점과 변화선 고치기", en: "Edit spot heights and breaklines" }
+      text: { ko: "표고점 프로젝트에서는 표고점 도구로 빈 곳을 클릭해 점을 더하고, 점을 끌어 옮기거나 Delete로 지워요. 변화선 도구는 클릭으로 점을 찍고 두 번 클릭이나 Enter로 끝내요. 보간 방법을 바꾼 뒤에는 다시 보간을 누르고, 브러시로 다듬으려면 격자로 확정을 누르세요(되돌릴 수 없어요).", en: "In a spot height project, click empty space with the Spot height tool to add a point, drag a point to move it or press Delete to remove it. With the Breakline tool, click to add points and double-click or press Enter to finish. Press Re-interpolate after changing the interpolation method, and press Finalize as grid to shape it with the brush (this cannot be undone)." }
+    - title: { ko: "등고선과 보기 정하기", en: "Set contours and the view" }
+      text: { ko: "왼쪽 등고선에서 간격, 기준 높이, 계곡선 주기를 입력하고 Enter를 누르면 바로 다시 그려져요. 보기에서 고도 채색·음영기복·높이 라벨 등을 켜고 끄고, 색상표의 편집...으로 색을 바꿔요. 편집 > 위상 검사로 등고선 상태를 확인할 수 있어요.", en: "Under Contours on the left, enter the interval, base level and index period and press Enter to redraw. Turn hypsometric tint, hillshade, labels and more on or off under View, and change colors with Edit... under Color table. Use Edit > Check topology to check the contours." }
+    - title: { ko: "저장하고 내보내기", en: "Save and export" }
+      text: { ko: "Ctrl+S로 프로젝트를 GeoPackage(.gpkg)로 저장해요. 파일 > 내보내기에서 높이 격자 GeoTIFF, 등고선 GeoPackage·GeoJSON, 표고점 CSV, 지도 이미지를 고르고, 지도 이미지는 범위·너비·DPI·형식을 정해 저장해요.", en: "Press Ctrl+S to save the project as a GeoPackage (.gpkg). Under File > Export, choose the elevation grid GeoTIFF, contours GeoPackage or GeoJSON, spot heights CSV or a map image; for a map image, set the range, width, DPI and format before saving." }
   uses: { ko: ["지형 데이터로 등산·답사용 등고선 지도를 만들 때", "측량한 표고점으로 지형면과 등고선을 만들 때", "게임·모형용 가상 지형을 만들고 다듬을 때"], en: ["Making a contour map for hiking or fieldwork from elevation data", "Building a surface and contours from surveyed spot heights", "Creating and shaping imaginary terrain for games or models"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigContourMap.json", en: "BigContourMap.json in the CONFIGURATION folder next to the exe" }
   screenshot_credit: { ko: "스크린샷 지형: Copernicus DEM GLO-30 설악산 일대를 잘라 낸 수정 데이터 — produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.", en: "Screenshot terrain: modified Copernicus DEM GLO-30 data (Seoraksan, Korea) — produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved." }
@@ -266,6 +388,15 @@
       text: { ko: "mermaid 글을 .mmd 파일로 저장하고 최근 파일에서 다시 열 수 있어요.", en: "Save mermaid text as .mmd files and reopen them from the recent files list." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대, Ctrl+휠로 다이어그램 확대를 지원해요.", en: "Dark/light mode, Korean/English UI, Ctrl +/− zoom for the screen and Ctrl+wheel zoom for the diagram." }
+  howto:
+    - title: { ko: "샘플이나 파일로 시작하기", en: "Start from a sample or a file" }
+      text: { ko: "왼쪽 샘플 목록에서 종류를 고르면 mermaid 문자열과 그림이 바로 나와요. 가진 파일은 열기(Ctrl+O)로 고르거나 창에 끌어다 놓고, 빈 문서는 새로 만들기(Ctrl+N)로 시작하세요.", en: "Pick a type from the Samples list on the left to load its mermaid text and drawing. Open your own file with Open (Ctrl+O) or drag it onto the window, or start blank with New (Ctrl+N)." }
+    - title: { ko: "글 고치며 확인하기", en: "Edit and watch" }
+      text: { ko: "가운데 mermaid 문자열 칸을 고치면 오른쪽 그림이 다시 그려져요. 문법 오류가 나면 마지막으로 성공한 그림이 남고 그림 위에 줄·열이 표시되니, 그 표시를 클릭해 오류 위치로 가세요.", en: "Edit the mermaid text box in the middle and the diagram on the right redraws. On a syntax error the last good drawing stays and the line and column appear above it; click that message to jump to the error." }
+    - title: { ko: "그림 둘러보기", en: "Look around the diagram" }
+      text: { ko: "그림을 끌어서 옮기고, 휠로 위아래, Shift+휠로 옆으로 넘겨요. Ctrl+휠로 확대·축소하고, 맞춤(F5)을 누르면 화면에 꼭 맞게, 100%를 누르면 실제 크기로 보여요.", en: "Drag the diagram to move it, scroll with the wheel, and use Shift+wheel to scroll sideways. Zoom with Ctrl+wheel, press Fit (F5) to fit it to the view, or 100% for actual size." }
+    - title: { ko: "저장하고 내보내기", en: "Save and export" }
+      text: { ko: "저장(Ctrl+S)이나 다른 이름으로 저장(Ctrl+Shift+S)으로 .mmd 파일을 남기고, 파일 > 최근 파일에서 다시 열어요. 그림은 SVG 버튼으로 바로 저장하고, PNG 버튼을 누르면 해상도와 투명 배경을 고른 뒤 내보내기를 누르면 돼요.", en: "Keep the text as an .mmd file with Save (Ctrl+S) or Save As (Ctrl+Shift+S) and reopen it from File > Recent Files. Save the drawing with the SVG button, or press PNG, choose the resolution and transparent background, then press Export." }
   uses: { ko: ["README나 위키에 넣을 mermaid 다이어그램을 미리 확인할 때", "회의 자료에 넣을 순서도나 간트 차트를 이미지로 만들 때", "mermaid 문법을 샘플로 익힐 때"], en: ["Previewing a mermaid diagram before putting it in a README or wiki", "Making a flowchart or Gantt chart image for meeting slides", "Learning mermaid syntax from samples"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigMermaid.json", en: "BigMermaid.json in the CONFIGURATION folder next to the exe" }
 
@@ -287,6 +418,15 @@
       text: { ko: "mermaid 문자열을 바로 복사해 README나 위키에 붙이거나, .mmd 파일과 PNG·SVG 이미지로 저장해요.", en: "Copy the mermaid text straight into a README or wiki, or save it as an .mmd file or a PNG or SVG image." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대, 마우스 휠로 다이어그램 확대를 지원해요.", en: "Dark/light mode, Korean/English UI, Ctrl +/− zoom for the screen and mouse-wheel zoom for the diagram." }
+  howto:
+    - title: { ko: "폴더 고르고 분석하기", en: "Pick a folder and analyze" }
+      text: { ko: "찾아보기(Ctrl+O)로 소스 폴더를 고르거나 폴더를 창에 끌어다 놓으세요. 폴더 칸에 경로를 직접 넣었다면 분석이나 Enter를 누르면 되고, 코드를 고친 뒤에는 F5로 다시 분석해요.", en: "Choose a source folder with Browse (Ctrl+O) or drag the folder onto the window. If you typed the path in the Folder box, press Analyze or Enter, and press F5 to analyze again after changing the code." }
+    - title: { ko: "분석 범위 정하기", en: "Set what to analyze" }
+      text: { ko: "왼쪽 옵션의 언어를 바꾸면 바로 다시 분석해요. 제외 패턴(예: *Test*;Migrations)이나 전처리 기호(예: DEBUG)는 입력한 뒤 Enter를 누르세요.", en: "Changing Language under Options on the left re-analyzes right away. For Exclude patterns (e.g. *Test*;Migrations) or Preprocessor symbols (e.g. DEBUG), type them and press Enter." }
+    - title: { ko: "보이는 내용 고르기", en: "Choose what to show" }
+      text: { ko: "최소 접근성, 멤버, 관계, 외부 형식, 배치를 바꾸면 다시 분석하지 않고 그림만 새로 그려요. 형식 목록에서 하나를 고르면 그 형식 중심으로 그려지고, 관계 단계의 −/+로 범위를 조절하며, 전체 보기를 누르면 처음으로 돌아가요.", en: "Changing Minimum accessibility, Members, Relations, External types or Layout redraws the diagram without analyzing again. Select a type in the Types list to center the diagram on it, adjust the range with − and + next to Relation steps, and press Show all to go back." }
+    - title: { ko: "그림 보고 가져가기", en: "View and take it out" }
+      text: { ko: "마우스 휠로 확대·축소하고 맞춤(Ctrl+F)으로 화면에 맞춰요. mermaid 복사(Ctrl+Shift+C)로 오른쪽 mermaid 문자열을 복사하거나, .mmd 저장(Ctrl+S), PNG(Ctrl+E), SVG 버튼으로 파일을 만들어요.", en: "Zoom with the mouse wheel and press Fit (Ctrl+F) to fit the view. Copy the mermaid text on the right with Copy mermaid (Ctrl+Shift+C), or make a file with Save .mmd (Ctrl+S), PNG (Ctrl+E) or SVG." }
   uses: { ko: ["처음 보는 프로젝트의 클래스 구조를 빠르게 파악할 때", "설계 문서나 README에 넣을 클래스 다이어그램을 만들 때", "리팩터링 전후로 클래스 관계가 어떻게 바뀌었는지 볼 때"], en: ["Getting a quick picture of the class structure of an unfamiliar project", "Making a class diagram for a design document or README", "Seeing how class relations changed before and after a refactoring"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigClassDiagram.json", en: "BigClassDiagram.json in the CONFIGURATION folder next to the exe" }
 
@@ -308,6 +448,17 @@
       text: { ko: "작업 중인 문서를 따로 자동 저장해 두었다가, 비정상 종료 뒤 복구할 수 있어요.", en: "Your work is auto-saved separately so it can be recovered after an unexpected exit." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom for the whole screen." }
+  howto:
+    - title: { ko: "새 맵 시작하기", en: "Start a map" }
+      text: { ko: "실행하면 '중심 주제' 노드 하나가 있는 새 맵이 열려요. 만들어 둔 맵은 '열기'(Ctrl+O)로 .wmm이나 FreeMind/Freeplane .mm 파일을 골라 이어서 쓰세요.", en: "BigMindMap opens with a new map holding a single 'Central Topic' node. To continue an existing map, click Open (Ctrl+O) and choose a .wmm or FreeMind/Freeplane .mm file." }
+    - title: { ko: "주제 붙이고 고치기", en: "Add and edit topics" }
+      text: { ko: "노드를 고르고 Tab을 누르면 자식, Enter를 누르면 형제 주제가 생기고 바로 글자를 입력할 수 있어요. 입력은 Enter로 확정하고(Shift+Enter는 줄바꿈) Esc로 취소해요. 이미 있는 노드는 F2나 두 번 클릭으로 고치거나, 고른 채로 바로 타이핑해 내용을 바꿔요.", en: "Select a node and press Tab for a child topic or Enter for a sibling, then type its text right away. Press Enter to confirm (Shift+Enter adds a line break) or Esc to cancel. To change an existing node, press F2 or double-click it, or just start typing while it is selected." }
+    - title: { ko: "맵 정리하고 둘러보기", en: "Arrange and move around" }
+      text: { ko: "방향키로 노드 사이를 옮겨 다니고, Space로 가지를 접거나 펼치고, Delete로 지워요. 노드를 다른 노드 위로 끌어다 놓으면 그 아래로 옮겨져요. 빈 곳을 끌면 화면이 움직이고, Ctrl+휠로 맵을 확대·축소하며 '맞추기'를 누르면 맵 전체가 화면에 들어와요.", en: "Move between nodes with the arrow keys, fold or unfold a branch with Space and delete with Delete. Drag a node onto another node to move it there. Drag empty space to pan, use Ctrl+wheel to zoom the map, and click Fit to see the whole map." }
+    - title: { ko: "노드 꾸미기", en: "Style nodes" }
+      text: { ko: "노드를 고른 뒤 오른쪽 '노드 스타일' 패널에서 배경색·테두리색·글자색·연결선 색, 글꼴, 도형을 바꿔요. 전체 색은 도구 모음의 '맵 테마'에서 고르고, '스타일 초기화'를 누르면 그 노드는 테마 기본값으로 돌아가요.", en: "Select a node and use the Node Style panel on the right to change its background, border, text and line colors, font and shape. Pick the overall colors from Map theme on the toolbar, and click Reset Style to return a node to the theme defaults." }
+    - title: { ko: "저장하고 내보내기", en: "Save and export" }
+      text: { ko: "'저장'(Ctrl+S)이나 '다른 이름'(Ctrl+Shift+S)으로 .wmm 파일에 저장해요. FreeMind/Freeplane에서 열려면 '내보내기'로 .mm 파일을 만드세요. 저장하지 못하고 꺼졌다면 다음 실행 때 '복구'를 눌러 자동 저장본을 되살릴 수 있어요.", en: "Save to a .wmm file with Save (Ctrl+S) or Save As (Ctrl+Shift+S). To open the map in FreeMind/Freeplane, click Export to create a .mm file. If the app closed before you saved, click Recover on the next launch to restore the auto-saved copy." }
   uses: { ko: ["아이디어를 쏟아 내며 정리할 때", "회의나 강의 내용을 구조로 정리할 때", "FreeMind로 만든 맵을 이어서 쓸 때"], en: ["Brainstorming and organizing ideas", "Structuring notes from a meeting or lecture", "Continuing a map made in FreeMind"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigMindMap.json (복구 파일은 CONFIGURATION\\RECOVERY)", en: "BigMindMap.json in the CONFIGURATION folder next to the exe (recovery files in CONFIGURATION\\RECOVERY)" }
 
@@ -329,6 +480,17 @@
       text: { ko: "메모는 SQLite 파일에 저장되고, 설정에서 다른 파일을 열거나 새로 만들 수 있어요.", en: "Notes are stored in a SQLite file, and you can open or create another one in Settings." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "메모 만들기", en: "Create a note" }
+      text: { ko: "BigMEMO.exe를 실행하면 메모 목록 창이 떠요. '새 메모' 단추(Ctrl+N)를 누르면 바탕 화면에 메모가 하나 생기고 바로 적을 수 있어요. 적은 내용은 따로 저장하지 않아도 자동으로 저장돼요.", en: "Run BigMEMO.exe and the notes list window appears. Click the New note button (Ctrl+N) to put a note on your desktop and start typing. What you write is saved automatically, with no Save step." }
+    - title: { ko: "꾸미고 이미지 넣기", en: "Format text and add images" }
+      text: { ko: "메모 아래쪽 도구 모음에서 글꼴과 크기를 고르고, 굵게(Ctrl+B)·기울임꼴(Ctrl+I)·밑줄(Ctrl+U)·취소선(Ctrl+T)·글머리 기호(Ctrl+Shift+L)를 써요. 이미지는 붙여 넣거나 끌어다 놓고, 클릭한 뒤 오른쪽 아래 모서리를 끌어 크기를 바꾸거나 오른쪽 클릭 > '원본 크기'로 되돌려요.", en: "Use the toolbar at the bottom of the note to pick a font and size, and apply Bold (Ctrl+B), Italic (Ctrl+I), Underline (Ctrl+U), Strikethrough (Ctrl+T) or Bullets (Ctrl+Shift+L). Paste or drop an image in, click it and drag its bottom-right corner to resize it, or right-click it and choose Original size to restore it." }
+    - title: { ko: "색 바꾸고 정리하기", en: "Change color and tidy up" }
+      text: { ko: "메모 위쪽의 '메뉴' 단추를 누르고 맨 위 색 칸에서 메모 색을 골라요. 같은 메뉴에서 '메모 목록'을 열거나 '메모 삭제'(Ctrl+D)로 지울 수 있어요. '메모 닫기'(X)는 화면에서만 치우고 메모는 목록에 남아요.", en: "Click the Menu button at the top of the note and pick a color from the swatches at the top. The same menu opens the Notes list or deletes the note (Delete note, Ctrl+D). Close note (X) only removes it from the screen; the note stays in the list." }
+    - title: { ko: "목록에서 찾아 열기", en: "Find and open from the list" }
+      text: { ko: "메모 목록 창의 '검색...' 칸에 낱말을 입력하면 맞는 메모만 남아요. 메모를 클릭하면 다시 바탕 화면에 열리고, 오른쪽 클릭하면 '메모 열기'와 '메모 삭제'를 고를 수 있어요.", en: "Type a word in the Search... box of the notes list to show only matching notes. Click a note to open it on the desktop again, or right-click it for Open note and Delete note." }
+    - title: { ko: "데이터 파일 바꾸기", en: "Switch the data file" }
+      text: { ko: "메모 목록 창의 '설정' 단추를 누르고 '기존 파일 열기...'나 '새 파일 만들기...'로 다른 SQLite 파일을 쓸 수 있어요. 바꾸기 전에 열린 메모는 지금 파일에 저장되고, '기본 위치'를 누르면 처음 파일로 돌아가요.", en: "Click the Settings button in the notes list and use Open existing file... or Create new file... to use another SQLite file. Open notes are saved to the current file before switching, and Default location goes back to the original file." }
   uses: { ko: ["오늘 할 일을 눈앞에 두고 싶을 때", "전화번호나 짧은 메모를 잠깐 적을 때", "스크린샷을 메모와 함께 남길 때"], en: ["Keeping your to-dos in sight", "Jotting down a phone number or quick note", "Saving a screenshot together with a note"] }
   settings_path: { ko: "%LOCALAPPDATA%\\BigMEMO (메모 데이터 BigMEMO.db와 설정 BigMEMO.json)", en: "%LOCALAPPDATA%\\BigMEMO (notes in BigMEMO.db, settings in BigMEMO.json)" }
 
@@ -350,6 +512,17 @@
       text: { ko: "이름 붙인 접속 목록(SSL 모드, 비밀번호 암호화 저장)과 쿼리 목록을 저장해 두고 다시 써요.", en: "Keep named connections (with SSL mode and encrypted passwords) and a named query list for reuse." }
     - title: { ko: "보기 설정", en: "View options" }
       text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소, 글꼴 크기 설정을 지원해요.", en: "Korean/English UI, dark/light mode, Ctrl +/− zoom and a font size setting." }
+  howto:
+    - title: { ko: "서버에 접속하기", en: "Connect to a server" }
+      text: { ko: "도구 모음의 '접속'을 누르면 'PostgreSQL 접속' 창이 열려요. '새로'를 누르고 호스트·포트·사용자·패스워드·SSL 모드를 넣은 뒤 '목록'으로 데이터베이스를 골라요. '저장'하면 접속 목록에 남고, '접속'(또는 목록에서 두 번 클릭)으로 연결돼요.", en: "Click Connect on the toolbar to open the PostgreSQL Connection window. Click New, enter the host, port, user, password and SSL mode, then pick a database with List. Save keeps it in the connection list, and Connect (or double-clicking it in the list) opens the connection." }
+    - title: { ko: "쿼리 실행하기", en: "Run queries" }
+      text: { ko: "편집기에 SQL을 쓰고 F5(또는 Ctrl+F9)를 누르면 선택한 부분이, 선택이 없으면 전체가 실행돼요. 캐럿이 있는 문장만 돌리려면 Ctrl+Enter('현재 문장')를 누르고, 오래 걸리면 Esc('취소')로 멈춰요.", en: "Write SQL in the editor and press F5 (or Ctrl+F9) to run the selection, or the whole script if nothing is selected. Press Ctrl+Enter (Current Statement) to run only the statement under the caret, and Esc (Cancel) to stop a long run." }
+    - title: { ko: "결과 고쳐 저장하기", en: "Edit and save results" }
+      text: { ko: "키가 있는 테이블을 조회한 결과에서 셀 값을 고치거나 '행 추가', '행 삭제', 'NULL'을 써요. '변경 저장'을 누르면 실행할 문장을 미리 보여 주고, '실행'한 뒤 '커밋'이나 '롤백'을 골라 마무리해요.", en: "In results from a keyed table, edit cell values or use Add Row, Delete Row and NULL. Click Save Changes to preview the statements, click Run, then finish with Commit or Rollback." }
+    - title: { ko: "객체 살펴보고 문장 만들기", en: "Browse objects and generate SQL" }
+      text: { ko: "왼쪽 '객체' 탭에서 테이블이나 함수를 고르면 '객체 정보'에 컬럼·제약조건·인덱스·트리거와 DDL이 나오고, 'DDL 복사'로 가져갈 수 있어요. Ctrl/Shift+클릭으로 여러 객체를 고른 뒤 오른쪽 클릭해 'CREATE 문 생성'부터 'DELETE 문 생성'까지 골라 편집기에 넣어요.", en: "Select a table or function on the Objects tab to see its columns, constraints, indexes, triggers and DDL under Object Info, and use Copy DDL to take it with you. Ctrl/Shift+click several objects, then right-click and choose Generate CREATE, INSERT, UPDATE or DELETE to put the statements in the editor." }
+    - title: { ko: "쿼리 모아 두고 안전하게 쓰기", en: "Save queries and work safely" }
+      text: { ko: "'쿼리 목록' 탭의 '추가'를 누르면 편집기의 선택 영역(없으면 전체)을 이름 붙여 저장해요. 저장한 쿼리는 '실행'으로 바로 돌리거나 '편집기로'(두 번 클릭)로 불러와요. 데이터를 바꿀 때는 '자동 커밋'을 끄고, 확인한 뒤 '커밋' 또는 '롤백'을 누르세요.", en: "On the Saved Queries tab, Add saves the editor selection (or the whole script) under a name. Run a saved query right away with Run, or bring it into the editor with To Editor (or a double-click). When changing data, turn off Auto Commit, check the result, then click Commit or Rollback." }
   uses: { ko: ["PostgreSQL 데이터를 조회하고 조금씩 고칠 때", "테이블이나 함수의 DDL을 확인하고 복사할 때", "자주 쓰는 쿼리를 모아 두고 바로 실행하고 싶을 때"], en: ["When you query PostgreSQL data and make small edits", "When you need to check or copy the DDL of a table or function", "When you want your frequent queries saved and ready to run"] }
   settings_path: { ko: "%APPDATA%\\BigSQL", en: "%APPDATA%\\BigSQL" }
 
@@ -371,6 +544,17 @@
       text: { ko: "옮긴 뒤 행 수, 시퀀스 값, 스키마 차이를 비교해 일치·불일치를 보여 줘요.", en: "After the move it compares row counts, sequence values and schema differences and shows what matches." }
     - title: { ko: "보기 설정", en: "View options" }
       text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "두 서버에 접속하기", en: "Connect both servers" }
+      text: { ko: "'소스 접속'과 '대상 접속' 칸에 호스트·포트·DB·사용자·비밀번호·SSL을 넣고 각각 '접속 테스트'를 누르세요. '저장'해 두면 다음부터 이름 목록에서 바로 고를 수 있어요. 소스 접속에 성공하면 '테이블 선택'에 테이블 목록이 나와요.", en: "Enter the host, port, DB, user, password and SSL in the Source and Target panels and click Test Connection on each. Click Save to pick them from the name list next time. Once the source connects, its tables appear under Select Tables." }
+    - title: { ko: "옮길 테이블 고르기", en: "Pick the tables" }
+      text: { ko: "'테이블 선택' 트리에서 옮길 테이블(또는 스키마 전체)을 체크하세요. 오른쪽 의존 객체 목록에 함께 갈 객체가 채워지고, '필수'가 아닌 항목은 '포함' 체크로 빼거나 넣을 수 있어요.", en: "Check the tables (or a whole schema) to move in the Select Tables tree. The dependency list fills with the objects that go along, and anything not marked Required can be toggled with its Include checkbox." }
+    - title: { ko: "점검하고 DDL 확인하기", en: "Check and review the DDL" }
+      text: { ko: "'사전 점검'을 누르면 '사전 점검 결과' 탭에 경고와 차단이 나와요. 차단이 있으면 '실행'이 막히니 먼저 해결하세요. 'DDL 미리 보기'로 대상에 만들 문장을 DDL 탭에서 보고, 'DDL 저장'으로 .sql 파일에 남길 수 있어요.", en: "Click Preflight to list warnings and blocks on the Preflight Results tab. Run stays disabled while there is a block, so fix those first. Preview DDL shows the statements for the target on the DDL tab, and Save DDL writes them to a .sql file." }
+    - title: { ko: "옮기기 실행하기", en: "Run the move" }
+      text: { ko: "'병렬도 (1~16)'를 정하고, 권한도 옮기려면 '권한(GRANT) 포함'을 체크한 뒤 '실행'을 누르세요. '테이블별 진행' 탭에서 행 수·복사량·속도를 보고, 멈춰야 하면 '취소'를 눌러요. 중간에 끊긴 실행은 '이어하기'로 남은 부분부터 계속해요.", en: "Set Parallel (1-16), check Include GRANT if you want privileges too, and click Run. Watch row counts, bytes copied and speed on the Table Progress tab, and click Cancel to stop. Resume continues an interrupted run from where it left off." }
+    - title: { ko: "결과 확인하기", en: "Check the result" }
+      text: { ko: "끝나면 '검증 결과' 탭에서 테이블별 행 수, 시퀀스 값, 스키마 차이가 일치하는지 확인해요. 자세한 진행 내용은 '로그' 탭에서 볼 수 있어요.", en: "When it finishes, the Verification tab shows whether row counts, sequence values and schema match for each table. The Log tab has the detailed progress." }
   uses: { ko: ["낮은 버전 서버의 테이블을 새 버전 서버로 옮길 때", "일부 테이블만 다른 데이터베이스로 복사할 때", "옮긴 결과가 원본과 같은지 확인하고 싶을 때"], en: ["When you move tables from an older server to a newer one", "When you copy only some tables to another database", "When you want to confirm the copy matches the source"] }
   settings_path: { ko: "%APPDATA%\\BigMigration", en: "%APPDATA%\\BigMigration" }
 
@@ -392,6 +576,17 @@
       text: { ko: "verify, proxy, trust_env 같은 실행 설정을 전역이나 명령별로 정하고 프리셋으로 바꿀 수 있어요.", en: "Set options like verify, proxy and trust_env globally or per command, and switch them with presets." }
     - title: { ko: "보기 설정", en: "View options" }
       text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "명령 넣기", en: "Add a command" }
+      text: { ko: "다른 곳에서 curl 명령을 복사해 왔다면 '붙여넣기로 새 명령'(Ctrl+Shift+V)을 누르면 그 명령으로 새 탭이 열려요. 직접 쓰려면 '＋ 새 명령'(Ctrl+N)을 누르고 탭에 명령을 입력하세요.", en: "If you copied a curl command from somewhere, click New from Paste (Ctrl+Shift+V) to open it in a new tab. To write one yourself, click ＋ New Command (Ctrl+N) and type it in the tab." }
+    - title: { ko: "실행하고 응답 보기", en: "Run and read the response" }
+      text: { ko: "'▶ 실행'(F5 또는 Ctrl+Enter)을 누르면 아래에 '본문', '헤더', '로그' 탭으로 응답이 나오고 '실행 이력'에 기록돼요. 'JSON 정렬'로 보기 좋게 펼치고, '복사'나 '파일로 저장...'으로 본문을 가져가요. 실행을 멈추려면 Esc('■ 중지')를 누르세요.", en: "Click ▶ Run (F5 or Ctrl+Enter) to see the response on the Body, Headers and Log tabs below, with an entry added to Run History. Turn on Format JSON for a readable layout, and use Copy or Save to File... to take the body. Press Esc (■ Stop) to stop a run." }
+    - title: { ko: "저장하고 목록에서 다시 쓰기", en: "Save and reuse from the list" }
+      text: { ko: "'저장'(Ctrl+S)을 누르면 처음 저장할 때 이름·그룹·설명을 묻고 왼쪽 '저장된 curl 명령' 목록에 넣어요. 목록에서 두 번 클릭하면 탭으로 열리고, '검색...'으로 찾거나 오른쪽 클릭 > '열고 실행'으로 바로 실행해요.", en: "Click Save (Ctrl+S); the first time, it asks for a name, group and description and adds the command to the saved list on the left. Double-click a command in the list to open it in a tab, find it with Search..., or right-click and choose Open and Run." }
+    - title: { ko: "반복하거나 여러 개 실행하기", en: "Repeat or run several" }
+      text: { ko: "탭에서 횟수(0이면 중지할 때까지)와 간격(ms)을 정하고 '⟳ 반복 실행'(Shift+F5)을 누르세요. 여러 명령을 목록에서 체크하고 '▶ 체크한 명령 실행'을 누르면 순서대로 돌고, 끝나면 '실패한 명령' 창으로 알려 줘요.", en: "In a tab, set the count (0 runs until you stop) and interval (ms), then click ⟳ Repeat (Shift+F5). Check several commands in the list and click ▶ Run Checked to run them in order; any failures are listed in the Failed Commands window at the end." }
+    - title: { ko: "Ubuntu용으로 바꾸고 설정 고르기", en: "Convert for Ubuntu and set options" }
+      text: { ko: "'🐧 Ubuntu로 복사'(Ctrl+Shift+C)를 누르면 bash용 명령이 클립보드에 들어가고, '변환 미리보기...'에서 결과를 확인한 뒤 '클립보드에 복사'할 수 있어요. verify·proxy 같은 옵션은 '⚙ 실행 설정'에서 이 명령만, 도구 모음의 '전역 실행 설정:' 프리셋으로 전체에 정해요.", en: "Click 🐧 Copy for Ubuntu (Ctrl+Shift+C) to put a bash version on the clipboard, or check the result in Conversion Preview... and click Copy to Clipboard. Set options such as verify and proxy for one command in ⚙ Run Settings, or for everything with the Global settings: preset on the toolbar." }
   uses: { ko: ["API를 여러 번 호출하며 테스트할 때", "팀에서 받은 curl 명령을 정리해 두고 싶을 때", "Windows에서 만든 명령을 Ubuntu 서버에서 쓰고 싶을 때"], en: ["When you test an API with repeated calls", "When you want to organize curl commands you received", "When you need a Windows command to work on an Ubuntu server"] }
   settings_path: { ko: "%APPDATA%\\BigCURL", en: "%APPDATA%\\BigCURL" }
 
@@ -413,6 +608,15 @@
       text: { ko: "최종 크기, 레이어 합계, 낭비 공간과 비율을 보여 주고 낭비를 만든 파일을 짚어 줘요.", en: "Shows final size, layer total and wasted space with its ratio, and points to the files that cause it." }
     - title: { ko: "보기 설정", en: "View options" }
       text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "이미지 고르기", en: "Pick an image" }
+      text: { ko: "Docker Desktop 같은 Docker 엔진을 켠 뒤 BigDocker를 실행하면 왼쪽 '이미지' 목록에 로컬 이미지가 나와요. 위쪽 칸에 저장소·태그·ID를 입력해 거르고, 하나를 클릭하면 분석이 시작돼요. 오래 걸리면 '취소'를 누르세요.", en: "Start a Docker engine such as Docker Desktop, then run BigDocker to see your local images in the Images list on the left. Type a repository, tag or ID in the box above to filter, and click one to start the analysis. Click Cancel if it takes too long." }
+    - title: { ko: "레이어 따라가기", en: "Step through the layers" }
+      text: { ko: "'레이어 타임라인'에서 레이어를 고르면 그 레이어까지 쌓인 상태로 아래 화면이 바뀌어요. L0이 가장 아래 레이어이고, 레이어마다 추가·수정·삭제 수와 만든 명령을 함께 볼 수 있어요.", en: "Select a layer in the Layer Timeline and the views below switch to the state stacked up to that layer. L0 is the bottom layer, and each layer shows its added, modified and deleted counts and the command that created it." }
+    - title: { ko: "파일 살펴보기", en: "Browse the files" }
+      text: { ko: "'파일 시스템' 트리에서 폴더를 두 번 클릭하거나 Enter, 오른쪽/왼쪽 화살표로 펼치고 접어요. '변경된 것만 보기'를 켜면 고른 레이어에서 바뀐 항목만 남아요. 항목을 고르면 '상세 정보'에 경로, 종류, 추가/수정 레이어가 나와요.", en: "In the File System tree, double-click a folder or press Enter or the Right/Left arrows to expand and collapse it. Turn on Changed only to keep just the items changed in the selected layer. Select an item to see its path, type and adding/modifying layers under Details." }
+    - title: { ko: "큰 곳과 낭비 찾기", en: "Find big folders and waste" }
+      text: { ko: "'크기 트리맵'에서 큰 사각형을 클릭하면 트리에서 그 항목이 선택돼요. 위쪽 요약의 '낭비' 값이 크다면 '낭비 공간' 목록에서 덮어씀·삭제로 표시된 파일을 확인해 Dockerfile을 고쳐 보세요.", en: "Click a large rectangle in the Size Treemap to select that item in the tree. If the Wasted figure in the summary at the top is large, check the files marked overwritten or deleted in the Wasted Space list and adjust your Dockerfile." }
   uses: { ko: ["이미지가 왜 이렇게 큰지 궁금할 때", "Dockerfile을 고친 뒤 레이어 변화를 확인할 때", "이미지에 어떤 파일이 들어 있는지 살펴볼 때"], en: ["When you wonder why an image is so large", "When you check layer changes after editing a Dockerfile", "When you want to see what files an image contains"] }
   settings_path: { ko: "%APPDATA%\\BigDocker", en: "%APPDATA%\\BigDocker" }
 
@@ -434,6 +638,15 @@
       text: { ko: "vLLM 같은 OpenAI 호환 API 서버의 모델을 추가하고, 기본 모델은 목록에서 숨길 수 있어요.", en: "Add models from OpenAI-compatible servers such as vLLM, and hide built-in models you don't need." }
     - title: { ko: "보기 설정", en: "View options" }
       text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "opencode 연결하기", en: "Connect opencode" }
+      text: { ko: "'설정'을 누르고 'opencode 실행 파일 (v2)'과 '작업 디렉토리'를 '찾아보기'로 고른 뒤 '저장 후 다시 시작'을 누르세요. 작업 디렉토리는 에이전트가 파일을 읽고 고칠 프로젝트 폴더예요. 왼쪽 세션 목록 아래에 'opencode ... 실행 중'이 보이면 준비된 거예요.", en: "Click Settings, choose the opencode executable (v2) and the Working directory with Browse, then click Save and restart. The working directory is the project folder the agent reads and edits. When 'opencode ... running' appears below the session list on the left, you're ready." }
+    - title: { ko: "세션 만들고 대화하기", en: "Start a session and chat" }
+      text: { ko: "'+ 새 세션'을 누르고 위쪽에서 에이전트와 모델을 고른 뒤, 아래 입력란에 요청을 쓰고 Enter(또는 '보내기')를 누르세요. Shift+Enter는 줄바꿈이고, 진행 중인 실행은 '중단'으로 멈춰요. 세션을 오른쪽 클릭하면 '이름 변경'과 '삭제'를 할 수 있어요.", en: "Click + New session, pick an agent and model at the top, type your request in the box below and press Enter (or click Send). Shift+Enter adds a line break, and Stop ends a run in progress. Right-click a session to Rename or Delete it." }
+    - title: { ko: "권한 요청에 답하기", en: "Answer permission requests" }
+      text: { ko: "에이전트가 파일을 고치거나 명령을 실행하려 하면 '권한 요청'이 떠요. 내용을 보고 '한 번 허용', '항상 허용', '거부' 중에 고르세요.", en: "When the agent wants to edit a file or run a command, a Permission request appears. Review it and choose Allow once, Always allow or Reject." }
+    - title: { ko: "MCP 서버와 모델 추가하기", en: "Add MCP servers and models" }
+      text: { ko: "'MCP'에서 이름, 유형('로컬 (명령 실행)' 또는 '원격 (URL)'), 명령이나 URL을 넣고 '추가'하면 연결 상태가 목록에 나와요. '모델'에서는 vLLM 같은 서버의 프로바이더 ID·기준 URL·모델 ID를 넣고 '추가'하고, 필요 없는 기본 모델은 '사용 안 함'으로 숨겨요.", en: "In MCP, enter a name, a type (Local (run command) or Remote (URL)) and the command or URL, then click Add; the connection status shows in the list. In Models, enter the provider ID, base URL and model ID of a server such as vLLM and click Add, and hide built-in models you don't need with Disable." }
   uses: { ko: ["opencode를 터미널 대신 창에서 쓰고 싶을 때", "사내 vLLM 모델로 코딩 에이전트를 돌릴 때", "MCP 서버를 화면에서 쉽게 등록하고 싶을 때"], en: ["When you'd rather use opencode in a window than a terminal", "When you run a coding agent on your own vLLM model", "When you want to register MCP servers from a screen"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
 
@@ -455,6 +668,17 @@
       text: { ko: "프로세스가 끝나 버린 워커를 같은 세션으로 다시 이어 실행해요.", en: "Resume a crashed worker in the same session." }
     - title: { ko: "보기 설정", en: "View options" }
       text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−(Ctrl+휠)로 글자 크기 조절을 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− (or Ctrl+wheel) text size." }
+  howto:
+    - title: { ko: "역할 집합 만들기", en: "Build a role set" }
+      text: { ko: "'역할 집합 편집' 탭에서 이름을 입력하고 '새 집합'을 누르거나, 기존 집합을 골라 '복제'하세요. '역할 추가'로 역할을 넣고 prompt, tools, orchestrator 같은 역할 필드를 채운 뒤 '저장'을 누르면 돼요.", en: "On the 'Role Sets' tab, type a name and click 'New', or pick an existing set and click 'Clone'. Add roles with 'Add Role', fill in role fields such as prompt, tools and orchestrator, then click 'Save'." }
+    - title: { ko: "대상 폴더 고르고 시작", en: "Pick a folder and start" }
+      text: { ko: "'실행 / 모니터' 탭에서 역할 집합을 고르고 '찾아보기'로 git 저장소 폴더를 지정한 뒤 '시작'을 누르세요. 시작되면 기준 브랜치가 상태 줄에 표시돼요.", en: "On the 'Run / Monitor' tab, choose a role set, set a git repository folder with 'Browse', and click 'Start'. Once started, the base branch appears in the status line." }
+    - title: { ko: "요청 보내기", en: "Send a request" }
+      text: { ko: "왼쪽 '요청' 아래 입력 칸에 할 일을 적고 '보내기'를 누르세요. 요청 목록에서 접수, 분배중, 진행중, 완료 순으로 상태가 바뀌어요.", en: "Type the job in the box under 'Requests' and click 'Send'. The request moves through Received, Distributing, In progress and Completed in the request list." }
+    - title: { ko: "진행 상황 살펴보기", en: "Follow the progress" }
+      text: { ko: "에이전트 칩을 누르면 그 에이전트의 이벤트만 보이고, '필터 해제'로 되돌아와요. 줄을 누르면 상세가 펼쳐지고 Ctrl+C로 복사돼요. 크래시된 워커는 칩의 '⟳ 재개'로 이어서 실행하세요.", en: "Click an agent chip to show only its events, and 'Clear Filter' to go back. Click a line to expand its details, and press Ctrl+C to copy it. For a crashed worker, click '⟳ Resume' on its chip." }
+    - title: { ko: "로그 확인하고 정지", en: "Check the log and stop" }
+      text: { ko: "'로그' 탭에서 역할과 이벤트 타입을 골라 원본 이벤트를 걸러 볼 수 있어요. 작업이 끝나면 '실행 / 모니터' 탭에서 '정지'를 누르세요.", en: "On the 'Log' tab, pick a role and event type to filter the raw events. When the work is done, click 'Stop' on the 'Run / Monitor' tab." }
   uses: { ko: ["큰 작업을 여러 에이전트에게 나눠 맡기고 싶을 때", "에이전트별 진행과 비용을 지켜보고 싶을 때", "에이전트 작업을 브랜치로 나눠 안전하게 병합하고 싶을 때"], en: ["When you want to split a big job across several agents", "When you want to watch each agent's progress and cost", "When you want agent work kept on branches and merged safely"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
 
@@ -476,6 +700,17 @@
       text: { ko: "pcap/pcapng 파일을 열고, 지금 보이는 패킷을 pcapng로 저장해요.", en: "Open pcap/pcapng files and save the packets on screen as pcapng." }
     - title: { ko: "보기 설정", en: "View options" }
       text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "캡처 시작하기", en: "Start capturing" }
+      text: { ko: "'캡처 포트'에 포트 번호를 넣거나 비워 두고(비우면 전체) '▶ 캡처 시작'을 누르세요. 다른 pktmon 캡처가 실행 중이면 그걸 중지할지 물어요. 끝낼 때는 '■ 중지'를 누르세요.", en: "Enter a port in 'Capture Port' or leave it empty for all ports, then click '▶ Start Capture'. If another pktmon capture is running, you are asked whether to stop it. Click '■ Stop' to finish." }
+    - title: { ko: "계층과 프로토콜 고르기", en: "Choose a layer and protocols" }
+      text: { ko: "'전체', 'L2 데이터 링크', 'L3 네트워크', 'L4 전송', 'L7 응용' 중 하나를 고르면 그 계층 기준으로 출발지·목적지가 바뀌어요. ARP, TCP, DNS 같은 체크 박스를 끄면 그 프로토콜은 숨겨져요.", en: "Pick 'All', 'L2 Data Link', 'L3 Network', 'L4 Transport' or 'L7 Application', and source and destination switch to that layer. Uncheck boxes such as ARP, TCP or DNS to hide those protocols." }
+    - title: { ko: "필터로 좁히기", en: "Narrow it down with a filter" }
+      text: { ko: "'디스플레이 필터'에 tcp.port == 443 같은 식을 입력하고 Enter나 '적용'을 누르세요. '해제'를 누르면 다시 모두 보여요.", en: "Type an expression such as tcp.port == 443 in 'Display Filter' and press Enter or click 'Apply'. Click 'Reset' to show everything again." }
+    - title: { ko: "패킷 들여다보기", en: "Inspect a packet" }
+      text: { ko: "목록에서 패킷을 누르면 아래에 트리와 16진수로 내용이 나와요. 캡처 중에 목록이 자꾸 내려가면 '자동 스크롤'을 끄세요.", en: "Click a packet in the list to see it as a tree and hex below. If the list keeps scrolling during capture, uncheck 'Auto Scroll'." }
+    - title: { ko: "파일로 열고 저장하기", en: "Open and save files" }
+      text: { ko: "'열기'로 pcap/pcapng 파일을 불러오고, '저장'을 누르면 지금 보이는 패킷만 pcapng로 저장돼요. '지우기'는 목록을 비워요.", en: "Load a pcap/pcapng file with 'Open', and click 'Save' to write only the packets on screen as pcapng. 'Clear' empties the list." }
   uses: { ko: ["어떤 프로그램이 어디와 통신하는지 궁금할 때", "특정 포트의 트래픽을 빠르게 확인할 때", "따로 드라이버를 설치하지 않고 패킷을 보고 싶을 때"], en: ["When you wonder which program talks to where", "When you want a quick look at traffic on one port", "When you want to see packets without installing a capture driver"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
 
@@ -497,6 +732,15 @@
       text: { ko: "샘플 데이터로 실제 공격 없이도 화면과 탐지 결과를 미리 살펴볼 수 있어요.", en: "Try the screens and detection results with sample data, no real attack needed." }
     - title: { ko: "보기 설정", en: "View options" }
       text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "관리자 권한으로 실행", en: "Run as administrator" }
+      text: { ko: "BigDetection.exe를 오른쪽 클릭해 '관리자 권한으로 실행'을 고르세요. 위쪽에 '일반 권한 · 보안 로그 조회 불가'가 보이면 보안 로그를 읽지 못하니 다시 실행하세요.", en: "Right-click BigDetection.exe and choose 'Run as administrator'. If the header shows 'Standard user · security log unavailable', the security log can't be read, so restart it." }
+    - title: { ko: "모니터링 시작", en: "Start monitoring" }
+      text: { ko: "'모니터링 시작'을 누르면 정해진 간격으로 계속 스캔하고, '지금 스캔'은 바로 한 번 살펴봐요. 처음에는 '샘플 데이터 사용'을 켜고 스캔해 화면을 미리 익혀 보세요. 멈출 때는 '중지'를 누르세요.", en: "Click 'Start monitoring' to scan at a set interval, or 'Scan now' to check once right away. To get familiar first, check 'Use sample data' and scan. Click 'Stop' to stop." }
+    - title: { ko: "탐지 항목 살펴보기", en: "Review a detection" }
+      text: { ko: "'고위험 탐지'나 '전체 탐지 목록'에서 항목을 누르세요. 상세에 '판단 근거'와 '점수 근거'가 나오고, '즉시 대응', '조사 대응', '보안 강화', 'Windows 명령 힌트' 순서로 할 일을 확인할 수 있어요.", en: "Click an item in 'High-risk detections' or 'All detections'. The details show 'Evidence' and 'Score breakdown', followed by 'Immediate actions', 'Investigation', 'Hardening' and 'Windows command hints'." }
+    - title: { ko: "최소화해 두고 알림 받기", en: "Minimize and get alerts" }
+      text: { ko: "모니터링 중에 창을 최소화하거나 다른 창을 쓰고 있으면, 새 CRITICAL 탐지가 생길 때 Windows 알림이 떠요. 지난 스캔 결과는 '스캔 로그'에서 볼 수 있어요.", en: "While monitoring, if the window is minimized or another window is active, a Windows notification appears for each new CRITICAL detection. Past scan results are listed in 'Scan log'." }
   uses: { ko: ["RDP나 파일 공유가 열린 PC를 지켜보고 싶을 때", "로그온 실패가 계속 생기는 이유를 알고 싶을 때", "의심스러운 IP에 어떻게 대응할지 감을 잡고 싶을 때"], en: ["When you want to keep an eye on a PC with RDP or file sharing open", "When you want to know why logon failures keep happening", "When you need ideas for handling a suspicious IP"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
 
@@ -518,6 +762,17 @@
       text: { ko: "비밀번호는 현재 Windows 계정으로 암호화해 저장하고, RD 게이트웨이와 인증서 처리 방식을 고를 수 있어요.", en: "Passwords are encrypted with your Windows account, and you can set an RD Gateway and certificate handling." }
     - title: { ko: "보기 설정", en: "View options" }
       text: { ko: "한국어/영어 화면, 다크/라이트 모드, Ctrl +/−로 확대·축소를 지원해요.", en: "Korean/English UI, dark/light mode and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "서버 등록하기", en: "Add a server" }
+      text: { ko: "왼쪽 아래 '서버 추가'(Ctrl+N)를 누르고 '호스트 (이름 또는 IP)', '사용자명', '비밀번호'를 입력한 뒤 '저장'을 누르세요. 쓰던 .rdp 파일이 있으면 '.rdp 파일 가져오기' 단추로 불러올 수 있어요.", en: "Click 'Add Server' (Ctrl+N) at the bottom left, enter 'Host (name or IP)', user name and password, then click 'Save'. If you have an existing .rdp file, bring it in with the 'Import .rdp file' button." }
+    - title: { ko: "연결하기", en: "Connect" }
+      text: { ko: "목록에서 서버를 두 번 클릭하거나 Enter를 누르면 새 탭에서 연결돼요. 이미 열린 서버면 그 탭으로 옮겨 가고, 하나 더 열려면 오른쪽 클릭 '새 탭으로 연결'(Shift+Enter)을 쓰세요. 목록에 없는 PC는 '빠른 연결' 칸에 host[:port]를 입력하고 Enter를 누르세요.", en: "Double-click a server or press Enter to connect in a new tab. If it is already open, you switch to that tab; to open another one, right-click and choose 'Connect in New Tab' (Shift+Enter). For a PC not on the list, type host[:port] in 'Quick Connect' and press Enter." }
+    - title: { ko: "탭 다루기", en: "Work with tabs" }
+      text: { ko: "Ctrl+Tab으로 탭을 오가고, F11로 전체 화면, Ctrl+W로 탭을 닫아요. 탭을 오른쪽 클릭하면 '다시 연결', '연결 끊기'가 있고, Ctrl+B로 사이드바를 숨기면 화면이 넓어져요. 원격 화면에 포커스가 있으면 키가 원격 PC로 가니 단축키는 그 밖에서 누르세요.", en: "Switch tabs with Ctrl+Tab, go full screen with F11 and close a tab with Ctrl+W. Right-click a tab for 'Reconnect' and 'Disconnect', and press Ctrl+B to hide the sidebar for more room. Keys go to the remote PC while the remote screen has focus, so use shortcuts outside it." }
+    - title: { ko: "파일 옮기기", en: "Move files" }
+      text: { ko: "탐색기에서 파일을 연결된 원격 화면으로 끌어다 놓으면 클립보드에 올라가요. 원격 PC의 붙여 넣을 폴더에서 Ctrl+V를 누르세요. 서버 설정의 '클립보드 공유'가 켜져 있어야 해요.", en: "Drag files from Explorer onto a connected remote screen to put them on the clipboard, then press Ctrl+V in the destination folder on the remote PC. 'Share clipboard' must be on in the server settings." }
+    - title: { ko: "목록 정리하기", en: "Keep the list tidy" }
+      text: { ko: "서버를 오른쪽 클릭해 '편집'(F2), '복제', '즐겨찾기 추가', '삭제'(Delete)를 고르세요. Ctrl+F로 서버를 검색하고, F5로 접속 가능 여부를 새로 고쳐요.", en: "Right-click a server for 'Edit' (F2), 'Duplicate', 'Add to Favorites' or 'Delete' (Delete). Press Ctrl+F to search servers and F5 to refresh which ones are reachable." }
   uses: { ko: ["여러 서버에 동시에 접속해 관리할 때", "자주 쓰는 원격 PC를 목록으로 정리하고 싶을 때", "원격 PC로 파일을 클립보드로 옮기고 싶을 때"], en: ["When you manage several servers at the same time", "When you want your frequent remote PCs in a tidy list", "When you want to move files to a remote PC via the clipboard"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
 
@@ -539,6 +794,15 @@
       text: { ko: "텍스트는 UTF-8·Hex·Base64로 넣고 보며, 파일은 그대로 암호화해 다른 파일로 저장해요. 결과를 바로 입력으로 넘겨 복호화를 확인할 수 있어요.", en: "Enter and view text as UTF-8, Hex or Base64, and encrypt files as they are into another file. Pass the result straight back as input to check decryption." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "암호화 방법 고르기", en: "Choose a method" }
+      text: { ko: "'암호화 방법' 목록에서 하나를 고르세요. 새로 보호할 데이터라면 '권장' 등급에서 고르고, 옛 방식을 고르면 나오는 경고를 꼭 읽어 보세요.", en: "Pick one from the 'Methods' list. For data you are protecting now, choose from 'Recommended', and read the warning shown when you pick a legacy method." }
+    - title: { ko: "키 정하기", en: "Set the key" }
+      text: { ko: "대칭키 방식은 '키'에서 '암호 (PBKDF2-HMAC-SHA256)'를 고르고 '암호'를 입력한 뒤, '출력 형식'을 '컨테이너 (권장)'로 두세요. 공개 키 방식은 '키 쌍 생성'을 누르고 '공개 키 저장...', '개인 키 저장...'으로 보관하거나, 받은 키를 '공개 키 열기...'로 불러와요.", en: "For symmetric methods, choose 'Password (PBKDF2-HMAC-SHA256)' under 'Key', enter the password, and keep 'Output format' at 'Container (recommended)'. For public-key methods, click 'Generate key pair' and keep the keys with 'Save public key...' and 'Save private key...', or load a key you received with 'Open public key...'." }
+    - title: { ko: "텍스트나 파일 암호화", en: "Encrypt text or a file" }
+      text: { ko: "'입력'에서 '텍스트'를 고르고 내용을 쓰거나, '파일'을 고르고 '찾아보기...'로 파일을 지정한 뒤 '암호화'를 누르세요. 텍스트 결과는 '출력'에 나와 '복사'로 가져가고, 파일은 저장할 곳을 물어 새 파일로 저장해요.", en: "Under 'Input', choose 'Text' and type, or choose 'File' and pick one with 'Browse...', then click 'Encrypt'. Text results appear under 'Output' and can be taken with 'Copy'; for a file, you are asked where to save the new file." }
+    - title: { ko: "복호화로 확인하기", en: "Check by decrypting" }
+      text: { ko: "'결과를 입력으로'를 누르고 같은 암호나 키로 '복호화'를 누르면 원래 내용이 돌아오는지 바로 확인할 수 있어요. 다른 곳에서 받은 암호문은 '입력 인코딩'을 Base64나 Hex로 맞춰 붙여 넣으세요.", en: "Click 'Use result as input', then 'Decrypt' with the same password or key to check that the original comes back. For ciphertext from elsewhere, set 'Input encoding' to Base64 or Hex before pasting it." }
   uses: { ko: ["중요한 파일이나 메모를 암호로 잠가 보관하고 싶을 때", "상대의 공개 키로 암호화해 개인 키를 가진 사람만 열게 하고 싶을 때", "OpenSSL이나 다른 시스템과 같은 결과가 나오는지 확인하거나 암호 방식을 배울 때"], en: ["When you want to lock important files or notes with a password", "When you encrypt with someone's public key so only the holder of the private key can open it", "When you check results against OpenSSL or another system, or learn how ciphers work"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigCipher.json (암호·키는 저장하지 않아요)", en: "CONFIGURATION\\BigCipher.json next to the exe (passwords and keys are not saved)" }
 
@@ -560,6 +824,17 @@
       text: { ko: "잘라내기·복사·붙여넣기, 끌어다 놓기, 휴지통으로 삭제를 바로 할 수 있어요.", en: "Cut, copy, paste, drag and drop, or send files to the Recycle Bin right there." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "폴더 고르기", en: "Pick a folder" }
+      text: { ko: "왼쪽 트리에서 바탕 화면, 사진, 드라이브 같은 폴더를 고르면 사진이 나와요. '썸네일'과 '상세 목록'으로 보기를 바꾸고, '상위 폴더'나 마우스 뒤로/앞으로 버튼으로 오가세요.", en: "Choose a folder such as Desktop, Pictures or a drive in the tree on the left to see its photos. Switch views with 'Thumbnails' and 'Details', and move around with 'Up' or the mouse back and forward buttons." }
+    - title: { ko: "전체 화면으로 보기", en: "View full screen" }
+      text: { ko: "사진을 두 번 클릭하거나 Enter를 누르세요. Space·PageDown은 다음, PageUp은 이전, Home·End는 처음과 끝 사진이고, +/−로 확대·축소, Esc로 닫아요. 여러 쪽 TIFF는 ↑/↓로 쪽을 넘기고, Ctrl+C로 이미지를 복사할 수 있어요.", en: "Double-click a photo or press Enter. Space or PageDown goes to the next photo, PageUp to the previous, Home and End to the first and last; + and − zoom, and Esc closes. Use the up and down arrows to turn pages in a multi-page TIFF, and Ctrl+C to copy the image." }
+    - title: { ko: "보는 크기 정하기", en: "Choose the display size" }
+      text: { ko: "도구 모음의 '화면에 맞춤'이나 '원본 크기'로 전체 화면 표시 방식을 정하세요. 전체 화면에서 오른쪽 클릭해도 바꿀 수 있고, 원본 크기에서는 끌어서 사진을 움직여요.", en: "Use 'Fit to Screen' or 'Original Size' on the toolbar to set how full screen shows photos. You can also change it by right-clicking in full screen, and drag to pan at original size." }
+    - title: { ko: "이름 한꺼번에 바꾸기", en: "Rename in a batch" }
+      text: { ko: "같은 폴더의 사진을 여러 개 고르고 '이름 일괄 변경'을 누르세요. '이름 패턴'(예: '20261109-####')과 '시작 번호'를 넣어 '새 이름'을 확인한 뒤 '이름 변경'을 누르고, 마음에 안 들면 '실행 취소'로 되돌려요.", en: "Select several photos in one folder and click 'Batch Rename'. Enter a 'Name Pattern' (for example '20261109-####') and 'Start Number', check the new names, then click 'Rename'; click 'Undo' to revert." }
+    - title: { ko: "파일 정리하기", en: "Tidy up files" }
+      text: { ko: "목록에서 Ctrl+X나 Ctrl+C로 잘라내거나 복사하고, 옮길 폴더에서 Ctrl+V로 붙여 넣으세요. 필요 없는 사진은 Delete를 누르면 확인 후 휴지통으로 가요.", en: "Cut or copy with Ctrl+X or Ctrl+C in the list, and paste with Ctrl+V in the target folder. Press Delete to send unwanted photos to the Recycle Bin after a confirmation." }
   uses: { ko: ["여행 사진을 빠르게 훑어볼 때", "사진 파일 이름을 날짜와 번호로 맞출 때", "필요 없는 사진을 골라 지울 때"], en: ["When you flip through travel photos", "When you rename photos with a date and number", "When you pick out and delete unwanted photos"] }
   settings_path: { ko: "%APPDATA%\\BigImageView\\BigImageView.json", en: "%APPDATA%\\BigImageView\\BigImageView.json" }
 
@@ -581,6 +856,17 @@
       text: { ko: "계단식·바둑판식 정렬, 최대화, Ctrl+Tab 전환을 쓰고, 탐색기에서 다시 열어도 같은 창에 들어와요.", en: "Cascade or tile, maximize and switch with Ctrl+Tab; opening another file from Explorer lands in the same window." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 화면 확대(그림 배율은 따로)를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− UI zoom (separate from image zoom)." }
+  howto:
+    - title: { ko: "그림 열기", en: "Open a picture" }
+      text: { ko: "'파일 > 열기...'(Ctrl+O)를 누르거나 그림 파일을 창에 끌어다 놓으세요. 화면을 바로 가져오려면 '캡처' 메뉴의 '사각형 영역'(PrtSc)이나 '창'(Ctrl+PrtSc)을 쓰면 새 창에 열리고 클립보드에도 복사돼요.", en: "Choose 'File > Open...' (Ctrl+O) or drag a picture onto the window. To grab the screen, use 'Rectangle Region' (PrtSc) or 'Window' (Ctrl+PrtSc) in the 'Capture' menu; it opens in a new window and is copied to the clipboard." }
+    - title: { ko: "영역 고르기", en: "Make a selection" }
+      text: { ko: "'선택' 메뉴나 도구 모음에서 사각형·원·다각형 선택 도구를 고르고 끌어서 고르세요. Shift는 더하기, Alt는 빼기이고, 다각형은 클릭으로 점을 찍고 두 번 클릭이나 Enter로 닫아요. '선택 > 페더...'(Shift+F6)로 경계를 부드럽게 할 수 있어요.", en: "Pick the rectangle, ellipse or polygon selection tool from the 'Select' menu or toolbar and drag. Hold Shift to add and Alt to subtract; for a polygon, click to add points and double-click or press Enter to close. Soften the edge with 'Select > Feather...' (Shift+F6)." }
+    - title: { ko: "필터 적용하기", en: "Apply a filter" }
+      text: { ko: "'필터'나 '조정' 메뉴에서 항목을 고르고, 대화 상자에서 값을 바꾸며 '미리 보기'로 확인한 뒤 '확인'을 누르세요. 선택 영역이 있으면 그 안에만 적용되고, Ctrl+Z로 되돌릴 수 있어요.", en: "Choose an item from the 'Filter' or 'Adjustments' menu, adjust values in the dialog while checking 'Preview', and click 'OK'. With a selection, only that area changes; press Ctrl+Z to undo." }
+    - title: { ko: "붙여 넣어 합성하기", en: "Paste and composite" }
+      text: { ko: "다른 그림에서 Ctrl+C로 복사하고 대상 그림에서 Ctrl+V를 누르세요. 떠 있는 조각을 끌어 옮기고 모서리 손잡이로 크기를 바꾼 뒤(Shift는 비율 고정), '블렌드 모드'나 'Poisson 블렌딩'을 골라 Enter로 확정하거나 Esc로 취소해요.", en: "Copy with Ctrl+C in one picture and press Ctrl+V in the target. Drag the floating piece to move it and use the corner handles to resize (Shift keeps the ratio), choose a 'Blend mode' or 'Poisson blending', then press Enter to commit or Esc to cancel." }
+    - title: { ko: "크기 바꾸고 저장하기", en: "Resize and save" }
+      text: { ko: "'이미지 > 크기 조정(리샘플링)...'(Ctrl+Alt+I)에서 커널을 골라 크기를 바꾸고, '선택 영역으로 자르기'(Ctrl+Shift+X)로 잘라요. '파일 > 저장'(Ctrl+S)이나 '다른 이름으로 저장...'(Ctrl+Shift+S)으로 저장하고, JPEG·WebP·GIF는 '저장 옵션' 창에서 품질 등을 정해요.", en: "Resize with a chosen kernel in 'Image > Image Size (Resample)...' (Ctrl+Alt+I), and crop with 'Crop to Selection' (Ctrl+Shift+X). Save with 'File > Save' (Ctrl+S) or 'Save As...' (Ctrl+Shift+S); for JPEG, WebP and GIF, set quality and other options in the 'Save Options' window." }
   uses: { ko: ["사진 일부만 흐리거나 모자이크할 때", "두 사진을 경계 없이 합성하고 싶을 때", "필터와 리샘플링이 실제로 어떻게 계산되는지 비교해 볼 때"], en: ["When you blur or pixelate part of a photo", "When you want to combine two photos without a visible seam", "When you compare how filters and resampling are actually computed"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigPainter.json", en: "CONFIGURATION\\BigPainter.json next to the exe" }
 
@@ -602,6 +888,17 @@
       text: { ko: "주석을 합쳐 PNG로 저장하거나 클립보드에 복사해요. 원본이 든 프로젝트(.bcap)로 저장하면 나중에 다시 고칠 수 있어요.", en: "Save the annotated image as PNG or copy it to the clipboard. Save a project (.bcap) that keeps the original so you can edit it again later." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 다크/라이트 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and dark or light themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "화면 캡처하기", en: "Capture the screen" }
+      text: { ko: "'영역'·'창'·'스크롤' 버튼(또는 캡처 메뉴)을 누른 뒤 끌어서 영역을 고르거나 창을 클릭하세요. Esc를 누르면 취소돼요. 찍은 이미지는 편집 화면에 열리고 저장 폴더(기본은 사진\\BigCapture)에 PNG로 바로 저장돼요.", en: "Click Region, Window or Scroll (or use the Capture menu), then drag a region or click a window. Press Esc to cancel. The image opens in the editor and is saved right away as a PNG in the save folder (Pictures\\BigCapture by default)." }
+    - title: { ko: "주석 달기", en: "Add annotations" }
+      text: { ko: "도구(사각형·화살표·텍스트·번호·가리기 등)와 색, 굵기를 고른 뒤 이미지 위에서 끌어 그리세요. 텍스트는 클릭한 자리에 입력하고 Enter로 확정해요(Shift+Enter는 줄 바꿈). '선택' 도구로 고른 주석은 Del로 지우고, Ctrl+Z·Ctrl+Y로 되돌리거나 다시 실행해요.", en: "Pick a tool (Rectangle, Arrow, Text, Number, Redact and so on), a color and a width, then drag on the image. For text, click where it goes, type and press Enter to finish (Shift+Enter adds a line). Select an annotation with the Select tool and press Del to remove it; Ctrl+Z and Ctrl+Y undo and redo." }
+    - title: { ko: "저장하고 복사하기", en: "Save and copy" }
+      text: { ko: "Ctrl+S는 주석을 합친 PNG로 저장하고, Ctrl+Shift+C는 클립보드에 복사해요. 나중에 다시 고치려면 Ctrl+Shift+S로 프로젝트(.bcap)로 저장하고 Ctrl+O로 열면 돼요. 프로젝트에는 가리기 전 원본이 들어 있으니 공유할 때는 PNG를 쓰세요.", en: "Ctrl+S saves a PNG with the annotations merged, and Ctrl+Shift+C copies it to the clipboard. To edit again later, save a project (.bcap) with Ctrl+Shift+S and open it with Ctrl+O. A project contains the original before redaction, so share the PNG instead." }
+    - title: { ko: "GIF·MP4로 녹화하기", en: "Record a GIF or MP4" }
+      text: { ko: "'GIF'나 'MP4' 버튼을 누르고 녹화할 영역을 끌거나 창을 클릭하면 바로 시작해요. 작은 상태 창의 '중지'를 누르면 끝나고, 파일은 저장 폴더에 저장돼요.", en: "Click GIF or MP4 and drag the recording region or click a window; recording starts right away. Click Stop in the small status window to finish, and the file is saved in the save folder." }
+    - title: { ko: "녹화·저장 설정", en: "Recording and save settings" }
+      text: { ko: "설정 메뉴에서 GIF·MP4 프레임률, GIF 디더링, 녹화에 커서 포함을 바꾸고, '저장 폴더 바꾸기'로 저장 위치를 정해요. 파일 > 저장 폴더 열기로 저장된 파일을 바로 볼 수 있어요.", en: "In the Settings menu, change the GIF and MP4 frame rates, GIF Dithering and Include Cursor in Recording, and pick where files go with Change Save Folder. File > Open Save Folder shows the saved files." }
   uses: { ko: ["설명서나 보고서에 넣을 화면을 찍고 표시할 때", "긴 웹 페이지나 문서를 한 장으로 남기고 싶을 때", "사용 방법을 짧은 GIF나 MP4로 보여 주고 싶을 때"], en: ["When you capture and mark up screens for a manual or report", "When you want to keep a long web page or document as one image", "When you want to show how something works in a short GIF or MP4"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigCapture.json", en: "CONFIGURATION\\BigCapture.json next to the exe" }
 
@@ -623,6 +920,15 @@
       text: { ko: "더블클릭이나 F로 전체 화면으로 보고, 마우스를 아래로 내리면 조작 바가 나와요.", en: "Double-click or press F for full screen; move the mouse to the bottom to show the controls." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 조작 바 글자 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and enlarge the control text with Ctrl +/−." }
+  howto:
+    - title: { ko: "파일 열기", en: "Open a file" }
+      text: { ko: "동영상·음악 파일을 창에 끌어다 놓거나 열기 버튼(Ctrl+O)을 누르세요. 같은 폴더에 이름이 같은 자막 파일이 있으면 함께 불러와요.", en: "Drop a video or music file onto the window or click Open (Ctrl+O). Subtitle files with the same name in the same folder are loaded along with it." }
+    - title: { ko: "재생 조작하기", en: "Control playback" }
+      text: { ko: "Space로 재생/일시 정지하고, ←/→는 5초, Ctrl+←/→는 30초씩 움직여요. ↑/↓나 마우스 휠로 볼륨을, M으로 음소거를 바꿔요. 시간 칸에 1:23:45.678이나 12:30처럼 입력하고 Enter(또는 '이동')를 누르면 그 위치로 가요.", en: "Space plays or pauses, Left/Right moves 5 seconds and Ctrl+Left/Right moves 30 seconds. Up/Down or the mouse wheel changes the volume, and M mutes. Type a time such as 1:23:45.678 or 12:30 in the time box and press Enter (or click Go) to jump there." }
+    - title: { ko: "자막과 오디오 고르기", en: "Choose subtitles and audio" }
+      text: { ko: "'자막' 버튼에서 자막 트랙을 고르거나 '자막 파일 열기...'로 파일을 더해요. 재생 중에 자막 파일을 창에 끌어다 놓아도 돼요. 싱크는 [ ]로 0.5초씩 맞추고 같은 메뉴에서 초기화해요. 언어가 여러 개면 '오디오' 버튼에서 트랙을 고르세요.", en: "Use the Subtitle button to pick a subtitle track or add a file with 'Open subtitle file...'. You can also drop a subtitle file onto the window while playing. Adjust the sync by 0.5 seconds with [ and ], and reset it from the same menu. If there are several languages, pick a track with the Audio button." }
+    - title: { ko: "이퀄라이저 맞추기", en: "Set the equalizer" }
+      text: { ko: "E를 누르거나 이퀄라이저 버튼을 눌러 창을 여세요. 켜짐/꺼짐을 바꾸고 프리셋을 고르거나 10개 밴드를 직접 움직여요. '자동 프리앰프'를 켜 두면 소리가 깨지지 않게 맞춰 주고, '초기화'로 처음 값으로 돌아가요.", en: "Press E or click the equalizer button to open its window. Switch it on or off, pick a preset or move the 10 bands yourself. Keep Auto preamp on to avoid clipping, and click Reset to go back to the defaults." }
   uses: { ko: ["받아 둔 동영상을 자막과 함께 볼 때", "자막 싱크가 맞지 않을 때", "음악을 이퀄라이저로 다듬어 들을 때"], en: ["When you watch a downloaded video with subtitles", "When the subtitles are out of sync", "When you want to fine-tune music with an equalizer"] }
   settings_path: { ko: "%LOCALAPPDATA%\\BigPlayer\\setting.json", en: "%LOCALAPPDATA%\\BigPlayer\\setting.json" }
   license_terms: { ko: "GPL-2.0-or-later · 무보증", en: "GPL-2.0-or-later · No warranty" }
@@ -646,6 +952,15 @@
       text: { ko: "방송이 보내 주는 곡 제목과 실제 형식(코덱·샘플 레이트)을 보여 줘요.", en: "Shows the track title sent by the station and the actual stream format (codec and sample rate)." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "방송 목록 받기", en: "Get the station list" }
+      text: { ko: "처음 실행하면 Radio Browser에서 방송 목록을 받아 와요. 그 뒤로는 받아 둔 목록을 쓰고 실행할 때 하루가 지났으면 새로 받아요. 바로 받고 싶으면 파일 > 방송 목록 새로 받기(F5)를 누르세요.", en: "On first launch BigRadio downloads the station list from Radio Browser. After that it uses the saved list and downloads a new one at launch if a day has passed; to refresh now, choose File > Refresh Station List (F5)." }
+    - title: { ko: "방송 찾기", en: "Find a station" }
+      text: { ko: "국가 목록('전체 국가')에서 나라를 고르고 '방송 이름 검색' 칸에 이름을 입력하면 목록이 좁혀져요. 대소문자와 공백은 무시해요.", en: "Pick a country from the country list ('All countries') and type in the 'Search station name' box to narrow the list. Case and spaces are ignored." }
+    - title: { ko: "재생하고 멈추기", en: "Play and stop" }
+      text: { ko: "방송을 두 번 클릭하거나 고른 뒤 Enter 또는 '▶ 재생'을 누르세요. '■ 정지'나 Esc로 멈추고, 볼륨 막대를 맨 왼쪽으로 내리면 음소거돼요.", en: "Double-click a station, or select it and press Enter or click ▶ Play. Click ■ Stop or press Esc to stop, and drag the volume slider all the way left to mute." }
+    - title: { ko: "즐겨찾기 모으기", en: "Collect favorites" }
+      text: { ko: "방송 줄의 ☆를 누르면 ★로 바뀌며 즐겨찾기에 들어가요. '★ 즐겨찾기' 버튼을 누르면 즐겨찾기한 방송만 보이고, 다시 누르면 전체로 돌아가요.", en: "Click ☆ on a station row to turn it into ★ and add it to your favorites. Click the ★ Favorites button to show only favorites, and click it again to see all stations." }
   uses: { ko: ["일하면서 다른 나라 라디오를 틀어 두고 싶을 때", "외국어 공부로 현지 방송을 들을 때", "방송 소리 크기를 VU 미터로 보고 싶을 때"], en: ["When you want radio from another country playing while you work", "When you listen to local broadcasts to learn a language", "When you want to watch broadcast levels on VU meters"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigRadio.json (방송 목록 캐시와 FFmpeg DLL은 %LOCALAPPDATA%\\BigRadio)", en: "BigRadio.json in the CONFIGURATION folder next to the exe (station list cache and FFmpeg DLLs in %LOCALAPPDATA%\\BigRadio)" }
 
@@ -667,6 +982,15 @@
       text: { ko: "마지막 파일과 위치, 볼륨, 이퀄라이저를 기억해 다시 켜면 이어서 들을 수 있어요. 기본 출력 장치를 바꾸면 소리도 따라가요.", en: "Remembers the last file, position, volume and equalizer so you can pick up where you left off. Sound follows when you change the default output device." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "파일 열고 재생하기", en: "Open and play a file" }
+      text: { ko: "'열기' 버튼이나 파일 > 열기(Ctrl+O)로 오디오 파일을 고르세요. '재생'·'일시 정지'·'정지' 버튼으로 재생을 조작하고, Space로 재생과 일시 정지를 오가요.", en: "Choose an audio file with the Open button or File > Open (Ctrl+O). Control playback with the Play, Pause and Stop buttons; Space toggles play and pause." }
+    - title: { ko: "구간 반복하기", en: "Repeat a section" }
+      text: { ko: "파형을 클릭하면 그 위치로 이동하고, 좌우로 끌면 그 구간이 반복 구간이 돼요. 구간 시간은 '반복 시작'·'반복 끝'에 표시돼요. '반복 해제'(재생 > 반복 구간 지우기)를 누르거나 파형을 한 번 클릭하면 반복이 풀려요.", en: "Click the waveform to jump there, or drag across it to make that part the repeat region. The times appear under Repeat start and Repeat end. Click Clear repeat (Playback > Clear Repeat Region), or click the waveform once, to stop repeating." }
+    - title: { ko: "이퀄라이저 맞추기", en: "Adjust the equalizer" }
+      text: { ko: "이퀄라이저의 대역 막대를 위아래로 끌어 1dB 단위로 맞추세요. 막대를 두 번 클릭하면 그 대역이 0dB로 돌아가요. 프리앰프는 소리가 깨지지 않게 자동으로 맞춰져요.", en: "Drag the equalizer band sliders up or down in 1 dB steps. Double-click a slider to return that band to 0 dB. The preamp is adjusted automatically to prevent clipping." }
+    - title: { ko: "스펙트럼 모양 바꾸기", en: "Change the spectrum style" }
+      text: { ko: "스펙트럼 옆의 '이전 모양'·'다음 모양' 버튼이나 보기 > 스펙트럼 모양에서 막대·LED 막대·곡선·원형·스펙트로그램·오실로스코프를 골라요.", en: "Use the Previous style and Next style buttons by the spectrum, or View > Spectrum Style, to pick Bars, LED Bars, Curve, Radial, Spectrogram or Oscilloscope." }
   uses: { ko: ["악기나 노래 연습으로 어려운 구간을 반복해 들을 때", "외국어 듣기 공부로 한 문장을 되풀이할 때", "이퀄라이저로 음악 소리를 내 취향에 맞출 때"], en: ["When practicing an instrument or song and repeating a hard passage", "When studying a language and replaying one sentence", "When tuning music to your taste with the equalizer"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigAudio.json (FFmpeg DLL은 %LOCALAPPDATA%\\BigAudio)", en: "CONFIGURATION\\BigAudio.json next to the exe (FFmpeg DLLs in %LOCALAPPDATA%\\BigAudio)" }
 
@@ -688,6 +1012,17 @@
       text: { ko: "WAV, FLAC, MP3, M4A/AAC, OGG, Opus, AIFF, WMA, MKA, WebM 오디오를 열고, 실행 취소·다시 실행으로 편집을 언제든 되돌릴 수 있어요.", en: "Opens WAV, FLAC, MP3, M4A/AAC, OGG, Opus, AIFF, WMA, MKA and WebM audio, and undo and redo let you take back any edit." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "파일 열고 둘러보기", en: "Open a file and look around" }
+      text: { ko: "'열기'(Ctrl+O)를 누르거나 오디오 파일을 창에 끌어다 놓으세요. 마우스 휠은 마우스 위치를 기준으로 시간을 확대·축소하고, Shift+휠은 좌우로 이동하며, '전체'는 파일 전체를 보여 줘요. Space로 재생/정지해요.", en: "Click Open (Ctrl+O) or drop an audio file onto the window. The mouse wheel zooms time around the pointer, Shift+wheel scrolls left and right, and Fit shows the whole file. Space plays and stops." }
+    - title: { ko: "시간 구간 자르고 붙이기", en: "Cut and paste time ranges" }
+      text: { ko: "파형에서 끌어 시간 구간을 고르세요(클릭만 하면 커서가 옮겨져요). Ctrl+X 잘라내기, Ctrl+C 복사, Del 삭제를 하고, Ctrl+V는 선택한 구간을 바꾸거나 선택이 없으면 커서 위치에 넣어요. Ctrl+A는 전체 선택, Esc는 선택 해제예요.", en: "Drag on the waveform to select a time range (a plain click moves the cursor). Use Ctrl+X to cut, Ctrl+C to copy and Del to delete; Ctrl+V replaces the selection, or inserts at the cursor when nothing is selected. Ctrl+A selects all and Esc clears the selection." }
+    - title: { ko: "특정 소리만 줄이거나 지우기", en: "Reduce or remove just one sound" }
+      text: { ko: "스펙트로그램에서 끌어 시간·주파수 사각형을 고르거나, 선택 칸에 시작·끝(초)과 낮은·높은 Hz를 넣고 '선택 적용'을 누르세요. '이득 (dB)'을 정한 뒤 '감쇠'·'제거'·'증폭'을 누르면 그 영역에만 적용돼요. 주파수 범위가 없으면 전체 대역에 적용해요.", en: "Drag a time-frequency rectangle on the spectrogram, or enter Start (s), End (s), Low Hz and High Hz in the selection panel and click Apply selection. Set Gain (dB), then click Attenuate, Remove or Amplify to apply it to that area only. With no frequency range, it applies to the full band." }
+    - title: { ko: "이음 확인하고 되돌리기", en: "Check seams and undo" }
+      text: { ko: "잘라내거나 붙인 뒤에는 '이음 정보'에서 이음 앞뒤 음량을 보고, 재생 > 이음 앞뒤 2초 듣기로 바로 들어 보세요. 마음에 들지 않으면 Ctrl+Z로 되돌리고 Ctrl+Y로 다시 실행해요.", en: "After cutting or pasting, check the loudness around the seam under Splice information and use Playback > Listen 2 s Around Splice to hear it. If you do not like it, press Ctrl+Z to undo and Ctrl+Y to redo." }
+    - title: { ko: "내보내기", en: "Export" }
+      text: { ko: "'내보내기'(Ctrl+S)를 누르고 저장 대화 상자의 파일 형식에서 WAV 16/24비트·32비트 float 또는 FLAC 16/24비트를 고르세요. 내보내지 않은 편집이 있으면 다른 파일을 열거나 끝낼 때 물어봐요.", en: "Click Export (Ctrl+S) and choose WAV 16/24-bit, WAV 32-bit float or FLAC 16/24-bit as the file type in the save dialog. If you have edits you have not exported, it asks before opening another file or closing." }
   uses: { ko: ["녹음에 섞인 기침이나 휴대폰 알림음만 골라 지울 때", "긴 녹음에서 필요 없는 부분을 잘라 내고 이음새 없이 이을 때", "소리가 주파수별로 어떻게 생겼는지 눈으로 살펴볼 때"], en: ["When removing just a cough or phone notification mixed into a recording", "When cutting unneeded parts out of a long recording and joining it seamlessly", "When looking at how a sound is shaped across frequencies"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigWave.json (FFmpeg DLL은 %LOCALAPPDATA%\\BigWave)", en: "CONFIGURATION\\BigWave.json next to the exe (FFmpeg DLLs in %LOCALAPPDATA%\\BigWave)" }
 
@@ -709,6 +1044,15 @@
       text: { ko: "exe 옆 SONG 폴더에 곡 파일(JSON)을 넣으면 목록에 더해져요.", en: "Put song files (JSON) in a SONG folder next to the exe to add them to the list." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "곡 고르기", en: "Pick a song" }
+      text: { ko: "'곡' 목록에서 듣고 싶은 곡을 고르세요. 옆에 템포·박자·조성이 표시되고, 다음에 켜면 마지막에 고른 곡이 선택되어 있어요.", en: "Choose a song from the Song list. Its tempo, time signature and key appear next to it, and the last song you picked is selected the next time you open the app." }
+    - title: { ko: "재생하고 따라 보기", en: "Play and follow along" }
+      text: { ko: "'재생'을 누르면 악보가 흐르고 연주하는 건반이 빛나요. 아래 상태 줄에서 진행 시간과 마디를 확인할 수 있어요.", en: "Click Play and the score scrolls while the keys being played light up. The status bar at the bottom shows the elapsed time and the current bar." }
+    - title: { ko: "멈추기", en: "Pause or stop" }
+      text: { ko: "'일시 정지'를 누른 뒤 다시 '재생'을 누르면 멈춘 곳부터 이어져요. '정지'를 누르면 곡의 처음으로 돌아가요. 재생 메뉴에서도 같은 일을 할 수 있어요.", en: "Click Pause, then Play again to continue from where it stopped. Stop goes back to the beginning of the song. The Playback menu does the same." }
+    - title: { ko: "곡 파일 더하기", en: "Add song files" }
+      text: { ko: "BigPiano.exe 옆에 SONG 폴더를 만들고 곡 파일(*.json)을 넣은 뒤 다시 실행하세요. 내장 곡 뒤에 파일 이름 순서로 목록에 붙어요.", en: "Create a SONG folder next to BigPiano.exe, put song files (*.json) in it and start the app again. They are added after the built-in songs in file name order." }
   uses: { ko: ["아이와 함께 피아노 곡을 들으며 악보를 볼 때", "어떤 건반을 누르는지 눈으로 익히고 싶을 때", "잔잔한 피아노 곡을 틀어 두고 싶을 때"], en: ["When you listen to piano songs and watch the score with your kids", "When you want to learn which keys are played by watching", "When you want some calm piano music in the background"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigPiano.json", en: "CONFIGURATION\\BigPiano.json next to the exe" }
 
@@ -730,6 +1074,15 @@
       text: { ko: "PNG, BMP, TIFF, JPEG를 원본으로 열고 결과는 무손실 PNG로 저장해요. 팔레트 이미지는 쓰지 않아요.", en: "Opens PNG, BMP, TIFF and JPEG covers and saves the result as lossless PNG. Palette images are not accepted." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "원본 이미지 고르기", en: "Choose a cover image" }
+      text: { ko: "'숨기기'를 고른 상태에서 '이미지 선택...'(또는 파일 > 원본 이미지 열기)으로 PNG·BMP·TIFF·JPEG 이미지를 여세요. 크기와 숨길 수 있는 최대 바이트가 표시돼요. 가능하면 JPEG보다 처음부터 무손실로 저장된 이미지를 쓰세요.", en: "With Hide selected, open a PNG, BMP, TIFF or JPEG image with Select Image... (or File > Open Cover Image...). Its size and the maximum bytes it can hold are shown. When you can, use an image saved losslessly from the start rather than a JPEG." }
+    - title: { ko: "텍스트와 비밀키 넣고 생성하기", en: "Enter text and a password, then generate" }
+      text: { ko: "'텍스트'에 숨길 내용을 쓰고 '비밀키'와 '비밀키 확인'에 같은 값을 넣으세요. '찾아보기...'로 생성 폴더를 정하고 '생성'을 누르면 그 폴더에 '원본이름.png'로 저장돼요. 같은 이름이 있으면 '원본이름 (2).png'처럼 번호가 붙어요.", en: "Type the message in Text and enter the same value in Password and Confirm Password. Pick the Output Folder with Browse... and click Generate; the result is saved there as 'original name.png'. If that name exists, a number is added, such as 'original name (2).png'." }
+    - title: { ko: "파일 그대로 전달하기", en: "Send the file as is" }
+      text: { ko: "만든 PNG는 메일 첨부나 USB처럼 파일 그대로 전달하세요. 메신저·SNS·클라우드 미리 보기는 이미지를 다시 저장해서 숨긴 내용이 지워져요.", en: "Send the PNG as a file, for example as an email attachment or on a USB drive. Messengers, social networks and cloud previews re-save images, which erases the hidden content." }
+    - title: { ko: "텍스트 꺼내기", en: "Reveal the text" }
+      text: { ko: "'꺼내기'를 고르고 '이미지 선택...'(또는 파일 > 숨긴 이미지 열기)으로 받은 PNG를 연 뒤, 비밀키를 넣고 '꺼내기'를 누르세요. '꺼낸 텍스트'에 내용이 나오고 '복사'로 클립보드에 담을 수 있어요. 비밀키가 틀리거나 파일이 바뀌었으면 아무것도 꺼내지 않아요.", en: "Choose Reveal, open the PNG you received with Select Image... (or File > Open Stego Image...), enter the password and click Reveal. The text appears in Revealed Text, and Copy puts it on the clipboard. If the password is wrong or the file was changed, nothing is revealed." }
   uses: { ko: ["사진 한 장에 짧은 메모를 몰래 담아 전하고 싶을 때", "스테가노그래피가 어떻게 동작하는지 직접 해 보고 싶을 때", "암호화와 정보 은닉을 배우거나 가르칠 때"], en: ["When you want to pass a short note tucked inside a photo", "When you want to try out how steganography works", "When learning or teaching encryption and information hiding"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigSteganography.json", en: "CONFIGURATION\\BigSteganography.json next to the exe" }
 
@@ -751,6 +1104,15 @@
       text: { ko: "그림을 PNG·JPEG로, 장면 설정을 JSON으로 저장하고, 타이머로 새 장면을 자동으로 계속 만들 수 있어요.", en: "Save the picture as PNG or JPEG and the scene settings as JSON, and let a timer keep generating new scenes automatically." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "장면 만들기", en: "Make a scene" }
+      text: { ko: "왼쪽 텍스트 칸에 띄울 글자를 넣고 객체·배경에서 원하는 항목을 고른 뒤 실행 버튼을 누르세요. '시드 고정'을 끄면 실행할 때마다 새 장면이 만들어져요.", en: "Type the words to float in the Text box, choose what you want under Objects and Background, then click Run. With 'Fix seed' off, every run makes a new scene." }
+    - title: { ko: "보기 방식 고르기", en: "Choose how to view" }
+      text: { ko: "위쪽의 평행 보기나 교차 보기 버튼을 누르고, 그림 아래 안내문대로 시선을 맞추세요. 그림 위의 두 점이 하나로 겹치면 제대로 본 거예요.", en: "Click Parallel or Cross-eye at the top and follow the hint below the picture to aim your eyes. When the two dots above the pictures merge into one, you are seeing it right." }
+    - title: { ko: "내 화면에 맞추기", en: "Match your screen" }
+      text: { ko: "보기 기하에서 시청 거리와 눈 사이 거리를 mm로 넣고 다시 실행하세요(화면 DPI는 0이면 자동). '평행 보기 불가'가 뜨면 '평행 보기 크기' 버튼을 누르고, 다시 누르면 '창에 맞춤'으로 돌아와요.", en: "Enter the viewing distance and eye separation in millimeters under Viewing Geometry and run again (Screen DPI 0 means auto). If it says parallel viewing is impossible, click 'Parallel size'; click it again to go back to 'Fit to window'." }
+    - title: { ko: "저장하기", en: "Save it" }
+      text: { ko: "Ctrl+S(파일 > 그림 저장)를 누르면 exe 옆 SAVE 폴더에 그림이 저장되고, '다른 이름으로 그림 저장'으로 PNG·JPEG를 원하는 곳에 저장해요. 장면 설정은 '장면 저장'으로 JSON에 남기고 '장면 열기'로 다시 불러와요.", en: "Ctrl+S (File > Save Image) saves the picture to the SAVE folder next to the exe, and 'Save Image As' saves a PNG or JPEG wherever you like. 'Save Scene' keeps the scene settings in JSON, and 'Open Scene' loads them again." }
   uses: { ko: ["맨눈 입체 보기를 연습하고 싶을 때", "아이와 함께 떠오르는 글자와 도형을 찾아보고 싶을 때", "양안 시차와 입체 시각을 배우거나 가르칠 때"], en: ["When you want to practice free-viewing stereo pictures", "When you want to find floating text and shapes with your kids", "When learning or teaching binocular disparity and stereo vision"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigStereogram.json", en: "CONFIGURATION\\BigStereogram.json next to the exe" }
 
@@ -772,6 +1134,17 @@
       text: { ko: "계산 기록과 메모리 값을 목록으로 보고 다시 불러올 수 있어요.", en: "View your history and memory values in a list and recall them." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "시스템/라이트/다크 테마, 한국어/English 화면, Ctrl +/−로 확대를 지원해요.", en: "System/light/dark theme, Korean/English UI and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "모드 고르기", en: "Pick a mode" }
+      text: { ko: "왼쪽 목록에서 계산기(표준·공학용·프로그래머·날짜 계산)나 변환기 아래의 단위 종류를 고르세요. 목록은 왼쪽 위 ☰ 버튼으로 열고 닫아요.", en: "Choose a calculator (Standard, Scientific, Programmer or Date Calculation) or a unit type under Converter in the list on the left. The ☰ button at the top left opens and closes the list." }
+    - title: { ko: "키보드로 계산하기", en: "Calculate with the keyboard" }
+      text: { ko: "버튼을 눌러도 되고, 숫자와 + - * / ( ) ^ !를 바로 입력해도 돼요. Enter나 =로 결과를 보고, Backspace는 한 글자, Delete는 입력값, Esc는 전체를 지워요. F9는 부호를 바꾸고, %는 표준 모드에서 백분율, 공학용·프로그래머 모드에서 나머지예요.", en: "Click the buttons or type digits and + - * / ( ) ^ ! directly. Press Enter or = for the result; Backspace deletes one character, Delete clears the entry and Esc clears everything. F9 changes the sign, and % is percent in Standard mode and modulo in Scientific and Programmer modes." }
+    - title: { ko: "진법과 비트 다루기", en: "Work with bases and bits" }
+      text: { ko: "프로그래머 모드에서 HEX·DEC·OCT·BIN 줄을 클릭하면 그 진법으로 입력하고, 나머지 줄에서 변환된 값을 함께 봐요. 비트를 누르면 비트 전환 키패드로, 키패드를 누르면 숫자 키패드로 돌아와요.", en: "In Programmer mode, click the HEX, DEC, OCT or BIN row to type in that base while the other rows show the converted values. Click Bits for the bit toggling keypad and Keypad to return to the number keypad." }
+    - title: { ko: "날짜 계산과 단위 변환", en: "Dates and unit conversion" }
+      text: { ko: "날짜 계산에서 '날짜 간 차이'를 고르면 시작일과 종료일 사이를 알려 주고, '일 합산 또는 빼기'를 고르면 추가/빼기와 년·월·일을 정해 결과 날짜를 보여 줘요. 변환기에서는 위아래 단위를 고르고 숫자를 입력하세요. 아래 값을 클릭하면 그쪽에 입력하고, Ctrl+C·Ctrl+V로 값을 복사하고 붙여 넣어요.", en: "In Date Calculation, choose 'Difference between dates' to compare a From and To date, or 'Add or subtract days' to pick Add or Subtract and years, months and days and see the resulting date. In a converter, pick the top and bottom units and type a number. Click the bottom value to type there instead, and use Ctrl+C and Ctrl+V to copy and paste the value." }
+    - title: { ko: "메모리와 기록 쓰기", en: "Use memory and history" }
+      text: { ko: "표준·공학용 모드에서 MS로 지금 값을 저장하고, MR로 불러오고, M+·M-로 더하거나 빼고, MC로 모두 지워요. 오른쪽 패널의 기록·메모리 탭에서 지난 계산과 저장한 값을 보고, 휴지통 버튼으로 비울 수 있어요.", en: "In Standard and Scientific modes, MS stores the current value, MR recalls it, M+ and M- add to or subtract from it, and MC clears all memory. The History and Memory tabs in the right panel show past calculations and stored values, and the trash button empties them." }
   uses: { ko: ["가계부나 간단한 계산을 할 때", "16진수나 비트 값을 확인할 때", "기념일까지 남은 날을 셀 때", "레시피나 여행지 단위를 바꿀 때"], en: ["Doing quick everyday math", "Checking hex or bit values", "Counting days until an anniversary", "Converting units for a recipe or a trip"] }
   settings_path: { ko: "%LOCALAPPDATA%\\BigCalculator\\BigCalculator.json", en: "%LOCALAPPDATA%\\BigCalculator\\BigCalculator.json" }
 
@@ -793,6 +1166,13 @@
       text: { ko: "다른 창 위에 늘 떠 있게 해 남은 시간을 놓치지 않아요.", en: "Keep the window above others so you never lose track of the countdown." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크 모드, 한국어/English 화면, Ctrl +/−로 확대를 지원해요.", en: "Dark mode, Korean/English UI and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "종료 방식 고르기", en: "Choose a mode" }
+      text: { ko: "'지정한 시각에 종료'를 골라 시·분을 넣거나, '일정 시간 경과 후 종료'를 골라 시간·분·초를 넣으세요. 칸을 클릭하면 그 방식이 저절로 선택되고, 위/아래 화살표나 마우스 휠로 값을 1씩 바꿀 수 있어요.", en: "Choose 'Shut down at a set time' and enter the hour and minute, or 'Shut down after a delay' and enter hours, minutes and seconds. Clicking a box selects its mode, and the up and down arrows or the mouse wheel change the value by 1." }
+    - title: { ko: "시작하기", en: "Start" }
+      text: { ko: "시작 버튼을 누르면 '종료까지 남은 시간'과 '종료 예정 시각'이 표시돼요. 지정한 시각이 오늘 이미 지났으면 다음 날 같은 시각으로 잡혀요.", en: "Click Start to see the time until shutdown and the planned shutdown time. If the set time has already passed today, it is scheduled for the same time tomorrow." }
+    - title: { ko: "켜 두거나 취소하기", en: "Keep it open or cancel" }
+      text: { ko: "예약 중에는 시작 버튼이 취소 버튼으로 바뀌니, 마음이 바뀌면 취소를 누르세요. 창을 닫으면 예약도 사라지니 종료될 때까지 BigCloser를 켜 두세요.", en: "While a shutdown is scheduled, the Start button becomes Cancel; click it if you change your mind. Closing the window drops the schedule, so keep BigCloser open until shutdown." }
   uses: { ko: ["큰 파일을 받아 두고 잠자리에 들 때", "영상을 틀어 놓고 잠들 때", "작업이 끝날 즈음 PC를 끄고 싶을 때"], en: ["Leaving a big download running overnight", "Falling asleep while a video plays", "Turning off the PC when a long task should be done"] }
   settings_path: { ko: "%LOCALAPPDATA%\\BigCloser\\BigCloser.json", en: "%LOCALAPPDATA%\\BigCloser\\BigCloser.json" }
 
@@ -812,6 +1192,15 @@
       text: { ko: "마우스를 올릴 때만 도구 모음이 나타나 평소엔 시계만 깔끔하게 보여요.", en: "The toolbar appears only on hover, so the clock looks clean the rest of the time." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크/라이트 모드, 한국어/English 메뉴, Ctrl +/−로 시계 크기를 바꿔요.", en: "Dark/light mode, Korean/English menus and Ctrl +/− to resize the clock." }
+  howto:
+    - title: { ko: "띄워 두기", en: "Put it on the desktop" }
+      text: { ko: "BigWatch.exe를 실행하면 시계가 다른 창 위에 떠요. 켜 두는 동안에는 화면이 꺼지거나 절전 모드로 들어가지 않아요.", en: "Run BigWatch.exe and the clock floats above other windows. While it is open, the screen does not turn off and the PC does not go to sleep." }
+    - title: { ko: "원하는 곳으로 옮기기", en: "Move it where you want" }
+      text: { ko: "시계를 마우스 왼쪽 버튼으로 끌어 원하는 자리에 두세요. 닫을 때의 위치와 크기를 기억했다가 다음에 그 자리에 다시 띄워요.", en: "Drag the clock with the left mouse button to where you want it. The position and size are remembered when you close it, and it reopens in the same place." }
+    - title: { ko: "그림자 깊이 고르기", en: "Pick the shadow depth" }
+      text: { ko: "시계를 오른쪽 클릭하고 그림자에서 0~5 포인트 중 하나를 고르세요.", en: "Right-click the clock and choose 0 to 5 pt under Shadow." }
+    - title: { ko: "닫기", en: "Close it" }
+      text: { ko: "시계에 마우스를 올리면 나타나는 도구 모음의 ✕ 버튼을 누르거나, 오른쪽 클릭 메뉴에서 닫기를 고르세요.", en: "Click the ✕ button on the toolbar that appears when you hover over the clock, or choose Close from the right-click menu." }
   uses: { ko: ["작업하면서 시간을 늘 보고 싶을 때", "바탕 화면을 조금 멋지게 꾸미고 싶을 때", "발표나 시험 중 시계를 크게 띄울 때"], en: ["Keeping an eye on the time while you work", "Giving your desktop a nice touch", "Showing a big clock during a talk or exam"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigWatch.json", en: "BigWatch.json in the CONFIGURATION folder next to the exe" }
 
@@ -833,6 +1222,15 @@
       text: { ko: "IANA 시간대 데이터베이스(tzdb 2026f)를 내장했고, 새 tzdb 파일(.nzd)을 exe 옆에 두면 그것을 써요.", en: "Built on the IANA Time Zone Database (tzdb 2026f), and uses a newer tzdb file (.nzd) if you place one next to the exe." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 밝은/어두운 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and light or dark themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "지도에서 고르기", en: "Pick a spot on the map" }
+      text: { ko: "세계 지도에서 궁금한 곳을 클릭하세요. 그 지점의 시간대와 현재 시각, 이 컴퓨터와의 시차, 다음 전환 날짜를 보여 줘요.", en: "Click any place on the world map. Its time zone, current time, difference from this PC and next offset change are shown." }
+    - title: { ko: "이름으로 찾기", en: "Search by name" }
+      text: { ko: "'도시 · 시간대 검색' 칸에 도시, 국가, 시간대 이름을 한글이나 영문으로 입력하세요. 결과에서 하나를 고르면 그곳의 시각을 보여 줘요.", en: "Type a city, country or time zone name in Korean or English in the 'Search Cities · Time Zones' box. Select a result to see its time." }
+    - title: { ko: "내 도시에 모으기", en: "Collect My Cities" }
+      text: { ko: "검색 결과에서 도시를 고르고 '＋ 내 도시에 추가'를 누르거나, 두 번 클릭 또는 Enter를 누르세요. 시간대 항목은 추가되지 않고 도시만 추가돼요.", en: "Select a city in the results and click '＋ Add to My Cities', or double-click it or press Enter. Only cities can be added, not time zone entries." }
+    - title: { ko: "내 도시 보기와 정리", en: "View and tidy My Cities" }
+      text: { ko: "내 도시 목록의 카드를 클릭하면 그 도시가 다시 선택되고 지도에도 표시돼요. 필요 없는 도시는 카드의 ✕ 버튼으로 빼세요. 목록은 자동으로 저장돼요.", en: "Click a card in My Cities to select that city again and see it on the map. Remove a city you no longer need with the ✕ button on its card. The list is saved automatically." }
   uses: { ko: ["해외에 있는 가족·친구에게 연락하기 좋은 시간을 알고 싶을 때", "다른 나라와 회의 시간을 잡을 때", "서머타임이 언제 바뀌는지 확인할 때"], en: ["When you want to know a good time to call family or friends abroad", "When you schedule a meeting with people in another country", "When you check when daylight saving time changes"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigWorldWatch.json", en: "BigWorldWatch.json in the CONFIGURATION folder next to the exe" }
 
@@ -852,6 +1250,17 @@
       text: { ko: "도시를 한글·영문으로 찾아 추가하면 세계 지도에 낮·밤과 함께 표시하고, 이 컴퓨터와의 시차를 알려 줘요. 시간 비교로 날짜를 넘기며 도시별 시각을 맞춰 볼 수 있어요.", en: "Add cities by searching in Korean or English to see them on a world map with day and night, along with the difference from this PC. Compare times across cities and step through days." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 다크/라이트 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and dark or light themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "타이머 맞추기", en: "Set a timer" }
+      text: { ko: "왼쪽에서 타이머를 고르고 + 버튼(새 타이머 추가)을 누르세요. 시간·분·초를 마우스 휠이나 위/아래 화살표로 맞추고 이름을 넣은 뒤 저장하면 카드가 생겨요. 카드의 ▶ 버튼으로 시작·일시 정지하고 ↺ 버튼으로 리셋하며, 카드를 클릭하면 다시 편집해요.", en: "Choose Timer on the left and click the + button (Add new timer). Set hours, minutes and seconds with the mouse wheel or the up and down arrows, enter a name and click Save to create a card. The ▶ button on the card starts and pauses it, ↺ resets it, and clicking the card edits it again." }
+    - title: { ko: "알람 맞추기", en: "Set an alarm" }
+      text: { ko: "알람에서 + 버튼을 누르고 시각과 이름을 정하세요. 요일마다 울리게 하려면 '알람 반복'을 켜고 요일을 고르고, 소리와 다시 알림 간격을 정한 뒤 저장하세요. 카드의 스위치로 알람을 켜고 끄고, 울릴 때 뜨는 창에서 다시 알림이나 해제를 눌러요.", en: "In Alarm, click + and set the time and a name. To ring on certain days, turn on 'Repeat alarm' and pick the days, choose a sound and snooze interval, then click Save. The switch on each card turns the alarm on or off, and when it rings, click Snooze or Dismiss in the window that appears." }
+    - title: { ko: "스톱워치 재기", en: "Use the stopwatch" }
+      text: { ko: "스톱워치에서 ▶ 버튼으로 시작하고, 깃발 버튼(랩 및 누적)을 누를 때마다 랩 시간과 누적 시간이 기록돼요. 타이머 카드와 스톱워치의 '항상 위에 유지' 버튼을 누르면 다른 창 위에 뜨는 작은 창으로 띄워져요.", en: "In Stopwatch, click ▶ to start; each click of the flag button (Laps / splits) records a lap time and total time. The 'Keep on top' button on a timer card or the stopwatch pops it out into a small window that stays above other windows." }
+    - title: { ko: "세계 시계에 도시 더하기", en: "Add cities to the world clock" }
+      text: { ko: "세계 시계에서 + 버튼(새 도시 추가)을 누르고 도시나 국가 이름을 한글이나 영문으로 입력하세요. 결과를 두 번 클릭하거나 골라서 추가를 누르면 돼요. '시간 비교' 버튼을 누르면 도시별 시각을 나란히 보며 이전 날·다음 날로 넘기고, 오늘로 돌아올 수 있어요.", en: "In World clock, click + (Add a new city) and type a city or country name in Korean or English. Double-click a result, or select it and click Add. The 'Compare times' button lines up each city's hours, and you can step to the previous or next day and back to Today." }
+    - title: { ko: "필요 없는 항목 지우기", en: "Remove what you don't need" }
+      text: { ko: "타이머·알람·세계 시계 화면의 연필 버튼(편집)을 누르면 항목마다 휴지통 버튼이 나타나요. 지울 항목의 휴지통을 누르고, 다 끝나면 같은 자리의 완료 버튼을 누르세요.", en: "Click the pencil (Edit) button on the Timer, Alarm or World clock page and a trash button appears on each item. Click the trash button on what you want to remove, then click Done in the same spot when you finish." }
   uses: { ko: ["요리·운동·공부 시간을 여러 타이머로 재고 싶을 때", "PC 앞에서 일하며 정해진 시각에 알림을 받고 싶을 때", "해외 도시와 시차를 비교해 연락할 시간을 정할 때"], en: ["When you want to time cooking, workouts or study with several timers", "When you want reminders at set times while working at your PC", "When you compare time differences with cities abroad to pick a time to call"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigClock.json", en: "BigClock.json in the CONFIGURATION folder next to the exe" }
 
@@ -873,6 +1282,17 @@
       text: { ko: "메모와 공휴일 정보는 SQLite 파일 하나에 저장하고, 클라우드 동기화 폴더 같은 다른 위치로 옮기거나 기존 파일을 열 수 있어요. API 키는 이 PC의 현재 사용자만 풀 수 있게 암호화해 저장해요.", en: "Notes and holiday data live in a single SQLite file that you can move elsewhere, such as a cloud-synced folder, or point to an existing file. Your API key is stored encrypted so only the current user on this PC can read it." }
     - title: { ko: "언어·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어, 다크/라이트 테마, Ctrl +/−로 화면 확대를 쓸 수 있어요.", en: "Switch between Korean and English and dark or light themes, and zoom with Ctrl +/−." }
+  howto:
+    - title: { ko: "공휴일 API 키 넣기", en: "Enter your holiday API key" }
+      text: { ko: "공공데이터포털에서 '한국천문연구원_특일 정보' 활용 승인을 받은 인증키를 준비하세요. 오른쪽 위 메뉴(… 버튼) > 설정...의 '공휴일 API 키'에 붙여 넣고 연결 테스트로 확인한 뒤 저장을 누르면, 설정 창을 닫을 때 공휴일 정보를 받아 와요.", en: "Get a data.go.kr service key approved for 'KASI special day information'. Paste it into Holiday API key under Menu (the … button at the top right) > Settings..., check it with Test connection and click Save; holidays are fetched when you close the Settings window." }
+    - title: { ko: "날짜 고르기", en: "Pick a day" }
+      text: { ko: "위쪽의 이전 달·다음 달 화살표로 달을 넘기고, 오늘 버튼으로 오늘로 돌아와요. 날짜 칸을 클릭하면 오른쪽 패널에 그날의 날짜와 메모가 열려요.", en: "Use the previous and next month arrows at the top to change months, and Today to come back. Click a day to open its date and note in the right panel." }
+    - title: { ko: "메모 쓰기", en: "Write a note" }
+      text: { ko: "오른쪽 패널에 바로 입력하세요. 굵게(Ctrl+B)·기울임꼴(Ctrl+I)·밑줄(Ctrl+U)·취소선(Ctrl+T)·글머리 기호(Ctrl+Shift+L)와 글꼴·글자 색은 위 도구 모음에 있어요. 그림은 끌어다 놓거나 붙여 넣고, 입력을 멈추면 저절로 저장돼요.", en: "Type straight into the right panel. Bold (Ctrl+B), Italic (Ctrl+I), Underline (Ctrl+U), Strikethrough (Ctrl+T), Bullets (Ctrl+Shift+L), font and text color are on the toolbar above. Drag or paste pictures in, and the note saves itself when you stop typing." }
+    - title: { ko: "메모 검색하기", en: "Search your notes" }
+      text: { ko: "Ctrl+F를 누르고 찾을 말을 입력하세요. Enter나 F3으로 다음 결과, Shift+F3으로 이전 결과로 이동하고, Esc로 검색을 지워요.", en: "Press Ctrl+F and type what you are looking for. Enter or F3 goes to the next match, Shift+F3 to the previous one, and Esc clears the search." }
+    - title: { ko: "표시 항목과 데이터 위치 정하기", en: "Choose what to show and where data lives" }
+      text: { ko: "메뉴에서 음력 표시, 24절기 표시, 기념일 표시, 잡절 표시를 켜고 꺼요. 설정의 데이터 파일에서 '다른 위치...'를 누르면 파일을 옮길 곳을 고르고, 그곳에 파일이 없으면 '현재 데이터 옮기기'나 '빈 파일로 시작'을 골라요.", en: "Turn Show lunar dates, Show solar terms, Show anniversaries and Show seasonal days on or off from the menu. Under Data file in Settings, click 'Change location...' to pick a new place; if there is no data file there, choose 'Move current data' or 'Start empty'." }
   uses: { ko: ["올해와 내년의 빨간 날을 한눈에 보고 싶을 때", "음력 생일이나 제사 날짜를 양력으로 확인할 때", "날마다 한 일이나 일정을 달력에 적어 두고 다시 찾을 때"], en: ["When you want to see this year's and next year's Korean holidays at a glance", "When you look up the solar date of a lunar birthday or memorial day", "When you jot down what you did or plan to do each day and find it again later"] }
   settings_path: { ko: "%APPDATA%\\BigCalendar\\BigCalendar.json (데이터 파일 기본 위치 %APPDATA%\\BigCalendar\\BigCalendar.db)", en: "%APPDATA%\\BigCalendar\\BigCalendar.json (data file by default at %APPDATA%\\BigCalendar\\BigCalendar.db)" }
 
@@ -894,6 +1314,15 @@
       text: { ko: "바로 가기를 대상 파일로 바꾸지 않고 그대로 실행해 인수·작업 폴더·관리자 권한 설정이 유지돼요. 탐색기와 같은 순서로 정렬하고, 파일 위치 열기도 지원해요.", en: "Shortcuts are launched as they are, not replaced with their targets, so arguments, working folder and run-as-administrator settings are kept. Programs are sorted in the same order as File Explorer, and you can open the file location." }
     - title: { ko: "테마·언어·확대", en: "Theme, language, zoom" }
       text: { ko: "다크/라이트 모드, 한국어/English 화면, Ctrl +/−로 화면 확대를 지원해요.", en: "Dark/light mode, Korean/English UI and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "프로그램 등록하기", en: "Register programs" }
+      text: { ko: "탐색기나 바탕 화면에서 .exe나 .lnk 파일을 BigLauncher 창으로 끌어다 놓으세요. 새로 등록한 프로그램은 '그룹 없음'에 들어가고, 결과는 상태 표시줄에 나와요.", en: "Drag .exe or .lnk files from File Explorer or the desktop onto the BigLauncher window. Newly registered programs go into 'Ungrouped', and the result appears in the status bar." }
+    - title: { ko: "실행하고 관리하기", en: "Launch and manage" }
+      text: { ko: "아이콘을 두 번 클릭하거나 골라서 Enter를 누르면 실행돼요. 아이콘을 오른쪽 클릭하면 이름 바꾸기(F2), 파일 위치 열기, 등록 해제(Del)를 고를 수 있어요. 등록을 해제해도 파일은 지워지지 않아요.", en: "Double-click an icon, or select it and press Enter, to launch it. Right-click an icon for Rename (F2), Open File Location and Unregister (Del). Unregistering never deletes the file." }
+    - title: { ko: "그룹으로 나누기", en: "Sort into groups" }
+      text: { ko: "파일 > 새 그룹을 누르고 이름을 입력한 뒤 Enter를 누르세요. Ctrl·Shift를 누른 채 클릭하거나 빈 곳에서 끌어 사각형으로 여러 프로그램을 고른 다음, 원하는 그룹으로 끌어다 놓거나 오른쪽 클릭 > 그룹으로 이동을 고르면 옮겨져요. 그룹 이름 바꾸기와 삭제는 그룹 머리글을 오른쪽 클릭하세요.", en: "Choose File > New Group, type a name and press Enter. Select several programs with Ctrl or Shift clicks, or drag a rectangle from an empty area, then drag them onto a group or right-click > Move to Group. Right-click a group header to rename or delete the group." }
+    - title: { ko: "찾기와 배치 바꾸기", en: "Find and rearrange" }
+      text: { ko: "Ctrl+F를 누르고 이름을 입력하면 맞는 프로그램이 강조되고, Esc를 누르면 검색어가 지워져요. 그룹이 많으면 보기 > 그룹 배치에서 수평 분할, 수직 분할, 다중 분할 중 하나를 고르세요.", en: "Press Ctrl+F and type a name to highlight matching programs; press Esc to clear the search. With many groups, pick Horizontal Split, Vertical Split or Multi Split under View > Group Layout." }
   uses: { ko: ["바탕 화면에 흩어진 바로 가기를 한곳에 정리하고 싶을 때", "업무용·개발용처럼 용도별로 프로그램을 나눠 두고 싶을 때", "설치하지 않고 쓰는 프로그램(포터블 exe)을 모아 실행할 때"], en: ["Tidying up shortcuts scattered across the desktop in one place", "Keeping programs sorted by purpose, such as work and development", "Collecting and launching portable programs that don't need installing"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigLauncher.json", en: "BigLauncher.json in the CONFIGURATION folder next to the exe" }
 
@@ -947,6 +1376,15 @@
       text: { ko: "창 위치와 크기, 배율을 저장해 두었다가 다음에 그대로 열어 줘요.", en: "It saves the window position, size and magnification and opens the same way next time." }
     - title: { ko: "한/영·테마·화면 확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/−로 버튼과 글자 크기 조절을 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− to resize the buttons and text." }
+  howto:
+    - title: { ko: "창 자리 잡기", en: "Place the window" }
+      text: { ko: "BigView.exe를 실행하고 위쪽 파란 제목 표시줄을 끌어 화면 한쪽에 두세요. 창 가장자리를 끌면 크기가 바뀌고, 창이 클수록 포인터 주변을 더 넓게 보여 줘요.", en: "Run BigView.exe and drag the blue title bar to put the window off to one side. Drag an edge to resize it; the bigger the window, the wider the area around the pointer it shows." }
+    - title: { ko: "마우스를 가져가 보기", en: "Point at what you want to see" }
+      text: { ko: "크게 보고 싶은 곳으로 마우스 포인터를 옮기면 아래 돋보기 영역에 그 주변이 확대돼 나와요.", en: "Move the mouse pointer over what you want to see, and the area around it appears enlarged in the magnifier pane below." }
+    - title: { ko: "배율 바꾸기", en: "Change the magnification" }
+      text: { ko: "BigView 창 위에서 마우스 휠을 위로 돌리면 배율이 올라가고, 아래로 돌리면 내려가요. 오른쪽 위 + / − 둥근 버튼을 눌러도 되고, 지금 배율은 '배율 : 1.50'처럼 표시돼요.", en: "With the mouse over the BigView window, scroll up to raise the scale and down to lower it. You can also press the round + / − buttons at the top right; the current value shows as 'Scale : 1.50'." }
+    - title: { ko: "잠시 끄고 닫기", en: "Pause and close" }
+      text: { ko: "잠깐 필요 없으면 '확대' 스위치를 끄세요. 닫기(X) 버튼으로 닫으면 창 위치와 크기, 배율, 스위치 상태가 저장돼 다음에 그대로 열려요.", en: "Turn off the 'Magnify' switch when you don't need it for a while. Closing with the close (X) button saves the window position, size, scale and switch state for next time." }
   uses: { ko: ["화면의 작은 글씨를 읽기 힘들 때", "이미지나 디자인을 픽셀 단위로 살펴볼 때", "발표나 강의에서 화면 일부를 크게 보여 줄 때"], en: ["When small text on screen is hard to read", "When you want to inspect images or designs up close", "When you need to show part of the screen bigger in a talk or class"] }
   settings_path: { ko: "%LOCALAPPDATA%\\BigView\\BigView.json", en: "%LOCALAPPDATA%\\BigView\\BigView.json" }
 
@@ -968,6 +1406,15 @@
       text: { ko: "−/100%/+ 버튼이나 마우스를 올린 채 Ctrl +/−로 키보드 전체를 키우거나 줄여요.", en: "Use the −/100%/+ buttons, or Ctrl +/− while the mouse is over it, to make the whole keyboard bigger or smaller." }
     - title: { ko: "한/영·다크/라이트", en: "Language and theme" }
       text: { ko: "한국어/영어 화면과 청색 계열 다크/라이트 테마를 고를 수 있어요.", en: "Choose a Korean or English UI and a blue dark or light theme." }
+  howto:
+    - title: { ko: "키보드 띄우기", en: "Open the keyboard" }
+      text: { ko: "BigKeyboard.exe를 실행하면 화면 아래 가운데에 키보드가 떠요. 위쪽 제목 줄을 끌어 옮기고, 가장자리를 끌어 크기를 맞추세요. 닫을 때의 위치는 다음 실행 때 그대로 돌아와요.", en: "Run BigKeyboard.exe and the keyboard appears at the bottom center of the screen. Drag the title row to move it and drag an edge to resize it. Its position when you close it is restored next time." }
+    - title: { ko: "입력할 창 고르기", en: "Pick where to type" }
+      text: { ko: "글자를 넣을 프로그램의 입력란을 먼저 클릭하세요. 제목 줄에 '입력 대상 : notepad'처럼 그 프로그램 이름이 나오면 준비가 된 거예요.", en: "First click the text box in the program you want to type into. When the title row shows that program's name, as in 'Target : notepad', you're ready." }
+    - title: { ko: "키 눌러 입력하기", en: "Click keys to type" }
+      text: { ko: "키를 클릭하거나 터치하면 그 창에 바로 입력돼요. 한국어 자판에서는 한/영 키로 한글과 영문을 바꿔요.", en: "Click or tap a key and it goes straight into that window. On the Korean layout, use the 한/영 key to switch between Hangul and English." }
+    - title: { ko: "Shift·Ctrl 같이 누르기", en: "Shift, Ctrl and other modifiers" }
+      text: { ko: "Shift, Ctrl, Alt, Win 키는 한 번 누르면 다음 키 하나에만 적용되고, 두 번 누르면 잠겨서 계속 적용되며, 세 번째 누르면 풀려요. 예를 들어 Ctrl을 한 번 누른 뒤 C를 누르면 Ctrl+C가 돼요.", en: "Press Shift, Ctrl, Alt or Win once to apply it to the next key only, twice to lock it on, and a third time to release it. For example, press Ctrl once and then C to send Ctrl+C." }
   uses: { ko: ["실제 키보드가 없거나 고장 났을 때", "터치스크린 PC에서 글자를 입력할 때", "손 대신 마우스로만 입력하고 싶을 때"], en: ["When you have no keyboard or it stopped working", "When typing on a touchscreen PC", "When you'd rather type with just the mouse"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigKeyboard.json", en: "CONFIGURATION\\BigKeyboard.json next to the exe" }
 
@@ -989,6 +1436,15 @@
       text: { ko: "글자 정보를 얻을 수 없는 화면은 화면 OCR로 글자를 찾아 읽어요.", en: "When a program doesn't expose its text, it can find the words with screen OCR." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "설정 창과 알림은 한국어/영어로, 다크/라이트 테마와 Ctrl +/− 확대도 돼요.", en: "Settings and notifications in Korean or English, plus dark/light theme and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "트레이에 띄워 두기", en: "Keep it in the tray" }
+      text: { ko: "BigReader.exe를 실행하면 창 없이 작업 표시줄 트레이에 아이콘만 생겨요. 트레이 아이콘을 클릭하면 설정 창이 열리고, 오른쪽 클릭하면 설정..., 일시 정지, 종료 메뉴가 나와요.", en: "Run BigReader.exe and it sits in the system tray as an icon, with no window. Click the tray icon to open the settings window, or right-click it for Settings..., Pause and Exit." }
+    - title: { ko: "가리키고 버튼 누르기", en: "Point and press" }
+      text: { ko: "읽고 싶은 글자 위에 마우스를 올리고 마우스 사이드 버튼 1(뒤로)을 누르면 그 줄을 읽어요. 읽는 중에 다시 누르면 멈춰요.", en: "Hover over the text you want to hear and press mouse side button 1 (Back) to read that line. Press it again while it's reading to stop." }
+    - title: { ko: "복사한 글 읽기", en: "Read copied text" }
+      text: { ko: "글을 복사(Ctrl+C)한 뒤 Ctrl+Alt+V를 누르면 클립보드의 글을 읽어 줘요. 사이드 버튼이 없는 마우스라면 설정의 '커서 읽기 단축키'에 키 조합을 정해 두세요.", en: "Copy some text (Ctrl+C) and press Ctrl+Alt+V to hear the clipboard read aloud. If your mouse has no side buttons, set a key combination under 'Read at cursor' in Settings." }
+    - title: { ko: "설정 바꾸기", en: "Adjust the settings" }
+      text: { ko: "설정 창에서 트리거 버튼, 읽기 단위, 음성 엔진, 속도를 고르고 '미리 듣기'로 소리를 들어 본 뒤 '저장'을 누르세요. 단축키는 입력란을 클릭하고 쓸 키 조합을 누르면 정해져요.", en: "In the settings window, choose the trigger button, reading unit, speech engine and speed, try them with 'Preview', then press 'Save'. To set a hotkey, click its box and press the key combination you want." }
   uses: { ko: ["긴 글을 눈 대신 귀로 듣고 싶을 때", "화면 글자를 읽기 힘들 때", "외국어 문장의 발음을 들어 보고 싶을 때"], en: ["When you'd rather listen to long text than read it", "When on-screen text is hard to read", "When you want to hear how a sentence sounds"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigReader.json", en: "CONFIGURATION\\BigReader.json next to the exe" }
 
@@ -1010,6 +1466,17 @@
       text: { ko: "저장한 시세를 기간별로 CSV 파일로 내보낼 수 있어요.", en: "Export the saved prices for any period to a CSV file." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마(차트 포함), Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme (charts included), and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "API 키 넣기", en: "Enter your API keys" }
+      text: { ko: "파일 > 설정...(또는 오른쪽 위 '설정' 버튼)을 열고 '금융위 서비스 키'나 'KRX 인증 키'에 발급받은 키를 넣은 뒤 '저장'을 누르세요.", en: "Open File > Settings... (or the 'Settings' button at the top right), enter the key you were issued in 'FSC service key' or 'KRX auth key', then press 'Save'." }
+    - title: { ko: "종목 목록 받고 고르기", en: "Get the stock list and pick stocks" }
+      text: { ko: "'종목 조회' 탭에서 처음 한 번 '종목 마스터 갱신'을 누르세요. 검색어에 코드나 이름을 넣고 '검색'한 뒤, 종목을 골라 '관심 종목 추가/해제'나 '수집 대상에 추가'를 누르면 돼요.", en: "On the 'Stocks' tab, press 'Refresh stock master' once at the start. Type a code or name in Keyword and press 'Search', then select a stock and press 'Add/remove watchlist' or 'Add to collection'." }
+    - title: { ko: "시세 수집하기", en: "Collect prices" }
+      text: { ko: "'주가 수집' 탭에서 기간, 소스(금융위 또는 KRX), 대상(관심 종목·선택 종목 목록·시장 전체)을 고르세요. '예상 호출 계산'으로 호출 수를 확인한 뒤 '수집 시작'을 누르고, 중간에 멈춘 작업은 작업 이력에서 골라 '이어서 수집'을 누르세요.", en: "On the 'Collect prices' tab, choose the period, source (FSC or KRX) and target (Watchlist, Selected stocks or Entire market). Check the call count with 'Estimate calls', press 'Start', and to finish an interrupted job, select it in Job history and press 'Resume'." }
+    - title: { ko: "차트와 신호 보기", en: "View charts and signals" }
+      text: { ko: "'차트 · 매매 신호' 탭에서 종목 코드나 이름을 입력해 ↑↓로 고르고 Enter(또는 '열기')를 누르세요. 기간과 지표를 고른 다음 전략을 정하고 '신호 계산'을 누르면 최근 신호 상태와 백테스트 결과가 나와요.", en: "On the 'Chart · Signals' tab, type a stock code or name, pick it with the arrow keys and press Enter (or 'Open'). Choose the period and indicators, pick a strategy and press 'Calculate' to see the latest signal status and backtest result." }
+    - title: { ko: "CSV로 내보내기", en: "Export to CSV" }
+      text: { ko: "'주가 수집' 탭 아래 '저장 현황'에서 종목을 고르고 'CSV 내보내기'를 누르면 위에서 정한 기간의 시세를 파일로 저장해요. 아무것도 고르지 않으면 전체 종목을 내보내요.", en: "In 'Stored data' at the bottom of the 'Collect prices' tab, select stocks and press 'Export CSV' to save prices for the period set above. With nothing selected, all stocks are exported." }
   uses: { ko: ["국내 주식 시세를 내 PC에 모아 두고 싶을 때", "기술적 지표가 차트에서 어떻게 보이는지 공부할 때", "시세 데이터를 CSV로 받아 직접 분석하고 싶을 때"], en: ["When you want Korean stock prices stored on your own PC", "When learning how technical indicators look on a chart", "When you want price data as CSV for your own analysis"] }
   settings_path: { ko: "%LOCALAPPDATA%\\BigStock (설정 settings.json, 데이터 stock.db)", en: "%LOCALAPPDATA%\\BigStock (settings.json and stock.db)" }
 
@@ -1033,6 +1500,15 @@
       text: { ko: "공공데이터포털 API 키를 넣으면 최신 운행 자료와 내장 데이터의 역 구성이 다른지 확인해요. 키는 Windows 사용자 계정으로 암호화해 저장해요.", en: "With a data.go.kr API key, checks whether the latest service data differs from the built-in stations. The key is stored encrypted with your Windows account." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면(역 영문명 포함), 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI (with English station names), dark or light theme, and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "도시 고르기", en: "Pick a city" }
+      text: { ko: "왼쪽 위 '도시'에서 보고 싶은 도시 버튼을 누르세요. 노선도에서 휠로 확대/축소하고, 끌거나 방향키로 움직이고, Home을 누르면 전체가 다시 보여요.", en: "Press a city button under 'City' at the top left. On the map, use the wheel to zoom, drag or use the arrow keys to pan, and press Home to see the whole map again." }
+    - title: { ko: "출발역과 도착역 정하기", en: "Set the origin and destination" }
+      text: { ko: "검색 칸에 역 이름이나 초성(예: ㅅㅇ)을 입력하고 Enter를 누르면 비어 있는 출발·도착 칸부터 채워져요. 노선도에서 역을 클릭해도 되고, 결과 목록에서 역을 골라 '출발역으로'나 '도착역으로'를 눌러도 돼요.", en: "Type a station name or Korean initials (e.g. ㅅㅇ) in the search box and press Enter to fill the empty From/To slot first. You can also click a station on the map, or select one in the results and press 'Set as Origin' or 'Set as Destination'." }
+    - title: { ko: "경로 확인하기", en: "Check the route" }
+      text: { ko: "두 역을 고르면 바로 경로가 나와요. '기준'에서 최소 시간과 최소 환승을 바꿔 비교하고, 출발역과 도착역은 바꾸기 버튼으로 맞바꿀 수 있어요.", en: "Once both stations are set, the route appears right away. Switch 'Prefer' between Fastest and Fewest Transfers to compare, and use the swap button to reverse origin and destination." }
+    - title: { ko: "이미지로 저장하기", en: "Save as an image" }
+      text: { ko: "파일 > 노선도 이미지 저장이나 파일 > 경로 이미지 저장을 누르고 저장할 위치를 고르세요. 최신 자료와 비교하려면 데이터 > 공공데이터포털 API 키 설정에 키를 넣은 뒤 데이터 > 데이터 갱신 확인을 누르세요.", en: "Choose File > Save Map Image or File > Save Route Image and pick where to save it. To compare with the latest data, enter your key under Data > Public Data Portal API Key, then choose Data > Check for Data Updates." }
   uses: { ko: ["처음 가는 도시에서 지하철로 가는 길을 미리 볼 때", "환승을 줄인 경로와 가장 빠른 경로를 비교할 때", "노선도 이미지를 크게 저장해 두고 싶을 때"], en: ["When planning a subway trip in an unfamiliar Korean city", "When comparing the fastest route with the one with fewer transfers", "When you want a large image of a rail map"] }
   apis_note: { ko: "노선도와 경로 찾기는 API 없이 쓸 수 있어요. 「데이터 갱신 확인」을 쓰려면 공공데이터포털(data.go.kr)에 회원가입·로그인한 뒤 아래 페이지에서 [활용신청]을 눌러 승인받고, 마이페이지의 일반 인증키(인코딩·디코딩 어느 쪽이든)를 BigRailway의 데이터 > 공공데이터포털 API 키 설정에 넣으세요.", en: "The maps and route finder work without the API. To use Check for Data Updates, sign up and log in at data.go.kr, press [활용신청] (Apply for use) on the page below and wait for approval, then enter your general API key from My Page (either the Encoding or Decoding form) in BigRailway under Data > Public Data Portal API Key." }
   apis:
@@ -1062,6 +1538,17 @@
       text: { ko: "지금까지의 알림을 모아 두고, 두 번 클릭하면 그 공고를 공고 탭에서 열어요.", en: "Keeps every alert; double-click one to open that notice in the Notices tab." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요. 인증키는 Windows 사용자 계정으로 암호화해 저장해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom. The API key is stored encrypted with your Windows account." }
+  howto:
+    - title: { ko: "인증키 넣기", en: "Enter your API key" }
+      text: { ko: "파일 > 인증키 설정...을 열고 공공데이터포털에서 받은 인증키를 붙여 넣은 뒤 '키 확인'을 눌러 '키가 동작합니다.'가 나오면 '저장'을 누르세요.", en: "Open File > Service Key..., paste the key you got from data.go.kr, press 'Test', and when 'The key works.' appears, press 'Save'." }
+    - title: { ko: "갱신하기", en: "Refresh" }
+      text: { ko: "'갱신' 버튼이나 F5를 누르세요. 처음 갱신은 최근 2개월 공고를 저장만 하고, 그다음 갱신부터 새 공고·정정공고·상태 변화를 알려 줘요.", en: "Press the 'Refresh' button or F5. The first refresh only saves the last two months of notices; from the next refresh on, you're told about new notices, amendments and status changes." }
+    - title: { ko: "공고 거르고 상세 보기", en: "Filter and open notices" }
+      text: { ko: "'공고' 탭에서 유형·지역·상태·기간을 고르거나 공고명을 검색하세요. 목록에서 공고를 고르면 일정과 공급 정보가 나오고, '원문 열기'로 LH 공고문을 열 수 있어요.", en: "On the 'Notices' tab, choose Type, Region, Status and Period, or search by notice name. Select a notice to see its schedule and supply details, and press 'Open original' to open the LH notice." }
+    - title: { ko: "관심 조건 저장하기", en: "Save your interest" }
+      text: { ko: "원하는 조건으로 거른 상태에서 '관심 조건으로 저장'을 누르면 그 조건에 맞는 공고만 알려 줘요. 모든 변화를 다시 받으려면 '관심 조건 해제'를 누르세요.", en: "With the list filtered the way you want, press 'Save as interest' to get alerts only for matching notices. Press 'Clear interest' to be told about every change again." }
+    - title: { ko: "일정·가격 살펴보기", en: "Check dates and prices" }
+      text: { ko: "'달력' 탭에서 다가오는 일정을 보고 '.ics 내보내기'로 다른 달력에 옮길 수 있어요. '가격 비교' 탭에서는 열 머리글을 눌러 정렬하고, 달력·알림 기록의 항목을 두 번 클릭하면 그 공고가 '공고' 탭에서 열려요.", en: "On the 'Calendar' tab, see upcoming dates and use 'Export .ics' to move them to another calendar. On the 'Prices' tab, click a column header to sort, and double-click an entry in Calendar or Alerts to open that notice on the 'Notices' tab." }
   uses: { ko: ["LH 청약·임대 공고를 매번 사이트에 들어가 확인하기 번거로울 때", "관심 지역·유형의 새 공고와 마감일을 놓치고 싶지 않을 때", "여러 공고의 분양가와 임대 조건을 한눈에 비교하고 싶을 때"], en: ["When checking the LH website for new notices every time gets tedious", "When you don't want to miss new notices or deadlines for your region and type", "When you want to compare prices and rental terms across notices at a glance"] }
   apis_note: { ko: "공공데이터포털(data.go.kr)에 회원가입·로그인한 뒤 아래 세 페이지에서 각각 [활용신청]을 눌러 승인받으세요. 인증키는 계정마다 하나라서 마이페이지의 일반 인증키(인코딩·디코딩 어느 쪽이든)를 BigLH의 파일 > 인증키 설정에 한 번만 넣으면 돼요. 세 API가 모두 승인돼야 목록·상세·공급 정보를 다 볼 수 있어요.", en: "Sign up and log in at data.go.kr, then press [활용신청] (Apply for use) on each of the three pages below and wait for approval. The key is one per account, so enter your general API key from My Page (either the Encoding or Decoding form) once in BigLH under File > Service Key. All three APIs must be approved to see notice lists, details and supply information." }
   apis:
@@ -1094,6 +1581,15 @@
       text: { ko: "경로 길이, 방문 셀, 탐색 단계, 시간을 보여 줘서 알고리즘끼리 비교하기 좋아요.", en: "Path length, visited cells, steps and time make it easy to compare algorithms." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 미로까지 바뀌는 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, a dark/light theme that recolors the maze too, and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "미로 만들기", en: "Generate a maze" }
+      text: { ko: "왼쪽 '미로 생성'에서 너비·높이(5~300), 시드, 생성 알고리즘, 브레이드(루프 비율)를 정하고 '미로 생성' 버튼을 누르세요. 시드 옆 '무작위 시드' 버튼을 누르면 새 시드가 들어가요. 실행하면 마지막 설정으로 미로가 하나 바로 만들어져요.", en: "Under 'Generate Maze' on the left, set the width and height (5 to 300), seed, generation algorithm and braid (loop ratio), then click 'Generate'. The 'Random seed' button next to the seed fills in a new seed. A maze is generated with your last settings as soon as the app starts." }
+    - title: { ko: "탐색 시작하기", en: "Start a search" }
+      text: { ko: "'미로 탐색'에서 탐색 알고리즘을 고르고, 표시 방식을 '애니메이션' 또는 '한 번에 표시'로 정한 뒤 '탐색 시작'을 누르세요.", en: "Under 'Solve Maze', choose a search algorithm, set the display mode to 'Animation' or 'Instant', and click 'Solve'." }
+    - title: { ko: "재생 조절하기", en: "Control the playback" }
+      text: { ko: "애니메이션 중에는 '애니메이션 속도' 슬라이더로 프레임당 단계 수를 바꿀 수 있어요. '일시정지 / 재개' 버튼으로 멈췄다 이어 가고, '정지' 버튼을 누르면 탐색 표시가 지워져요.", en: "During the animation, the 'Animation speed' slider changes how many steps run per frame. The 'Pause / Resume' button stops and continues the search, and the 'Stop' button clears the search display." }
+    - title: { ko: "알고리즘 비교하기", en: "Compare algorithms" }
+      text: { ko: "탐색이 끝나면 상태, 경로 길이, 방문 셀, 탐색 단계, 탐색 시간을 확인하세요. 탐색 알고리즘을 바꾸면 이전 표시가 지워지니, 같은 미로에서 '탐색 시작'을 다시 눌러 결과를 견줘 보세요.", en: "When the search ends, check the status, path length, visited cells, steps and time. Changing the search algorithm clears the previous display, so click 'Solve' again on the same maze to compare the results." }
   uses: { ko: ["탐색 알고리즘을 눈으로 이해하고 싶을 때", "수업이나 발표에서 알고리즘을 보여 줄 때", "그냥 미로가 풀리는 걸 구경하고 싶을 때"], en: ["When you want to understand search algorithms visually", "When showing algorithms in a class or talk", "When you just enjoy watching a maze get solved"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigMaze.json", en: "CONFIGURATION\\BigMaze.json next to the exe" }
 
@@ -1115,6 +1611,15 @@
       text: { ko: "방향이 있는 그래프와 없는 그래프를 모두 다룰 수 있어요.", en: "Works with both directed and undirected graphs." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "랜덤 그래프 만들기", en: "Generate a random graph" }
+      text: { ko: "'랜덤 생성'에서 그래프 유형, 시드, 노드 수(1~200), 밀도(0~1), 최소·최대 가중치를 정하고 필요하면 '방향 그래프'를 체크한 뒤 '랜덤 생성'을 누르세요. '무작위' 버튼은 새 시드로 바꾸고 바로 만들어 줘요.", en: "Under 'Random Graph', set the graph type, seed, node count (1 to 200), density (0 to 1) and min and max weights, check 'Directed graph' if needed, then click 'Generate'. The 'Random' button switches to a new seed and generates right away." }
+    - title: { ko: "Mermaid 파일 불러오기", en: "Open a Mermaid file" }
+      text: { ko: "'파일 > 불러오기' 또는 '불러오기' 버튼으로 .mmd 파일을 고르세요. 첫 줄은 'flowchart LR'처럼 쓰고, 'A -->|5| B'처럼 링크 글자에 가중치를 적어요(없으면 1, '---'는 방향 없는 간선). 잘못된 곳이 있으면 '진단'에 줄과 열이 나와요.", en: "Choose a .mmd file with 'File > Open' or the 'Open' button. Start with a line like 'flowchart LR' and put the weight in the link text, as in 'A -->|5| B' (1 if omitted; '---' makes an undirected edge). Any mistake is listed under 'Diagnostics' with its line and column." }
+    - title: { ko: "최단 경로 찾기", en: "Find the shortest path" }
+      text: { ko: "'최단 경로'에서 시작 노드와 목적 노드를 고르고 '최단 경로 찾기'를 누르세요. 거리와 경로가 나오고 그래프 위에 경로가 표시돼요. 갈 수 없으면 도달할 수 없다고 알려 줘요.", en: "Under 'Shortest Path', pick the source and target nodes and click 'Find Shortest Path'. The distance and path appear and the path is shown on the graph. If the target can't be reached, it tells you so." }
+    - title: { ko: "그래프 저장하기", en: "Save the graph" }
+      text: { ko: "'파일 > 저장하기' 또는 '저장하기' 버튼을 누르면 지금 그래프를 .mmd 파일로 저장해요. 랜덤으로 만든 그래프도 저장해 두었다가 나중에 다시 불러올 수 있어요.", en: "Click 'File > Save' or the 'Save' button to save the current graph as a .mmd file. You can save a random graph too and load it again later." }
   uses: { ko: ["다익스트라 알고리즘을 직접 실험해 보고 싶을 때", "Mermaid로 적은 그래프의 경로를 확인할 때", "자료구조 수업 자료가 필요할 때"], en: ["When you want to experiment with Dijkstra's algorithm", "When checking paths in a graph written in Mermaid", "When you need material for a data structures class"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigGraph.json", en: "CONFIGURATION\\BigGraph.json next to the exe" }
 
@@ -1136,6 +1641,15 @@
       text: { ko: "예제 텍스트를 눌러서 바로 시험해 볼 수 있어요.", en: "Load an example text with one click and try it right away." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "텍스트 넣기", en: "Enter some text" }
+      text: { ko: "'원본 텍스트'에 압축할 글을 입력하세요. '예제 불러오기'를 누를 때마다 다음 예제가 들어가고, '지우기'를 누르면 입력과 결과가 모두 지워져요.", en: "Type the text to compress under 'Source Text'. Each click on 'Load Sample' loads the next sample, and 'Clear' erases the input and the results." }
+    - title: { ko: "인코딩하기", en: "Encode" }
+      text: { ko: "'인코딩 ▶'을 누르세요. 코드 테이블, 비트 문자열, 인코딩 바이트(HEX), 압축률 같은 통계가 한꺼번에 채워져요.", en: "Click 'Encode ▶'. The code table, bit string, encoded bytes (HEX) and stats such as the ratio are filled in at once." }
+    - title: { ko: "디코딩해 확인하기", en: "Decode and check" }
+      text: { ko: "'◀ 디코딩'을 누르면 '디코딩 결과'에 복원한 글이 나오고, 원본과 같으면 'ROUND TRIP : 일치', 다르면 'ROUND TRIP : 불일치'로 표시돼요.", en: "Click '◀ Decode' to show the restored text under 'Decoded Result'. It reads 'ROUND TRIP : MATCH' if it equals the source and 'ROUND TRIP : MISMATCH' if not." }
+    - title: { ko: "바이트를 고쳐 보기", en: "Tamper with the bytes" }
+      text: { ko: "'인코딩 바이트 (HEX)' 상자의 값이나 '유효 비트 수'를 직접 고친 뒤 '◀ 디코딩'을 다시 누르세요. 비트 하나만 바뀌어도 결과가 어떻게 달라지는지 볼 수 있어요(공백은 무시해요).", en: "Edit the values in the 'Encoded Bytes (HEX)' box or the 'Valid Bits' count, then click '◀ Decode' again to see how even one changed bit affects the result (spaces are ignored)." }
   uses: { ko: ["압축이 어떻게 동작하는지 궁금할 때", "허프만 코딩을 배우거나 가르칠 때", "글자 빈도에 따라 코드가 어떻게 달라지는지 볼 때"], en: ["When you're curious how compression works", "When learning or teaching Huffman coding", "When you want to see how codes change with character frequency"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigHuffman.json", en: "CONFIGURATION\\BigHuffman.json next to the exe" }
 
@@ -1157,6 +1671,17 @@
       text: { ko: "데이터를 2차원으로 줄여 군집을 점 그림으로 보여 주고, 점에 마우스를 올리면 행 번호가 나와요.", en: "Projects the data to 2D and plots the clusters; hover a point to see its row number." }
     - title: { ko: "결과 CSV 저장", en: "Save results as CSV" }
       text: { ko: "군집 번호가 붙은 데이터를 CSV 파일로 저장해요.", en: "Save the data with cluster labels to a CSV file." }
+  howto:
+    - title: { ko: "데이터 파일 열기", en: "Open a data file" }
+      text: { ko: "'파일 열기'를 눌러 CSV 또는 XLSX 파일을 고르세요. 첫 행은 열 이름으로 읽고, 내용은 '데이터' 탭에 표로 나와요.", en: "Click 'Open File' and choose a CSV or XLSX file. The first row is read as column names, and the contents appear as a table on the 'Data' tab." }
+    - title: { ko: "열 고르기", en: "Pick the columns" }
+      text: { ko: "'군집화 컬럼' 목록에서 묶을 때 쓸 열을 체크하세요. 숫자 열과 문자열 열을 섞어 여러 개 고를 수 있어요.", en: "Check the columns to use in the 'Clustering Columns' list. You can mix number and text columns and pick several." }
+    - title: { ko: "K 정하기", en: "Choose K" }
+      text: { ko: "'군집 수 (K)'에 직접 숫자를 넣거나 'K 추천'을 누르세요. 추천을 누르면 'K 추천' 탭에 그래프와 표가 나오고, 추천한 K가 입력란에 들어가요.", en: "Type a number in 'Clusters (K)' or click 'Suggest K'. The suggestion shows charts and a table on the 'K Suggestion' tab and enters the suggested K in the box." }
+    - title: { ko: "군집화 실행하기", en: "Run the clustering" }
+      text: { ko: "'군집화 실행'을 누르면 '데이터' 탭에 '군집' 열이 붙고, '군집 요약'과 'PCA 산점도' 탭에서 결과를 볼 수 있어요.", en: "Click 'Run Clustering' to add a 'Cluster' column on the 'Data' tab, and see the results on the 'Cluster Summary' and 'PCA Scatter' tabs." }
+    - title: { ko: "CSV로 저장하기", en: "Save as CSV" }
+      text: { ko: "'CSV 저장'을 누르면 '원래 파일 이름_군집.csv'라는 이름이 제안돼요. 위치를 골라 저장하면 군집 번호가 붙은 데이터가 담겨요.", en: "Click 'Save CSV' and a name like 'original name_clusters.csv' is suggested. Pick a location to save the data with its cluster labels." }
   uses: { ko: ["고객이나 상품 데이터를 비슷한 그룹으로 나눠 보고 싶을 때", "K-평균 알고리즘을 실제 데이터로 배워 볼 때", "엑셀 표에 숨은 패턴을 찾아보고 싶을 때"], en: ["When you want to split customer or product data into similar groups", "When learning K-means with real data", "When looking for hidden patterns in a spreadsheet"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigClustering.json", en: "CONFIGURATION\\BigClustering.json next to the exe" }
 
@@ -1180,6 +1705,15 @@
       text: { ko: "이동 목록을 정해진 텍스트 형식으로 클립보드에 복사해요.", en: "Copy the move list to the clipboard in a fixed text format." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "문제 정하기", en: "Set up the puzzle" }
+      text: { ko: "'원판'과 '기둥' 옆의 줄이기·늘리기 버튼으로 개수를 정하고, '목표 기둥'에서 A~H 중 하나를 누르세요. 개수를 바꾸면 모든 원판이 기둥 A에 쌓인 기본 배치로 다시 시작해요.", en: "Use the buttons next to 'Disks' and 'Pegs' to set fewer or more, then click one of A to H under 'Target peg'. Changing a count restarts from the standard layout with every disk on peg A." }
+    - title: { ko: "시작 배치 고르기", en: "Choose the starting layout" }
+      text: { ko: "'기본 배치'를 누르면 원판이 모두 기둥 A에 쌓이고, '랜덤 배치'를 누르면 원판마다 기둥이 무작위로 정해져요. 기둥이 4개 이상이면 랜덤 배치로 풀 수 있는 원판 수에 제한이 있어요.", en: "Click 'Standard' to stack every disk on peg A, or 'Random' to put each disk on a random peg. With 4 or more pegs, random layouts can only be solved up to a limited number of disks." }
+    - title: { ko: "풀이 재생하기", en: "Play the solution" }
+      text: { ko: "'▶ 재생'을 누르면 원판이 차례로 옮겨지고, 같은 버튼('❚❚ 일시정지')으로 멈춰요. '한 단계'는 한 번만 옮기고, '처음으로'는 시작 배치로 되돌려요. '속도' 옆 버튼으로 빠르기를 바꿔요.", en: "Click '▶ Play' to move the disks in order, and click the same button ('❚❚ Pause') to stop. 'Step' makes a single move and 'Restart' returns to the starting layout. The buttons next to 'Speed' change how fast it plays." }
+    - title: { ko: "이동 목록 살펴보기", en: "Browse the move list" }
+      text: { ko: "'이동 목록'에서 항목을 누르면 그 이동 뒤 상태로 바로 가요. '복사' 버튼이나 '파일 > 이동 목록 복사'로 목록 전체를 클립보드에 복사할 수 있어요.", en: "Click an item in the 'Move List' to jump to the state after that move. Use the 'Copy' button or 'File > Copy Move List' to copy the whole list to the clipboard." }
   uses: { ko: ["하노이 탑 재귀 풀이를 눈으로 따라가 보고 싶을 때", "재귀 알고리즘을 배우거나 가르칠 때", "기둥이 늘면 이동 수가 얼마나 줄어드는지 볼 때"], en: ["When you want to follow the recursive Hanoi solution with your eyes", "When learning or teaching recursive algorithms", "When you want to see how extra pegs cut the move count"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigHanoiTop.json", en: "CONFIGURATION\\BigHanoiTop.json next to the exe" }
 
@@ -1201,5 +1735,16 @@
       text: { ko: "원하는 크기로 다시 그려 PNG로 저장하거나 클립보드에 복사하고, PNG에 매개변수를 담아 두어 그 파일로 같은 그림을 다시 그려요.", en: "Redraw at any size to save as PNG or copy to the clipboard; the PNG carries its parameters, so you can open it to redraw the same picture." }
     - title: { ko: "한/영·테마·확대", en: "Language, theme, zoom" }
       text: { ko: "한국어/영어 화면, 다크/라이트 테마, Ctrl +/− 확대를 지원해요.", en: "Korean or English UI, dark or light theme, and Ctrl +/− zoom." }
+  howto:
+    - title: { ko: "프랙탈 고르기", en: "Pick a fractal" }
+      text: { ko: "썸네일 목록에서 프랙탈을 누르면 바로 그려져요. 프리셋이 있는 프랙탈은 '프리셋'에서 하나를 고르면 그 값으로 바로 다시 그려요.", en: "Click a fractal in the thumbnail list to draw it right away. For fractals with presets, choosing one under 'Preset' redraws with those values." }
+    - title: { ko: "확대해 탐험하기", en: "Zoom in to explore" }
+      text: { ko: "망델브로·줄리아 같은 탈출 시간 프랙탈에서는 그림을 드래그하면 그 영역이 확대되고, 클릭하면 2배 확대, 오른쪽 클릭하면 2배 축소돼요.", en: "On escape-time fractals such as Mandelbrot and Julia, drag over the picture to zoom into that area, click to zoom in 2×, or right-click to zoom out 2×." }
+    - title: { ko: "매개변수 바꾸기", en: "Change the parameters" }
+      text: { ko: "값을 고친 뒤 '그리기 (F5)'를 누르거나 입력란에서 Enter를 누르세요. 계산이 오래 걸리면 '취소 (Esc)', 처음 값으로 돌아가려면 '기본값'을 누르세요. 색칠 항목만 바꿨다면 다시 계산하지 않고 색만 칠해요.", en: "After editing values, click 'Draw (F5)' or press Enter in a box. Click 'Cancel (Esc)' if it takes too long, or 'Defaults' to go back to the starting values. If you changed only the coloring settings, it just recolors without recomputing." }
+    - title: { ko: "고해상도 PNG 저장하기", en: "Save a high-resolution PNG" }
+      text: { ko: "'고해상도 저장'에 너비와 높이(픽셀)를 넣고 'PNG 저장'(Ctrl+S)을 누르면 그 크기로 다시 그려 저장해요. 지금 화면의 그림은 '클립보드 복사'(Ctrl+Shift+C)로 복사할 수 있어요.", en: "Enter a width and height in pixels under 'High-Resolution Save' and click 'Save PNG' (Ctrl+S) to redraw at that size and save. To copy the picture currently on screen, use 'Copy' (Ctrl+Shift+C)." }
+    - title: { ko: "저장한 그림 다시 그리기", en: "Redraw a saved picture" }
+      text: { ko: "'파일 > PNG에서 매개변수 열기'(Ctrl+O)로 BigFractal이 저장한 PNG를 고르면, 같은 프랙탈과 매개변수, 저장 크기를 불러와 다시 그려요.", en: "Choose a PNG saved by BigFractal with 'File > Open Parameters from PNG' (Ctrl+O) to load the same fractal, parameters and save size and draw it again." }
   uses: { ko: ["망델브로 집합 속을 깊이 확대해 구경하고 싶을 때", "프랙탈과 혼돈 이론을 배우거나 가르칠 때", "배경 화면이나 인쇄용 고해상도 프랙탈 그림이 필요할 때"], en: ["When you want to zoom deep into the Mandelbrot set", "When learning or teaching fractals and chaos theory", "When you need a high-resolution fractal picture for a wallpaper or print"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigFractal.json", en: "CONFIGURATION\\BigFractal.json next to the exe" }
