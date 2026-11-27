@@ -81,6 +81,17 @@ layout: default
       </div>
     </section>
 
+    {%- if app.howto %}
+    <section class="block">
+      <h2>{{ t.howto_title }}</h2>
+      <ol class="howto">
+        {%- for h in app.howto %}
+        <li><span class="step-num">{{ forloop.index }}</span><div><h3>{{ h.title[L] }}</h3><p>{{ h.text[L] }}</p></div></li>
+        {%- endfor %}
+      </ol>
+    </section>
+    {%- endif %}
+
     {%- if app.uses[L] and app.uses[L].size > 0 %}
     <section class="block">
       <h2>{{ t.uses_title }}</h2>

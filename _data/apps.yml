@@ -915,6 +915,17 @@
       text: { ko: "비밀번호 관리자처럼 기록하지 말라고 표시한 복사와 제외 프로세스(기본 KeePass·KeePassXC·1Password·Bitwarden)는 저장하지 않아요. 기록은 Windows 사용자 계정으로 암호화해 이 PC에만 둬요.", en: "Copies marked as not to be recorded, as password managers do, and copies from excluded processes (KeePass, KeePassXC, 1Password and Bitwarden by default) are not stored. History is encrypted with your Windows user account and stays on this PC." }
     - title: { ko: "보존 한도·언어·테마", en: "Retention, language, theme" }
       text: { ko: "기본 500개·30일·항목당 32MB까지 보관하고 설정에서 바꿀 수 있어요. 단축키, 한국어/영어, 다크/라이트 테마, Ctrl +/− 화면 확대도 지원해요.", en: "By default it keeps 500 items, 30 days and up to 32 MB per item, all changeable in settings, along with the hotkeys. Korean or English UI, dark or light theme and Ctrl +/− zoom are supported." }
+  howto:
+    - title: { ko: "실행해 두기", en: "Keep it running" }
+      text: { ko: "BigClipboard.exe를 실행해 두면 다른 프로그램에서 복사(Ctrl+C)할 때마다 목록에 쌓여요. 창을 닫으면 기록과 단축키도 멈추니 쓰는 동안에는 최소화해 두세요.", en: "While BigClipboard.exe is running, everything you copy (Ctrl+C) in other programs is added to the list. Closing the window stops recording and the hotkeys, so minimize it while you work." }
+    - title: { ko: "팝업에서 골라 붙여 넣기", en: "Pick and paste from the popup" }
+      text: { ko: "붙여 넣을 곳에 커서를 두고 Ctrl+Alt+V를 누르세요. 검색어를 입력하거나 위/아래 화살표로 고른 뒤 Enter(또는 두 번 클릭)를 누르면 그 자리에 붙어요. Esc를 누르거나 다른 곳을 클릭하면 닫혀요.", en: "Put the cursor where you want to paste and press Ctrl+Alt+V. Type to search or use the up and down arrows, then press Enter (or double-click) to paste there. Press Esc or click elsewhere to close it." }
+    - title: { ko: "메인 창에서 다시 쓰기", en: "Reuse from the main window" }
+      text: { ko: "목록에서 항목을 고르고 Enter, 두 번 클릭 또는 '클립보드에 넣기'를 누른 뒤 원하는 곳에서 Ctrl+V 하세요. Ctrl+F로 검색하고 Del로 지울 수 있어요.", en: "Select an item and press Enter, double-click it or click Copy to Clipboard, then press Ctrl+V where you want it. Ctrl+F searches and Del deletes." }
+    - title: { ko: "고정하고 번호로 붙여 넣기", en: "Pin and paste by number" }
+      text: { ko: "항목을 고르고 Ctrl+P(또는 '고정')를 누르면 목록 맨 위에 고정돼요. 고정 항목은 위에서부터 1~9번이 되어 Ctrl+Alt+숫자로 바로 붙여 넣을 수 있고, Alt+위/아래로 순서를 바꿔요.", en: "Select an item and press Ctrl+P (or click Pin) to pin it at the top of the list. Pinned items are numbered 1 to 9 from the top, Ctrl+Alt+number pastes one directly, and Alt+Up/Down changes the order." }
+    - title: { ko: "설정 바꾸기", en: "Change settings" }
+      text: { ko: "설정 > 설정 열기에서 최대 항목 수, 보존 일수, 항목 크기 상한, 제외 프로세스, 단축키를 바꿔요. 단축키가 다른 프로그램과 겹치면 상태 표시줄에 알려 주니 다른 조합으로 바꾸세요.", en: "Settings > Open Settings changes the maximum item count, retention days, item size limit, excluded processes and hotkeys. If a hotkey is already taken by another program, the status bar tells you, so choose another combination." }
   uses: { ko: ["조금 전에 복사한 내용을 다시 붙여 넣어야 할 때", "인사말·주소·명령어처럼 자주 쓰는 문장을 단축키로 넣고 싶을 때", "여러 곳에서 모은 내용을 한 문서에 차례로 붙일 때"], en: ["When you need to paste something you copied a while ago", "When you want frequently used text such as greetings, addresses or commands on a hotkey", "When you paste content gathered from several places into one document"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigClipboard.json (기록은 %LOCALAPPDATA%\\BigClipboard\\History.db)", en: "CONFIGURATION\\BigClipboard.json next to the exe (history in %LOCALAPPDATA%\\BigClipboard\\History.db)" }
 

@@ -39,6 +39,7 @@ ko:
   features_title: 이런 걸 할 수 있어요
   uses_title: 이럴 때 쓰세요
   apis_title: 먼저 신청해야 할 API
+  howto_title: 사용 방법
   start_title: 시작하기
   steps: [zip 파일 받기, 압축 풀기, exe 파일 실행]
   smartscreen_note: '"Windows의 PC 보호" 창이 뜨면 "추가 정보" → "실행"을 누르세요.'
@@ -109,6 +110,7 @@ en:
   features_title: What it can do
   uses_title: Handy when you are
   apis_title: APIs to apply for first
+  howto_title: How to use
   start_title: Getting started
   steps: [Download the zip, Unzip it, Run the exe]
   smartscreen_note: 'If "Windows protected your PC" appears, click "More info" → "Run anyway".'
