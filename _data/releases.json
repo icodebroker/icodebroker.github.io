@@ -119,6 +119,14 @@
                          "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigDetection-v1.0.0/BigDetection-1.0.0-win-x64.zip",
                          "released":  "2026-11-18"
                      },
+    "BigDiff":  {
+                    "version":  "1.0.0",
+                    "zip":  "BigDiff-1.0.0-win-x64.zip",
+                    "size":  66296253,
+                    "sha256":  "07b3e2a0c3d9cf988aebe72b6ad4d338403f5f8f3ea66b470f404a5b7ac9dabc",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigDiff-v1.0.0/BigDiff-1.0.0-win-x64.zip",
+                    "released":  "2026-11-28"
+                },
     "BigDisk":  {
                     "version":  "1.0.0",
                     "zip":  "BigDisk-1.0.0-win-x64.zip",
