@@ -320,12 +320,12 @@
                        "released":  "2026-11-18"
                    },
     "BigOpenCode":  {
-                        "version":  "1.0.0",
-                        "zip":  "BigOpenCode-1.0.0-win-x64.zip",
-                        "size":  60691624,
-                        "sha256":  "f76719f8b2cbe86d6366d7ed7197c8e14f11a4bb41bc9f48190c1d42d828a766",
-                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigOpenCode-v1.0.0/BigOpenCode-1.0.0-win-x64.zip",
-                        "released":  "2026-11-18"
+                        "version":  "1.0.1",
+                        "zip":  "BigOpenCode-1.0.1-win-x64.zip",
+                        "size":  60694514,
+                        "sha256":  "db814f9b655b2cb92094c7cf3a7bc33b796b4a45dfa6841c089326e5d96121a3",
+                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigOpenCode-v1.0.1/BigOpenCode-1.0.1-win-x64.zip",
+                        "released":  "2026-11-28"
                     },
     "BigPacket":  {
                       "version":  "1.0.0",
