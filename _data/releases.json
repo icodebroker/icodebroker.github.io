@@ -8,12 +8,12 @@
                      "released":  "2026-11-21"
                  },
     "BigCalculator":  {
-                          "version":  "1.0.1",
-                          "zip":  "BigCalculator-1.0.1-win-x64.zip",
-                          "size":  61355029,
-                          "sha256":  "f6a2c5a69c6d56c5a28d049cdd738ce2480ee8658abb1bc5ffc620cab70c061d",
-                          "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCalculator-v1.0.1/BigCalculator-1.0.1-win-x64.zip",
-                          "released":  "2026-11-21"
+                          "version":  "1.0.2",
+                          "zip":  "BigCalculator-1.0.2-win-x64.zip",
+                          "size":  61355377,
+                          "sha256":  "cfd22f19b72bd5195e728595b8ff18317a450d2c928ef277e73292c0737ff378",
+                          "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCalculator-v1.0.2/BigCalculator-1.0.2-win-x64.zip",
+                          "released":  "2026-11-28"
                       },
     "BigCalendar":  {
                         "version":  "1.0.0",

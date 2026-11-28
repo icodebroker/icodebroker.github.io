@@ -1212,7 +1212,7 @@
   category: desktop
   summary: { ko: "공학·프로그래머 모드와 변환기 계산기", en: "Standard, scientific and programmer calculator" }
   tagline: { ko: "일상 계산부터 단위 변환까지 하나로 해결해요", en: "From everyday math to unit conversion, all in one" }
-  intro: { ko: "표준, 공학용, 프로그래머 모드와 날짜 계산, 단위 변환기를 한 창에서 쓸 수 있어요. 계산 기록과 메모리도 남아 있어 앞의 결과를 다시 쓰기 편해요.", en: "Standard, scientific and programmer modes plus date calculation and unit converters, all in one window. History and memory make it easy to reuse earlier results." }
+  intro: { ko: "표준, 공학용, 프로그래머 모드와 날짜 계산, 단위 변환기를 한 창에서 쓸 수 있어요. 계산 기록과 메모리도 남아 있어 앞의 결과를 다시 쓰기 편해요. 결과 값은 Ctrl+C로 복사하고, 복사해 둔 숫자는 Ctrl+V로 바로 붙여 넣을 수 있어요.", en: "Standard, scientific and programmer modes plus date calculation and unit converters, all in one window. History and memory make it easy to reuse earlier results. Copy a result with Ctrl+C and paste a copied number straight in with Ctrl+V." }
   features:
     - title: { ko: "여러 계산 모드", en: "Several calculator modes" }
       text: { ko: "표준, 공학용(삼각법·로그·지수), 프로그래머 모드를 골라 써요.", en: "Switch between standard, scientific (trig, log, powers) and programmer modes." }
@@ -1230,7 +1230,7 @@
     - title: { ko: "모드 고르기", en: "Pick a mode" }
       text: { ko: "왼쪽 목록에서 계산기(표준·공학용·프로그래머·날짜 계산)나 변환기 아래의 단위 종류를 고르세요. 목록은 왼쪽 위 ☰ 버튼으로 열고 닫아요.", en: "Choose a calculator (Standard, Scientific, Programmer or Date Calculation) or a unit type under Converter in the list on the left. The ☰ button at the top left opens and closes the list." }
     - title: { ko: "키보드로 계산하기", en: "Calculate with the keyboard" }
-      text: { ko: "버튼을 눌러도 되고, 숫자와 + - * / ( ) ^ !를 바로 입력해도 돼요. Enter나 =로 결과를 보고, Backspace는 한 글자, Delete는 입력값, Esc는 전체를 지워요. F9는 부호를 바꾸고, %는 표준 모드에서 백분율, 공학용·프로그래머 모드에서 나머지예요.", en: "Click the buttons or type digits and + - * / ( ) ^ ! directly. Press Enter or = for the result; Backspace deletes one character, Delete clears the entry and Esc clears everything. F9 changes the sign, and % is percent in Standard mode and modulo in Scientific and Programmer modes." }
+      text: { ko: "버튼을 눌러도 되고, 숫자와 + - * / ( ) ^ !를 바로 입력해도 돼요. Enter나 =로 결과를 보고, Backspace는 한 글자, Delete는 입력값, Esc는 전체를 지워요. F9는 부호를 바꾸고, %는 표준 모드에서 백분율, 공학용·프로그래머 모드에서 나머지예요. Ctrl+C는 표시된 값을 자릿수 구분 기호 없이 복사하고, Ctrl+V는 클립보드의 숫자를 입력값으로 붙여 넣어요(식은 붙여 넣을 수 없어요).", en: "Click the buttons or type digits and + - * / ( ) ^ ! directly. Press Enter or = for the result; Backspace deletes one character, Delete clears the entry and Esc clears everything. F9 changes the sign, and % is percent in Standard mode and modulo in Scientific and Programmer modes. Ctrl+C copies the displayed value without digit separators, and Ctrl+V pastes a number from the clipboard as the entry (expressions can't be pasted)." }
     - title: { ko: "진법과 비트 다루기", en: "Work with bases and bits" }
       text: { ko: "프로그래머 모드에서 HEX·DEC·OCT·BIN 줄을 클릭하면 그 진법으로 입력하고, 나머지 줄에서 변환된 값을 함께 봐요. 비트를 누르면 비트 전환 키패드로, 키패드를 누르면 숫자 키패드로 돌아와요.", en: "In Programmer mode, click the HEX, DEC, OCT or BIN row to type in that base while the other rows show the converted values. Click Bits for the bit toggling keypad and Keypad to return to the number keypad." }
     - title: { ko: "날짜 계산과 단위 변환", en: "Dates and unit conversion" }
