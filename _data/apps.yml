@@ -1337,7 +1337,7 @@
     - title: { ko: "끌어다 놓아 등록", en: "Drag-and-drop registration" }
       text: { ko: ".exe나 .lnk 파일을 여러 개 한꺼번에 끌어다 놓아 등록하고, 이미 등록된 파일은 건너뛰어요.", en: "Drop several .exe or .lnk files at once to register them; files already registered are skipped." }
     - title: { ko: "그룹 정리", en: "Groups" }
-      text: { ko: "새 그룹을 만들고 이름을 바꾸거나, 여러 프로그램을 골라 다른 그룹으로 끌어다 옮길 수 있어요. 그룹은 하나씩 또는 한꺼번에 접고 펼칠 수 있고 그 상태를 기억해요. 상태 표시줄에 등록한 프로그램 수가 보여요.", en: "Create and rename groups, and select several programs to drag them to another group. Collapse and expand groups one at a time or all at once, and the state is remembered. The status bar shows how many programs are registered." }
+      text: { ko: "새 그룹을 만들고 이름을 바꾸거나, 여러 프로그램을 골라 다른 그룹으로 끌어다 옮길 수 있어요. 그룹은 하나씩 또는 한꺼번에 접고 펼칠 수 있고 그 상태를 기억해요. 창 머리말의 BigLauncher 옆과 상태 표시줄에 등록한 프로그램 수가 보여요.", en: "Create and rename groups, and select several programs to drag them to another group. Collapse and expand groups one at a time or all at once, and the state is remembered. The number of registered programs appears next to BigLauncher in the window header and in the status bar." }
     - title: { ko: "검색", en: "Search" }
       text: { ko: "Ctrl+F로 이름을 검색하면 일치하는 프로그램을 강조하고, 접힌 그룹도 잠시 펼쳐 보여 줘요.", en: "Press Ctrl+F to search by name; matching programs are highlighted and collapsed groups open temporarily." }
     - title: { ko: "그룹 배치", en: "Group layout" }

@@ -240,12 +240,12 @@
                         "released":  "2026-11-18"
                     },
     "BigLauncher":  {
-                        "version":  "1.0.1",
-                        "zip":  "BigLauncher-1.0.1-win-x64.zip",
-                        "size":  60255871,
-                        "sha256":  "5e61545a05e2f0cfcaed4cc484805c2b2716f476217c14852569b42700698cbb",
-                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigLauncher-v1.0.1/BigLauncher-1.0.1-win-x64.zip",
-                        "released":  "2026-11-24"
+                        "version":  "1.0.2",
+                        "zip":  "BigLauncher-1.0.2-win-x64.zip",
+                        "size":  60256016,
+                        "sha256":  "507aba7623e0768e29ae460c7523fc1426f7fbd9fedd70558766ab9883f89e56",
+                        "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigLauncher-v1.0.2/BigLauncher-1.0.2-win-x64.zip",
+                        "released":  "2026-11-28"
                     },
     "BigLH":  {
                   "version":  "1.0.1",
