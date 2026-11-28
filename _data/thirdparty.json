@@ -1291,6 +1291,28 @@
                           "url":  null
                       }
                   ],
+    "BigRename":  [
+                      {
+                          "name":  ".NET Runtime / WPF",
+                          "license":  "MIT",
+                          "url":  "https://github.com/dotnet/runtime"
+                      },
+                      {
+                          "name":  "MetadataExtractor",
+                          "license":  "Apache-2.0",
+                          "url":  "https://github.com/drewnoakes/metadata-extractor-dotnet"
+                      },
+                      {
+                          "name":  "XmpCore",
+                          "license":  "BSD-3-Clause",
+                          "url":  "https://github.com/drewnoakes/xmp-core-dotnet/"
+                      },
+                      {
+                          "name":  "NanumGothicCoding",
+                          "license":  "SIL OFL 1.1",
+                          "url":  null
+                      }
+                  ],
     "BigS3":  [
                   {
                       "name":  ".NET Runtime / WPF",

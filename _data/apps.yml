@@ -155,6 +155,38 @@
   uses: { ko: ["작업 폴더를 외장 디스크나 다른 드라이브에 주기적으로 백업할 때", "백업하기 전에 무엇이 복사되고 지워질지 먼저 확인하고 싶을 때", "여러 폴더를 각자의 백업 위치로 한 번에 맞추고 싶을 때"], en: ["When you regularly back up work folders to an external disk or another drive", "When you want to see what will be copied and deleted before backing up", "When you want to sync several folders to their own backup locations at once"] }
   settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigFolderBackup.json", en: "BigFolderBackup.json in the CONFIGURATION folder next to the exe" }
 
+- name: BigRename
+  category: files
+  summary: { ko: "번호·날짜·정규식·EXIF로 파일 이름 일괄 변경", en: "Batch rename files by counter, date, regex and EXIF" }
+  tagline: { ko: "미리 보고 바꾸고, 마음에 안 들면 되돌리세요", en: "Preview, rename, and undo if you change your mind" }
+  intro: { ko: "BigRename은 폴더 안의 파일 이름을 규칙 하나로 한꺼번에 바꾸는 프로그램이에요. 번호, 촬영 일시, 정규식 찾아 바꾸기, 카메라 이름을 조합한 새 이름을 실행 전에 표로 미리 보여 주고, 실행한 작업은 기록이 남아 원래 이름으로 되돌릴 수 있어요. 중간에 실패하면 이미 바꾼 파일을 원래대로 돌려 놓아 파일을 잃거나 덮어쓰지 않아요.", en: "BigRename renames all the files in a folder with a single rule. It previews the new names, built from counters, capture dates, regex find and replace and camera names, in a table before anything changes, and every run is journaled so you can put the original names back. If a run fails partway, the files already renamed are restored, so nothing is lost or overwritten." }
+  features:
+    - title: { ko: "템플리트로 새 이름 만들기", en: "Name templates" }
+      text: { ko: "{name}, {n:000}, {taken:yyyy-MM-dd}, {modified:…}, {make}, {model}을 섞어 새 이름을 만들고, 번호는 시작값과 증가값을 정할 수 있어요.", en: "Mix {name}, {n:000}, {taken:yyyy-MM-dd}, {modified:…}, {make} and {model} into a new name, with your own counter start and step." }
+    - title: { ko: "사진·동영상 촬영 일시", en: "Photo and video dates" }
+      text: { ko: "사진은 EXIF, 동영상은 QuickTime 메타데이터에서 촬영 일시를 읽고, 없으면 파일 시각을 써요. 어디서 읽었는지 표에 함께 보여 줘요.", en: "Reads the capture date from EXIF for photos and QuickTime metadata for videos, falling back to the file time, and shows the source in the table." }
+    - title: { ko: "정규식 찾아 바꾸기", en: "Regex find and replace" }
+      text: { ko: ".NET 정규식으로 이름 일부를 찾아 바꾸고, $1이나 ${이름}으로 찾은 묶음을 다시 쓸 수 있어요.", en: "Find and replace parts of a name with .NET regular expressions, reusing captured groups with $1 or ${name}." }
+    - title: { ko: "짝 파일 함께 바꾸기", en: "Companion files" }
+      text: { ko: "이름이 같은 RAW·JPEG·동영상과 XMP·AAE 사이드카는 한 묶음으로 같은 새 이름을 받아요.", en: "RAW, JPEG and video files and XMP or AAE sidecars that share a name are renamed together as one group." }
+    - title: { ko: "실행 전 검사", en: "Checks before running" }
+      text: { ko: "금지 문자, 예약 이름, 너무 긴 경로, 다른 파일과 겹치는 이름을 미리 찾아 표시하고, 문제가 남아 있으면 실행하지 않아요. 새 이름끼리 겹치면 번호를 덧붙여요.", en: "Flags forbidden characters, reserved names, over-long paths and clashes with other files in advance, and will not run while any problem remains. When new names collide, a number is appended." }
+    - title: { ko: "되돌리기와 복구", en: "Undo and recovery" }
+      text: { ko: "실행 기록으로 마지막 작업을 원래 이름으로 되돌리고, 강제 종료로 끝나지 않은 작업은 다음 실행 때 마저 진행할지 되돌릴지 물어봐요.", en: "The journal undoes the last batch, and a batch cut off by a crash is offered for completion or rollback the next time you start." }
+  howto:
+    - title: { ko: "폴더 고르기", en: "Choose a folder" }
+      text: { ko: "'폴더 선택'(Ctrl+O)을 눌러 이름을 바꿀 파일이 있는 폴더를 고르세요. 하위 폴더까지 바꾸려면 '하위 폴더 포함'을 켜요. 파일은 자기 폴더 안에서만 이름이 바뀌어요.", en: "Click 'Choose Folder' (Ctrl+O) and pick the folder with the files to rename. Turn on 'Include subfolders' to cover subfolders too; files only change name within their own folder." }
+    - title: { ko: "새 이름 규칙 쓰기", en: "Write the naming rule" }
+      text: { ko: "'새 이름' 칸에 템플리트를 쓰세요. 예를 들어 {taken:yyyy-MM-dd}_{n:000}은 2026-10-03_001처럼 바뀌어요. '번호 순서'에서 이름·촬영 일시·수정 시각 중 번호를 매길 순서를 고르고, '시작'과 '증가'로 번호를 정해요.", en: "Type a template in 'New name'; for example {taken:yyyy-MM-dd}_{n:000} gives names like 2026-10-03_001. Under 'Number order', choose whether numbering follows name, date taken or date modified, and set the counter with 'Start' and 'Step'." }
+    - title: { ko: "필요하면 정규식으로 다듬기", en: "Refine with a regex if needed" }
+      text: { ko: "'찾을 정규식'과 '바꿀 문자열'을 채우면 확장자를 뺀 이름에 적용되고, 그 결과가 템플리트의 {name}이 돼요. 대소문자를 가리지 않으려면 '대소문자 무시'를 켜세요.", en: "Fill in 'Find (regex)' and 'Replace' to apply them to the name without its extension; the result becomes {name} in the template. Turn on 'Ignore case' to match regardless of case." }
+    - title: { ko: "미리 보고 실행하기", en: "Preview and run" }
+      text: { ko: "아래 표에서 원래 이름과 새 이름, 상태를 확인하세요. 문제가 표시된 파일이 없으면 '이름 바꾸기'(Ctrl+Enter)를 누르고 확인 창에서 계속하면 바뀌어요. 폴더 내용이 바뀌었으면 F5로 다시 읽어요.", en: "Check the current names, new names and status in the table below. When no file shows a problem, click 'Rename' (Ctrl+Enter) and confirm. Press F5 to reload if the folder has changed." }
+    - title: { ko: "되돌리기", en: "Undo" }
+      text: { ko: "결과가 마음에 들지 않으면 '되돌리기'(편집 > 마지막 작업 되돌리기)를 누르세요. 그 사이 이름이 바뀌었거나 원래 이름을 다른 파일이 차지한 파일은 건너뛰고 알려 줘요.", en: "If you don't like the result, click 'Undo' (Edit > Undo Last Batch). Files renamed again in the meantime, or whose original name is now taken by another file, are skipped and listed." }
+  uses: { ko: ["카메라와 휴대폰 사진을 촬영 날짜 순서로 한 폴더에 정리할 때", "파일 이름의 일정한 부분만 한꺼번에 고치고 싶을 때", "일괄 변경이 잘못될까 걱정돼 미리 보고 되돌릴 수 있어야 할 때"], en: ["When you sort camera and phone photos into one folder by capture date", "When you want to change the same part of many file names at once", "When you worry a batch rename might go wrong and want to preview and undo it"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigRename.json (실행 기록은 %LOCALAPPDATA%\\BigRename\\JOURNAL)", en: "CONFIGURATION\\BigRename.json next to the exe (journal in %LOCALAPPDATA%\\BigRename\\JOURNAL)" }
+
 - name: BigFTP
   category: files
   summary: { ko: "쉽고 안전한 FTP/FTPS 파일 전송", en: "Easy and careful FTP/FTPS file transfer" }

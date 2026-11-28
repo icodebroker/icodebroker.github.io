@@ -98,6 +98,7 @@ function Get-PackageLicense([string]$name, [string]$version)
         'Interop.UIAutomationClient' = 'MIT'
         'FFmpeg.AutoGen'             = 'MIT'
         'BitMiracle.LibTiff.NET'     = 'BSD-3-Clause'
+        'XmpCore'                    = 'BSD-3-Clause'
     }
 
     $license    = $null

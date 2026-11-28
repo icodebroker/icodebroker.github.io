@@ -367,6 +367,14 @@
                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigRemote-v1.0.0/BigRemote-1.0.0-win-x64.zip",
                       "released":  "2026-11-18"
                   },
+    "BigRename":  {
+                      "version":  "1.0.0",
+                      "zip":  "BigRename-1.0.0-win-x64.zip",
+                      "size":  66631888,
+                      "sha256":  "209f878bb7f44c46a48d2f60c980bcfb41edae15e8fd1c546c8052037006677b",
+                      "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigRename-v1.0.0/BigRename-1.0.0-win-x64.zip",
+                      "released":  "2026-11-28"
+                  },
     "BigS3":  {
                   "version":  "1.0.0",
                   "zip":  "BigS3-1.0.0-win-x64.zip",
