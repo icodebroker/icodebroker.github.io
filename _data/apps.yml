@@ -1489,8 +1489,10 @@
       text: { ko: "시계에 마우스를 올리면 나타나는 도구 모음의 ✕ 버튼을 누르거나, 오른쪽 클릭 메뉴에서 닫기를 고르세요.", en: "Click the ✕ button on the toolbar that appears when you hover over the clock, or choose Close from the right-click menu." }
   uses: { ko: ["작업하면서 시간을 늘 보고 싶을 때", "바탕 화면을 조금 멋지게 꾸미고 싶을 때", "발표나 시험 중 시계를 크게 띄울 때"], en: ["Keeping an eye on the time while you work", "Giving your desktop a nice touch", "Showing a big clock during a talk or exam"] }
   data_files:
-    - path: '%TEMP%\.net\BigWatch\*\CONFIGURATION\BigWatch.json'
-      text: { ko: "그림자 깊이, 창, 다크 모드, 언어, 확대를 저장해요. 지금 버전은 exe 옆이 아니라 실행할 때 풀리는 이 임시 폴더에 저장해서, 새 버전을 받거나 임시 파일을 정리하면 설정이 처음으로 돌아가요.", en: "Shadow depth, window, dark mode, language and zoom. The current version saves this inside the temporary folder it unpacks to, not next to the exe, so settings reset when you get a new version or clean temporary files." }
+    - path: '[exe]\CONFIGURATION\BigWatch.json'
+      text: { ko: "그림자 깊이, 창, 다크 모드, 언어, 확대를 저장해요. 지우면 처음 설정으로 돌아가요. 1.0.0은 설정을 %TEMP%\\.net\\BigWatch 아래 임시 폴더에 저장했는데, 1.0.1부터는 이 파일이 없으면 그 설정을 한 번 읽어 와서 exe 옆에 저장해요.", en: "Shadow depth, window, dark mode, language and zoom. Deleting it resets these settings. Version 1.0.0 saved settings in a temporary folder under %TEMP%\\.net\\BigWatch; from 1.0.1, if this file is missing, those settings are read once and then saved next to the exe." }
+    - path: '%TEMP%\.net\BigWatch\'
+      text: { ko: "1.0.0이 실행할 때 프로그램 전체를 풀어 두던 폴더예요. 1.0.1로 설정을 옮긴 뒤에는 프로그램을 닫고 지워도 돼요.", en: "Where version 1.0.0 unpacked the whole app when it ran. After 1.0.1 has taken over your settings, you can delete it while the app is closed." }
 
 - name: BigWorldWatch
   category: desktop
