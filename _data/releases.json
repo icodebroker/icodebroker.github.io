@@ -400,12 +400,12 @@
                       "released":  "2026-11-28"
                   },
     "BigS3":  {
-                  "version":  "1.0.0",
-                  "zip":  "BigS3-1.0.0-win-x64.zip",
-                  "size":  57826608,
-                  "sha256":  "4b8ae0b0f5d75110751f24c97a5782c2207ee8992d361634fbeb76dc9d1545c3",
-                  "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigS3-v1.0.0/BigS3-1.0.0-win-x64.zip",
-                  "released":  "2026-11-18"
+                  "version":  "1.0.1",
+                  "zip":  "BigS3-1.0.1-win-x64.zip",
+                  "size":  57827455,
+                  "sha256":  "d37e1667230bfa08c035217c49aad89ae7d08d5f0d01b95a7365a65a292318a3",
+                  "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigS3-v1.0.1/BigS3-1.0.1-win-x64.zip",
+                  "released":  "2026-11-28"
               },
     "BigSQL":  {
                    "version":  "1.0.0",
