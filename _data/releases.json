@@ -143,6 +143,14 @@
                       "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigDocker-v1.0.0/BigDocker-1.0.0-win-x64.zip",
                       "released":  "2026-11-18"
                   },
+    "BigDuplicate":  {
+                         "version":  "1.0.0",
+                         "zip":  "BigDuplicate-1.0.0-win-x64.zip",
+                         "size":  66315486,
+                         "sha256":  "d9b5a564431c80745f9b09bbf49217bde36571c1ecbab2b0d08860bf61bda3ed",
+                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigDuplicate-v1.0.0/BigDuplicate-1.0.0-win-x64.zip",
+                         "released":  "2026-11-28"
+                     },
     "BigEdit":  {
                     "version":  "1.0.0",
                     "zip":  "BigEdit-1.0.0-win-x64.zip",

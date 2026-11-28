@@ -590,6 +590,28 @@
                           "url":  null
                       }
                   ],
+    "BigDuplicate":  [
+                         {
+                             "name":  ".NET Runtime / WPF",
+                             "license":  "MIT",
+                             "url":  "https://github.com/dotnet/runtime"
+                         },
+                         {
+                             "name":  "Pillow (grayscale conversion and LANCZOS resampling code), Copyright (c) 1997-2011 Secret Labs AB, (c) 1995-2011 Fredrik Lundh and contributors, (c) 2010 Jeffrey \u0027Alex\u0027 Clark and contributors",
+                             "license":  "MIT-CMU",
+                             "url":  "https://github.com/python-pillow/Pillow"
+                         },
+                         {
+                             "name":  "ImageHash 4.3.2 (pHash/dHash definitions), Copyright (c) 2013-2022 Johannes Buchner",
+                             "license":  "BSD-2-Clause",
+                             "url":  "https://github.com/JohannesBuchner/imagehash"
+                         },
+                         {
+                             "name":  "NanumGothicCoding",
+                             "license":  "SIL OFL 1.1",
+                             "url":  null
+                         }
+                     ],
     "BigEdit":  [
                     {
                         "name":  ".NET Runtime / WPF",

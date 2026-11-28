@@ -213,6 +213,13 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = 'dagre-d3-es 7.0.14 (layered layout structure), Copyright (c) 2013 Chris Pettitt'; license = 'MIT'; url = 'https://github.com/tbo47/dagre-es' })
     }
 
+    # BigDuplicate : pHash/dHash를 imagehash 4.3.2 정의로 구하고, 회색조(Convert.c L24)·LANCZOS 크기 조정(Resample.c)은 Pillow 코드를 C#으로 옮김
+    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigDuplicate')
+    {
+        [void]$list.Add([ordered]@{ name = 'Pillow (grayscale conversion and LANCZOS resampling code), Copyright (c) 1997-2011 Secret Labs AB, (c) 1995-2011 Fredrik Lundh and contributors, (c) 2010 Jeffrey ''Alex'' Clark and contributors'; license = 'MIT-CMU'; url = 'https://github.com/python-pillow/Pillow' })
+        [void]$list.Add([ordered]@{ name = 'ImageHash 4.3.2 (pHash/dHash definitions), Copyright (c) 2013-2022 Johannes Buchner'; license = 'BSD-2-Clause'; url = 'https://github.com/JohannesBuchner/imagehash' })
+    }
+
     # BigRailway : 내장 노선 데이터 (railway-data.json은 OSM 파생 데이터베이스라 zip의 DATA 폴더에 ODbL로 함께 넣는다)
     if((Split-Path -Leaf $appDirectoryPath) -eq 'BigRailway')
     {
