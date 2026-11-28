@@ -231,6 +231,14 @@
                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigHash-v1.0.0/BigHash-1.0.0-win-x64.zip",
                     "released":  "2026-11-28"
                 },
+    "BigHosts":  {
+                     "version":  "1.0.0",
+                     "zip":  "BigHosts-1.0.0-win-x64.zip",
+                     "size":  66353943,
+                     "sha256":  "a3de4c50da0a80fe1fe091726b73103d2bd87fd661dc7b09a654d5291fa61de0",
+                     "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigHosts-v1.0.0/BigHosts-1.0.0-win-x64.zip",
+                     "released":  "2026-11-29"
+                 },
     "BigHuffman":  {
                        "version":  "1.0.0",
                        "zip":  "BigHuffman-1.0.0-win-x64.zip",

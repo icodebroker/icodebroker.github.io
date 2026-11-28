@@ -1054,6 +1054,42 @@
     - path: '[exe]\CONFIGURATION\BigCipher.json'
       text: { ko: "테마, 언어, 확대, 창, 패널 폭, 고른 알고리즘, 입출력 방식을 저장해요. 암호, 키, IV는 저장하지 않아요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, panel width, the selected algorithm and input/output mode. Passwords, keys and IVs are never saved. Deleting it resets these settings." }
 
+- name: BigHosts
+  category: network
+  summary: { ko: "hosts 파일 편집과 프로필 전환, 관리자 권한 저장", en: "Edit the hosts file, switch profiles and save with administrator rights" }
+  tagline: { ko: "hosts를 고치고, 실제로 그렇게 동작하는지까지 확인하세요", en: "Edit hosts and confirm it really works the way you wrote it" }
+  intro: { ko: "BigHosts는 Windows hosts 파일을 표로 편집하고, 개발·테스트용 항목 묶음을 프로필로 저장해 바꿔 끼우는 프로그램이에요. 프로그램은 일반 권한으로 실행되고 저장할 때만 UAC 확인을 받아 관리자 권한으로 쓰며, 저장할 때마다 백업을 남기고 hosts의 권한과 속성을 원래대로 되돌려요. 운영 체제가 무시하는 줄은 미리 알려 주고, 저장한 뒤에는 운영 체제 해석기로 이름을 조회해 적은 대로 동작하는지 확인해요. 이런 판정 규칙은 실제 hosts와 운영 체제 조회 결과를 무작위 항목으로 대조해 검증했어요.", en: "BigHosts edits the Windows hosts file as a table and lets you keep sets of development and test entries as profiles to swap in and out. The program runs with normal rights and asks for UAC confirmation only when it saves, keeping a backup each time and restoring the file's permissions and attributes. It warns you about lines Windows ignores, and after saving it looks up each name with the operating system resolver to confirm it works as written. These rules were checked by comparing randomly generated entries against the real hosts file and the operating system's own lookups." }
+  features:
+    - title: { ko: "표와 원문 편집", en: "Table and raw text editing" }
+      text: { ko: "'항목' 탭에서 주소·이름·주석을 표로 고치고 체크 박스로 켜고 끌 수 있어요. '원문' 탭에서는 파일 내용을 그대로 고칠 수 있고, 고치지 않은 줄은 줄 끝과 인코딩까지 원래 바이트 그대로 저장해요.", en: "Edit addresses, names and comments as a table on the 'Entries' tab and switch lines on and off with a check box. The 'Source' tab edits the file text directly, and lines you did not touch are written back byte for byte, line endings and encoding included." }
+    - title: { ko: "프로필 전환", en: "Profile switching" }
+      text: { ko: "항목 묶음을 프로필로 저장해 두고 '선택한 프로필 적용'을 누르면 hosts 안의 BigHosts 블록만 그 프로필로 바꿔요. Docker 같은 다른 프로그램이 넣은 줄은 블록 밖에 그대로 남아요.", en: "Save sets of entries as profiles; 'Apply selected profile' replaces only the BigHosts block inside hosts with that profile. Lines added by other programs such as Docker stay untouched outside the block." }
+    - title: { ko: "운영 체제가 무시하는 줄 경고", en: "Warnings for lines Windows ignores" }
+      text: { ko: "상태 열에서 잘못된 주소, 와일드카드, 10번째 이후 이름, localhost 재정의, BOM 없는 UTF-8 파일의 한글 줄, 같은 이름에 다른 주소, Defender가 되돌릴 수 있는 Microsoft 도메인처럼 적은 대로 동작하지 않는 줄을 알려 줘요.", en: "The Status column flags lines that will not work as written: invalid addresses, wildcards, names after the ninth, localhost overrides, non-ASCII lines in a UTF-8 file without BOM, one name with different addresses, and Microsoft domains that Defender may revert." }
+    - title: { ko: "안전한 관리자 저장", en: "Careful administrator save" }
+      text: { ko: "저장할 때만 관리자 권한을 받고, 백업을 남긴 뒤 임시 파일로 바꿔 끼워 중간에 꺼져도 hosts가 깨지지 않아요. 편집하는 동안 다른 프로그램이 hosts를 바꿨으면 덮어쓰기 전에 알려 주고, 백업은 최근 50개를 보관해요.", en: "Administrator rights are used only for saving: a backup is made and the file is swapped in from a temporary file, so hosts is never left half-written. If another program changed hosts while you were editing, you are told before anything is overwritten, and the latest 50 backups are kept." }
+    - title: { ko: "저장 뒤 확인", en: "Check after saving" }
+      text: { ko: "저장하면 '확인' 탭에서 운영 체제 해석기(getaddrinfo)로 이름마다 조회해 hosts에 적은 주소와 실제로 돌아온 주소를 나란히 보여 줘요.", en: "After saving, the 'Check' tab looks up each name with the operating system resolver (getaddrinfo) and shows the address written in hosts next to the address actually returned." }
+  howto:
+    - title: { ko: "항목 추가하기", en: "Add an entry" }
+      text: { ko: "'항목 추가'(Ctrl+N)를 누르고 주소와 이름을 입력하세요. '켜기' 체크 박스나 '활성 전환'(Ctrl+E)으로 줄을 주석 처리하거나 되살리고, '항목 삭제'로 지울 수 있어요.", en: "Click 'Add entry' (Ctrl+N) and type the address and name. Use the 'On' check box or 'Toggle' (Ctrl+E) to comment a line out or bring it back, and 'Delete entry' to remove it." }
+    - title: { ko: "저장하기", en: "Save" }
+      text: { ko: "'저장 (관리자)'(Ctrl+S)를 누르고 UAC 확인 창에서 허용하세요. 상태 표시줄에 백업 파일 이름이 나오고, '확인' 탭에 조회 결과가 나와요. hosts를 새로 불러오려면 '다시 읽기'(F5)를 누르세요.", en: "Click 'Save (admin)' (Ctrl+S) and allow the UAC prompt. The status bar shows the backup file name and the 'Check' tab shows the lookup results. Use 'Reload' (F5) to read hosts again." }
+    - title: { ko: "프로필 만들고 적용하기", en: "Create and apply a profile" }
+      text: { ko: "왼쪽 '프로필'에 이름을 적고 '추가'를 누른 뒤, '프로필 내용' 탭에 줄을 적고 '프로필 저장'(Ctrl+S)을 누르세요. 목록에서 프로필을 고르고 '선택한 프로필 적용'을 누르면 바로 hosts에 저장돼요. '(프로필 없음)'을 적용하면 블록을 지워요.", en: "Type a name under 'Profiles' on the left and click 'New', write the lines on the 'Profile' tab and click 'Save profile' (Ctrl+S). Pick the profile in the list and click 'Apply selected profile' to save it to hosts right away. Applying '(No profile)' removes the block." }
+    - title: { ko: "백업에서 되돌리기", en: "Restore from a backup" }
+      text: { ko: "'파일 → 백업에서 불러오기'로 저장 전 hosts를 골라 불러온 뒤 저장하면 되돌아가요. '백업 폴더 열기'로 백업 파일을 직접 볼 수도 있어요.", en: "Use 'File → Load from backup' to load an earlier hosts and then save it to roll back. 'Open backup folder' shows the backup files themselves." }
+  uses: { ko: ["개발 중인 사이트를 실제 도메인 이름으로 내 PC나 테스트 서버에 연결할 때", "개발·스테이징·운영 환경의 hosts 항목을 번갈아 바꿔 써야 할 때", "hosts에 적은 항목이 왜 동작하지 않는지 알고 싶을 때"], en: ["When you point a real domain name at your own PC or a test server during development", "When you switch hosts entries between development, staging and production", "When you want to know why an entry in hosts is not working"] }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigHosts.json'
+      text: { ko: "테마, 언어, 확대, 창 위치를 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom and window position. Deleting it resets these settings." }
+    - path: '[exe]\CONFIGURATION\PROFILES\*.hosts'
+      text: { ko: "프로필마다 파일 하나로 내용을 저장해요.", en: "One file per profile with its lines." }
+    - path: '[exe]\CONFIGURATION\BACKUP\hosts_*.bak'
+      text: { ko: "저장하기 직전의 hosts 백업이에요. 최근 50개만 남기고 오래된 것은 지워요.", en: "Backups of hosts taken just before each save. Only the latest 50 are kept." }
+    - path: '%TEMP%\BigHosts'
+      text: { ko: "관리자 권한 저장에 넘기는 요청 파일을 잠깐 두는 곳이에요. 저장이 끝나면 지워요.", en: "Holds the request handed to the administrator save for a moment. It is deleted when the save finishes." }
+
 - name: BigImageView
   category: media
   summary: { ko: "썸네일로 빠르게 훑는 이미지 뷰어", en: "An image viewer for browsing by thumbnail" }
