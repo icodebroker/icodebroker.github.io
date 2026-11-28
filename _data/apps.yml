@@ -5,7 +5,7 @@
   category: files
   summary: { ko: "두 창으로 나눠 쓰는 파일 탐색기", en: "A file explorer with a side-by-side split view" }
   tagline: { ko: "폴더 두 개를 나란히 열고 편하게 정리하세요", en: "Open two folders side by side and tidy up with ease" }
-  intro: { ko: "BigExplorer는 Windows 탐색기처럼 쓰는 파일 관리 프로그램이에요. 화면을 좌우로 나눠 두 폴더를 함께 보고, 복사·이동·비교를 한 화면에서 할 수 있어요. 압축 풀기와 바로 가기 만들기 같은 자주 쓰는 일도 오른쪽 클릭 메뉴에 모아 두었어요. 보고 있는 폴더의 exe·ico 파일이 새로 쓰이면 아이콘도 새로 읽어 와요.", en: "BigExplorer is a file manager that works much like Windows File Explorer. Split the window in two to see two folders at once, and copy, move or compare files on one screen. Everyday jobs like extracting archives and making shortcuts are right in the right-click menu. When an .exe or .ico file is rewritten, its icon is read again." }
+  intro: { ko: "BigExplorer는 Windows 탐색기처럼 쓰는 파일 관리 프로그램이에요. 화면을 좌우로 나눠 두 폴더를 함께 보고, 복사·이동·비교를 한 화면에서 할 수 있어요. 압축 풀기와 바로 가기 만들기 같은 자주 쓰는 일도 오른쪽 클릭 메뉴에 모아 두었어요. 보고 있는 폴더의 exe·ico 파일이 새로 쓰이면 아이콘도 새로 읽어 와요. SVG 파일 미리 보기 그림은 프로그램이 직접 빠르게 그리고, SVG 안의 인터넷 주소는 내려받지 않아요.", en: "BigExplorer is a file manager that works much like Windows File Explorer. Split the window in two to see two folders at once, and copy, move or compare files on one screen. Everyday jobs like extracting archives and making shortcuts are right in the right-click menu. When an .exe or .ico file is rewritten, its icon is read again. SVG thumbnails are drawn quickly by the app itself, and web addresses inside an SVG are never downloaded." }
   features:
     - title: { ko: "좌우 분할 보기", en: "Split view" }
       text: { ko: "창을 세로로 나눠 두 폴더를 나란히 열고, 반대쪽 창으로 바로 복사하거나 옮길 수 있어요.", en: "Split the window vertically to open two folders side by side and copy or move items straight to the other pane." }

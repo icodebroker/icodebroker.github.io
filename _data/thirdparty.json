@@ -614,6 +614,86 @@
                             "url":  "https://github.com/dotnet/runtime"
                         },
                         {
+                            "name":  "Skia (in libSkiaSharp)",
+                            "license":  "BSD-3-Clause",
+                            "url":  "https://skia.org"
+                        },
+                        {
+                            "name":  "libwebp (in libSkiaSharp)",
+                            "license":  "BSD-3-Clause",
+                            "url":  "https://chromium.googlesource.com/webm/libwebp"
+                        },
+                        {
+                            "name":  "libjpeg-turbo (in libSkiaSharp)",
+                            "license":  "IJG, BSD-3-Clause",
+                            "url":  "https://libjpeg-turbo.org"
+                        },
+                        {
+                            "name":  "libpng (in libSkiaSharp)",
+                            "license":  "libpng-2.0",
+                            "url":  "http://www.libpng.org/pub/png/libpng.html"
+                        },
+                        {
+                            "name":  "zlib (in libSkiaSharp)",
+                            "license":  "Zlib",
+                            "url":  "https://zlib.net"
+                        },
+                        {
+                            "name":  "ExCSS",
+                            "license":  "MIT",
+                            "url":  "https://github.com/TylerBrinks/ExCSS"
+                        },
+                        {
+                            "name":  "HarfBuzzSharp",
+                            "license":  "MIT",
+                            "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                        },
+                        {
+                            "name":  "HarfBuzzSharp.NativeAssets.Win32",
+                            "license":  "MIT",
+                            "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                        },
+                        {
+                            "name":  "ShimSkiaSharp",
+                            "license":  "MIT",
+                            "url":  "https://github.com/wieslawsoltes/Svg.Skia"
+                        },
+                        {
+                            "name":  "SkiaSharp",
+                            "license":  "MIT",
+                            "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                        },
+                        {
+                            "name":  "SkiaSharp.NativeAssets.Win32",
+                            "license":  "MIT",
+                            "url":  "https://go.microsoft.com/fwlink/?linkid=868515"
+                        },
+                        {
+                            "name":  "Svg.Animation",
+                            "license":  "MIT",
+                            "url":  "https://github.com/wieslawsoltes/Svg.Skia"
+                        },
+                        {
+                            "name":  "Svg.Custom",
+                            "license":  "MS-PL",
+                            "url":  "https://github.com/wieslawsoltes/Svg.Skia"
+                        },
+                        {
+                            "name":  "Svg.Model",
+                            "license":  "MIT",
+                            "url":  "https://github.com/wieslawsoltes/Svg.Skia"
+                        },
+                        {
+                            "name":  "Svg.SceneGraph",
+                            "license":  "MIT",
+                            "url":  "https://github.com/wieslawsoltes/Svg.Skia"
+                        },
+                        {
+                            "name":  "Svg.Skia",
+                            "license":  "MIT",
+                            "url":  "https://github.com/wieslawsoltes/Svg.Skia"
+                        },
+                        {
                             "name":  "NanumGothicCoding",
                             "license":  "SIL OFL 1.1",
                             "url":  null

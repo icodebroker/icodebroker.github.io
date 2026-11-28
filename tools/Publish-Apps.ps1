@@ -222,8 +222,8 @@ function Get-ThirdPartyList([string]$appDirectoryPath)
         [void]$list.Add([ordered]@{ name = '서울교통공사·부산교통공사·광주교통공사 역간 소요시간 / station-to-station times published by Seoul Metro, Busan Transportation Corp., Gwangju Metropolitan Rapid Transit Corp.'; license = 'Public data (data.go.kr)'; url = 'https://www.data.go.kr/' })
     }
 
-    # BigPainter : SkiaSharp 네이티브 라이브러리(libSkiaSharp.dll)에 들어 있는 Skia와 코덱
-    if((Split-Path -Leaf $appDirectoryPath) -eq 'BigPainter')
+    # BigPainter·BigExplorer : SkiaSharp 네이티브 라이브러리(libSkiaSharp.dll)에 들어 있는 Skia와 코덱
+    if(@('BigPainter', 'BigExplorer') -contains (Split-Path -Leaf $appDirectoryPath))
     {
         [void]$list.Add([ordered]@{ name = 'Skia (in libSkiaSharp)'; license = 'BSD-3-Clause'; url = 'https://skia.org' })
         [void]$list.Add([ordered]@{ name = 'libwebp (in libSkiaSharp)'; license = 'BSD-3-Clause'; url = 'https://chromium.googlesource.com/webm/libwebp' })
