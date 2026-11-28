@@ -247,6 +247,34 @@
   uses: { ko: ["설정 파일이나 코드의 두 버전에서 무엇이 바뀌었는지 볼 때", "백업 폴더와 원본 폴더가 같은지 확인할 때", "인코딩이나 줄 끝이 다른 파일을 내용만으로 비교하고 싶을 때"], en: ["When you want to see what changed between two versions of a config file or source code", "When you want to check that a backup folder matches the original", "When you want to compare files by content even though their encodings or line endings differ"] }
   settings_path: { ko: "exe 옆 CONFIGURATION\\BigDiff.json", en: "CONFIGURATION\\BigDiff.json next to the exe" }
 
+- name: BigHash
+  category: files
+  summary: { ko: "MD5·SHA-1·SHA-256 파일 해시 계산과 체크섬 검증", en: "Compute MD5, SHA-1 and SHA-256 file hashes and verify checksums" }
+  tagline: { ko: "받은 파일이 배포처의 파일과 같은지 바로 확인하세요", en: "Check right away that a download matches the original" }
+  intro: { ko: "BigHash는 파일을 끌어다 놓으면 MD5, SHA-1, SHA-256 해시를 한 번에 계산하고, 배포처에서 받은 해시나 SHA256SUMS 같은 체크섬 파일과 대조해 일치하는지 알려 주는 프로그램이에요. 파일을 한 번만 읽어 세 해시를 함께 계산하므로 빠르고, 계산한 해시는 GNU coreutils 형식의 체크섬 파일로 저장할 수 있어요. 계산 결과는 NIST 테스트 벡터와 certutil, Get-FileHash, coreutils, Python hashlib의 결과와 대조해 검증했어요.", en: "BigHash computes MD5, SHA-1 and SHA-256 hashes at once for the files you drop on it, and tells you whether they match a hash published by the source or a checksum file such as SHA256SUMS. Each file is read only once for all three hashes, so it is fast, and the hashes can be saved as a checksum file in GNU coreutils format. Its results were checked against NIST test vectors and against certutil, Get-FileHash, coreutils and Python hashlib." }
+  features:
+    - title: { ko: "세 해시를 한 번에", en: "Three hashes in one pass" }
+      text: { ko: "파일을 한 번 읽으면서 MD5, SHA-1, SHA-256을 동시에 계산해요. 폴더를 넣으면 하위 폴더의 파일까지 모두 추가하고, 해시마다 복사 버튼이 있어요.", en: "MD5, SHA-1 and SHA-256 are computed together while the file is read once. Adding a folder adds every file in its subfolders, and each hash has its own copy button." }
+    - title: { ko: "붙여 넣은 해시와 대조", en: "Compare with a pasted hash" }
+      text: { ko: "배포처의 해시를 '예상 해시'에 붙여 넣으면 길이로 알고리즘을 알아내 목록의 파일과 비교하고, 일치하는 해시를 강조해요. 해시가 든 줄 전체를 붙여 넣어도 돼요.", en: "Paste the published hash into 'Expected hash' and it works out the algorithm from the length, compares it with the files in the list and highlights the match. Pasting the whole line that contains the hash also works." }
+    - title: { ko: "체크섬 파일 검증", en: "Checksum file verification" }
+      text: { ko: "SHA256SUMS, .sha256, .sha1, .md5 파일을 열면 적힌 파일을 모두 계산해 일치, 불일치, 읽지 못함, 형식 오류 줄 수를 알려 주고, 파일마다 체크섬 파일의 몇 번째 줄과 비교했는지 보여 줘요.", en: "Open a SHA256SUMS, .sha256, .sha1 or .md5 file to hash every file it lists and see the counts of matches, mismatches, unreadable files and malformed lines, with the checksum file line each file was compared against." }
+    - title: { ko: "체크섬 파일 저장", en: "Save checksum files" }
+      text: { ko: "계산한 해시를 SHA256SUMS, SHA1SUMS, MD5SUMS로 저장해요. GNU coreutils와 같은 형식(BOM 없는 UTF-8, LF 줄 끝, 상대 경로)이라 sha256sum -c로 그대로 검증할 수 있어요.", en: "Save the hashes as SHA256SUMS, SHA1SUMS or MD5SUMS. The format matches GNU coreutils (UTF-8 without BOM, LF line endings, relative paths), so sha256sum -c can verify the file as is." }
+    - title: { ko: "믿을 수 있는 결과만", en: "Only results you can trust" }
+      text: { ko: "읽는 동안 파일이 바뀌면 '변경됨'으로 표시하고 해시를 보여 주지 않아요. 취소하거나 오류가 난 파일도 부분 해시를 보여 주지 않고, 클라우드 전용 파일은 내려받기가 시작되지 않도록 읽지 않아요.", en: "If a file changes while it is being read, it is marked 'Changed' and no hash is shown. Canceled or failed files never show a partial hash, and cloud-only files are not read so that no download is triggered." }
+  howto:
+    - title: { ko: "파일 추가하기", en: "Add files" }
+      text: { ko: "파일이나 폴더를 왼쪽 '해시할 파일' 영역에 끌어다 놓거나 '파일 추가'(Ctrl+O), '폴더 추가'(Ctrl+Shift+O)를 누르세요. 바로 계산이 시작되고 '취소'(Esc)로 멈출 수 있어요.", en: "Drop files or folders on the 'Files to hash' area on the left, or click 'Add Files' (Ctrl+O) or 'Add Folder' (Ctrl+Shift+O). Hashing starts right away, and 'Cancel' (Esc) stops it." }
+    - title: { ko: "해시 대조하기", en: "Compare a hash" }
+      text: { ko: "배포처에서 받은 해시를 '예상 해시' 칸에 붙여 넣으세요. 일치하는 파일과 해시가 강조되고 결과가 칸 아래에 나와요. MD5·SHA-1 일치는 전송 중 손상이 없다는 뜻이고, 위·변조 여부는 SHA-256으로 확인하세요.", en: "Paste the hash from the source into the 'Expected hash' box. The matching file and hash are highlighted, with the result below the box. An MD5 or SHA-1 match only rules out damage in transfer; use SHA-256 to rule out tampering." }
+    - title: { ko: "체크섬 파일로 검증하기", en: "Verify with a checksum file" }
+      text: { ko: "'체크섬 파일 열기'(Ctrl+K)로 체크섬 파일을 고르거나 오른쪽 '체크섬 파일로 검증' 영역에 끌어다 놓으세요. 아래쪽 상태 표시줄에 일치·불일치 개수가 나와요.", en: "Choose a checksum file with 'Open Checksum File' (Ctrl+K) or drop it on the 'Verify with checksum file' area on the right. The status bar at the bottom shows the match and mismatch counts." }
+    - title: { ko: "체크섬 파일 저장하기", en: "Save a checksum file" }
+      text: { ko: "'체크섬 저장 ▾'에서 SHA-256(Ctrl+S), SHA-1, MD5 중 하나를 고르세요. 계산이 끝난 파일만 저장하고, '리셋'으로 목록과 붙여 넣은 해시를 지울 수 있어요.", en: "Choose SHA-256 (Ctrl+S), SHA-1 or MD5 from 'Save Checksums ▾'. Only files whose hashing has finished are saved, and 'Reset' clears the list and the pasted hash." }
+  uses: { ko: ["내려받은 설치 파일이 배포처에서 밝힌 SHA-256과 같은지 확인할 때", "여러 파일을 옮기거나 백업한 뒤 손상 없이 복사됐는지 확인할 때", "다른 사람에게 보낼 파일의 체크섬 파일을 만들어 함께 줄 때"], en: ["When you want to check that a downloaded installer matches the SHA-256 published by its source", "When you want to confirm that files were copied without damage after a move or backup", "When you want to make a checksum file to send along with files you share"] }
+  settings_path: { ko: "exe 옆 CONFIGURATION\\BigHash.json", en: "CONFIGURATION\\BigHash.json next to the exe" }
+
 - name: BigFTP
   category: files
   summary: { ko: "쉽고 안전한 FTP/FTPS 파일 전송", en: "Easy and careful FTP/FTPS file transfer" }

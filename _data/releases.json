@@ -223,6 +223,14 @@
                         "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigHanoiTop-v1.0.0/BigHanoiTop-1.0.0-win-x64.zip",
                         "released":  "2026-11-19"
                     },
+    "BigHash":  {
+                    "version":  "1.0.0",
+                    "zip":  "BigHash-1.0.0-win-x64.zip",
+                    "size":  66337393,
+                    "sha256":  "157b817b94de26bb27412e84022d13180a61c0df6ae49defa047ac0ffdc63bd3",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigHash-v1.0.0/BigHash-1.0.0-win-x64.zip",
+                    "released":  "2026-11-28"
+                },
     "BigHuffman":  {
                        "version":  "1.0.0",
                        "zip":  "BigHuffman-1.0.0-win-x64.zip",

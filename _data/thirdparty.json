@@ -815,6 +815,18 @@
                             "url":  null
                         }
                     ],
+    "BigHash":  [
+                    {
+                        "name":  ".NET Runtime / WPF",
+                        "license":  "MIT",
+                        "url":  "https://github.com/dotnet/runtime"
+                    },
+                    {
+                        "name":  "NanumGothicCoding",
+                        "license":  "SIL OFL 1.1",
+                        "url":  null
+                    }
+                ],
     "BigHuffman":  [
                        {
                            "name":  ".NET Runtime / WPF",
