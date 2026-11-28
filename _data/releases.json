@@ -104,12 +104,12 @@
                    "released":  "2026-11-18"
                },
     "BigCURL":  {
-                    "version":  "1.0.0",
-                    "zip":  "BigCURL-1.0.0-win-x64.zip",
-                    "size":  65551053,
-                    "sha256":  "c0b5e4db68bb41e8d3f8425dc9c9d9085426bfad6ef5f4cda14f1e81cea11405",
-                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCURL-v1.0.0/BigCURL-1.0.0-win-x64.zip",
-                    "released":  "2026-11-18"
+                    "version":  "1.0.1",
+                    "zip":  "BigCURL-1.0.1-win-x64.zip",
+                    "size":  65552108,
+                    "sha256":  "8c616759176c8c8547b6e588f2c5ed7ca8c9720bda66a4b79b6d4ba30fab24cf",
+                    "url":  "https://github.com/icodebroker/icodebroker.github.io/releases/download/BigCURL-v1.0.1/BigCURL-1.0.1-win-x64.zip",
+                    "released":  "2026-11-28"
                 },
     "BigDetection":  {
                          "version":  "1.0.0",

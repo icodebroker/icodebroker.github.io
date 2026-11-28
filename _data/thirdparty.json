@@ -522,6 +522,11 @@
                         "url":  "https://dot.net/"
                     },
                     {
+                        "name":  "System.Security.Cryptography.ProtectedData",
+                        "license":  "MIT",
+                        "url":  "https://dot.net/"
+                    },
+                    {
                         "name":  "NanumGothicCoding",
                         "license":  "SIL OFL 1.1",
                         "url":  null
