@@ -131,7 +131,15 @@ layout: default
         <dt>{{ t.sha256 }}</dt><dd><code class="hash">{{ rel.sha256 }}</code></dd>
         <dt>{{ t.verify }}</dt><dd><code>Get-FileHash .\{{ rel.zip }}</code></dd>
         {%- endif %}
-        <dt>{{ t.settings }}</dt><dd><code>{{ app.settings_path[L] }}</code></dd>
+        <dt>{{ t.data_files }}</dt>
+        <dd>
+          <ul class="data-files">
+            {%- for f in app.data_files %}
+            <li><code>{{ f.path | replace: '[exe]', t.exe_folder | escape }}</code><span>{{ f.text[L] | escape }}</span></li>
+            {%- endfor %}
+          </ul>
+          <p class="data-files-note">{{ t.data_files_note | escape }}</p>
+        </dd>
         <dt>{{ t.uninstall }}</dt><dd>{{ t.uninstall_text }}</dd>
         <dt>{{ t.third_party }}</dt>
         <dd>

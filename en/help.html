@@ -4,7 +4,7 @@ lang: en
 title: Help
 permalink: /en/help/
 alt_url: /help/
-last_modified: 2026-11-18
+last_modified: 2026-11-28
 description: How to download and run the apps, get past SmartScreen and antivirus warnings, check that a file is intact, and remove an app.
 ---
 <h1>Help</h1>
@@ -33,7 +33,13 @@ description: How to download and run the apps, get past SmartScreen and antiviru
 <p>Some antivirus products wrongly flag single-file portable exes. If you downloaded it from this site (GitHub) and the SHA-256 matches, you can add it to your antivirus exceptions.</p>
 
 <h2>How to remove</h2>
-<p>Nothing is installed, so just delete the exe and the extracted folder. To remove settings too, delete the folder listed under <strong>More details → Settings location</strong> on the app page.</p>
+<p>Nothing is installed, so just delete the exe and the extracted folder. To remove settings and history too, close the app and delete the files and folders listed under <strong>More details → Files it creates</strong> on the app page. Apps mostly create files in these places:</p>
+<ul>
+  <li><strong>The CONFIGURATION folder next to the exe</strong>: most apps keep their settings here. Moving the whole exe folder moves the settings with it.</li>
+  <li><strong>A folder named after the app in %APPDATA% or %LOCALAPPDATA%</strong>: some apps keep settings, note or history databases, caches and journals here. Type <code>%LOCALAPPDATA%</code> into the File Explorer address bar to open it.</li>
+  <li><strong>%TEMP%\.net\app name</strong>: DLLs that .NET unpacks when the app runs. You can delete it after closing the app; it is created again on the next run.</li>
+</ul>
+<p>Files that hold data you created, such as notes, memos, clipboard history or saved servers, cannot be recovered once deleted, so copy them first if you need them. Passwords and keys are often encrypted with your Windows account, so they must be entered again on another PC. For apps that register in the registry, such as start-up entries or Explorer menus (BigReader, BigZIP and others), turn the option off or unregister in the app before deleting the exe.</p>
 
 <h2>Apps that need administrator rights</h2>
 <p>A few apps that read system information, such as BigDisk and BigPacket, ask for administrator rights when they start. Their pages mention it.</p>

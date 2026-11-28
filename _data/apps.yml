@@ -31,7 +31,13 @@
     - title: { ko: "경로 한 번에 만들기", en: "Create a whole path" }
       text: { ko: "위쪽 '경로 생성' 아이콘 버튼이나 Ctrl+Shift+D(기본값)를 누르고 'a\\b\\c'처럼 경로를 입력한 뒤 [생성]을 누르세요. 상대 경로는 지금 폴더를 기준으로 하고, '생성 후 해당 폴더로 이동'을 켜 두면 바로 그 폴더가 열려요.", en: "Click the 'Create path' icon button at the top or press Ctrl+Shift+D (default), type a path such as 'a\\b\\c' and click [Create]. Relative paths start from the current folder, and with 'Go to the folder after creating it' checked, the new folder opens right away." }
   uses: { ko: ["두 폴더의 내용을 비교하며 정리할 때", "파일을 이 폴더에서 저 폴더로 자주 옮길 때", "깊은 폴더 구조를 한 번에 만들어야 할 때"], en: ["When you sort files while comparing two folders", "When you often move files from one folder to another", "When you need to create a deep folder structure in one go"] }
-  settings_path: { ko: "%LOCALAPPDATA%\\BigExplorer\\settings.json", en: "%LOCALAPPDATA%\\BigExplorer\\settings.json" }
+  data_files:
+    - path: '%LOCALAPPDATA%\BigExplorer\settings.json'
+      text: { ko: "테마, 언어, 확대, 글꼴, 보기 옵션, 단축키, 창 위치, 마지막으로 연 왼쪽·오른쪽 폴더와 최근 만든 경로를 저장해요. 지우면 설정과 기록이 처음으로 돌아가요.", en: "Theme, language, zoom, font, view options, hotkey, window position, the last left and right folders, and recently created paths. Deleting it resets settings and history." }
+    - path: '%LOCALAPPDATA%\BigExplorer\settings.json.bak'
+      text: { ko: "설정 파일이 깨졌을 때 옮겨 둔 사본이에요. 지워도 돼요.", en: "A copy of a settings file that could not be read. Safe to delete." }
+    - path: '%LOCALAPPDATA%\BigExplorer\Log\'
+      text: { ko: "오류가 났을 때만 남는 오류 기록(BigExplorer.log, 1MB가 넘으면 BigExplorer.1.log로 넘김)이에요. 파일 경로가 들어갈 수 있고, 지워도 돼요.", en: "An error log written only when something goes wrong (BigExplorer.log, rolled over to BigExplorer.1.log at 1 MB). It may contain file paths. Safe to delete." }
 
 - name: BigDiskSize
   category: files
@@ -61,7 +67,9 @@
     - title: { ko: "관리자로 실행해 빠르게", en: "Run as administrator for speed" }
       text: { ko: "드라이브 전체를 자주 살펴본다면 BigDiskSize.exe를 오른쪽 클릭해 '관리자 권한으로 실행'을 고르세요. NTFS 드라이브를 더 빨리 읽어요.", en: "If you often scan whole drives, right-click BigDiskSize.exe and choose 'Run as administrator'. NTFS drives are then read faster." }
   uses: { ko: ["디스크 공간이 부족하다는 알림이 떴을 때", "어떤 폴더가 가장 큰지 궁금할 때", "정리할 큰 파일을 찾고 싶을 때"], en: ["When Windows warns you that disk space is low", "When you wonder which folder is the biggest", "When you want to find large files to clean up"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigDiskSize.json", en: "CONFIGURATION\\BigDiskSize.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigDiskSize.json'
+      text: { ko: "테마, 언어, 확대, 창 위치, 폴더 목록 비율을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window position and folder list ratio. Deleting it resets these settings." }
 
 - name: BigDisk
   category: files
@@ -93,7 +101,9 @@
     - title: { ko: "결과 저장과 보고서", en: "Save results and reports" }
       text: { ko: "검사가 끝나면 [결과 저장]으로 남겨 두었다가 위쪽 [검사 결과 열기]로 다시 볼 수 있어요. 배드 섹터 목록은 [CSV 내보내기], 전체 내용은 [HTML 보고서]로 내보내요. 응답 시간 색 기준과 재시도 횟수는 [설정]에서 바꿔요.", en: "After a scan, click [Save Result] to keep it and reopen it later with [Open Scan Result] at the top. Export the bad sector list with [Export CSV] or everything with [HTML Report]. Change the response-time color limits and retry count in [Settings]." }
   uses: { ko: ["컴퓨터가 갑자기 느려지거나 멈출 때", "중고 디스크를 사기 전이나 산 뒤에 점검할 때", "중요한 자료를 백업할 때가 됐는지 알고 싶을 때"], en: ["When your PC suddenly slows down or freezes", "When you check a used disk before or after buying it", "When you want to know if it is time to back up important data"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigDisk.json", en: "CONFIGURATION\\BigDisk.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigDisk.json'
+      text: { ko: "창 위치, 탭, 테마, 언어, 확대, 검사 옵션, 검사 결과를 저장할 폴더를 저장해요. 처음 실행할 때 만들어지고, 지우면 처음 설정으로 돌아가요.", en: "Window position, tab, theme, language, zoom, scan options and the folder for scan results. Created at first launch; deleting it resets these settings." }
 
 - name: BigZIP
   category: files
@@ -125,7 +135,13 @@
     - title: { ko: "탐색기 메뉴에 등록하기", en: "Add it to the Explorer menu" }
       text: { ko: "[설정] > '탐색기 메뉴 등록'을 누르면 탐색기에서 파일을 오른쪽 클릭해 바로 압축하거나 풀 수 있어요. 메뉴를 빼려면 '탐색기 메뉴 해제'를 누르세요.", en: "Click [Settings] > 'Register Explorer menu' to compress or extract straight from the right-click menu in Explorer. Use 'Unregister Explorer menu' to remove the menu." }
   uses: { ko: ["여러 파일을 하나로 묶어 보낼 때", "용량이 큰 폴더를 빠르게 압축할 때", "받은 ZIP 파일이 깨지지 않았는지 확인할 때"], en: ["When you bundle many files into one to send", "When you want to compress a large folder quickly", "When you check that a downloaded ZIP file is not damaged"] }
-  settings_path: { ko: "%APPDATA%\\BigZIP\\BigZIP.json", en: "%APPDATA%\\BigZIP\\BigZIP.json" }
+  data_files:
+    - path: '%APPDATA%\BigZIP\BigZIP.json'
+      text: { ko: "테마, 언어, 확대, 창, 정렬, 폴더 트리 폭, 압축 옵션을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, sort order, folder tree width and compression options. Deleting it resets these settings." }
+    - path: '%TEMP%\BigZIP\'
+      text: { ko: "압축 파일 안의 파일을 열거나 끌어낼 때 잠시 풀어 둔 사본이에요. 창을 닫으면 지워지지만, 다른 프로그램이 열고 있던 파일은 남을 수 있어요. 지워도 돼요.", en: "Temporary copies extracted when you open or drag out a file inside an archive. They are removed when the window closes, but files still open in another program can stay behind. Safe to delete." }
+    - path: 'HKCU\Software\Classes\...\BigZIP.*'
+      text: { ko: "'탐색기 메뉴 등록'을 눌렀을 때만 생기는 탐색기 오른쪽 클릭 메뉴와 .zip 연결 레지스트리 항목이에요. exe를 지우기 전에 '탐색기 메뉴 해제'를 누르면 모두 지워져요.", en: "Registry entries for the Explorer right-click menu and the .zip association, created only when you click 'Register Explorer menu'. Click 'Unregister Explorer menu' before deleting the exe to remove them all." }
 
 - name: BigFolderBackup
   category: files
@@ -153,7 +169,9 @@
     - title: { ko: "백업 실행하기", en: "Run the backup" }
       text: { ko: "미리 본 내용이 맞으면 [백업 실행]을 누르세요. 진행 중에는 [취소](또는 Esc)로 멈출 수 있고, 그때까지 처리한 작업은 그대로 남아요. 끝나면 아래 상태 줄에 성공·실패·건너뜀 건수가 나와요.", en: "If the preview looks right, click [Run Backup]. Click [Cancel] (or press Esc) to stop while it runs; work done so far is kept. When it finishes, the status bar shows how many items succeeded, failed or were skipped." }
   uses: { ko: ["작업 폴더를 외장 디스크나 다른 드라이브에 주기적으로 백업할 때", "백업하기 전에 무엇이 복사되고 지워질지 먼저 확인하고 싶을 때", "여러 폴더를 각자의 백업 위치로 한 번에 맞추고 싶을 때"], en: ["When you regularly back up work folders to an external disk or another drive", "When you want to see what will be copied and deleted before backing up", "When you want to sync several folders to their own backup locations at once"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigFolderBackup.json", en: "BigFolderBackup.json in the CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigFolderBackup.json'
+      text: { ko: "테마, 언어, 확대, 창과 백업 작업 목록(원본·백업 폴더 경로)을 저장해요. 지우면 만들어 둔 백업 작업이 모두 사라져요.", en: "Theme, language, zoom, window and the backup job list (source and backup folder paths). Deleting it removes all your backup jobs." }
 
 - name: BigRename
   category: files
@@ -185,7 +203,13 @@
     - title: { ko: "되돌리기", en: "Undo" }
       text: { ko: "결과가 마음에 들지 않으면 '되돌리기'(편집 > 마지막 작업 되돌리기)를 누르세요. 그 사이 이름이 바뀌었거나 원래 이름을 다른 파일이 차지한 파일은 건너뛰고 알려 줘요.", en: "If you don't like the result, click 'Undo' (Edit > Undo Last Batch). Files renamed again in the meantime, or whose original name is now taken by another file, are skipped and listed." }
   uses: { ko: ["카메라와 휴대폰 사진을 촬영 날짜 순서로 한 폴더에 정리할 때", "파일 이름의 일정한 부분만 한꺼번에 고치고 싶을 때", "일괄 변경이 잘못될까 걱정돼 미리 보고 되돌릴 수 있어야 할 때"], en: ["When you sort camera and phone photos into one folder by capture date", "When you want to change the same part of many file names at once", "When you worry a batch rename might go wrong and want to preview and undo it"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigRename.json (실행 기록은 %LOCALAPPDATA%\\BigRename\\JOURNAL)", en: "CONFIGURATION\\BigRename.json next to the exe (journal in %LOCALAPPDATA%\\BigRename\\JOURNAL)" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigRename.json'
+      text: { ko: "테마, 언어, 확대, 창, 마지막 폴더, 정렬, 이름 규칙을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, last folder, sort order and the rename rule. Deleting it resets these settings." }
+    - path: '%LOCALAPPDATA%\BigRename\JOURNAL\'
+      text: { ko: "이름 바꾸기 작업마다 바꾸기 전후의 이름과 경로를 적은 작업 기록이에요(끝난 기록은 최근 20개만 남겨요). 되돌리기와 강제 종료 뒤 복구에 쓰이니, 지우면 되돌릴 수 없어요. 끝나지 않은 작업이 있을 때는 지우지 마세요.", en: "A journal of old and new names and paths for each rename batch (only the latest 20 finished journals are kept). It is used for Undo and for recovery after a crash, so deleting it makes undo impossible. Do not delete it while a batch is unfinished." }
+    - path: '.~bigrename-*.tmp'
+      text: { ko: "A↔B처럼 서로 이름을 맞바꿀 때 이름을 바꾼 폴더에 잠시 쓰는 임시 이름이에요. 강제 종료되면 남을 수 있고, 다음 실행 때 작업 기록으로 복구해요.", en: "A temporary name used in the renamed folder when names are swapped (A↔B). It can stay behind after a crash, and the journal restores it at the next start." }
 
 - name: BigDuplicate
   category: files
@@ -215,9 +239,19 @@
     - title: { ko: "정리할 파일 고르기", en: "Choose files to clean up" }
       text: { ko: "'남길 파일 자동 선택'에서 규칙을 고르거나 카드의 '정리 대상'을 직접 체크하세요. 정리 실행을 누르기 전까지는 아무것도 바뀌지 않아요.", en: "Pick a rule from 'Auto-select Files to Keep' or tick 'Clean up' on the cards yourself. Nothing changes until you run the clean-up." }
     - title: { ko: "정리하고 되돌리기", en: "Clean up and undo" }
-      text: { ko: "정리 방식을 '격리 폴더로 이동'이나 '휴지통'으로 정하고 '정리 실행'(Ctrl+Enter)을 누르세요. 격리 폴더는 드라이브 맨 위의 BigDuplicate.Quarantine이고, 마음이 바뀌면 '되돌리기'(편집 > 마지막 작업 되돌리기)로 원래 자리에 돌려 놓아요.", en: "Choose 'Move to quarantine' or 'Recycle Bin' as the clean-up method and click 'Clean Up' (Ctrl+Enter). The quarantine folder is BigDuplicate.Quarantine at the root of the drive, and if you change your mind, 'Undo' (Edit > Undo Last Operation) puts the files back." }
+      text: { ko: "정리 방식을 '격리 폴더로 이동'이나 '휴지통'으로 정하고 '정리 실행'(Ctrl+Enter)을 누르세요. 격리 폴더는 C: 같은 시스템 드라이브면 %LOCALAPPDATA%\\BigDuplicate\\QUARANTINE, 다른 드라이브면 그 드라이브 맨 위의 BigDuplicate.Quarantine이고, 마음이 바뀌면 '되돌리기'(편집 > 마지막 작업 되돌리기)로 원래 자리에 돌려 놓아요.", en: "Choose 'Move to quarantine' or 'Recycle Bin' as the clean-up method and click 'Clean Up' (Ctrl+Enter). The quarantine folder is %LOCALAPPDATA%\\BigDuplicate\\QUARANTINE for files on the system drive (such as C:) and BigDuplicate.Quarantine at the root of any other drive, and if you change your mind, 'Undo' (Edit > Undo Last Operation) puts the files back." }
   uses: { ko: ["사진을 여러 곳에 백업하다 같은 파일이 쌓였을 때", "휴대폰에서 옮기거나 메신저로 받아 크기만 다른 사진을 정리할 때", "중복 파일을 지우고 싶지만 잘못 지울까 걱정될 때"], en: ["When backing up photos to several places has piled up identical files", "When you want to tidy photos that only differ in size after moving them from a phone or receiving them in a messenger", "When you want to remove duplicates but worry about deleting the wrong file"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigDuplicate.json (작업 기록은 %LOCALAPPDATA%\\BigDuplicate\\JOURNAL, 해시 캐시는 %LOCALAPPDATA%\\BigDuplicate\\CACHE)", en: "CONFIGURATION\\BigDuplicate.json next to the exe (journal in %LOCALAPPDATA%\\BigDuplicate\\JOURNAL, hash cache in %LOCALAPPDATA%\\BigDuplicate\\CACHE)" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigDuplicate.json'
+      text: { ko: "테마, 언어, 확대, 창, 검사할 폴더 목록, 유사 이미지 옵션, 정리 방식, 남길 파일 규칙을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, the folders to scan, similar-image options, clean-up method and keep rule. Deleting it resets these settings." }
+    - path: '%LOCALAPPDATA%\BigDuplicate\CACHE\hash.bin'
+      text: { ko: "검사한 파일의 경로, 크기, 수정 시각과 해시를 담아 다음 검사를 빠르게 하는 캐시예요. 저절로 줄지 않으니 커지면 지워도 돼요(다음 검사만 느려져요).", en: "A cache of paths, sizes, modified times and hashes of scanned files that makes the next scan faster. It never shrinks on its own, so delete it if it grows large (the next scan is just slower)." }
+    - path: '%LOCALAPPDATA%\BigDuplicate\JOURNAL\'
+      text: { ko: "정리 작업마다 원래 경로, 격리 경로, SHA-256을 적은 작업 기록이에요. 되돌리기에 쓰이고 저절로 지워지지 않아요. 지우면 되돌릴 수 없어요.", en: "A journal of the original path, quarantine path and SHA-256 for each clean-up. It is used for Undo and is never removed automatically. Deleting it makes undo impossible." }
+    - path: '%LOCALAPPDATA%\BigDuplicate\QUARANTINE\'
+      text: { ko: "'격리 폴더로 이동'으로 정리한 파일 중 %LOCALAPPDATA%와 같은 드라이브(보통 C:)에 있던 파일이 실제로 옮겨지는 곳이에요. 저절로 비우지 않으니 공간을 차지해요. 지우면 그 파일이 완전히 삭제되고 되돌릴 수 없어요.", en: "Where files cleaned up with 'Move to quarantine' are actually moved when they were on the same drive as %LOCALAPPDATA% (usually C:). It is never emptied automatically, so it takes up space. Deleting it permanently deletes those files and makes undo impossible." }
+    - path: 'X:\BigDuplicate.Quarantine\'
+      text: { ko: "다른 드라이브(X:)에 있던 파일을 격리할 때 그 드라이브 맨 위에 만드는 격리 폴더예요. 위 QUARANTINE 폴더와 같이 다루세요.", en: "The quarantine folder created at the root of another drive (X:) for files that were on that drive. Treat it like the QUARANTINE folder above." }
 
 - name: BigDiff
   category: files
@@ -245,7 +279,9 @@
     - title: { ko: "폴더 비교하기", en: "Compare folders" }
       text: { ko: "'폴더 비교'(Ctrl+2)에서 두 폴더를 고르고 '비교'를 누르세요. 목록에서 양쪽에 모두 있는 파일을 두 번 클릭하면 그 파일을 텍스트 비교로 열어요.", en: "In 'Folder Compare' (Ctrl+2), choose two folders and click 'Compare'. Double-click a file that exists on both sides to open it in Text Compare." }
   uses: { ko: ["설정 파일이나 코드의 두 버전에서 무엇이 바뀌었는지 볼 때", "백업 폴더와 원본 폴더가 같은지 확인할 때", "인코딩이나 줄 끝이 다른 파일을 내용만으로 비교하고 싶을 때"], en: ["When you want to see what changed between two versions of a config file or source code", "When you want to check that a backup folder matches the original", "When you want to compare files by content even though their encodings or line endings differ"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigDiff.json", en: "CONFIGURATION\\BigDiff.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigDiff.json'
+      text: { ko: "테마, 언어, 확대, 창, 비교 모드, 마지막으로 비교한 파일과 폴더 경로, 인코딩, 제외 패턴을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, compare mode, the last compared file and folder paths, encodings and exclude patterns. Deleting it resets these settings." }
 
 - name: BigHash
   category: files
@@ -273,7 +309,9 @@
     - title: { ko: "체크섬 파일 저장하기", en: "Save a checksum file" }
       text: { ko: "'체크섬 저장 ▾'에서 SHA-256(Ctrl+S), SHA-1, MD5 중 하나를 고르세요. 계산이 끝난 파일만 저장하고, '리셋'으로 목록과 붙여 넣은 해시를 지울 수 있어요.", en: "Choose SHA-256 (Ctrl+S), SHA-1 or MD5 from 'Save Checksums ▾'. Only files whose hashing has finished are saved, and 'Reset' clears the list and the pasted hash." }
   uses: { ko: ["내려받은 설치 파일이 배포처에서 밝힌 SHA-256과 같은지 확인할 때", "여러 파일을 옮기거나 백업한 뒤 손상 없이 복사됐는지 확인할 때", "다른 사람에게 보낼 파일의 체크섬 파일을 만들어 함께 줄 때"], en: ["When you want to check that a downloaded installer matches the SHA-256 published by its source", "When you want to confirm that files were copied without damage after a move or backup", "When you want to make a checksum file to send along with files you share"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigHash.json", en: "CONFIGURATION\\BigHash.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigHash.json'
+      text: { ko: "테마, 언어, 확대, 창 위치만 저장해요. 파일 목록과 해시는 저장하지 않아요.", en: "Only theme, language, zoom and window position. The file list and hashes are not saved." }
 
 - name: BigFTP
   category: files
@@ -305,7 +343,11 @@
     - title: { ko: "전송 확인하기", en: "Check transfers" }
       text: { ko: "아래 '전송' 탭에서 진행률과 확인 결과를 보고, [선택 취소]나 [모두 취소]로 멈출 수 있어요. 끝난 줄은 [끝난 항목 지우기]로 정리하고, 자세한 기록은 '로그' 탭에서 보세요.", en: "The 'Transfers' tab at the bottom shows progress and verification results; stop jobs with [Cancel selected] or [Cancel all]. Tidy up with [Clear finished], and see the details in the 'Log' tab." }
   uses: { ko: ["웹사이트 파일을 서버에 올릴 때", "회사나 집의 NAS에서 파일을 받아 올 때", "같은 파일이 덮어쓰이지 않도록 조심해서 보낼 때"], en: ["When you upload website files to a server", "When you fetch files from a NAS at home or work", "When you want to send files without overwriting by accident"] }
-  settings_path: { ko: "%APPDATA%\\BigFTP\\BigFTP.json", en: "%APPDATA%\\BigFTP\\BigFTP.json" }
+  data_files:
+    - path: '%APPDATA%\BigFTP\BigFTP.json'
+      text: { ko: "서버 목록(호스트, 포트, 사용자 이름, 암호, TLS 설정, 신뢰한 인증서 지문)과 마지막 서버·로컬 폴더, 테마, 언어, 창을 저장해요. 암호는 Windows 사용자 계정으로 암호화(DPAPI)해서 다른 PC나 다른 계정에서는 풀 수 없어요. 지우면 저장한 서버가 모두 사라져요.", en: "The server list (host, port, user name, password, TLS settings, trusted certificate thumbprints), the last server and local folder, theme, language and window. Passwords are encrypted with your Windows account (DPAPI) and cannot be decrypted on another PC or account. Deleting it removes all saved servers." }
+    - path: '*.winftp-part'
+      text: { ko: "받는 폴더에 생기는 내려받는 중인 파일이에요. 끝나면 이름이 바뀌고 실패하면 지워지지만, 강제 종료되면 남을 수 있어요. 지워도 돼요.", en: "A partial download in the destination folder. It is renamed when finished and deleted on failure, but can stay behind after a crash. Safe to delete." }
 
 - name: BigS3
   category: files
@@ -335,7 +377,9 @@
     - title: { ko: "속성 보기와 공유 링크", en: "Properties and share links" }
       text: { ko: "객체 하나를 고르고 [속성](또는 오른쪽 클릭 > 속성)을 누르면 자세한 정보 창이 열려요. 공유하려면 아래 'Presigned URL' 칸에 만료 시간(분)을 넣고 [URL 생성]을 누른 뒤 [복사]로 클립보드에 담으세요.", en: "Select one object and click [Properties] (or right-click > Properties) to open its details. To share it, enter an expiry in minutes under 'Presigned URL', click [Create URL], then [Copy] to put it on the clipboard." }
   uses: { ko: ["MinIO나 S3에 파일을 올리고 확인할 때", "다른 사람에게 파일 링크를 잠깐 공유할 때", "버킷 안에 무엇이 들어 있는지 살펴볼 때"], en: ["When you upload and check files on MinIO or S3", "When you share a file link with someone for a short time", "When you want to see what is inside a bucket"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigS3.json", en: "CONFIGURATION\\BigS3.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigS3.json'
+      text: { ko: "엔드포인트, 액세스 키, 시크릿 키, SSL 사용 여부와 테마, 언어, 창을 저장해요. 시크릿 키는 암호화하지 않고 그대로 저장하니 이 파일을 다른 사람과 나누지 마세요. 지우면 연결 정보가 사라져요.", en: "Endpoint, access key, secret key, SSL option, theme, language and window. The secret key is stored as plain text, so do not share this file. Deleting it removes the connection details." }
 
 - name: BigEdit
   category: docs
@@ -367,7 +411,13 @@
     - title: { ko: "저장하기", en: "Save" }
       text: { ko: "Ctrl+S로 저장하고, Ctrl+Shift+S로 다른 이름으로 저장해요. 옵션 > 저장할 때 .bak 백업 만들기를 켜 두면 저장할 때마다 원본이 .bak 파일로 남아요.", en: "Press Ctrl+S to save or Ctrl+Shift+S to save under a new name. Turn on Options > Create .bak Backup on Save to keep the original as a .bak file each time you save." }
   uses: { ko: ["큰 로그 파일을 열어 살펴볼 때", "글자가 깨진 파일의 인코딩을 바꿀 때", "마크다운 글을 쓰면서 바로 확인할 때", "여러 줄을 한꺼번에 정리할 때"], en: ["Looking through a large log file", "Fixing a file whose text looks garbled", "Writing Markdown and checking it as you go", "Tidying many lines at once"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigEdit.json (쓸 수 없으면 %LOCALAPPDATA%\\BigEdit)", en: "BigEdit.json in the CONFIGURATION folder next to the exe (falls back to %LOCALAPPDATA%\\BigEdit if not writable)" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigEdit.json'
+      text: { ko: "창, 줄 바꿈, 탭, 글꼴, 확대, 다크 모드, 언어, 찾기 옵션과 최근 파일 10개를 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, word wrap, tabs, font, zoom, dark mode, language, search options and the 10 most recent files. Deleting it resets these settings." }
+    - path: '%LOCALAPPDATA%\BigEdit\BigEdit.json'
+      text: { ko: "exe 폴더에 쓸 수 없을 때(예: Program Files)만 대신 쓰는 설정 파일이에요.", en: "The settings file used instead only when the exe folder is not writable (for example Program Files)." }
+    - path: '*.bak'
+      text: { ko: "'저장할 때 .bak 백업 만들기'를 켰을 때 저장한 파일 옆에 남는 이전 버전이에요(기본은 꺼짐).", en: "The previous version left next to a saved file when 'Create .bak Backup on Save' is on (off by default)." }
 
 - name: BigJSON
   category: docs
@@ -397,7 +447,9 @@
     - title: { ko: "복사해 가져가기", en: "Copy it out" }
       text: { ko: "복사 버튼을 누르면 편집기 내용 전체가 클립보드에 들어가요. 지우기를 누르면 화면이 비워져요.", en: "Press Copy to put the whole editor text on the clipboard. Press Clear to empty the screen." }
   uses: { ko: ["API 응답을 읽기 쉽게 보고 싶을 때", "설정 파일 구조를 빠르게 확인할 때", "JSONL 로그를 살펴볼 때"], en: ["Reading an API response more easily", "Checking the structure of a settings file", "Going through JSONL logs"] }
-  settings_path: { ko: "%APPDATA%\\BigJSON\\BigJSON.json", en: "%APPDATA%\\BigJSON\\BigJSON.json" }
+  data_files:
+    - path: '%APPDATA%\BigJSON\BigJSON.json'
+      text: { ko: "테마, 언어, 확대, 들여쓰기, 글꼴, 창을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, indentation, font and window. Deleting it resets these settings." }
 
 - name: BigCSV
   category: docs
@@ -425,7 +477,9 @@
     - title: { ko: "행 골라 복사하기", en: "Select and copy rows" }
       text: { ko: "행을 클릭한 뒤 Shift+클릭으로 범위를, Ctrl+클릭으로 따로 떨어진 행을 더 고르세요. Ctrl+C나 오른쪽 클릭 > 복사하기를 누르면 머리글과 함께 탭으로 구분되어 복사되니 엑셀에 바로 붙여 넣을 수 있어요.", en: "Click a row, then Shift+click to select a range or Ctrl+click to add separate rows. Press Ctrl+C or right-click > Copy to copy them tab-separated with the header row, ready to paste into a spreadsheet." }
   uses: { ko: ["엑셀로 열기 힘든 큰 CSV를 볼 때", "내보낸 데이터를 빠르게 확인할 때", "특정 행의 내용을 찾아볼 때"], en: ["Viewing a CSV too big for a spreadsheet", "Quickly checking exported data", "Looking up a specific row"] }
-  settings_path: { ko: "%APPDATA%\\BigCSV\\BigCSV.json", en: "%APPDATA%\\BigCSV\\BigCSV.json" }
+  data_files:
+    - path: '%APPDATA%\BigCSV\BigCSV.json'
+      text: { ko: "테마, 언어, 확대, 창을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom and window. Deleting it resets these settings." }
 
 - name: BigFormula
   category: docs
@@ -455,7 +509,9 @@
     - title: { ko: "저장한 수식 다시 고치기", en: "Edit a saved formula" }
       text: { ko: "파일 > PNG에서 수식 열기(Ctrl+O)로 이 프로그램에서 저장한 PNG를 고르면 수식이 다시 불러와져요. 새 수식을 시작하려면 Ctrl+N이나 지우기를 누르세요.", en: "Choose File > Open Formula from PNG (Ctrl+O) and pick a PNG saved by this app to load its formula again. Press Ctrl+N or Clear to start a new one." }
   uses: { ko: ["발표 자료에 수식 이미지를 넣을 때", "Word 문서에 수식을 넣을 때", "예전에 만든 수식을 다시 고칠 때"], en: ["Adding formula images to slides", "Putting equations into a Word document", "Editing a formula you made before"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigFormula.json", en: "BigFormula.json in the CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigFormula.json'
+      text: { ko: "테마, 언어, 확대, 창, 내보내기 배율, 투명 배경과 마지막으로 입력한 LaTeX 수식을 저장해요. 지우면 마지막 수식도 사라져요.", en: "Theme, language, zoom, window, export scale, transparent background and the last LaTeX formula you typed. Deleting it also loses that formula." }
 
 - name: BigContourMap
   category: docs
@@ -487,7 +543,9 @@
     - title: { ko: "저장하고 내보내기", en: "Save and export" }
       text: { ko: "Ctrl+S로 프로젝트를 GeoPackage(.gpkg)로 저장해요. 파일 > 내보내기에서 높이 격자 GeoTIFF, 등고선 GeoPackage·GeoJSON, 표고점 CSV, 지도 이미지를 고르고, 지도 이미지는 범위·너비·DPI·형식을 정해 저장해요.", en: "Press Ctrl+S to save the project as a GeoPackage (.gpkg). Under File > Export, choose the elevation grid GeoTIFF, contours GeoPackage or GeoJSON, spot heights CSV or a map image; for a map image, set the range, width, DPI and format before saving." }
   uses: { ko: ["지형 데이터로 등산·답사용 등고선 지도를 만들 때", "측량한 표고점으로 지형면과 등고선을 만들 때", "게임·모형용 가상 지형을 만들고 다듬을 때"], en: ["Making a contour map for hiking or fieldwork from elevation data", "Building a surface and contours from surveyed spot heights", "Creating and shaping imaginary terrain for games or models"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigContourMap.json", en: "BigContourMap.json in the CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigContourMap.json'
+      text: { ko: "테마, 언어, 확대, 창, 패널 폭, 마지막 폴더, 브러시 설정을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, panel width, last folder and brush settings. Deleting it resets these settings." }
   screenshot_credit: { ko: "스크린샷 지형: Copernicus DEM GLO-30 설악산 일대를 잘라 낸 수정 데이터 — produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved.", en: "Screenshot terrain: modified Copernicus DEM GLO-30 data (Seoraksan, Korea) — produced using Copernicus WorldDEM-30 © DLR e.V. 2010-2014 and © Airbus Defence and Space GmbH 2014-2018 provided under COPERNICUS by the European Union and ESA; all rights reserved." }
 
 - name: BigMermaid
@@ -518,7 +576,9 @@
     - title: { ko: "저장하고 내보내기", en: "Save and export" }
       text: { ko: "저장(Ctrl+S)이나 다른 이름으로 저장(Ctrl+Shift+S)으로 .mmd 파일을 남기고, 파일 > 최근 파일에서 다시 열어요. 그림은 SVG 버튼으로 바로 저장하고, PNG 버튼을 누르면 해상도와 투명 배경을 고른 뒤 내보내기를 누르면 돼요.", en: "Keep the text as an .mmd file with Save (Ctrl+S) or Save As (Ctrl+Shift+S) and reopen it from File > Recent Files. Save the drawing with the SVG button, or press PNG, choose the resolution and transparent background, then press Export." }
   uses: { ko: ["README나 위키에 넣을 mermaid 다이어그램을 미리 확인할 때", "회의 자료에 넣을 순서도나 간트 차트를 이미지로 만들 때", "mermaid 문법을 샘플로 익힐 때"], en: ["Previewing a mermaid diagram before putting it in a README or wiki", "Making a flowchart or Gantt chart image for meeting slides", "Learning mermaid syntax from samples"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigMermaid.json", en: "BigMermaid.json in the CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigMermaid.json'
+      text: { ko: "테마, 언어, 확대, 창, 패널 폭, 최근 파일, 내보내기 옵션과 저장하지 않은 편집 내용을 저장해요. 지우면 저장하지 않은 다이어그램도 사라져요.", en: "Theme, language, zoom, window, panel widths, recent files, export options and any unsaved editor text. Deleting it also loses the unsaved diagram." }
 
 - name: BigClassDiagram
   category: docs
@@ -548,7 +608,9 @@
     - title: { ko: "그림 보고 가져가기", en: "View and take it out" }
       text: { ko: "마우스 휠로 확대·축소하고 맞춤(Ctrl+F)으로 화면에 맞춰요. mermaid 복사(Ctrl+Shift+C)로 오른쪽 mermaid 문자열을 복사하거나, .mmd 저장(Ctrl+S), PNG(Ctrl+E), SVG 버튼으로 파일을 만들어요.", en: "Zoom with the mouse wheel and press Fit (Ctrl+F) to fit the view. Copy the mermaid text on the right with Copy mermaid (Ctrl+Shift+C), or make a file with Save .mmd (Ctrl+S), PNG (Ctrl+E) or SVG." }
   uses: { ko: ["처음 보는 프로젝트의 클래스 구조를 빠르게 파악할 때", "설계 문서나 README에 넣을 클래스 다이어그램을 만들 때", "리팩터링 전후로 클래스 관계가 어떻게 바뀌었는지 볼 때"], en: ["Getting a quick picture of the class structure of an unfamiliar project", "Making a class diagram for a design document or README", "Seeing how class relations changed before and after a refactoring"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigClassDiagram.json", en: "BigClassDiagram.json in the CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigClassDiagram.json'
+      text: { ko: "테마, 언어, 확대, 창, 패널 폭, 마지막으로 분석한 폴더, 분석·다이어그램·내보내기 옵션을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, panel widths, the last analyzed folder, and analysis, diagram and export options. Deleting it resets these settings." }
 
 - name: BigMindMap
   category: docs
@@ -580,7 +642,11 @@
     - title: { ko: "저장하고 내보내기", en: "Save and export" }
       text: { ko: "'저장'(Ctrl+S)이나 '다른 이름'(Ctrl+Shift+S)으로 .wmm 파일에 저장해요. FreeMind/Freeplane에서 열려면 '내보내기'로 .mm 파일을 만드세요. 저장하지 못하고 꺼졌다면 다음 실행 때 '복구'를 눌러 자동 저장본을 되살릴 수 있어요.", en: "Save to a .wmm file with Save (Ctrl+S) or Save As (Ctrl+Shift+S). To open the map in FreeMind/Freeplane, click Export to create a .mm file. If the app closed before you saved, click Recover on the next launch to restore the auto-saved copy." }
   uses: { ko: ["아이디어를 쏟아 내며 정리할 때", "회의나 강의 내용을 구조로 정리할 때", "FreeMind로 만든 맵을 이어서 쓸 때"], en: ["Brainstorming and organizing ideas", "Structuring notes from a meeting or lecture", "Continuing a map made in FreeMind"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigMindMap.json (복구 파일은 CONFIGURATION\\RECOVERY)", en: "BigMindMap.json in the CONFIGURATION folder next to the exe (recovery files in CONFIGURATION\\RECOVERY)" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigMindMap.json'
+      text: { ko: "창, 테마, 언어, 확대, 최근 쓴 색을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, theme, language, zoom and recently used colors. Deleting it resets these settings." }
+    - path: '[exe]\CONFIGURATION\RECOVERY\'
+      text: { ko: "저장하지 않은 변경이 있으면 2분마다 자동으로 남기는 복구 파일(.wmm과 .json)이에요. 저장하거나 정상 종료하면 지워지고, 남아 있으면 다음 실행 때 복구할지 물어요. 프로그램이 실행 중일 때는 지우지 마세요.", en: "Recovery files (.wmm and .json) saved every 2 minutes while there are unsaved changes. They are removed when you save or close normally; leftovers are offered for recovery at the next start. Do not delete them while the app is running." }
 
 - name: BigMEMO
   category: docs
@@ -612,7 +678,11 @@
     - title: { ko: "데이터 파일 바꾸기", en: "Switch the data file" }
       text: { ko: "메모 목록 창의 '설정' 단추를 누르고 '기존 파일 열기...'나 '새 파일 만들기...'로 다른 SQLite 파일을 쓸 수 있어요. 바꾸기 전에 열린 메모는 지금 파일에 저장되고, '기본 위치'를 누르면 처음 파일로 돌아가요.", en: "Click the Settings button in the notes list and use Open existing file... or Create new file... to use another SQLite file. Open notes are saved to the current file before switching, and Default location goes back to the original file." }
   uses: { ko: ["오늘 할 일을 눈앞에 두고 싶을 때", "전화번호나 짧은 메모를 잠깐 적을 때", "스크린샷을 메모와 함께 남길 때"], en: ["Keeping your to-dos in sight", "Jotting down a phone number or quick note", "Saving a screenshot together with a note"] }
-  settings_path: { ko: "%LOCALAPPDATA%\\BigMEMO (메모 데이터 BigMEMO.db와 설정 BigMEMO.json)", en: "%LOCALAPPDATA%\\BigMEMO (notes in BigMEMO.db, settings in BigMEMO.json)" }
+  data_files:
+    - path: '%LOCALAPPDATA%\BigMEMO\BigMEMO.db'
+      text: { ko: "모든 메모(내용, 색, 창 위치)를 담은 데이터베이스예요. 암호화하지 않아요. 백업할 파일은 이것이고, 지우면 메모가 모두 사라져요. 위치는 프로그램에서 바꿀 수 있어요.", en: "The database that holds all notes (content, color, window positions). It is not encrypted. This is the file to back up; deleting it loses every note. Its location can be changed in the app." }
+    - path: '%LOCALAPPDATA%\BigMEMO\BigMEMO.json'
+      text: { ko: "데이터베이스 위치, 메모 목록 창, 확대, 다크 모드, 언어를 저장해요. 지우면 설정이 처음으로 돌아가고 기본 데이터베이스를 써요.", en: "Database location, note list window, zoom, dark mode and language. Deleting it resets these settings and switches back to the default database." }
 
 - name: BigSQL
   category: dev
@@ -644,7 +714,11 @@
     - title: { ko: "쿼리 모아 두고 안전하게 쓰기", en: "Save queries and work safely" }
       text: { ko: "'쿼리 목록' 탭의 '추가'를 누르면 편집기의 선택 영역(없으면 전체)을 이름 붙여 저장해요. 저장한 쿼리는 '실행'으로 바로 돌리거나 '편집기로'(두 번 클릭)로 불러와요. 데이터를 바꿀 때는 '자동 커밋'을 끄고, 확인한 뒤 '커밋' 또는 '롤백'을 누르세요.", en: "On the Saved Queries tab, Add saves the editor selection (or the whole script) under a name. Run a saved query right away with Run, or bring it into the editor with To Editor (or a double-click). When changing data, turn off Auto Commit, check the result, then click Commit or Rollback." }
   uses: { ko: ["PostgreSQL 데이터를 조회하고 조금씩 고칠 때", "테이블이나 함수의 DDL을 확인하고 복사할 때", "자주 쓰는 쿼리를 모아 두고 바로 실행하고 싶을 때"], en: ["When you query PostgreSQL data and make small edits", "When you need to check or copy the DDL of a table or function", "When you want your frequent queries saved and ready to run"] }
-  settings_path: { ko: "%APPDATA%\\BigSQL", en: "%APPDATA%\\BigSQL" }
+  data_files:
+    - path: '%APPDATA%\BigSQL\BigSQL.json'
+      text: { ko: "테마, 언어, 창, 글꼴, 확대, 행 제한, 시간 제한과 연결 목록(호스트, 포트, 사용자, 데이터베이스, SSL)을 저장해요. 암호는 '저장'을 체크했을 때만 Windows 사용자 계정으로 암호화(DPAPI)해서 저장해요. 지우면 저장한 연결이 사라져요.", en: "Theme, language, window, font, zoom, row limit, timeout and the connection list (host, port, user, database, SSL). Passwords are saved only when 'Save' is ticked, encrypted with your Windows account (DPAPI). Deleting it removes saved connections." }
+    - path: '%APPDATA%\BigSQL\SavedQuery.json'
+      text: { ko: "저장한 SQL 쿼리예요. 암호화하지 않아요. 지우면 저장한 쿼리가 사라져요.", en: "Your saved SQL queries, stored as plain text. Deleting it removes them." }
 
 - name: BigMigration
   category: dev
@@ -676,7 +750,13 @@
     - title: { ko: "결과 확인하기", en: "Check the result" }
       text: { ko: "끝나면 '검증 결과' 탭에서 테이블별 행 수, 시퀀스 값, 스키마 차이가 일치하는지 확인해요. 자세한 진행 내용은 '로그' 탭에서 볼 수 있어요.", en: "When it finishes, the Verification tab shows whether row counts, sequence values and schema match for each table. The Log tab has the detailed progress." }
   uses: { ko: ["낮은 버전 서버의 테이블을 새 버전 서버로 옮길 때", "일부 테이블만 다른 데이터베이스로 복사할 때", "옮긴 결과가 원본과 같은지 확인하고 싶을 때"], en: ["When you move tables from an older server to a newer one", "When you copy only some tables to another database", "When you want to confirm the copy matches the source"] }
-  settings_path: { ko: "%APPDATA%\\BigMigration", en: "%APPDATA%\\BigMigration" }
+  data_files:
+    - path: '%APPDATA%\BigMigration\BigMigration.json'
+      text: { ko: "연결 목록, 마지막 원본·대상, 병렬 수, 테마, 언어, 창을 저장해요. 암호는 Windows 사용자 계정으로 암호화(DPAPI)해요. 지우면 저장한 연결이 사라져요.", en: "The connection list, last source and target, parallel count, theme, language and window. Passwords are encrypted with your Windows account (DPAPI). Deleting it removes saved connections." }
+    - path: '%APPDATA%\BigMigration\RUN\'
+      text: { ko: "이동 작업마다 만드는 폴더(대상 정보, 이어 하기 상태, 실행 로그, 스키마 덤프)예요. 암호는 들어 있지 않지만 데이터베이스·호스트 이름과 스키마가 들어 있어요. 저절로 지우지 않아 쌓이고, 지우면 끝나지 않은 작업을 이어 할 수 없어요. preview 폴더는 DDL 미리 보기용이라 지워도 돼요.", en: "One folder per migration run (target info, resume state, run log, schema dump). No passwords, but database and host names and schema are inside. They are never removed automatically, and deleting one means an unfinished run cannot be resumed. The preview folder is only for DDL preview and is safe to delete." }
+    - path: '%LOCALAPPDATA%\BigMigration\pgbin\'
+      text: { ko: "내장된 pg_dump·pg_restore를 처음 쓸 때 풀어 두는 폴더예요. 지워도 다음에 다시 풀어요(옛 버전 폴더는 남으니 지워도 돼요).", en: "The bundled pg_dump and pg_restore, unpacked the first time they are needed. Safe to delete; they are unpacked again (folders from older versions stay behind and can be deleted)." }
 
 - name: BigCURL
   category: dev
@@ -708,7 +788,17 @@
     - title: { ko: "Ubuntu용으로 바꾸고 설정 고르기", en: "Convert for Ubuntu and set options" }
       text: { ko: "'🐧 Ubuntu로 복사'(Ctrl+Shift+C)를 누르면 bash용 명령이 클립보드에 들어가고, '변환 미리보기...'에서 결과를 확인한 뒤 '클립보드에 복사'할 수 있어요. verify·proxy 같은 옵션은 '⚙ 실행 설정'에서 이 명령만, 도구 모음의 '전역 실행 설정:' 프리셋으로 전체에 정해요.", en: "Click 🐧 Copy for Ubuntu (Ctrl+Shift+C) to put a bash version on the clipboard, or check the result in Conversion Preview... and click Copy to Clipboard. Set options such as verify and proxy for one command in ⚙ Run Settings, or for everything with the Global settings: preset on the toolbar." }
   uses: { ko: ["API를 여러 번 호출하며 테스트할 때", "팀에서 받은 curl 명령을 정리해 두고 싶을 때", "Windows에서 만든 명령을 Ubuntu 서버에서 쓰고 싶을 때"], en: ["When you test an API with repeated calls", "When you want to organize curl commands you received", "When you need a Windows command to work on an Ubuntu server"] }
-  settings_path: { ko: "%APPDATA%\\BigCURL", en: "%APPDATA%\\BigCURL" }
+  data_files:
+    - path: '%APPDATA%\BigCURL\commands.json'
+      text: { ko: "저장한 curl 명령 전체예요. 명령에 든 토큰, Authorization 헤더, -u 사용자:암호도 암호화하지 않고 그대로 저장해요. 지우면 저장한 명령이 모두 사라져요.", en: "All your saved curl commands. Any tokens, Authorization headers or -u user:password in them are stored as plain text. Deleting it removes all saved commands." }
+    - path: '%APPDATA%\BigCURL\settings.json'
+      text: { ko: "curl 경로, 작업 폴더, 기본값, 프리셋(프록시, CA 인증서 경로), 창, 테마를 저장해요. 지우면 처음 설정으로 돌아가요. 옆의 .bak(직전 버전)과 .corrupt-날짜(깨진 파일 사본)는 지워도 돼요.", en: "curl path, working folder, defaults, presets (proxy, CA bundle path), window and theme. Deleting it resets these settings. The .bak (previous version) and .corrupt-date (broken copy) files next to it are safe to delete." }
+    - path: '%APPDATA%\BigCURL\logs\'
+      text: { ko: "날짜별 실행 기록(명령 이름, 결과 코드, 걸린 시간, 오류)이에요. 명령 텍스트는 남기지 않아요. 저절로 지우지 않으니 커지면 지워도 돼요.", en: "Daily run logs (command name, result code, duration, errors). Command text is not logged. They are never removed automatically, so delete them when they grow." }
+    - path: '[exe]\data\'
+      text: { ko: "exe 옆에 portable.flag 파일을 두면 위 파일들을 %APPDATA% 대신 여기에 저장해요.", en: "If a portable.flag file sits next to the exe, the files above are stored here instead of %APPDATA%." }
+    - path: '%TEMP%\BigCURL\'
+      text: { ko: "실행할 때마다 응답 헤더와 본문을 잠시 받는 곳이에요. 실행이 끝나면 지워지고, 강제 종료 때만 남아요.", en: "Where response headers and bodies are received during each run. They are deleted when the run ends and stay only after a crash." }
 
 - name: BigDocker
   category: dev
@@ -738,7 +828,9 @@
     - title: { ko: "큰 곳과 낭비 찾기", en: "Find big folders and waste" }
       text: { ko: "'크기 트리맵'에서 큰 사각형을 클릭하면 트리에서 그 항목이 선택돼요. 위쪽 요약의 '낭비' 값이 크다면 '낭비 공간' 목록에서 덮어씀·삭제로 표시된 파일을 확인해 Dockerfile을 고쳐 보세요.", en: "Click a large rectangle in the Size Treemap to select that item in the tree. If the Wasted figure in the summary at the top is large, check the files marked overwritten or deleted in the Wasted Space list and adjust your Dockerfile." }
   uses: { ko: ["이미지가 왜 이렇게 큰지 궁금할 때", "Dockerfile을 고친 뒤 레이어 변화를 확인할 때", "이미지에 어떤 파일이 들어 있는지 살펴볼 때"], en: ["When you wonder why an image is so large", "When you check layer changes after editing a Dockerfile", "When you want to see what files an image contains"] }
-  settings_path: { ko: "%APPDATA%\\BigDocker", en: "%APPDATA%\\BigDocker" }
+  data_files:
+    - path: '%APPDATA%\BigDocker\BigDocker.json'
+      text: { ko: "테마, 언어, 확대, 창, 패널 폭을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window and panel widths. Deleting it resets these settings." }
 
 - name: BigOpenCode
   category: dev
@@ -768,7 +860,11 @@
     - title: { ko: "MCP 서버와 모델 추가하기", en: "Add MCP servers and models" }
       text: { ko: "'MCP'에서 이름, 유형('로컬 (명령 실행)' 또는 '원격 (URL)'), 명령이나 URL을 넣고 '추가'하면 연결 상태가 목록에 나와요. '모델'에서는 vLLM 같은 서버의 프로바이더 ID·기준 URL·모델 ID를 넣고 '추가'하고, 필요 없는 기본 모델은 '사용 안 함'으로 숨겨요.", en: "In MCP, enter a name, a type (Local (run command) or Remote (URL)) and the command or URL, then click Add; the connection status shows in the list. In Models, enter the provider ID, base URL and model ID of a server such as vLLM and click Add, and hide built-in models you don't need with Disable." }
   uses: { ko: ["opencode를 터미널 대신 창에서 쓰고 싶을 때", "사내 vLLM 모델로 코딩 에이전트를 돌릴 때", "MCP 서버를 화면에서 쉽게 등록하고 싶을 때"], en: ["When you'd rather use opencode in a window than a terminal", "When you run a coding agent on your own vLLM model", "When you want to register MCP servers from a screen"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigOpenCode.json'
+      text: { ko: "창, 테마, 언어, 확대, opencode.exe 경로, 작업 폴더, 데이터 폴더, 기본 에이전트와 모델을 저장해요. 지우면 다음 실행 때 opencode를 다시 찾아요. 대화 세션은 opencode가 자기 폴더(설정한 데이터 폴더, 없으면 opencode 기본 위치)에 저장해요.", en: "Window, theme, language, zoom, opencode.exe path, working folder, data folder, default agent and model. Deleting it makes the app look for opencode again. Chat sessions are stored by opencode itself (in the data folder you set, or opencode's default location)." }
+    - path: '%USERPROFILE%\opencode.json'
+      text: { ko: "MCP 서버나 사용자 모델을 추가·수정하거나 모델을 켜고 끌 때 작업 폴더(기본 %USERPROFILE%)에 쓰는 opencode 설정이에요. 사용자 모델의 API 키와 MCP 환경 변수·헤더를 암호화하지 않고 저장해요. opencode도 같은 파일을 읽으니 지우면 그 설정이 모두 사라져요.", en: "The opencode config written to the working folder (%USERPROFILE% by default) when you add or edit MCP servers or custom models, or turn models on or off. Custom model API keys and MCP environment variables and headers are stored as plain text. opencode reads the same file, so deleting it removes those settings." }
 
 - name: BigClaude
   category: dev
@@ -800,7 +896,13 @@
     - title: { ko: "로그 확인하고 정지", en: "Check the log and stop" }
       text: { ko: "'로그' 탭에서 역할과 이벤트 타입을 골라 원본 이벤트를 걸러 볼 수 있어요. 작업이 끝나면 '실행 / 모니터' 탭에서 '정지'를 누르세요.", en: "On the 'Log' tab, pick a role and event type to filter the raw events. When the work is done, click 'Stop' on the 'Run / Monitor' tab." }
   uses: { ko: ["큰 작업을 여러 에이전트에게 나눠 맡기고 싶을 때", "에이전트별 진행과 비용을 지켜보고 싶을 때", "에이전트 작업을 브랜치로 나눠 안전하게 병합하고 싶을 때"], en: ["When you want to split a big job across several agents", "When you want to watch each agent's progress and cost", "When you want agent work kept on branches and merged safely"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigClaude.json'
+      text: { ko: "claude 경로, 마지막 역할 세트, 대상 폴더, 글꼴 크기, 테마, 언어, 창을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "claude path, last role set, target folder, font size, theme, language and window. Deleting it resets these settings." }
+    - path: '[exe]\CONFIGURATION\ROLESET\'
+      text: { ko: "만든 역할 세트(역할, 프롬프트, 도구)예요. 지우면 역할 세트가 사라져요.", en: "Your role sets (roles, prompts, tools). Deleting them removes the role sets." }
+    - path: '.claude\worktrees\'
+      text: { ko: "고른 Git 저장소 안에 역할마다 만드는 작업 트리예요. worktree-역할 이름 브랜치와 병합할 때 만든 커밋도 저장소에 남아요. 프로그램이 지우지 않으니 필요 없으면 git worktree remove, git branch -d로 정리하세요. Claude CLI의 대화 기록은 Claude CLI가 자기 폴더에 저장해요.", en: "Worktrees created for each role inside the Git repository you choose. The worktree-role branches and the commits made when merging also stay in the repository. The app does not remove them, so clean up with git worktree remove and git branch -d when no longer needed. Claude CLI keeps its own chat history in its own folder." }
 
 - name: BigPacket
   category: network
@@ -832,7 +934,13 @@
     - title: { ko: "파일로 열고 저장하기", en: "Open and save files" }
       text: { ko: "'열기'로 pcap/pcapng 파일을 불러오고, '저장'을 누르면 지금 보이는 패킷만 pcapng로 저장돼요. '지우기'는 목록을 비워요.", en: "Load a pcap/pcapng file with 'Open', and click 'Save' to write only the packets on screen as pcapng. 'Clear' empties the list." }
   uses: { ko: ["어떤 프로그램이 어디와 통신하는지 궁금할 때", "특정 포트의 트래픽을 빠르게 확인할 때", "따로 드라이버를 설치하지 않고 패킷을 보고 싶을 때"], en: ["When you wonder which program talks to where", "When you want a quick look at traffic on one port", "When you want to see packets without installing a capture driver"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigPacket.json'
+      text: { ko: "창, 레이아웃, 캡처 포트, 표시 필터, 끈 프로토콜, 테마, 확대를 저장해요. 이 파일이 없으면 옛 버전이 %TEMP%에 남긴 설정을 한 번 복사해 와요. 지우면 처음 설정으로 돌아가요.", en: "Window, layout, capture port, display filter, disabled protocols, theme and zoom. If this file is missing, settings left in %TEMP% by older versions are copied once. Deleting it resets these settings." }
+    - path: '%TEMP%\BigPacket\PktMon.etl'
+      text: { ko: "캡처하는 동안 쓰는 패킷 기록이에요. 있는 동안에는 패킷 내용이 들어 있고, 멈추면 지워지며 남아 있으면 다음 실행 때 지워요.", en: "The packet trace written while capturing. It holds packet contents while it exists; it is deleted when you stop, and any leftover is deleted at the next start." }
+    - path: '%TEMP%\.net\BigPacket\'
+      text: { ko: "이 프로그램은 실행할 때 프로그램 전체(약 130MB)를 여기에 풀어요. 버전마다 폴더가 하나씩 생기니 프로그램을 닫은 뒤 옛 폴더를 지워도 돼요.", en: "This app unpacks itself entirely (about 130 MB) here when it runs. A folder is added for each version, so old folders can be deleted while the app is closed." }
 
 - name: BigDetection
   category: network
@@ -862,7 +970,13 @@
     - title: { ko: "최소화해 두고 알림 받기", en: "Minimize and get alerts" }
       text: { ko: "모니터링 중에 창을 최소화하거나 다른 창을 쓰고 있으면, 새 CRITICAL 탐지가 생길 때 Windows 알림이 떠요. 지난 스캔 결과는 '스캔 로그'에서 볼 수 있어요.", en: "While monitoring, if the window is minimized or another window is active, a Windows notification appears for each new CRITICAL detection. Past scan results are listed in 'Scan log'." }
   uses: { ko: ["RDP나 파일 공유가 열린 PC를 지켜보고 싶을 때", "로그온 실패가 계속 생기는 이유를 알고 싶을 때", "의심스러운 IP에 어떻게 대응할지 감을 잡고 싶을 때"], en: ["When you want to keep an eye on a PC with RDP or file sharing open", "When you want to know why logon failures keep happening", "When you need ideas for handling a suspicious IP"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigDetection.json'
+      text: { ko: "창, 테마, 언어, 확대를 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, theme, language and zoom. Deleting it resets these settings." }
+    - path: 'HKCU\Software\Classes\AppUserModelId\*, HKCU\Software\Classes\CLSID\{...}'
+      text: { ko: "창이 최소화되거나 비활성일 때 위험 경보를 Windows 알림으로 처음 띄우면, 알림 라이브러리가 알림 발신자 정보를 레지스트리에 등록해요. 프로그램을 지운 뒤 지워도 돼요.", en: "When a critical alert is first shown as a Windows notification (while the window is minimized or inactive), the notification library registers the app as a sender in the registry. Safe to delete after removing the app." }
+    - path: '%LOCALAPPDATA%\ToastNotificationManagerCompat\Apps\'
+      text: { ko: "같은 때 알림 라이브러리가 저장하는 알림 아이콘이에요. 지워도 돼요.", en: "The notification icon saved by the notification library at the same time. Safe to delete." }
 
 - name: BigRemote
   category: network
@@ -894,7 +1008,17 @@
     - title: { ko: "목록 정리하기", en: "Keep the list tidy" }
       text: { ko: "서버를 오른쪽 클릭해 '편집'(F2), '복제', '즐겨찾기 추가', '삭제'(Delete)를 고르세요. Ctrl+F로 서버를 검색하고, F5로 접속 가능 여부를 새로 고쳐요.", en: "Right-click a server for 'Edit' (F2), 'Duplicate', 'Add to Favorites' or 'Delete' (Delete). Press Ctrl+F to search servers and F5 to refresh which ones are reachable." }
   uses: { ko: ["여러 서버에 동시에 접속해 관리할 때", "자주 쓰는 원격 PC를 목록으로 정리하고 싶을 때", "원격 PC로 파일을 클립보드로 옮기고 싶을 때"], en: ["When you manage several servers at the same time", "When you want your frequent remote PCs in a tidy list", "When you want to move files to a remote PC via the clipboard"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더", en: "CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigRemote.json'
+      text: { ko: "창, 사이드바, 테마, 언어, 확대, 마지막으로 고른 서버를 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, sidebar, theme, language, zoom and the last selected server. Deleting it resets these settings." }
+    - path: '[exe]\CONFIGURATION\ServerList.json'
+      text: { ko: "서버 목록(호스트, 포트, 사용자, 도메인, 게이트웨이, 옵션, 암호)이에요. 암호는 Windows 사용자 계정으로 암호화(DPAPI)해서 다른 PC나 다른 계정에서는 풀 수 없어요. 지우면 저장한 서버가 모두 사라져요.", en: "The server list (host, port, user, domain, gateway, options, password). Passwords are encrypted with your Windows account (DPAPI) and cannot be decrypted on another PC or account. Deleting it removes all saved servers." }
+    - path: '[exe]\LOG\'
+      text: { ko: "날짜별 연결 기록(호스트, 사용자 이름, FreeRDP 출력)이에요. 암호는 ****로 가려요. 저절로 지우지 않으니 커지면 지워도 돼요.", en: "Daily connection logs (host, user name, FreeRDP output). Passwords are masked as ****. They are never removed automatically, so delete them when they grow." }
+    - path: '%LOCALAPPDATA%\BigRemote\FreeRDP\'
+      text: { ko: "처음 연결할 때 풀어 두는 내장 FreeRDP(wfreerdp.exe)예요. 지워도 다시 풀어요(옛 버전 폴더는 남으니 지워도 돼요).", en: "The bundled FreeRDP (wfreerdp.exe), unpacked at the first connection. Safe to delete; it is unpacked again (folders from older versions stay behind and can be deleted)." }
+    - path: '%APPDATA%\FreeRDP\server\'
+      text: { ko: "FreeRDP가 처음 접속할 때 신뢰한 서버 인증서예요. 지우면 다음 접속 때 인증서를 다시 확인해요.", en: "Server certificates FreeRDP trusted on first connection. Deleting them means you confirm the certificate again at the next connection." }
 
 - name: BigCipher
   category: network
@@ -924,7 +1048,9 @@
     - title: { ko: "복호화로 확인하기", en: "Check by decrypting" }
       text: { ko: "'결과를 입력으로'를 누르고 같은 암호나 키로 '복호화'를 누르면 원래 내용이 돌아오는지 바로 확인할 수 있어요. 다른 곳에서 받은 암호문은 '입력 인코딩'을 Base64나 Hex로 맞춰 붙여 넣으세요.", en: "Click 'Use result as input', then 'Decrypt' with the same password or key to check that the original comes back. For ciphertext from elsewhere, set 'Input encoding' to Base64 or Hex before pasting it." }
   uses: { ko: ["중요한 파일이나 메모를 암호로 잠가 보관하고 싶을 때", "상대의 공개 키로 암호화해 개인 키를 가진 사람만 열게 하고 싶을 때", "OpenSSL이나 다른 시스템과 같은 결과가 나오는지 확인하거나 암호 방식을 배울 때"], en: ["When you want to lock important files or notes with a password", "When you encrypt with someone's public key so only the holder of the private key can open it", "When you check results against OpenSSL or another system, or learn how ciphers work"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigCipher.json (암호·키는 저장하지 않아요)", en: "CONFIGURATION\\BigCipher.json next to the exe (passwords and keys are not saved)" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigCipher.json'
+      text: { ko: "테마, 언어, 확대, 창, 패널 폭, 고른 알고리즘, 입출력 방식을 저장해요. 암호, 키, IV는 저장하지 않아요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, panel width, the selected algorithm and input/output mode. Passwords, keys and IVs are never saved. Deleting it resets these settings." }
 
 - name: BigImageView
   category: media
@@ -956,7 +1082,9 @@
     - title: { ko: "파일 정리하기", en: "Tidy up files" }
       text: { ko: "목록에서 Ctrl+X나 Ctrl+C로 잘라내거나 복사하고, 옮길 폴더에서 Ctrl+V로 붙여 넣으세요. 필요 없는 사진은 Delete를 누르면 확인 후 휴지통으로 가요.", en: "Cut or copy with Ctrl+X or Ctrl+C in the list, and paste with Ctrl+V in the target folder. Press Delete to send unwanted photos to the Recycle Bin after a confirmation." }
   uses: { ko: ["여행 사진을 빠르게 훑어볼 때", "사진 파일 이름을 날짜와 번호로 맞출 때", "필요 없는 사진을 골라 지울 때"], en: ["When you flip through travel photos", "When you rename photos with a date and number", "When you pick out and delete unwanted photos"] }
-  settings_path: { ko: "%APPDATA%\\BigImageView\\BigImageView.json", en: "%APPDATA%\\BigImageView\\BigImageView.json" }
+  data_files:
+    - path: '%APPDATA%\BigImageView\BigImageView.json'
+      text: { ko: "테마, 언어, 확대, 창, 폴더 패널 폭, 보기 방식, 마지막 폴더를 저장해요. 섬네일 캐시는 디스크에 남기지 않아요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, folder panel width, view mode and the last folder. No thumbnail cache is written to disk. Deleting it resets these settings." }
 
 - name: BigPainter
   category: media
@@ -988,7 +1116,9 @@
     - title: { ko: "크기 바꾸고 저장하기", en: "Resize and save" }
       text: { ko: "'이미지 > 크기 조정(리샘플링)...'(Ctrl+Alt+I)에서 커널을 골라 크기를 바꾸고, '선택 영역으로 자르기'(Ctrl+Shift+X)로 잘라요. '파일 > 저장'(Ctrl+S)이나 '다른 이름으로 저장...'(Ctrl+Shift+S)으로 저장하고, JPEG·WebP·GIF는 '저장 옵션' 창에서 품질 등을 정해요.", en: "Resize with a chosen kernel in 'Image > Image Size (Resample)...' (Ctrl+Alt+I), and crop with 'Crop to Selection' (Ctrl+Shift+X). Save with 'File > Save' (Ctrl+S) or 'Save As...' (Ctrl+Shift+S); for JPEG, WebP and GIF, set quality and other options in the 'Save Options' window." }
   uses: { ko: ["사진 일부만 흐리거나 모자이크할 때", "두 사진을 경계 없이 합성하고 싶을 때", "필터와 리샘플링이 실제로 어떻게 계산되는지 비교해 볼 때"], en: ["When you blur or pixelate part of a photo", "When you want to combine two photos without a visible seam", "When you compare how filters and resampling are actually computed"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigPainter.json", en: "CONFIGURATION\\BigPainter.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigPainter.json'
+      text: { ko: "테마, 언어, 확대, 창, 패널 폭, 마지막 폴더, 필터 값, 리샘플링, JPEG·WebP·GIF 옵션, 캡처 지연을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, panel width, last folder, filter values, resampling, JPEG/WebP/GIF options and capture delay. Deleting it resets these settings." }
 
 - name: BigCapture
   category: media
@@ -1020,7 +1150,11 @@
     - title: { ko: "녹화·저장 설정", en: "Recording and save settings" }
       text: { ko: "설정 메뉴에서 GIF·MP4 프레임률, GIF 디더링, 녹화에 커서 포함을 바꾸고, '저장 폴더 바꾸기'로 저장 위치를 정해요. 파일 > 저장 폴더 열기로 저장된 파일을 바로 볼 수 있어요.", en: "In the Settings menu, change the GIF and MP4 frame rates, GIF Dithering and Include Cursor in Recording, and pick where files go with Change Save Folder. File > Open Save Folder shows the saved files." }
   uses: { ko: ["설명서나 보고서에 넣을 화면을 찍고 표시할 때", "긴 웹 페이지나 문서를 한 장으로 남기고 싶을 때", "사용 방법을 짧은 GIF나 MP4로 보여 주고 싶을 때"], en: ["When you capture and mark up screens for a manual or report", "When you want to keep a long web page or document as one image", "When you want to show how something works in a short GIF or MP4"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigCapture.json", en: "CONFIGURATION\\BigCapture.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigCapture.json'
+      text: { ko: "테마, 언어, 확대, 창, 저장 폴더, GIF·MP4 프레임 수, 디더링, 커서 녹화를 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, save folder, GIF/MP4 frame rates, dithering and cursor recording. Deleting it resets these settings." }
+    - path: '%USERPROFILE%\Pictures\BigCapture\'
+      text: { ko: "캡처할 때마다 자동으로 저장되는 PNG와 녹화한 GIF·MP4예요(저장 폴더는 설정에서 바꿀 수 있어요). 화면 내용이 그대로 들어 있는 내 결과물이에요.", en: "PNGs saved automatically on every capture, plus recorded GIFs and MP4s (the folder can be changed in settings). These are your own files with whatever was on screen." }
 
 - name: BigPlayer
   category: media
@@ -1050,7 +1184,11 @@
     - title: { ko: "이퀄라이저 맞추기", en: "Set the equalizer" }
       text: { ko: "E를 누르거나 이퀄라이저 버튼을 눌러 창을 여세요. 켜짐/꺼짐을 바꾸고 프리셋을 고르거나 10개 밴드를 직접 움직여요. '자동 프리앰프'를 켜 두면 소리가 깨지지 않게 맞춰 주고, '초기화'로 처음 값으로 돌아가요.", en: "Press E or click the equalizer button to open its window. Switch it on or off, pick a preset or move the 10 bands yourself. Keep Auto preamp on to avoid clipping, and click Reset to go back to the defaults." }
   uses: { ko: ["받아 둔 동영상을 자막과 함께 볼 때", "자막 싱크가 맞지 않을 때", "음악을 이퀄라이저로 다듬어 들을 때"], en: ["When you watch a downloaded video with subtitles", "When the subtitles are out of sync", "When you want to fine-tune music with an equalizer"] }
-  settings_path: { ko: "%LOCALAPPDATA%\\BigPlayer\\setting.json", en: "%LOCALAPPDATA%\\BigPlayer\\setting.json" }
+  data_files:
+    - path: '%LOCALAPPDATA%\BigPlayer\setting.json'
+      text: { ko: "확대, 테마, 언어, 창을 저장해요. 최근 파일 목록은 저장하지 않아요. 지우면 처음 설정으로 돌아가요.", en: "Zoom, theme, language and window. No recent-files list is kept. Deleting it resets these settings." }
+    - path: '%TEMP%\BigPlayer_*.ass'
+      text: { ko: "SMI 자막을 열 때 잠시 만드는 변환본이에요. 바로 지워지고 강제 종료 때만 남아요.", en: "A temporary conversion made when an SMI subtitle is opened. It is deleted right away and stays only after a crash." }
   license_terms: { ko: "GPL-2.0-or-later · 무보증", en: "GPL-2.0-or-later · No warranty" }
   notice: { ko: "BigPlayer에는 GPL로 배포되는 mpv(libmpv)와 FFmpeg가 들어 있어 프로그램 전체가 GPL-2.0-or-later 조건으로 배포됩니다. 이 사이트의 '재배포 금지' 조건은 BigPlayer에 적용되지 않으며, GPL 조건에 따라 복사·수정·재배포할 수 있습니다. 전체 소스 코드는 곧 공개할 예정이며, 공개되면 이 페이지에 위치를 알려 드립니다.", en: "BigPlayer includes mpv (libmpv) and FFmpeg, which are distributed under the GPL, so the whole app is distributed under GPL-2.0-or-later. This site's no-redistribution term does not apply to BigPlayer; you may copy, modify and redistribute it under the GPL. The complete source code will be published soon, and its location will be announced on this page." }
 
@@ -1082,7 +1220,13 @@
     - title: { ko: "즐겨찾기 모으기", en: "Collect favorites" }
       text: { ko: "방송 줄의 ☆를 누르면 ★로 바뀌며 즐겨찾기에 들어가요. '★ 즐겨찾기' 버튼을 누르면 즐겨찾기한 방송만 보이고, 다시 누르면 전체로 돌아가요.", en: "Click ☆ on a station row to turn it into ★ and add it to your favorites. Click the ★ Favorites button to show only favorites, and click it again to see all stations." }
   uses: { ko: ["일하면서 다른 나라 라디오를 틀어 두고 싶을 때", "외국어 공부로 현지 방송을 들을 때", "방송 소리 크기를 VU 미터로 보고 싶을 때"], en: ["When you want radio from another country playing while you work", "When you listen to local broadcasts to learn a language", "When you want to watch broadcast levels on VU meters"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigRadio.json (방송 목록 캐시와 FFmpeg DLL은 %LOCALAPPDATA%\\BigRadio)", en: "BigRadio.json in the CONFIGURATION folder next to the exe (station list cache and FFmpeg DLLs in %LOCALAPPDATA%\\BigRadio)" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigRadio.json'
+      text: { ko: "테마, 언어, 확대, 창, 볼륨, 국가 필터, 검색어와 즐겨찾기 방송국을 저장해요. 지우면 즐겨찾기도 사라져요.", en: "Theme, language, zoom, window, volume, country filter, search text and favorite stations. Deleting it also loses your favorites." }
+    - path: '%LOCALAPPDATA%\BigRadio\stations.json'
+      text: { ko: "Radio Browser에서 받은 방송국 목록이에요(24시간이 지나면 새로 받아요). 지워도 다시 받아요.", en: "The station list downloaded from Radio Browser (refreshed after 24 hours). Safe to delete; it is downloaded again." }
+    - path: '%LOCALAPPDATA%\BigRadio\FFMPEG\'
+      text: { ko: "실행할 때 풀어 두는 FFmpeg DLL과 라이선스예요. 지워도 다시 풀어요.", en: "FFmpeg DLLs and license unpacked at startup. Safe to delete; they are unpacked again." }
 
 - name: BigAudio
   category: media
@@ -1112,7 +1256,11 @@
     - title: { ko: "스펙트럼 모양 바꾸기", en: "Change the spectrum style" }
       text: { ko: "스펙트럼 옆의 '이전 모양'·'다음 모양' 버튼이나 보기 > 스펙트럼 모양에서 막대·LED 막대·곡선·원형·스펙트로그램·오실로스코프를 골라요.", en: "Use the Previous style and Next style buttons by the spectrum, or View > Spectrum Style, to pick Bars, LED Bars, Curve, Radial, Spectrogram or Oscilloscope." }
   uses: { ko: ["악기나 노래 연습으로 어려운 구간을 반복해 들을 때", "외국어 듣기 공부로 한 문장을 되풀이할 때", "이퀄라이저로 음악 소리를 내 취향에 맞출 때"], en: ["When practicing an instrument or song and repeating a hard passage", "When studying a language and replaying one sentence", "When tuning music to your taste with the equalizer"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigAudio.json (FFmpeg DLL은 %LOCALAPPDATA%\\BigAudio)", en: "CONFIGURATION\\BigAudio.json next to the exe (FFmpeg DLLs in %LOCALAPPDATA%\\BigAudio)" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigAudio.json'
+      text: { ko: "테마, 언어, 확대, 창, 이퀄라이저, 스펙트럼, 볼륨과 마지막 파일·재생 위치를 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, equalizer, spectrum, volume, and the last file and playback position. Deleting it resets these settings." }
+    - path: '%LOCALAPPDATA%\BigAudio\FFMPEG\'
+      text: { ko: "처음 오디오를 열 때 풀어 두는 FFmpeg DLL과 라이선스예요. 지워도 다시 풀어요.", en: "FFmpeg DLLs and license unpacked the first time audio is opened. Safe to delete; they are unpacked again." }
 
 - name: BigWave
   category: media
@@ -1144,7 +1292,13 @@
     - title: { ko: "내보내기", en: "Export" }
       text: { ko: "'내보내기'(Ctrl+S)를 누르고 저장 대화 상자의 파일 형식에서 WAV 16/24비트·32비트 float 또는 FLAC 16/24비트를 고르세요. 내보내지 않은 편집이 있으면 다른 파일을 열거나 끝낼 때 물어봐요.", en: "Click Export (Ctrl+S) and choose WAV 16/24-bit, WAV 32-bit float or FLAC 16/24-bit as the file type in the save dialog. If you have edits you have not exported, it asks before opening another file or closing." }
   uses: { ko: ["녹음에 섞인 기침이나 휴대폰 알림음만 골라 지울 때", "긴 녹음에서 필요 없는 부분을 잘라 내고 이음새 없이 이을 때", "소리가 주파수별로 어떻게 생겼는지 눈으로 살펴볼 때"], en: ["When removing just a cough or phone notification mixed into a recording", "When cutting unneeded parts out of a long recording and joining it seamlessly", "When looking at how a sound is shaped across frequencies"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigWave.json (FFmpeg DLL은 %LOCALAPPDATA%\\BigWave)", en: "CONFIGURATION\\BigWave.json next to the exe (FFmpeg DLLs in %LOCALAPPDATA%\\BigWave)" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigWave.json'
+      text: { ko: "테마, 언어, 확대, 창, 스펙트로그램·FFT·게인 설정, 마지막 폴더, 내보내기 형식을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, spectrogram, FFT and gain settings, last folder and export format. Deleting it resets these settings." }
+    - path: '%LOCALAPPDATA%\BigWave\FFMPEG\'
+      text: { ko: "처음 파일을 열거나 내보낼 때 풀어 두는 FFmpeg DLL과 라이선스예요. 지워도 다시 풀어요.", en: "FFmpeg DLLs and license unpacked the first time a file is opened or exported. Safe to delete; they are unpacked again." }
+    - path: '%LOCALAPPDATA%\BigWave\CACHE\'
+      text: { ko: "연 파일을 디코딩한 임시 오디오(.pcm)예요. 클 수 있지만 파일을 닫거나 프로그램이 끝나면 Windows가 지워요.", en: "Temporary decoded audio (.pcm) of the open file. It can be large, but Windows deletes it when the file is closed or the app ends." }
 
 - name: BigPiano
   category: media
@@ -1174,7 +1328,9 @@
     - title: { ko: "곡 파일 더하기", en: "Add song files" }
       text: { ko: "BigPiano.exe 옆에 SONG 폴더를 만들고 곡 파일(*.json)을 넣은 뒤 다시 실행하세요. 내장 곡 뒤에 파일 이름 순서로 목록에 붙어요.", en: "Create a SONG folder next to BigPiano.exe, put song files (*.json) in it and start the app again. They are added after the built-in songs in file name order." }
   uses: { ko: ["아이와 함께 피아노 곡을 들으며 악보를 볼 때", "어떤 건반을 누르는지 눈으로 익히고 싶을 때", "잔잔한 피아노 곡을 틀어 두고 싶을 때"], en: ["When you listen to piano songs and watch the score with your kids", "When you want to learn which keys are played by watching", "When you want some calm piano music in the background"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigPiano.json", en: "CONFIGURATION\\BigPiano.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigPiano.json'
+      text: { ko: "테마, 언어, 확대, 고른 곡, 창을 저장해요. exe 옆 SONG 폴더는 곡을 추가할 때 직접 넣는 곳이고 프로그램은 읽기만 해요.", en: "Theme, language, zoom, selected song and window. The SONG folder next to the exe is where you add songs yourself; the app only reads it." }
 
 - name: BigSteganography
   category: media
@@ -1204,7 +1360,9 @@
     - title: { ko: "텍스트 꺼내기", en: "Reveal the text" }
       text: { ko: "'꺼내기'를 고르고 '이미지 선택...'(또는 파일 > 숨긴 이미지 열기)으로 받은 PNG를 연 뒤, 비밀키를 넣고 '꺼내기'를 누르세요. '꺼낸 텍스트'에 내용이 나오고 '복사'로 클립보드에 담을 수 있어요. 비밀키가 틀리거나 파일이 바뀌었으면 아무것도 꺼내지 않아요.", en: "Choose Reveal, open the PNG you received with Select Image... (or File > Open Stego Image...), enter the password and click Reveal. The text appears in Revealed Text, and Copy puts it on the clipboard. If the password is wrong or the file was changed, nothing is revealed." }
   uses: { ko: ["사진 한 장에 짧은 메모를 몰래 담아 전하고 싶을 때", "스테가노그래피가 어떻게 동작하는지 직접 해 보고 싶을 때", "암호화와 정보 은닉을 배우거나 가르칠 때"], en: ["When you want to pass a short note tucked inside a photo", "When you want to try out how steganography works", "When learning or teaching encryption and information hiding"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigSteganography.json", en: "CONFIGURATION\\BigSteganography.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigSteganography.json'
+      text: { ko: "테마, 언어, 확대, 창, 숨기기·꺼내기 모드, 출력 폴더를 저장해요. 암호와 숨긴 내용은 저장하지 않아요.", en: "Theme, language, zoom, window, hide/extract mode and output folder. Passwords and hidden content are never saved." }
 
 - name: BigStereogram
   category: media
@@ -1234,7 +1392,11 @@
     - title: { ko: "저장하기", en: "Save it" }
       text: { ko: "Ctrl+S(파일 > 그림 저장)를 누르면 exe 옆 SAVE 폴더에 그림이 저장되고, '다른 이름으로 그림 저장'으로 PNG·JPEG를 원하는 곳에 저장해요. 장면 설정은 '장면 저장'으로 JSON에 남기고 '장면 열기'로 다시 불러와요.", en: "Ctrl+S (File > Save Image) saves the picture to the SAVE folder next to the exe, and 'Save Image As' saves a PNG or JPEG wherever you like. 'Save Scene' keeps the scene settings in JSON, and 'Open Scene' loads them again." }
   uses: { ko: ["맨눈 입체 보기를 연습하고 싶을 때", "아이와 함께 떠오르는 글자와 도형을 찾아보고 싶을 때", "양안 시차와 입체 시각을 배우거나 가르칠 때"], en: ["When you want to practice free-viewing stereo pictures", "When you want to find floating text and shapes with your kids", "When learning or teaching binocular disparity and stereo vision"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigStereogram.json", en: "CONFIGURATION\\BigStereogram.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigStereogram.json'
+      text: { ko: "테마, 언어, 확대, 창, 장면 설정, 시드, 보기 방식, 보는 거리, 눈 간격, DPI, 자동 저장 여부를 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, scene settings, seed, view mode, viewing distance, eye separation, DPI and auto-save. Deleting it resets these settings." }
+    - path: '[exe]\SAVE\'
+      text: { ko: "'이미지 저장'(Ctrl+S)과 자동 저장으로 만든 PNG예요. 내가 만든 결과물이에요. exe 옆 IMAGE 폴더는 그림을 직접 넣는 곳이고 프로그램은 읽기만 해요.", en: "PNGs made with 'Save image' (Ctrl+S) and auto-save. These are your own results. The IMAGE folder next to the exe is where you add pictures yourself; the app only reads it." }
 
 - name: BigCalculator
   category: desktop
@@ -1266,7 +1428,9 @@
     - title: { ko: "메모리와 기록 쓰기", en: "Use memory and history" }
       text: { ko: "표준·공학용 모드에서 MS로 지금 값을 저장하고, MR로 불러오고, M+·M-로 더하거나 빼고, MC로 모두 지워요. 오른쪽 패널의 기록·메모리 탭에서 지난 계산과 저장한 값을 보고, 휴지통 버튼으로 비울 수 있어요.", en: "In Standard and Scientific modes, MS stores the current value, MR recalls it, M+ and M- add to or subtract from it, and MC clears all memory. The History and Memory tabs in the right panel show past calculations and stored values, and the trash button empties them." }
   uses: { ko: ["가계부나 간단한 계산을 할 때", "16진수나 비트 값을 확인할 때", "기념일까지 남은 날을 셀 때", "레시피나 여행지 단위를 바꿀 때"], en: ["Doing quick everyday math", "Checking hex or bit values", "Counting days until an anniversary", "Converting units for a recipe or a trip"] }
-  settings_path: { ko: "%LOCALAPPDATA%\\BigCalculator\\BigCalculator.json", en: "%LOCALAPPDATA%\\BigCalculator\\BigCalculator.json" }
+  data_files:
+    - path: '%LOCALAPPDATA%\BigCalculator\BigCalculator.json'
+      text: { ko: "창, 탐색 패널, 테마, 언어, 확대, 단위 변환 선택을 저장해요. 계산 기록과 메모리는 저장하지 않아요.", en: "Window, navigation panel, theme, language, zoom and unit converter choices. Calculation history and memory are not saved." }
 
 - name: BigCloser
   category: desktop
@@ -1294,7 +1458,9 @@
     - title: { ko: "켜 두거나 취소하기", en: "Keep it open or cancel" }
       text: { ko: "예약 중에는 시작 버튼이 취소 버튼으로 바뀌니, 마음이 바뀌면 취소를 누르세요. 창을 닫으면 예약도 사라지니 종료될 때까지 BigCloser를 켜 두세요.", en: "While a shutdown is scheduled, the Start button becomes Cancel; click it if you change your mind. Closing the window drops the schedule, so keep BigCloser open until shutdown." }
   uses: { ko: ["큰 파일을 받아 두고 잠자리에 들 때", "영상을 틀어 놓고 잠들 때", "작업이 끝날 즈음 PC를 끄고 싶을 때"], en: ["Leaving a big download running overnight", "Falling asleep while a video plays", "Turning off the PC when a long task should be done"] }
-  settings_path: { ko: "%LOCALAPPDATA%\\BigCloser\\BigCloser.json", en: "%LOCALAPPDATA%\\BigCloser\\BigCloser.json" }
+  data_files:
+    - path: '%LOCALAPPDATA%\BigCloser\BigCloser.json'
+      text: { ko: "창 위치, 다크 모드, 항상 위, 언어, 확대, 모드, 목표 시간을 저장해요. 예약은 Windows 작업 스케줄러에 등록하지 않으니, 프로그램을 켜 두어야 종료돼요.", en: "Window position, dark mode, always on top, language, zoom, mode and target time. The schedule is not registered with Windows Task Scheduler, so the app must stay open for the shutdown to happen." }
 
 - name: BigWatch
   category: desktop
@@ -1322,7 +1488,9 @@
     - title: { ko: "닫기", en: "Close it" }
       text: { ko: "시계에 마우스를 올리면 나타나는 도구 모음의 ✕ 버튼을 누르거나, 오른쪽 클릭 메뉴에서 닫기를 고르세요.", en: "Click the ✕ button on the toolbar that appears when you hover over the clock, or choose Close from the right-click menu." }
   uses: { ko: ["작업하면서 시간을 늘 보고 싶을 때", "바탕 화면을 조금 멋지게 꾸미고 싶을 때", "발표나 시험 중 시계를 크게 띄울 때"], en: ["Keeping an eye on the time while you work", "Giving your desktop a nice touch", "Showing a big clock during a talk or exam"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigWatch.json", en: "BigWatch.json in the CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '%TEMP%\.net\BigWatch\*\CONFIGURATION\BigWatch.json'
+      text: { ko: "그림자 깊이, 창, 다크 모드, 언어, 확대를 저장해요. 지금 버전은 exe 옆이 아니라 실행할 때 풀리는 이 임시 폴더에 저장해서, 새 버전을 받거나 임시 파일을 정리하면 설정이 처음으로 돌아가요.", en: "Shadow depth, window, dark mode, language and zoom. The current version saves this inside the temporary folder it unpacks to, not next to the exe, so settings reset when you get a new version or clean temporary files." }
 
 - name: BigWorldWatch
   category: desktop
@@ -1352,7 +1520,11 @@
     - title: { ko: "내 도시 보기와 정리", en: "View and tidy My Cities" }
       text: { ko: "내 도시 목록의 카드를 클릭하면 그 도시가 다시 선택되고 지도에도 표시돼요. 필요 없는 도시는 카드의 ✕ 버튼으로 빼세요. 목록은 자동으로 저장돼요.", en: "Click a card in My Cities to select that city again and see it on the map. Remove a city you no longer need with the ✕ button on its card. The list is saved automatically." }
   uses: { ko: ["해외에 있는 가족·친구에게 연락하기 좋은 시간을 알고 싶을 때", "다른 나라와 회의 시간을 잡을 때", "서머타임이 언제 바뀌는지 확인할 때"], en: ["When you want to know a good time to call family or friends abroad", "When you schedule a meeting with people in another country", "When you check when daylight saving time changes"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigWorldWatch.json", en: "BigWorldWatch.json in the CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigWorldWatch.json'
+      text: { ko: "설정과 창 위치를 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Settings and window position. Deleting it resets the settings." }
+    - path: '[exe]\*.nzd'
+      text: { ko: "더 새로운 시간대 데이터를 쓰고 싶을 때 직접 넣는 파일이에요. 프로그램은 읽기만 해요.", en: "Newer time zone data you can add yourself. The app only reads it." }
 
 - name: BigClock
   category: desktop
@@ -1382,7 +1554,9 @@
     - title: { ko: "필요 없는 항목 지우기", en: "Remove what you don't need" }
       text: { ko: "타이머·알람·세계 시계 화면의 연필 버튼(편집)을 누르면 항목마다 휴지통 버튼이 나타나요. 지울 항목의 휴지통을 누르고, 다 끝나면 같은 자리의 완료 버튼을 누르세요.", en: "Click the pencil (Edit) button on the Timer, Alarm or World clock page and a trash button appears on each item. Click the trash button on what you want to remove, then click Done in the same spot when you finish." }
   uses: { ko: ["요리·운동·공부 시간을 여러 타이머로 재고 싶을 때", "PC 앞에서 일하며 정해진 시각에 알림을 받고 싶을 때", "해외 도시와 시차를 비교해 연락할 시간을 정할 때"], en: ["When you want to time cooking, workouts or study with several timers", "When you want reminders at set times while working at your PC", "When you compare time differences with cities abroad to pick a time to call"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigClock.json", en: "BigClock.json in the CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigClock.json'
+      text: { ko: "테마, 언어, 확대, 창과 타이머, 알람(이름 포함), 스톱워치 상태, 세계 시계 도시를 저장해요. 지우면 알람과 타이머가 모두 사라져요.", en: "Theme, language, zoom, window, and your timers, alarms (with labels), stopwatch state and world clock cities. Deleting it removes all alarms and timers." }
 
 - name: BigCalendar
   category: desktop
@@ -1414,7 +1588,11 @@
     - title: { ko: "표시 항목과 데이터 위치 정하기", en: "Choose what to show and where data lives" }
       text: { ko: "메뉴에서 음력 표시, 24절기 표시, 기념일 표시, 잡절 표시를 켜고 꺼요. 설정의 데이터 파일에서 '다른 위치...'를 누르면 파일을 옮길 곳을 고르고, 그곳에 파일이 없으면 '현재 데이터 옮기기'나 '빈 파일로 시작'을 골라요.", en: "Turn Show lunar dates, Show solar terms, Show anniversaries and Show seasonal days on or off from the menu. Under Data file in Settings, click 'Change location...' to pick a new place; if there is no data file there, choose 'Move current data' or 'Start empty'." }
   uses: { ko: ["올해와 내년의 빨간 날을 한눈에 보고 싶을 때", "음력 생일이나 제사 날짜를 양력으로 확인할 때", "날마다 한 일이나 일정을 달력에 적어 두고 다시 찾을 때"], en: ["When you want to see this year's and next year's Korean holidays at a glance", "When you look up the solar date of a lunar birthday or memorial day", "When you jot down what you did or plan to do each day and find it again later"] }
-  settings_path: { ko: "%APPDATA%\\BigCalendar\\BigCalendar.json (데이터 파일 기본 위치 %APPDATA%\\BigCalendar\\BigCalendar.db)", en: "%APPDATA%\\BigCalendar\\BigCalendar.json (data file by default at %APPDATA%\\BigCalendar\\BigCalendar.db)" }
+  data_files:
+    - path: '%APPDATA%\BigCalendar\BigCalendar.json'
+      text: { ko: "창, 배치, 확대, 표시 옵션, 색, 다크 모드, 언어, 데이터 파일 위치와 특일 API 인증키를 저장해요. 인증키는 Windows 사용자 계정으로 암호화(DPAPI)해서 다른 PC나 계정에서는 다시 넣어야 해요.", en: "Window, layout, zoom, display options, colors, dark mode, language, the data file location and the holiday API key. The key is encrypted with your Windows account (DPAPI), so it must be entered again on another PC or account." }
+    - path: '%APPDATA%\BigCalendar\BigCalendar.db'
+      text: { ko: "메모(붙여 넣은 그림 포함)와 공휴일·특일 캐시를 담은 데이터베이스예요. 백업할 파일은 이것이고, 지우면 메모가 모두 사라져요. 위치를 바꾸면 원래 파일은 그대로 남으니 필요 없으면 지우세요.", en: "The database with your memos (including pasted pictures) and the holiday cache. This is the file to back up; deleting it loses every memo. Moving it leaves the original file in place, so delete that copy if you no longer need it." }
 
 - name: BigLauncher
   category: desktop
@@ -1444,7 +1622,9 @@
     - title: { ko: "찾기와 배치 바꾸기", en: "Find and rearrange" }
       text: { ko: "Ctrl+F를 누르고 이름을 입력하면 맞는 프로그램이 강조되고, Esc를 누르면 검색어가 지워져요. 그룹이 많으면 보기 > 그룹 배치에서 수평 분할, 수직 분할, 다중 분할 중 하나를 고르세요.", en: "Press Ctrl+F and type a name to highlight matching programs; press Esc to clear the search. With many groups, pick Horizontal Split, Vertical Split or Multi Split under View > Group Layout." }
   uses: { ko: ["바탕 화면에 흩어진 바로 가기를 한곳에 정리하고 싶을 때", "업무용·개발용처럼 용도별로 프로그램을 나눠 두고 싶을 때", "설치하지 않고 쓰는 프로그램(포터블 exe)을 모아 실행할 때"], en: ["Tidying up shortcuts scattered across the desktop in one place", "Keeping programs sorted by purpose, such as work and development", "Collecting and launching portable programs that don't need installing"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION 폴더의 BigLauncher.json", en: "BigLauncher.json in the CONFIGURATION folder next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigLauncher.json'
+      text: { ko: "테마, 언어, 확대, 창, 배치와 그룹·등록한 프로그램 목록을 저장해요. 지우면 등록한 프로그램이 모두 사라져요.", en: "Theme, language, zoom, window, layout, and your groups and registered programs. Deleting it removes all registered programs." }
 
 - name: BigClipboard
   category: desktop
@@ -1476,7 +1656,13 @@
     - title: { ko: "설정 바꾸기", en: "Change settings" }
       text: { ko: "설정 > 설정 열기에서 최대 항목 수, 보존 일수, 항목 크기 상한, 제외 프로세스, 단축키를 바꿔요. 단축키가 다른 프로그램과 겹치면 상태 표시줄에 알려 주니 다른 조합으로 바꾸세요.", en: "Settings > Open Settings changes the maximum item count, retention days, item size limit, excluded processes and hotkeys. If a hotkey is already taken by another program, the status bar tells you, so choose another combination." }
   uses: { ko: ["조금 전에 복사한 내용을 다시 붙여 넣어야 할 때", "인사말·주소·명령어처럼 자주 쓰는 문장을 단축키로 넣고 싶을 때", "여러 곳에서 모은 내용을 한 문서에 차례로 붙일 때"], en: ["When you need to paste something you copied a while ago", "When you want frequently used text such as greetings, addresses or commands on a hotkey", "When you paste content gathered from several places into one document"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigClipboard.json (기록은 %LOCALAPPDATA%\\BigClipboard\\History.db)", en: "CONFIGURATION\\BigClipboard.json next to the exe (history in %LOCALAPPDATA%\\BigClipboard\\History.db)" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigClipboard.json'
+      text: { ko: "테마, 언어, 확대, 창, 최대 개수, 보관 일수, 최대 크기, 제외 프로그램, 단축키를 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Theme, language, zoom, window, maximum items, retention days, maximum size, excluded programs and hotkeys. Deleting it resets these settings." }
+    - path: '%LOCALAPPDATA%\BigClipboard\History.db'
+      text: { ko: "클립보드 기록이에요. 내용과 미리 보기는 Windows 사용자 계정으로 암호화(DPAPI)하지만, 같은 계정으로 로그인한 상태에서는 열 수 있고 출처 프로그램 이름, 시각, 크기는 암호화하지 않아요. 다른 PC나 계정으로 옮기면 열 수 없어요. 지우면 고정 항목을 포함한 기록이 모두 사라져요.", en: "Your clipboard history. Content and previews are encrypted with your Windows account (DPAPI), but anyone signed in as you can read them, and source program names, times and sizes are not encrypted. It cannot be opened on another PC or account. Deleting it removes all history, including pinned items." }
+    - path: '%LOCALAPPDATA%\BigClipboard\History.db.broken-*'
+      text: { ko: "기록 파일을 열 수 없을 때(다른 PC나 계정에서 옮겨 온 경우 등) 옮겨 둔 옛 파일이에요. 암호화된 기록이 남아 있으니 필요 없으면 지우세요.", en: "The old history file, moved aside when it could not be opened (for example after copying it from another PC or account). It still holds encrypted history, so delete it if you do not need it." }
 
 - name: BigView
   category: desktop
@@ -1506,7 +1692,9 @@
     - title: { ko: "잠시 끄고 닫기", en: "Pause and close" }
       text: { ko: "잠깐 필요 없으면 '확대' 스위치를 끄세요. 닫기(X) 버튼으로 닫으면 창 위치와 크기, 배율, 스위치 상태가 저장돼 다음에 그대로 열려요.", en: "Turn off the 'Magnify' switch when you don't need it for a while. Closing with the close (X) button saves the window position, size, scale and switch state for next time." }
   uses: { ko: ["화면의 작은 글씨를 읽기 힘들 때", "이미지나 디자인을 픽셀 단위로 살펴볼 때", "발표나 강의에서 화면 일부를 크게 보여 줄 때"], en: ["When small text on screen is hard to read", "When you want to inspect images or designs up close", "When you need to show part of the screen bigger in a talk or class"] }
-  settings_path: { ko: "%LOCALAPPDATA%\\BigView\\BigView.json", en: "%LOCALAPPDATA%\\BigView\\BigView.json" }
+  data_files:
+    - path: '%LOCALAPPDATA%\BigView\BigView.json'
+      text: { ko: "창, 다크 모드, 언어, 확대, 돋보기 켜기, 배율을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, dark mode, language, zoom, magnifier on/off and scale. Deleting it resets these settings." }
 
 - name: BigKeyboard
   category: desktop
@@ -1536,7 +1724,9 @@
     - title: { ko: "Shift·Ctrl 같이 누르기", en: "Shift, Ctrl and other modifiers" }
       text: { ko: "Shift, Ctrl, Alt, Win 키는 한 번 누르면 다음 키 하나에만 적용되고, 두 번 누르면 잠겨서 계속 적용되며, 세 번째 누르면 풀려요. 예를 들어 Ctrl을 한 번 누른 뒤 C를 누르면 Ctrl+C가 돼요.", en: "Press Shift, Ctrl, Alt or Win once to apply it to the next key only, twice to lock it on, and a third time to release it. For example, press Ctrl once and then C to send Ctrl+C." }
   uses: { ko: ["실제 키보드가 없거나 고장 났을 때", "터치스크린 PC에서 글자를 입력할 때", "손 대신 마우스로만 입력하고 싶을 때"], en: ["When you have no keyboard or it stopped working", "When typing on a touchscreen PC", "When you'd rather type with just the mouse"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigKeyboard.json", en: "CONFIGURATION\\BigKeyboard.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigKeyboard.json'
+      text: { ko: "키보드 창과 표시 설정을 저장해요. 누른 키는 기록하지 않아요.", en: "Keyboard window and display settings. Keys you press are never recorded." }
 
 - name: BigReader
   category: desktop
@@ -1566,7 +1756,15 @@
     - title: { ko: "설정 바꾸기", en: "Adjust the settings" }
       text: { ko: "설정 창에서 트리거 버튼, 읽기 단위, 음성 엔진, 속도를 고르고 '미리 듣기'로 소리를 들어 본 뒤 '저장'을 누르세요. 단축키는 입력란을 클릭하고 쓸 키 조합을 누르면 정해져요.", en: "In the settings window, choose the trigger button, reading unit, speech engine and speed, try them with 'Preview', then press 'Save'. To set a hotkey, click its box and press the key combination you want." }
   uses: { ko: ["긴 글을 눈 대신 귀로 듣고 싶을 때", "화면 글자를 읽기 힘들 때", "외국어 문장의 발음을 들어 보고 싶을 때"], en: ["When you'd rather listen to long text than read it", "When on-screen text is hard to read", "When you want to hear how a sentence sounds"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigReader.json", en: "CONFIGURATION\\BigReader.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigReader.json'
+      text: { ko: "읽기 마우스 버튼, 단축키, Windows 시작 시 자동 실행, 음성 설정, 테마, 언어, 확대, 설정 창 위치를 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Read mouse button, hotkeys, start with Windows, speech settings, theme, language, zoom and settings window position. Deleting it resets these settings." }
+    - path: '[exe]\LOG\'
+      text: { ko: "날짜별 기록(BigReader-날짜.log)이에요. 마우스 버튼이나 단축키로 읽은 글이 그대로 남고 저절로 지우지 않아요. 지워도 돼요.", en: "Daily logs (BigReader-date.log). Text read with the mouse button or hotkeys is written as is, and logs are never removed automatically. Safe to delete." }
+    - path: '[exe]\MODEL\supertonic\'
+      text: { ko: "처음 실행할 때 자동으로 내려받는 Supertonic 음성 모델(약 139MB)이에요. 지우면 다음 실행 때 다시 받아요. 설정에서 다른 모델 폴더를 정하면 그곳에 받아요.", en: "The Supertonic speech model (about 139 MB), downloaded automatically at first launch. If deleted, it is downloaded again at the next launch. If you set another model folder in settings, it goes there." }
+    - path: 'HKCU\Software\Microsoft\Windows\CurrentVersion\Run (BigReader)'
+      text: { ko: "'Windows 시작 시 자동 실행'을 켰을 때 생기는 값이에요. 끄면 지워지니 exe를 지우기 전에 이 옵션을 끄세요.", en: "Created when 'Start automatically with Windows' is on and removed when it is off, so turn the option off before deleting the exe." }
 
 - name: BigStock
   category: desktop
@@ -1598,7 +1796,15 @@
     - title: { ko: "CSV로 내보내기", en: "Export to CSV" }
       text: { ko: "'주가 수집' 탭 아래 '저장 현황'에서 종목을 고르고 'CSV 내보내기'를 누르면 위에서 정한 기간의 시세를 파일로 저장해요. 아무것도 고르지 않으면 전체 종목을 내보내요.", en: "In 'Stored data' at the bottom of the 'Collect prices' tab, select stocks and press 'Export CSV' to save prices for the period set above. With nothing selected, all stocks are exported." }
   uses: { ko: ["국내 주식 시세를 내 PC에 모아 두고 싶을 때", "기술적 지표가 차트에서 어떻게 보이는지 공부할 때", "시세 데이터를 CSV로 받아 직접 분석하고 싶을 때"], en: ["When you want Korean stock prices stored on your own PC", "When learning how technical indicators look on a chart", "When you want price data as CSV for your own analysis"] }
-  settings_path: { ko: "%LOCALAPPDATA%\\BigStock (설정 settings.json, 데이터 stock.db)", en: "%LOCALAPPDATA%\\BigStock (settings.json and stock.db)" }
+  data_files:
+    - path: '%LOCALAPPDATA%\BigStock\settings.json'
+      text: { ko: "거래 비용, 전략·차트 옵션, 마지막 종목, 창, 테마, 언어, 데이터베이스 위치와 API 키를 저장해요. API 키는 Windows 사용자 계정으로 암호화(DPAPI)해서 다른 PC나 계정에서는 다시 넣어야 해요.", en: "Trading costs, strategy and chart options, last stock, window, theme, language, database location and API keys. The keys are encrypted with your Windows account (DPAPI), so they must be entered again on another PC or account." }
+    - path: '%LOCALAPPDATA%\BigStock\stock.db'
+      text: { ko: "수집한 가격과 관심 종목을 담은 데이터베이스예요. 옆의 stock.db-wal, stock.db-shm과 한 묶음이니 백업할 때는 프로그램을 닫고 세 파일을 함께 복사하세요. 지우면 수집한 데이터가 모두 사라져요. 위치는 설정에서 바꿀 수 있어요.", en: "The database with collected prices and your watch list. It belongs together with stock.db-wal and stock.db-shm next to it, so close the app and copy all three to back it up. Deleting it loses all collected data. Its location can be changed in settings." }
+    - path: '%LOCALAPPDATA%\BigStock\logs\'
+      text: { ko: "날짜별 기록이에요(30개까지 보관, API 주소는 가려요). 지워도 돼요.", en: "Daily logs (up to 30 kept, API addresses masked). Safe to delete." }
+    - path: '%LOCALAPPDATA%\BigStock\FONT\'
+      text: { ko: "차트에 쓰는 글꼴 사본이에요. 지워도 다시 만들어요.", en: "A copy of the chart font. Safe to delete; it is created again." }
 
 - name: BigRailway
   category: desktop
@@ -1635,7 +1841,11 @@
     - name: { ko: "국토교통부_도시철도 노선별 경유역 정보", en: "MOLIT urban railway stations by line" }
       url: https://www.data.go.kr/data/15142034/openapi.do
       use: { ko: "데이터 갱신 확인 (최신 역 구성과 내장 데이터 비교)", en: "Data update check (compares the latest stations with the built-in data)" }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigRailway.json", en: "CONFIGURATION\\BigRailway.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigRailway.json'
+      text: { ko: "창, 지도 확대와 중심, 테마, 언어와 공공데이터포털 인증키를 저장해요. 인증키는 Windows 사용자 계정으로 암호화(DPAPI)해서 다른 PC나 계정에서는 다시 넣어야 해요.", en: "Window, map zoom and center, theme, language and the data.go.kr service key. The key is encrypted with your Windows account (DPAPI), so it must be entered again on another PC or account." }
+    - path: '[exe]\CONFIGURATION\CACHE\'
+      text: { ko: "'데이터 갱신 확인'으로 받은 역 목록이에요. 지워도 다음에 확인할 때 다시 받아요.", en: "Station lists downloaded by 'Check for Data Updates'. Safe to delete; they are downloaded again at the next check." }
   screenshot_credit: { ko: "노선도 데이터: 역 좌표·영문명·노선 색 © OpenStreetMap contributors (ODbL 1.0), 역 순서·운행 노선 국토교통부 도시철도 노선별 경유역 정보(공공데이터포털).", en: "Map data: station coordinates, English names and line colors © OpenStreetMap contributors (ODbL 1.0); station order and services from the MOLIT urban railway route station data (data.go.kr)." }
 
 - name: BigLH
@@ -1681,7 +1891,15 @@
     - name: { ko: "한국토지주택공사 분양임대공고별 공급정보 조회 서비스", en: "LH sale and rental notice supply service" }
       url: https://www.data.go.kr/data/15056765/openapi.do
       use: { ko: "공급 정보 (주택형·분양가·임대 조건)", en: "Supply details (house types, prices, rental terms)" }
-  settings_path: { ko: "exe 옆 CONFIGURATION (설정 BigLH.json, 공고 DB BigLH.db)", en: "CONFIGURATION next to the exe (BigLH.json settings and BigLH.db notice database)" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigLH.json'
+      text: { ko: "설정과 인증키를 저장해요. 인증키는 Windows 사용자 계정으로 암호화(DPAPI)해서 다른 PC나 계정에서는 다시 넣어야 해요.", en: "Settings and the service key. The key is encrypted with your Windows account (DPAPI), so it must be entered again on another PC or account." }
+    - path: '[exe]\CONFIGURATION\BigLH.db'
+      text: { ko: "수집한 LH 공고와 변경·알림 기록을 담은 데이터베이스예요. 지우면 기록이 사라지고 공고를 다시 수집해요.", en: "The database of collected LH notices and their change and alert history. Deleting it loses the history, and notices are collected again." }
+    - path: '[exe]\CONFIGURATION\BigLH.png'
+      text: { ko: "알림 아이콘이에요. 지워도 다시 만들어요.", en: "The notification icon. Safe to delete; it is created again." }
+    - path: 'HKCU\Software\Classes\AppUserModelId\BigLH'
+      text: { ko: "Windows 알림 발신자 등록(이름과 아이콘 경로)이에요. 실행할 때마다 다시 쓰고, 프로그램을 지운 뒤 지워도 돼요.", en: "Registers the app as a Windows notification sender (name and icon path). It is rewritten at every start and is safe to delete after removing the app." }
 
 - name: BigMaze
   category: algo
@@ -1711,7 +1929,9 @@
     - title: { ko: "알고리즘 비교하기", en: "Compare algorithms" }
       text: { ko: "탐색이 끝나면 상태, 경로 길이, 방문 셀, 탐색 단계, 탐색 시간을 확인하세요. 탐색 알고리즘을 바꾸면 이전 표시가 지워지니, 같은 미로에서 '탐색 시작'을 다시 눌러 결과를 견줘 보세요.", en: "When the search ends, check the status, path length, visited cells, steps and time. Changing the search algorithm clears the previous display, so click 'Solve' again on the same maze to compare the results." }
   uses: { ko: ["탐색 알고리즘을 눈으로 이해하고 싶을 때", "수업이나 발표에서 알고리즘을 보여 줄 때", "그냥 미로가 풀리는 걸 구경하고 싶을 때"], en: ["When you want to understand search algorithms visually", "When showing algorithms in a class or talk", "When you just enjoy watching a maze get solved"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigMaze.json", en: "CONFIGURATION\\BigMaze.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigMaze.json'
+      text: { ko: "창, 테마, 언어와 프로그램 옵션을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, theme, language and app options. Deleting it resets these settings." }
 
 - name: BigGraph
   category: algo
@@ -1741,7 +1961,9 @@
     - title: { ko: "그래프 저장하기", en: "Save the graph" }
       text: { ko: "'파일 > 저장하기' 또는 '저장하기' 버튼을 누르면 지금 그래프를 .mmd 파일로 저장해요. 랜덤으로 만든 그래프도 저장해 두었다가 나중에 다시 불러올 수 있어요.", en: "Click 'File > Save' or the 'Save' button to save the current graph as a .mmd file. You can save a random graph too and load it again later." }
   uses: { ko: ["다익스트라 알고리즘을 직접 실험해 보고 싶을 때", "Mermaid로 적은 그래프의 경로를 확인할 때", "자료구조 수업 자료가 필요할 때"], en: ["When you want to experiment with Dijkstra's algorithm", "When checking paths in a graph written in Mermaid", "When you need material for a data structures class"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigGraph.json", en: "CONFIGURATION\\BigGraph.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigGraph.json'
+      text: { ko: "창, 테마, 언어와 프로그램 옵션을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, theme, language and app options. Deleting it resets these settings." }
 
 - name: BigHuffman
   category: algo
@@ -1771,7 +1993,9 @@
     - title: { ko: "바이트를 고쳐 보기", en: "Tamper with the bytes" }
       text: { ko: "'인코딩 바이트 (HEX)' 상자의 값이나 '유효 비트 수'를 직접 고친 뒤 '◀ 디코딩'을 다시 누르세요. 비트 하나만 바뀌어도 결과가 어떻게 달라지는지 볼 수 있어요(공백은 무시해요).", en: "Edit the values in the 'Encoded Bytes (HEX)' box or the 'Valid Bits' count, then click '◀ Decode' again to see how even one changed bit affects the result (spaces are ignored)." }
   uses: { ko: ["압축이 어떻게 동작하는지 궁금할 때", "허프만 코딩을 배우거나 가르칠 때", "글자 빈도에 따라 코드가 어떻게 달라지는지 볼 때"], en: ["When you're curious how compression works", "When learning or teaching Huffman coding", "When you want to see how codes change with character frequency"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigHuffman.json", en: "CONFIGURATION\\BigHuffman.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigHuffman.json'
+      text: { ko: "창, 테마, 언어와 프로그램 옵션을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, theme, language and app options. Deleting it resets these settings." }
 
 - name: BigClustering
   category: algo
@@ -1803,7 +2027,9 @@
     - title: { ko: "CSV로 저장하기", en: "Save as CSV" }
       text: { ko: "'CSV 저장'을 누르면 '원래 파일 이름_군집.csv'라는 이름이 제안돼요. 위치를 골라 저장하면 군집 번호가 붙은 데이터가 담겨요.", en: "Click 'Save CSV' and a name like 'original name_clusters.csv' is suggested. Pick a location to save the data with its cluster labels." }
   uses: { ko: ["고객이나 상품 데이터를 비슷한 그룹으로 나눠 보고 싶을 때", "K-평균 알고리즘을 실제 데이터로 배워 볼 때", "엑셀 표에 숨은 패턴을 찾아보고 싶을 때"], en: ["When you want to split customer or product data into similar groups", "When learning K-means with real data", "When looking for hidden patterns in a spreadsheet"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigClustering.json", en: "CONFIGURATION\\BigClustering.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigClustering.json'
+      text: { ko: "창, 테마, 언어와 프로그램 옵션을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, theme, language and app options. Deleting it resets these settings." }
 
 - name: BigHanoiTop
   category: algo
@@ -1835,7 +2061,9 @@
     - title: { ko: "이동 목록 살펴보기", en: "Browse the move list" }
       text: { ko: "'이동 목록'에서 항목을 누르면 그 이동 뒤 상태로 바로 가요. '복사' 버튼이나 '파일 > 이동 목록 복사'로 목록 전체를 클립보드에 복사할 수 있어요.", en: "Click an item in the 'Move List' to jump to the state after that move. Use the 'Copy' button or 'File > Copy Move List' to copy the whole list to the clipboard." }
   uses: { ko: ["하노이 탑 재귀 풀이를 눈으로 따라가 보고 싶을 때", "재귀 알고리즘을 배우거나 가르칠 때", "기둥이 늘면 이동 수가 얼마나 줄어드는지 볼 때"], en: ["When you want to follow the recursive Hanoi solution with your eyes", "When learning or teaching recursive algorithms", "When you want to see how extra pegs cut the move count"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigHanoiTop.json", en: "CONFIGURATION\\BigHanoiTop.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigHanoiTop.json'
+      text: { ko: "창, 테마, 언어와 프로그램 옵션을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, theme, language and app options. Deleting it resets these settings." }
 
 - name: BigFractal
   category: algo
@@ -1867,4 +2095,6 @@
     - title: { ko: "저장한 그림 다시 그리기", en: "Redraw a saved picture" }
       text: { ko: "'파일 > PNG에서 매개변수 열기'(Ctrl+O)로 BigFractal이 저장한 PNG를 고르면, 같은 프랙탈과 매개변수, 저장 크기를 불러와 다시 그려요.", en: "Choose a PNG saved by BigFractal with 'File > Open Parameters from PNG' (Ctrl+O) to load the same fractal, parameters and save size and draw it again." }
   uses: { ko: ["망델브로 집합 속을 깊이 확대해 구경하고 싶을 때", "프랙탈과 혼돈 이론을 배우거나 가르칠 때", "배경 화면이나 인쇄용 고해상도 프랙탈 그림이 필요할 때"], en: ["When you want to zoom deep into the Mandelbrot set", "When learning or teaching fractals and chaos theory", "When you need a high-resolution fractal picture for a wallpaper or print"] }
-  settings_path: { ko: "exe 옆 CONFIGURATION\\BigFractal.json", en: "CONFIGURATION\\BigFractal.json next to the exe" }
+  data_files:
+    - path: '[exe]\CONFIGURATION\BigFractal.json'
+      text: { ko: "창, 테마, 언어와 프로그램 옵션을 저장해요. 지우면 처음 설정으로 돌아가요.", en: "Window, theme, language and app options. Deleting it resets these settings." }

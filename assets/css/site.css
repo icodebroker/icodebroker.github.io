@@ -337,6 +337,11 @@ kbd {
 @media (min-width: 720px) { .more-info dt, .more-info dd { margin-top: 8px; } }
 .hash { word-break: break-all; }
 .tp-list { margin: 0; padding-left: 18px; }
+.data-files { margin: 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.data-files li { display: grid; gap: 2px; }
+.data-files code { word-break: break-all; }
+.data-files span { font-size: .92rem; }
+.data-files-note { margin: 12px 0 0; font-size: .88rem; color: var(--muted); }
 
 .grid-small { margin-bottom: 56px; }
 

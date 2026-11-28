@@ -51,9 +51,11 @@ ko:
   released: 올린 날
   sha256: SHA-256
   verify: PowerShell로 파일이 온전한지 확인하기
-  settings: 설정 저장 위치
+  data_files: 저장되는 파일
+  exe_folder: exe 폴더
+  data_files_note: 'exe 폴더는 exe 파일이 있는 폴더예요. %APPDATA%, %LOCALAPPDATA%, %TEMP%, %USERPROFILE%은 탐색기 주소 표시줄에 그대로 입력하면 열려요. 설정 파일 옆에 잠시 생기는 .tmp 파일과 깨진 설정을 옮겨 둔 .broken-날짜 파일은 지워도 돼요. 또 모든 프로그램은 실행할 때 .NET이 필요한 DLL을 %TEMP%\.net\<프로그램 이름> 폴더에 풀어 두는데, 프로그램을 닫은 뒤 지워도 다음 실행 때 다시 만들어져요. exe 폴더에 쓸 수 없는 곳(예: Program Files)에 두면 exe 폴더에 저장하는 설정은 남지 않아요.'
   uninstall: 지우는 법
-  uninstall_text: 설치하지 않았으니 exe 파일을 지우면 끝이에요. 설정까지 지우려면 아래 위치도 지우세요.
+  uninstall_text: 설치하지 않았으니 exe 파일을 지우면 끝이에요. 설정과 기록까지 지우려면 프로그램을 닫고 위 '저장되는 파일'도 지우세요. 레지스트리 항목이 있는 프로그램은 exe를 지우기 전에 프로그램에서 해당 옵션을 끄거나 등록을 해제하세요.
   third_party: 사용한 오픈 소스
   third_party_text: 이 프로그램에 들어 있는 오픈 소스 구성 요소와 라이선스
   more_apps: 다른 프로그램도 둘러보세요
@@ -122,9 +124,11 @@ en:
   released: Released
   sha256: SHA-256
   verify: Check the file with PowerShell
-  settings: Settings location
+  data_files: Files it creates
+  exe_folder: exe folder
+  data_files_note: 'The exe folder is the folder that contains the exe. You can open %APPDATA%, %LOCALAPPDATA%, %TEMP% and %USERPROFILE% by typing them into the File Explorer address bar. The .tmp files that briefly appear next to a settings file, and .broken-date copies of a damaged settings file, are safe to delete. Every app also has .NET unpack the DLLs it needs into %TEMP%\.net\<app name> when it runs; you can delete that folder after closing the app, and it is created again on the next run. If the exe sits in a folder you cannot write to (such as Program Files), settings kept in the exe folder are not saved.'
   uninstall: How to remove
-  uninstall_text: Nothing is installed, so just delete the exe. To remove settings too, delete the location below.
+  uninstall_text: Nothing is installed, so just delete the exe. To remove settings and history too, close the app and delete the files listed above. If the app has registry entries, turn off the option or unregister in the app before deleting the exe.
   third_party: Open source used
   third_party_text: Open source components included in this app and their licenses
   more_apps: Take a look at other apps
